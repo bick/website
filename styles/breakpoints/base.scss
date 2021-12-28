@@ -46,11 +46,11 @@ h3 {
         width: 3rem;
         height: 3rem;
         max-width: 3rem;
-        background: url("https://rawcdn.githack.com/bick/website/f7feef6d03dd3cca2fc736e521abd774bf7f0c29/owen.png");
+        background: url("https://cdn.owenbick.com/owen.png");
         background-size: contain;
         border: none;
         &:hover {
-          background: url("https://rawcdn.githack.com/bick/website/8d652ab693f956d53397e0b88803c16dde2b7f7f/owen-hovered.png");
+          background: url("https://cdn.owenbick.com/owen-hover.png");
           background-size: contain;
           cursor: pointer;
         }

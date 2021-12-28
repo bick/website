@@ -52,7 +52,7 @@ export default function Home() {
           <div className="container">
             <h3>Uh oh... looks like this page doesn't exist.</h3>
             <Link href="/"><a>&#8592; Go back home</a></Link><br /><br /><br /><br />
-            <img src="../static/cat.gif" />
+            <img src="https://cdn.owenbick.com/cat.gif" />
           </div>
         </section>
       </Layout>
