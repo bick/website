@@ -61,8 +61,8 @@ export default function Home() {
                 <span>, Jobs for coders</span>
               </li>
               <li>
-                <a href="//gitcdn.net" target="_blank">GitCDN</a>
-                <span>, A free CDN for GitHub</span>
+                <a href="#">GitCDN</a>
+                <span>, A free CDN for GitHub (coming soon)</span>
               </li>
             </ul>
           </div>
