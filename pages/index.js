@@ -59,15 +59,15 @@ export default function Home() {
             <h3>Featured Projects</h3>
             <ul className="portfolio__list">
               <li>
-                <a href="//macdb.io">MacDB</a>
+                <a href="//macdb.io" target="_blank">MacDB</a>
                 <span>, A database of macOS versions</span>
               </li>
               <li>
-                <a href="//devgigs.com">DevGigs.com</a>
+                <a href="//devgigs.com" target="_blank">DevGigs.com</a>
                 <span>, Jobs for coders</span>
               </li>
               <li>
-                <a href="//gitcdn.net">GitCDN</a>
+                <a href="//gitcdn.net" target="_blank">GitCDN</a>
                 <span>, A free CDN for GitHub</span>
               </li>
             </ul>
@@ -95,22 +95,22 @@ export default function Home() {
           <div className="container">
             <h3>Follow me</h3>
             <span>Twitter: </span>
-            <a href="//twitter.com/owenbick">@owenbick</a>
+            <a href="//twitter.com/owenbick" target="_blank">@owenbick</a>
             <br />
             <span>LinkedIn: </span>
-            <a href="//linkedin.com/in/bick">@bick</a>
+            <a href="//linkedin.com/in/bick" target="_blank">@bick</a>
             <br />
             <span>ProductHunt: </span>
-            <a href="//producthunt.com/@bick">@bick</a>
+            <a href="//producthunt.com/@bick" target="_blank">@bick</a>
             <br />
             <span>Instagram: </span>
-            <a href="//instagram.com/owenbick">@owenbick</a>
+            <a href="//instagram.com/owenbick" target="_blank">@owenbick</a>
             <br />
             <span>GitHub: </span>
-            <a href="//github.com/bick">@bick</a>
+            <a href="//github.com/bick" target="_blank">@bick</a>
             <br />
             <span>Dribbble: </span>
-            <a href="//dribbble.com/bick">@bick</a>
+            <a href="//dribbble.com/bick" target="_blank">@bick</a>
           </div>
         </section>
       </Layout>
