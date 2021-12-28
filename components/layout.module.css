@@ -1,9 +1,8 @@
 .layout {
   animation: hello ease-out 0.3s;
   width: 100%;
-  /* max-width: 78rem; */
   padding-block-start: 0;
-  padding-block-end: 4rem;
+  padding-block-end: 0;
   margin: 0 auto;
 }
 
