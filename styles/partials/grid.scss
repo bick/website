@@ -1,11 +1,4 @@
-/*!
- * Bootstrap Grid v4.1.1 (https://getbootstrap.com/)
- * Copyright 2011-2018 The Bootstrap Authors
- * Copyright 2011-2018 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- * Compiled by Owen Bick (https://github.com/bick)
- */
- @-ms-viewport {
+@-ms-viewport {
     width: device-width;
 }
 
@@ -22,8 +15,6 @@ html {
 
 .container {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
