@@ -48,25 +48,6 @@ export default function Home() {
             <h1>About Owen Bick</h1>
           </div>
         </section>
-        <section className="portfolio">
-          <div className="container">
-            <h3>Featured Projects</h3>
-            <ul className="portfolio__list">
-              <li>
-                <a href="//macdb.io" target="_blank">MacDB</a>
-                <span>, A database of macOS versions</span>
-              </li>
-              <li>
-                <a href="//devgigs.com" target="_blank">DevGigs.com</a>
-                <span>, Jobs for coders</span>
-              </li>
-              <li>
-                <a href="#">GitCDN</a>
-                <span>, A free CDN for GitHub (coming soon)</span>
-              </li>
-            </ul>
-          </div>
-        </section>
         <section className="about">
           <div className="container">
             <h3>About Me</h3>
@@ -85,6 +66,25 @@ export default function Home() {
               GitHub) so I know the tech jargon that matters to be a successful
               UX designer.
             </p>
+          </div>
+        </section>
+        <section className="social">
+          <div className="container">
+            <h3>My tech stack</h3>
+            <span>MacBook Pro (16-inch, 2019)</span>
+            <br />
+            <span>24" LG Ultrafine Monitor (x2)</span>
+            <br />
+            <span>Keychron K10</span>
+            <br />
+            <span>Logitech MX Master 2S</span>
+            <br />
+            <span>Blue Snowball</span>
+          </div>
+        </section>
+        <section className="social">
+          <div className="container">
+            <h3>This website was built using NextJS, SASS, and Netlify.</h3>
           </div>
         </section>
         <section className="social">
