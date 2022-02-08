@@ -1,2 +1,3 @@
-**/.next
-**/.DS_Store
+.next
+.DS_Store
+styles/.DS_Store
