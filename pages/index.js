@@ -59,16 +59,16 @@ export default function Home() {
             <h3>Featured Projects</h3>
             <ul className="portfolio__list">
               <li>
-                <a href="//macdb.io" target="_blank">MacDB</a>
+                <a href="//weekendlabs.net" target="_blank">Weekend Labs</a>
+                <span>, A full-service branding & product agency</span>
+              </li>
+              <li>
+                <a href="//macdb.io" target="_blank">MacDB (coming soon)</a>
                 <span>, A database of macOS versions</span>
               </li>
               <li>
-                <a href="//devgigs.com" target="_blank">DevGigs.com</a>
+                <a href="//devgigs.com" target="_blank">DevGigs.com (coming soon)</a>
                 <span>, Jobs for coders</span>
-              </li>
-              <li>
-                <a href="#">GitCDN</a>
-                <span>, A free CDN for GitHub (coming soon)</span>
               </li>
             </ul>
           </div>
