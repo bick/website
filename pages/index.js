@@ -63,12 +63,12 @@ export default function Home() {
                 <span>, A full-service branding & product agency</span>
               </li>
               <li>
-                <a href="//macdb.io" target="_blank">MacDB (coming soon)</a>
-                <span>, A database of macOS versions</span>
+                <a href="//macdb.io" target="_blank">MacDB</a>
+                <span>, A database of macOS versions (coming soon)</span>
               </li>
               <li>
-                <a href="//devgigs.com" target="_blank">DevGigs.com (coming soon)</a>
-                <span>, Jobs for coders</span>
+                <a href="//devgigs.com" target="_blank">DevGigs.com</a>
+                <span>, Jobs for coders (coming soon)</span>
               </li>
             </ul>
           </div>
