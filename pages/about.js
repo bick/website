@@ -58,8 +58,6 @@ export default function Home() {
               allows someone to use the product for the first time and feel like
               they understand what they&apos;re looking at. They don&apos;t need to be
               experts, but a digital product should not be overwhelming.
-              Currently, I work at 829 Studios, but I&apos;m always open to freelance
-              projects and can be contacted here.
               <br />
               <br />I have done web development as a hobby for about six years
               (this site is built in React and is publically available on my
@@ -71,7 +69,7 @@ export default function Home() {
         <section className="social">
           <div className="container">
             <h3>My tech stack</h3>
-            <span>MacBook Pro (16-inch, 2019)</span>
+            <span>MacBook Pro (14-inch, M1 Pro)</span>
             <br />
             <span>24" LG Ultrafine Monitor (x2)</span>
             <br />

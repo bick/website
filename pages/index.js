@@ -60,11 +60,11 @@ export default function Home() {
             <ul className="portfolio__list">
               <li>
                 <a href="//weekendlabs.net" target="_blank">Weekend Labs</a>
-                <span>, A full-service branding & product agency</span>
+                <span>, A full-service digital agency</span>
               </li>
               <li>
-                <a href="//macdb.io" target="_blank">MacDB</a>
-                <span>, A database of macOS versions (coming soon)</span>
+                <a href="//websiteshowcase.org" target="_blank">Website Showcase</a>
+                <span>, A collection of some awesome websites</span>
               </li>
               <li>
                 <a href="//devgigs.com" target="_blank">DevGigs.com</a>
@@ -83,8 +83,6 @@ export default function Home() {
               allows someone to use the product for the first time and feel like
               they understand what they&apos;re looking at. They don&apos;t need to be
               experts, but a digital product should not be overwhelming.
-              Currently, I work at 829 Studios, but I&apos;m always open to freelance
-              projects and can be contacted here.
             </p>
             <Link href="/about">
               <a>Read more &#8594;</a>
