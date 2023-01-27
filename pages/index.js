@@ -12,10 +12,7 @@ export default function Home() {
           Owen Bick – A product consultant and web developer based in Boston
         </title>
         <link rel="icon" href="./static/favicon.ico" />
-        <meta
-          name="description"
-          content="Owen Bick is a product consultant and web developer based in Boston."
-        />
+        <meta name="description" content="Owen Bick is a product consultant and web developer based in Boston." />
         <meta name="author" content="Owen Bick" />
       </Head>
       <Header></Header>
@@ -68,22 +65,19 @@ export default function Home() {
           <div className="container">
             <h3>Follow me</h3>
             <span>Twitter: </span>
-            <a href="//twitter.com/owenbick" target="_blank">@owenbick</a>
+            <Link href="https://twitter.com/owenbick" target="_blank">@owenbick</Link>
             <br />
             <span>LinkedIn: </span>
-            <a href="//linkedin.com/in/bick" target="_blank">@bick</a>
-            <br />
-            <span>ProductHunt: </span>
-            <a href="//producthunt.com/@bick" target="_blank">@bick</a>
-            <br />
-            <span>Instagram: </span>
-            <a href="//instagram.com/owenbick" target="_blank">@owenbick</a>
+            <Link href="https://linkedin.com/in/bick" target="_blank">@bick</Link>
             <br />
             <span>GitHub: </span>
-            <a href="//github.com/bick" target="_blank">@bick</a>
+            <Link href="https://github.com/bick" target="_blank">@bick</Link>
             <br />
-            <span>Dribbble: </span>
-            <a href="//dribbble.com/bick" target="_blank">@bick</a>
+            <span>ProductHunt: </span>
+            <Link href="https://producthunt.com/@bick" target="_blank">@bick</Link>
+            <br />
+            <span>Instagram: </span>
+            <Link href="https://instagram.com/owenbick" target="_blank">@owenbick</Link>
           </div>
         </section>
       </Layout>
