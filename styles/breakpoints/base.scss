@@ -119,7 +119,7 @@ h3 {
       background-position: 0px 100%;
       transition: 0.2s;
       background-size: 16px 4px;
-      animation: link-fx-5-animation 0.4s linear infinite;
+      animation: fancy-line 0.4s linear infinite;
       padding: 0 0 0.5rem;
     }
   }
@@ -138,50 +138,6 @@ h3 {
   transform-origin: 70% 70%;
   display: inline-block;
   margin-left: .5rem;
-}
-
-@keyframes wave-animation {
-  0% {
-    transform: rotate(0.0deg)
-  }
-
-  10% {
-    transform: rotate(14.0deg)
-  }
-
-  20% {
-    transform: rotate(-8.0deg)
-  }
-
-  30% {
-    transform: rotate(14.0deg)
-  }
-
-  40% {
-    transform: rotate(-4.0deg)
-  }
-
-  50% {
-    transform: rotate(10.0deg)
-  }
-
-  60% {
-    transform: rotate(0.0deg)
-  }
-
-  100% {
-    transform: rotate(0.0deg)
-  }
-}
-
-@keyframes link-fx-5-animation {
-  from {
-    background-position: 0px 100%;
-  }
-
-  to {
-    background-position: 16px 100%;
-  }
 }
 
 .portfolio {
@@ -270,7 +226,46 @@ h3 {
   }
 }
 
-canvas {
-  width: 100vw;
-  height: 100vh;
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0.0deg)
+  }
+
+  10% {
+    transform: rotate(14.0deg)
+  }
+
+  20% {
+    transform: rotate(-8.0deg)
+  }
+
+  30% {
+    transform: rotate(14.0deg)
+  }
+
+  40% {
+    transform: rotate(-4.0deg)
+  }
+
+  50% {
+    transform: rotate(10.0deg)
+  }
+
+  60% {
+    transform: rotate(0.0deg)
+  }
+
+  100% {
+    transform: rotate(0.0deg)
+  }
+}
+
+@keyframes fancy-line {
+  from {
+    background-position: 0px 100%;
+  }
+
+  to {
+    background-position: 16px 100%;
+  }
 }
