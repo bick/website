@@ -54,7 +54,7 @@ export default function Home() {
         </section>
         <section className="social">
           <div className="container">
-            <h3>This website was built using NextJS, SASS, and Netlify.</h3>
+            <h3>This website was built using NextJS, SASS, and Vercel.</h3>
           </div>
         </section>
         <section className="social">
