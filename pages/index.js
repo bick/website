@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Owen Bick – A product designer and web developer based in Boston
+          Owen Bick – A product consultant and web developer based in Boston
         </title>
         <link rel="icon" href="./static/favicon.ico" />
         <meta
