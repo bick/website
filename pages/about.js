@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/Layout";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -11,37 +13,7 @@ export default function Home() {
         <meta name="description" content="About Owen Bick" />
         <meta name="author" content="Owen Bick" />
       </Head>
-      <header className="header">
-        <div className="header__logo">
-          <Link href="/">
-            <a>
-              <div className="header__logo__img"></div>
-            </a>
-          </Link>
-          <Link href="/">
-            <a className="back-home">&#8592;</a>
-          </Link>
-        </div>
-        <div className="header__nav">
-          <ul className="header__nav__list">
-            <li className="header__nav__item">
-              <Link className="header__nav__link" href="/">
-                <a className="header__nav__link">Index</a>
-              </Link>
-            </li>
-            <li className="header__nav__item">
-              <Link href="/about">
-                <a className="header__nav__link active">About</a>
-              </Link>
-            </li>
-            <li className="header__nav__item">
-              <Link className="header__nav__link" href="/contact">
-                <a className="header__nav__link">Contact</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </header>
+      <Header></Header>
       <Layout>
         <section className="hero">
           <div className="container">
@@ -77,7 +49,7 @@ export default function Home() {
             <br />
             <span>Logitech MX Master 2S</span>
             <br />
-            <span>Blue Snowball</span>
+            <span>DX Racer</span>
           </div>
         </section>
         <section className="social">
@@ -89,50 +61,23 @@ export default function Home() {
           <div className="container">
             <h3>Follow me</h3>
             <span>Twitter: </span>
-            <a href="//twitter.com/owenbick" target="_blank">@owenbick</a>
+            <Link href="//twitter.com/owenbick" target="_blank">@owenbick</Link>
             <br />
             <span>LinkedIn: </span>
-            <a href="//linkedin.com/in/bick" target="_blank">@bick</a>
-            <br />
-            <span>ProductHunt: </span>
-            <a href="//producthunt.com/@bick" target="_blank">@bick</a>
-            <br />
-            <span>Instagram: </span>
-            <a href="//instagram.com/owenbick" target="_blank">@owenbick</a>
+            <Link href="//linkedin.com/in/bick" target="_blank">@bick</Link>
             <br />
             <span>GitHub: </span>
-            <a href="//github.com/bick" target="_blank">@bick</a>
+            <Link href="//github.com/bick" target="_blank">@bick</Link>
             <br />
-            <span>Dribbble: </span>
-            <a href="//dribbble.com/bick" target="_blank">@bick</a>
+            <span>ProductHunt: </span>
+            <Link href="//producthunt.com/@bick" target="_blank">@bick</Link>
+            <br />
+            <span>Instagram: </span>
+            <Link href="//instagram.com/owenbick" target="_blank">@owenbick</Link>
           </div>
         </section>
       </Layout>
-      <footer className="footer">
-        <div className="container">
-          <ul className="footer__list">
-            <li className="footer__list__item">
-              <Link href="/">
-                <a className="footer__list__link">Index</a>
-              </Link>
-            </li>
-            <li className="footer__list__item">
-              <Link href="/about">
-                <a className="footer__list__link">About</a>
-              </Link>
-            </li>
-            <li className="footer__list__item">
-              <Link href="/contact">
-                <a className="footer__list__link">Contact</a>
-              </Link>
-            </li>
-          </ul>
-          <span>
-            Copyright &copy; 2022 Owen Bick. All Rights Reserved. This website
-            doesn’t use any cookies.
-          </span>
-        </div>
-      </footer>
+      <Footer></Footer>
     </>
   );
 }

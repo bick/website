@@ -6,17 +6,19 @@ body {
   color: var(--white);
   background: var(--black);
 }
+
 a {
   border-bottom: 2px solid var(--link);
   text-decoration: none;
   padding-bottom: 2px;
   max-width: fit-content;
+
   &:hover {
     border-bottom: 2px solid transparent;
     text-decoration: none !important;
   }
-  &:link[href^="//"]:after
-  {
+
+  &:link[href^="//"]:after {
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 1;
@@ -26,88 +28,90 @@ a {
     opacity: 0.5;
   }
 }
+
 h3 {
   font-size: 1.25rem;
 }
+
 .header {
+  display: flex;
   position: sticky;
+  align-items: center;
   top: 0;
   width: 100%;
   padding: 1rem 0;
   z-index: 9999;
-  background: var(--black);
+  background: var(--black-o);
 
   .header__logo {
     display: flex;
     float: left;
+
     a {
       border-bottom: 0;
-      .header__logo__img {
-        width: 3rem;
-        height: 3rem;
-        max-width: 3rem;
-        background: url("https://cdn.owenbick.com/owen.png");
-        background-size: contain;
-        border: none;
-        &:hover {
-          background: url("https://cdn.owenbick.com/owen-hover.png");
-          background-size: contain;
-          cursor: pointer;
-        }
-      }
-    }
-    .back-home {
-      display: none;
-      background: var(--back);
-      border-radius: 50rem;
-      vertical-align: middle;
-      margin-left: 2rem;
-      color: var(--white);
-      font-size: 1.5rem;
-      height: 3rem;
-      width: 3rem;
-      max-width: 3rem;
-      line-height: 3rem;
-      text-align: center;
-      border-bottom: 0;
-      &:hover {
-        background: var(--back-hover);
-        text-decoration: none;
+
+      img {
+        max-width: 4rem;
       }
     }
   }
-  .header__nav {
+
+  .back-home {
+    display: none;
+    background: var(--back);
+    border-radius: 50rem;
+    vertical-align: middle;
+    margin-left: 2rem;
+    color: var(--white);
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    max-width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-bottom: 0;
+
+    &:hover {
+      background: var(--back-hover);
+      text-decoration: none;
+    }
+  }
+
+  .header__list {
     display: flex;
-    .header__nav__list {
-      display: flex;
-      margin-left: auto;
-      .header__nav__item {
-        .header__nav__link {
-          display: block;
-          color: var(--link);
-          font-weight: 500;
-          font-size: 1rem;
-          margin-left: 1.5rem;
-          height: 3rem;
-          line-height: 3rem;
-          border-bottom: 0;
-          &:hover {
-            color: var(--white);
-            text-decoration: none;
-          }
-          &.active {
-            color: var(--white);
-          }
+    margin-left: auto;
+
+    .header__item {
+      .header__link {
+        display: block;
+        color: var(--link);
+        font-weight: 500;
+        font-size: 1rem;
+        margin-left: 1.5rem;
+        height: 3rem;
+        line-height: 3rem;
+        border-bottom: 0;
+
+        &:hover {
+          color: var(--white);
+          text-decoration: none;
+        }
+
+        &.active {
+          color: var(--white);
         }
       }
     }
   }
 }
+
 .hero {
   padding-top: 3rem;
+
   h1 {
     font-weight: 500;
     font-size: 2rem;
+
     .line {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4' viewBox='0 0 16 4'%3E%3Cpath d='M0,3.5c4,0,4-3,8-3s4,3,8,3' fill='none' stroke='%23ff6204' opacity='1' stroke-miterlimit='20'/%3E%3C/svg%3E");
       background-repeat: repeat-x;
@@ -118,41 +122,55 @@ h3 {
       animation: link-fx-5-animation 0.4s linear infinite;
       padding: 0 0 0.5rem;
     }
-    .wave {
-      animation-name: wave-animation;
-      animation-duration: 2.5s;
-    }
   }
+
   h2 {
     font-weight: 500;
     font-size: 2rem;
     line-height: 1.5;
   }
 }
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+  margin-left: .5rem;
+}
+
 @keyframes wave-animation {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0.0deg)
   }
+
   10% {
-    transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+    transform: rotate(14.0deg)
+  }
+
   20% {
-    transform: rotate(-8deg);
+    transform: rotate(-8.0deg)
   }
+
   30% {
-    transform: rotate(14deg);
+    transform: rotate(14.0deg)
   }
+
   40% {
-    transform: rotate(-4deg);
+    transform: rotate(-4.0deg)
   }
+
   50% {
-    transform: rotate(10deg);
+    transform: rotate(10.0deg)
   }
+
   60% {
-    transform: rotate(0deg);
-  } /* Reset for the last half to pause */
+    transform: rotate(0.0deg)
+  }
+
   100% {
-    transform: rotate(0deg);
+    transform: rotate(0.0deg)
   }
 }
 
@@ -165,16 +183,20 @@ h3 {
     background-position: 16px 100%;
   }
 }
+
 .portfolio {
   margin-top: 5rem;
+
   h3 {
     font-weight: 500;
   }
+
   .portfolio__list {
     li {
       padding-left: 18px;
       line-height: 1.8;
       font-size: 1.125rem;
+
       &:before {
         content: "";
         width: 4px;
@@ -184,38 +206,47 @@ h3 {
         background: rgba(242, 241, 239, 0.2);
         transform: translate(-18px, 14px);
       }
+
       span {
         opacity: 0.5;
       }
     }
   }
 }
+
 .about {
   margin-top: 5rem;
   font-size: 1.125rem;
+
   h3 {
     font-weight: 500;
   }
+
   p {
     margin: 0;
   }
+
   a {
     display: block;
     margin-top: 2rem;
   }
 }
+
 .social {
   margin-top: 5rem;
   font-size: 1.125rem;
   line-height: 2;
+
   h3 {
     font-weight: 500;
   }
+
   span {
     display: inline-block;
     margin: 0 0.5rem 0 0;
   }
 }
+
 .footer {
   margin: 15rem 0 5rem;
   font-size: 1rem;
@@ -223,15 +254,23 @@ h3 {
   .footer__list {
     display: flex;
     margin: 2rem 0;
+
     .footer__list__item {
       margin: 0 2rem 0 0;
+
       .footer__list__link {
         color: var(--white);
         font-size: 1.125rem;
       }
     }
   }
+
   span {
     opacity: .5;
   }
+}
+
+canvas {
+  width: 100vw;
+  height: 100vh;
 }

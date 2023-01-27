@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/Layout";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -16,39 +18,12 @@ export default function Home() {
         />
         <meta name="author" content="Owen Bick" />
       </Head>
-      <header className="header">
-        <div className="header__logo">
-          <Link href="/">
-            <a>
-              <div className="header__logo__img"></div>
-            </a>
-          </Link>
-        </div>
-        <div className="header__nav">
-          <ul className="header__nav__list">
-            <li className="header__nav__item">
-              <Link className="header__nav__link" href="/">
-                <a className="header__nav__link active">Index</a>
-              </Link>
-            </li>
-            <li className="header__nav__item">
-              <Link href="/about">
-                <a className="header__nav__link">About</a>
-              </Link>
-            </li>
-            <li className="header__nav__item">
-              <Link className="header__nav__link" href="/contact">
-                <a className="header__nav__link">Contact</a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </header>
+      <Header></Header>
       <Layout>
         <section className="hero">
           <div className="container">
             <h1>
-              Hi, I&apos;m <span className="line">Owen Bick</span>{" "}
+              Hi, I&apos;m <span className="line">Owen Bick</span>
               <span className="wave">👋</span>
             </h1>
             <h2>I&apos;m a product designer and web developer based in Boston</h2>
@@ -85,7 +60,7 @@ export default function Home() {
               experts, but a digital product should not be overwhelming.
             </p>
             <Link href="/about">
-              <a>Read more &#8594;</a>
+              Read more &#8594;
             </Link>
           </div>
         </section>
@@ -112,31 +87,7 @@ export default function Home() {
           </div>
         </section>
       </Layout>
-      <footer className="footer">
-        <div className="container">
-          <ul className="footer__list">
-            <li className="footer__list__item">
-              <Link href="/">
-                <a className="footer__list__link">Index</a>
-              </Link>
-            </li>
-            <li className="footer__list__item">
-              <Link href="/about">
-                <a className="footer__list__link">About</a>
-              </Link>
-            </li>
-            <li className="footer__list__item">
-              <Link href="/contact">
-                <a className="footer__list__link">Contact</a>
-              </Link>
-            </li>
-          </ul>
-          <span>
-            Copyright &copy; 2022 Owen Bick. All Rights Reserved. This website
-            doesn’t use any cookies.
-          </span>
-        </div>
-      </footer>
+      <Footer></Footer>
     </>
   );
 }
