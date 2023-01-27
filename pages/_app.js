@@ -1,7 +1,13 @@
+import { Analytics } from '@vercel/analytics/react';
 import '../styles/style.scss'
 
-export function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+export function Bick({ Component, pageProps }) {
+  return (
+    <>
+      <Component {...pageProps} />
+      <Analytics />
+    </>
+  )
 }
 
-export default MyApp
+export default Bick
