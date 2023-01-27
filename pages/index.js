@@ -52,7 +52,7 @@ export default function Home() {
           <div className="container">
             <h3>About Me</h3>
             <p>
-              I&apos;m Owen, I&apos;m a product designer and web developer that currently lives in
+              I&apos;m Owen, I&apos;m a product consultant and web developer that currently lives in
               Boston. I&apos;ve helped many companies build digital products that are
               more human. My philosophy is simple: design products in a way that
               allows someone to use the product for the first time and feel like

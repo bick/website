@@ -24,17 +24,16 @@ export default function Home() {
           <div className="container">
             <h3>About Me</h3>
             <p>
-              I&apos;m Owen, I&apos;m a product designer and web developer that currently lives in
+              I&apos;m Owen, I&apos;m a product consultant and web developer that currently lives in
               Boston. I&apos;ve helped many companies build digital products that are
               more human. My philosophy is simple: design products in a way that
               allows someone to use the product for the first time and feel like
               they understand what they&apos;re looking at. They don&apos;t need to be
               experts, but a digital product should not be overwhelming.
               <br />
-              <br />I have done web development as a hobby for about six years
-              (this site is built in React and is publically available on my
-              GitHub) so I know the tech jargon that matters to be a successful
-              UX designer.
+              <br />I started developing for the web as a hobby about 12 years ago so I know the tech jargon that matters the most in some of the most complex business cases. I have worked as a software engineer professionally for about 5 years where I have gained an aptitude for simplifying and building out complex infrastructures as economically as possible.
+              <br />
+              <br />I generally focus on working with startups (seed, Series A, B, &amp; C round) who are looking to build a digital product, raise money, and/or expand their engineering and product teams.
             </p>
           </div>
         </section>
