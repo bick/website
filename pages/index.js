@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="./static/favicon.ico" />
         <meta
           name="description"
-          content="Owen Bick is a product designer and web developer based in Boston."
+          content="Owen Bick is a product consultant and web developer based in Boston."
         />
         <meta name="author" content="Owen Bick" />
       </Head>
@@ -26,7 +26,7 @@ export default function Home() {
               Hi, I&apos;m <span className="line">Owen Bick</span>
               <span className="wave">👋</span>
             </h1>
-            <h2>I&apos;m a product designer and web developer based in Boston</h2>
+            <h2>I&apos;m a product consultant and web developer based in Boston</h2>
           </div>
         </section>
         <section className="portfolio">
