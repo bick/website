@@ -35,12 +35,12 @@ export default function Home() {
                 <span>, A full-service digital agency</span>
               </li>
               <li>
-                <a href="//websiteshowcase.org" target="_blank">Website Showcase</a>
-                <span>, A collection of some awesome websites</span>
+                <a href="//devgigs.com" target="_blank">Impossible Chess</a>
+                <span>, How long can you last against the world's best chess engine?</span>
               </li>
               <li>
-                <a href="//devgigs.com" target="_blank">DevGigs.com</a>
-                <span>, Jobs for coders (coming soon)</span>
+                <a href="//websiteshowcase.org" target="_blank">Website Showcase</a>
+                <span>, A collection of some awesome websites</span>
               </li>
             </ul>
           </div>
