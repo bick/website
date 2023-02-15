@@ -47,13 +47,11 @@ export default function Home() {
             <span>Keychron K10</span>
             <br />
             <span>Logitech MX Master 2S</span>
-            <br />
-            <span>DX Racer</span>
           </div>
         </section>
         <section className="social">
           <div className="container">
-            <h3>This website was built using NextJS, SASS, and Vercel.</h3>
+            <h3>This website was built using NextJS, TypeScript, SASS, and Vercel.</h3>
           </div>
         </section>
         <section className="social">

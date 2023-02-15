@@ -31,15 +31,19 @@ export default function Home() {
             <h3>Featured Projects</h3>
             <ul className="portfolio__list">
               <li>
-                <a href="//weekendlabs.net" target="_blank">Weekend Labs</a>
-                <span>, A full-service digital agency</span>
+                <Link href="https://weekendlabs.net" target="_blank">Weekend Labs</Link>
+                <span>, A full-service product consultancy</span>
               </li>
               <li>
-                <a href="//devgigs.com" target="_blank">Impossible Chess</a>
+                <Link href="https://spoteasy.com" target="_blank">Spot Easy</Link>
+                <span>, Boston's #1 apartment rentals directory</span>
+              </li>
+              <li>
+                <Link href="https://devgigs.com" target="_blank">Impossible Chess</Link>
                 <span>, How long can you last against the world's best chess engine?</span>
               </li>
               <li>
-                <a href="//websiteshowcase.org" target="_blank">Website Showcase</a>
+                <Link href="https://websiteshowcase.org" target="_blank">Website Showcase</Link>
                 <span>, A collection of some awesome websites</span>
               </li>
             </ul>

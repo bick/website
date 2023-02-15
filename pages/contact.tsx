@@ -30,19 +30,19 @@ export default function Home() {
           <div className="container">
             <h3>Follow me</h3>
             <span>Twitter: </span>
-            <Link href="//twitter.com/owenbick" target="_blank">@owenbick</Link>
+            <Link href="https://twitter.com/owenbick" target="_blank">@owenbick</Link>
             <br />
             <span>LinkedIn: </span>
-            <Link href="//linkedin.com/in/bick" target="_blank">@bick</Link>
+            <Link href="https://linkedin.com/in/bick" target="_blank">@bick</Link>
             <br />
             <span>GitHub: </span>
-            <Link href="//github.com/bick" target="_blank">@bick</Link>
+            <Link href="https://github.com/bick" target="_blank">@bick</Link>
             <br />
             <span>ProductHunt: </span>
-            <Link href="//producthunt.com/@bick" target="_blank">@bick</Link>
+            <Link href="https://producthunt.com/@bick" target="_blank">@bick</Link>
             <br />
             <span>Instagram: </span>
-            <Link href="//instagram.com/owenbick" target="_blank">@owenbick</Link>
+            <Link href="https://instagram.com/owenbick" target="_blank">@owenbick</Link>
           </div>
         </section>
       </Layout>
