@@ -33,7 +33,7 @@ export default function Home() {
               <br />
               <br />I started developing for the web as a hobby about 12 years ago so I know the tech jargon that matters the most in some of the most complex business cases. I have worked as a software engineer professionally for about 5 years where I have gained an aptitude for simplifying and building out complex infrastructures as economically as possible.
               <br />
-              <br />I generally focus on working with startups (seed, Series A, B, &amp; C round) who are looking to build a digital product, raise money, and/or expand their engineering and product teams.
+              <br />I generally focus on working with startups (Series A, B, &amp; C rounds) who are looking to build a digital product, raise money, and/or expand their engineering and product teams.
             </p>
           </div>
         </section>
