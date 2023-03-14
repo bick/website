@@ -15,9 +15,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-globe": "^2.0.1",
-    "sass": "^1.45.1",
-    "three": "^0.149.0",
-    "three-orbit-controls": "^82.1.0"
+    "sass": "^1.45.1"
   },
   "devDependencies": {
     "@types/node": "18.13.0",
