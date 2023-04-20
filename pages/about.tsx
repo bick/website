@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -23,17 +24,14 @@ export default function Home() {
         <section className="about">
           <div className="container">
             <h3>About Me</h3>
+            <p className="about__boston">
+              I&apos;m Owen, I&apos;m a software engineer and (occasional) angel investor that currently lives in
+              Boston.<Image src="/static/boston.webp" alt="Owen Bick" width={42} height={42} />
+            </p>
             <p>
-              I&apos;m Owen, I&apos;m a product consultant and web developer that currently lives in
-              Boston. I&apos;ve helped many companies build digital products that are
-              more human. My philosophy is simple: design products in a way that
-              allows someone to use the product for the first time and feel like
-              they understand what they&apos;re looking at. They don&apos;t need to be
-              experts, but a digital product should not be overwhelming.
+              <br />I started developing for the web as a hobby about 12 years ago. starting out as a hobby and eventually making it my profession. My experience has led me to work on some of the most challenging and intricate business cases, where I've mastered the art of simplifying and building out complex infrastructures with cost-effectiveness in mind.
               <br />
-              <br />I started developing for the web as a hobby about 12 years ago so I know the tech jargon that matters the most in some of the most complex business cases. I have worked as a software engineer professionally for about 5 years where I have gained an aptitude for simplifying and building out complex infrastructures as economically as possible.
-              <br />
-              <br />I generally focus on working with startups (Series A, B, &amp; C rounds) who are looking to build a digital product, raise money, and/or expand their engineering and product teams.
+              <br />Currently, my primary focus is working with ambitious startups in Series A, B, and C rounds, helping them develop cutting-edge digital products, secure funding, and scale their engineering and product teams.
             </p>
           </div>
         </section>
@@ -42,9 +40,9 @@ export default function Home() {
             <h3>My tech stack</h3>
             <span>MacBook Pro (14-inch, M1 Pro)</span>
             <br />
-            <span>24" LG Ultrafine Monitor (x2)</span>
+            <span>LG 40WP95C-W 40” UltraWide Monitor</span>
             <br />
-            <span>Keychron K10</span>
+            <span>Logitech MX Mechanical</span>
             <br />
             <span>Logitech MX Master 2S</span>
           </div>

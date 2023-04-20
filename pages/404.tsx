@@ -12,7 +12,7 @@ export default function Home() {
           404 Not Found – Owen Bick
         </title>
         <link rel="icon" href="./static/favicon.ico" />
-        <meta name="description" content="Owen Bick is a product consultant and web developer based in Boston." />
+        <meta name="description" content="Owen Bick is a software engineer and angel investor based in Boston." />
         <meta name="author" content="Owen Bick" />
       </Head>
       <Header></Header>

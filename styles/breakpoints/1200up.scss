@@ -10,3 +10,14 @@
 .back-home {
     display: block !important;
 }
+
+.about {
+    &__boston {
+        display: flex;
+        align-items: center;
+
+        img {
+            margin-left: 1rem;
+        }
+    }
+}

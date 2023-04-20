@@ -9,10 +9,10 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Owen Bick – A product consultant and web developer based in Boston
+          Owen Bick – A software engineer and angel investor based in Boston
         </title>
         <link rel="icon" href="./static/favicon.ico" />
-        <meta name="description" content="Owen Bick is a product consultant and web developer based in Boston." />
+        <meta name="description" content="Owen Bick is a software engineer and angel investor based in Boston." />
         <meta name="author" content="Owen Bick" />
       </Head>
       <Header></Header>
@@ -23,7 +23,7 @@ export default function Home() {
               Hi, I&apos;m <span className="line">Owen Bick</span>
               <span className="wave">👋</span>
             </h1>
-            <h2>I&apos;m a product consultant and web developer based in Boston</h2>
+            <h2>I&apos;m a software engineer and angel investor based in Boston</h2>
           </div>
         </section>
         <section className="portfolio">
@@ -35,16 +35,12 @@ export default function Home() {
                 <span>, A full-service product consultancy</span>
               </li>
               <li>
-                <Link href="https://spoteasy.com" target="_blank">Spot Easy</Link>
-                <span>, Boston's #1 apartment rentals directory</span>
+                <Link href="https://hourlytomonthly.com" target="_blank">Hourly to Monthly</Link>
+                <span>, Convert the hourly costs of services to its monthly cost</span>
               </li>
               <li>
-                <Link href="https://devgigs.com" target="_blank">Impossible Chess</Link>
+                <Link href="https://impossiblechess.com" target="_blank">Impossible Chess</Link>
                 <span>, How long can you last against the world's best chess engine?</span>
-              </li>
-              <li>
-                <Link href="https://websiteshowcase.org" target="_blank">Website Showcase</Link>
-                <span>, A collection of some awesome websites</span>
               </li>
             </ul>
           </div>
@@ -53,12 +49,7 @@ export default function Home() {
           <div className="container">
             <h3>About Me</h3>
             <p>
-              I&apos;m Owen, I&apos;m a product consultant and web developer that currently lives in
-              Boston. I&apos;ve helped many companies build digital products that are
-              more human. My philosophy is simple: design products in a way that
-              allows someone to use the product for the first time and feel like
-              they understand what they&apos;re looking at. They don&apos;t need to be
-              experts, but a digital product should not be overwhelming.
+              Hi, my name is Owen, and I'm a software engineer and (occasional) angel investor based in Boston. With a passion for startups, I enjoy working with early-stage companies to help them develop innovative software solutions that drive growth and success. As an investor, I bring a unique perspective to the table, combining my technical expertise with my experience in identifying promising startups with strong potential for success.
             </p>
             <Link href="/about">
               Read more &#8594;
