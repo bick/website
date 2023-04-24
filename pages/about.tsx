@@ -40,11 +40,11 @@ export default function Home() {
             <h3>My tech stack</h3>
             <span>MacBook Pro (14-inch, M1 Pro)</span>
             <br />
-            <span>LG 40WP95C-W 40” UltraWide Monitor</span>
+            <span>LG 49WL95C-W 49” 5K UltraWide Monitor</span>
             <br />
             <span>Logitech MX Mechanical</span>
             <br />
-            <span>Logitech MX Master 2S</span>
+            <span>Logitech MX Master 3S</span>
           </div>
         </section>
         <section className="social">
