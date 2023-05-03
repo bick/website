@@ -29,7 +29,7 @@ export default function Home() {
               Boston.<Image src="/static/boston.webp" alt="Owen Bick" width={42} height={42} />
             </p>
             <p>
-              <br />I started developing for the web as a hobby about 12 years ago. starting out as a hobby and eventually making it my profession. My experience has led me to work on some of the most challenging and intricate business cases, where I've mastered the art of simplifying and building out complex infrastructures with cost-effectiveness in mind.
+              <br />I first started developing for the web about 14 years ago. My experience has led me to work on some of the most challenging and intricate business cases, where I've mastered the art of simplifying and building out complex infrastructures with cost-effectiveness in mind.
               <br />
               <br />Currently, my primary focus is working with ambitious startups in Series A, B, and C rounds, helping them develop cutting-edge digital products, secure funding, and scale their engineering and product teams.
             </p>

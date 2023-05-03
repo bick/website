@@ -12,7 +12,10 @@ export default function Home() {
           Owen Bick – A software engineer and angel investor based in Boston
         </title>
         <link rel="icon" href="./static/favicon.ico" />
-        <meta name="description" content="Owen Bick is a software engineer and angel investor based in Boston." />
+        <meta
+          name="description"
+          content="Owen Bick is a software engineer and angel investor based in Boston."
+        />
         <meta name="author" content="Owen Bick" />
       </Head>
       <Header></Header>
@@ -23,7 +26,9 @@ export default function Home() {
               Hi, I&apos;m <span className="line">Owen Bick</span>
               <span className="wave">👋</span>
             </h1>
-            <h2>I&apos;m a software engineer and angel investor based in Boston</h2>
+            <h2>
+              I&apos;m a software engineer and angel investor based in Boston
+            </h2>
           </div>
         </section>
         <section className="portfolio">
@@ -31,16 +36,32 @@ export default function Home() {
             <h3>Featured Projects</h3>
             <ul className="portfolio__list">
               <li>
-                <Link href="https://weekendlabs.net" target="_blank">Weekend Labs</Link>
+                <Link href="https://spoteasy.com" target="_blank">
+                  SpotEasy
+                </Link>
+                <span style={{ marginRight: '1rem' }}>, Boston's #1 apartment marketplace</span>👈 Current project
+              </li>
+              <li>
+                <Link href="https://weekendlabs.net" target="_blank">
+                  Weekend Labs
+                </Link>
                 <span>, A full-service product consultancy</span>
               </li>
               <li>
-                <Link href="https://hourlytomonthly.com" target="_blank">Hourly to Monthly</Link>
-                <span>, Convert the hourly costs of services to its monthly cost</span>
+                <Link href="https://hourlytomonthly.com" target="_blank">
+                  Hourly to Monthly
+                </Link>
+                <span>
+                  , Convert the hourly costs of services to its monthly cost
+                </span>
               </li>
               <li>
-                <Link href="https://impossiblechess.com" target="_blank">Impossible Chess</Link>
-                <span>, How long can you last against the world's best chess engine?</span>
+                <Link href="https://impossiblechess.com" target="_blank">
+                  Impossible Chess
+                </Link>
+                <span>
+                  , How long can you last against the world's best chess engine?
+                </span>
               </li>
             </ul>
           </div>
@@ -49,30 +70,44 @@ export default function Home() {
           <div className="container">
             <h3>About Me</h3>
             <p>
-              Hi, my name is Owen, and I'm a software engineer and (occasional) angel investor based in Boston. With a passion for startups, I enjoy working with early-stage companies to help them develop innovative software solutions that drive growth and success. As an investor, I bring a unique perspective to the table, combining my technical expertise with my experience in identifying promising startups with strong potential for success.
+              Hi, my name is Owen, and I'm a software engineer and (occasional)
+              angel investor based in Boston. With a passion for startups, I
+              enjoy working with early-stage companies to help them develop
+              innovative software solutions that drive growth and success. As an
+              investor, I bring a unique perspective to the table, combining my
+              technical expertise with my experience in identifying promising
+              startups with strong potential for success.
             </p>
-            <Link href="/about">
-              Read more &#8594;
-            </Link>
+            <Link href="/about">Read more &#8594;</Link>
           </div>
         </section>
         <section className="social">
           <div className="container">
             <h3>Follow me</h3>
             <span>Twitter: </span>
-            <Link href="https://twitter.com/owenbick" target="_blank">@owenbick</Link>
+            <Link href="https://twitter.com/owenbick" target="_blank">
+              @owenbick
+            </Link>
             <br />
             <span>LinkedIn: </span>
-            <Link href="https://linkedin.com/in/bick" target="_blank">@bick</Link>
+            <Link href="https://linkedin.com/in/bick" target="_blank">
+              @bick
+            </Link>
             <br />
             <span>GitHub: </span>
-            <Link href="https://github.com/bick" target="_blank">@bick</Link>
+            <Link href="https://github.com/bick" target="_blank">
+              @bick
+            </Link>
             <br />
             <span>ProductHunt: </span>
-            <Link href="https://producthunt.com/@bick" target="_blank">@bick</Link>
+            <Link href="https://producthunt.com/@bick" target="_blank">
+              @bick
+            </Link>
             <br />
             <span>Instagram: </span>
-            <Link href="https://instagram.com/owenbick" target="_blank">@owenbick</Link>
+            <Link href="https://instagram.com/owenbick" target="_blank">
+              @owenbick
+            </Link>
           </div>
         </section>
       </Layout>
