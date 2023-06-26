@@ -1,5 +1,6 @@
 /* Breakpoints */
 @import "breakpoints/base.scss";
+
 @media (min-width: 1200px) {
   @import "breakpoints/1200up.scss";
 }
@@ -8,3 +9,8 @@
 @import "partials/reset.scss";
 @import "partials/variables.scss";
 @import "partials/grid.scss";
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

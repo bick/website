@@ -1,21 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
-
 body {
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--white);
   background: var(--black);
 }
 
 a {
-  border-bottom: 2px solid var(--link);
+  border-bottom: 1px solid transparent;
   text-decoration: none;
-  padding-bottom: 2px;
+  padding-bottom: 0px;
   max-width: fit-content;
+  color: #2997ff;
 
   &:hover {
-    border-bottom: 2px solid transparent;
+    border-bottom: 1px solid var(--link);
     text-decoration: none !important;
+    opacity: .75;
+    text-decoration: underline;
   }
 
   &:link[href^="https://"]:after {
@@ -41,7 +42,6 @@ h3 {
   width: 100%;
   padding: 1rem;
   z-index: 9999;
-  background: var(--black-o);
 
   .header__logo {
     display: flex;
@@ -153,6 +153,15 @@ h3 {
       line-height: 1.8;
       font-size: 1.125rem;
 
+      a {
+        margin-right: 2rem;
+        border-bottom: 1px solid var(--link);
+
+        &:hover {
+          border-bottom: 1px dashed var(--link);
+        }
+      }
+
       &:before {
         content: "";
         width: 4px;
@@ -162,10 +171,12 @@ h3 {
         background: rgba(242, 241, 239, 0.2);
         transform: translate(-18px, 14px);
       }
+    }
 
-      span {
-        opacity: 0.5;
-      }
+    &__current {}
+
+    &__desc {
+      opacity: 0.5;
     }
   }
 }
