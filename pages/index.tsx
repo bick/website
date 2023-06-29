@@ -39,28 +39,25 @@ export default function Home() {
                 <Link href="https://spoteasy.com" target="_blank">
                   SpotEasy
                 </Link>
-                <span style={{ marginRight: '1rem' }}>, Boston's #1 apartment marketplace</span>👈 Current project
+                <span className="portfolio__desc">
+                  , Boston's #1 apartment marketplace
+                </span>
+                👈 Current project
               </li>
               <li>
                 <Link href="https://weekendlabs.net" target="_blank">
                   Weekend Labs
                 </Link>
-                <span>, A full-service product consultancy</span>
+                <span className="portfolio__desc">
+                  , A full-service product consultancy
+                </span>
               </li>
               <li>
                 <Link href="https://hourlytomonthly.com" target="_blank">
                   Hourly to Monthly
                 </Link>
-                <span>
+                <span className="portfolio__desc">
                   , Convert the hourly costs of services to its monthly cost
-                </span>
-              </li>
-              <li>
-                <Link href="https://impossiblechess.com" target="_blank">
-                  Impossible Chess
-                </Link>
-                <span>
-                  , How long can you last against the world's best chess engine?
                 </span>
               </li>
             </ul>

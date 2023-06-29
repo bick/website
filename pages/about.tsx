@@ -25,13 +25,27 @@ export default function Home() {
           <div className="container">
             <h3>About Me</h3>
             <p className="about__boston">
-              I&apos;m Owen, I&apos;m a software engineer and (occasional) angel investor that currently lives in
-              Boston.<Image src="/static/boston.webp" alt="Owen Bick" width={42} height={42} />
+              I&apos;m Owen, I&apos;m a software engineer and (occasional) angel
+              investor that currently lives in Boston.
+              <Image
+                src="/static/boston.webp"
+                alt="Owen Bick"
+                width={42}
+                height={42}
+              />
             </p>
             <p>
-              <br />I first started developing for the web about 14 years ago. My experience has led me to work on some of the most challenging and intricate business cases, where I've mastered the art of simplifying and building out complex infrastructures with cost-effectiveness in mind.
+              <br />I first started developing for the web about 14 years ago.
+              My experience has led me to work on some of the most challenging
+              and intricate business cases, where I've mastered the art of
+              simplifying and building out complex infrastructures with
+              cost-effectiveness in mind.
               <br />
-              <br />Currently, my primary focus is working with ambitious startups in Series A, B, and C rounds, helping them develop cutting-edge digital products, secure funding, and scale their engineering and product teams.
+              <br />
+              Currently, my primary focus is working with ambitious startups in
+              Series A, B, and C rounds, helping them develop cutting-edge
+              digital products, secure funding, and scale their engineering and
+              product teams.
             </p>
           </div>
         </section>
@@ -49,26 +63,38 @@ export default function Home() {
         </section>
         <section className="social">
           <div className="container">
-            <h3>This website was built using NextJS, TypeScript, SASS, and Vercel.</h3>
+            <h3 className="opacity-100 italic">
+              This website was built using NextJS, TypeScript, SASS, and Vercel.
+            </h3>
           </div>
         </section>
         <section className="social">
           <div className="container">
             <h3>Follow me</h3>
             <span>Twitter: </span>
-            <Link href="https://twitter.com/owenbick" target="_blank">@owenbick</Link>
+            <Link href="https://twitter.com/owenbick" target="_blank">
+              @owenbick
+            </Link>
             <br />
             <span>LinkedIn: </span>
-            <Link href="https://linkedin.com/in/bick" target="_blank">@bick</Link>
+            <Link href="https://linkedin.com/in/bick" target="_blank">
+              @bick
+            </Link>
             <br />
             <span>GitHub: </span>
-            <Link href="https://github.com/bick" target="_blank">@bick</Link>
+            <Link href="https://github.com/bick" target="_blank">
+              @bick
+            </Link>
             <br />
             <span>ProductHunt: </span>
-            <Link href="https://producthunt.com/@bick" target="_blank">@bick</Link>
+            <Link href="https://producthunt.com/@bick" target="_blank">
+              @bick
+            </Link>
             <br />
             <span>Instagram: </span>
-            <Link href="https://instagram.com/owenbick" target="_blank">@owenbick</Link>
+            <Link href="https://instagram.com/owenbick" target="_blank">
+              @owenbick
+            </Link>
           </div>
         </section>
       </Layout>
