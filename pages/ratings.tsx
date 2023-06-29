@@ -13,7 +13,7 @@ export default function Home() {
     { name: "Star Wars: Episode VI", rating: 8.5 },
   ]);
 
-  const getRatingColor = (rating) => {
+  const getRatingColor = (rating: number) => {
     if (rating >= 0 && rating <= 4) return "red";
     if (rating > 4 && rating <= 7) return "yellow";
     if (rating > 7 && rating <= 10) return "#23C55E";
