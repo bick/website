@@ -36,25 +36,27 @@ export default function Home() {
             <h3>Featured Projects</h3>
             <ul className="portfolio__list">
               <li>
-                <div className="portfolio__list__current">
-                  <Link href="https://spoteasy.com" target="_blank">
-                    SpotEasy
-                  </Link>
-                  <span className="lg:hidden">👈 Current project</span>
-                </div>
-                <span className="portfolio__list__desc">Boston's #1 apartment marketplace</span>
+                <Link href="https://spoteasy.com" target="_blank">
+                  SpotEasy
+                </Link>
+                <span className="portfolio__desc">
+                  , Boston's #1 apartment marketplace
+                </span>
+                👈 Current project
               </li>
               <li>
                 <Link href="https://weekendlabs.net" target="_blank">
                   Weekend Labs
                 </Link>
-                <span>, A full-service product consultancy</span>
+                <span className="portfolio__desc">
+                  , A full-service product consultancy
+                </span>
               </li>
               <li>
                 <Link href="https://hourlytomonthly.com" target="_blank">
                   Hourly to Monthly
                 </Link>
-                <span>
+                <span className="portfolio__desc">
                   , Convert the hourly costs of services to its monthly cost
                 </span>
               </li>

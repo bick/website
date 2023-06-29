@@ -6,17 +6,18 @@ body {
 }
 
 a {
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--link);
   text-decoration: none;
-  padding-bottom: 0px;
+  padding-bottom: 1px;
   max-width: fit-content;
   color: #2997ff;
 
   &:hover {
-    border-bottom: 1px solid var(--link);
+    border-bottom: 1px dashed var(--link);
     text-decoration: none !important;
     opacity: .75;
     text-decoration: underline;
+    font-style: italic;
   }
 
   &:link[href^="https://"]:after {
@@ -31,7 +32,10 @@ a {
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  opacity: .5;
+  margin-bottom: 1rem !important;
 }
 
 .header {
@@ -49,6 +53,10 @@ h3 {
 
     a {
       border-bottom: 0;
+
+      &:hover {
+        opacity: 1;
+      }
 
       img {
         max-width: 4rem;
@@ -95,6 +103,7 @@ h3 {
         &:hover {
           color: var(--white);
           text-decoration: none;
+          font-style: normal;
         }
 
         &.active {
@@ -143,10 +152,6 @@ h3 {
 .portfolio {
   margin-top: 5rem;
 
-  h3 {
-    font-weight: 500;
-  }
-
   .portfolio__list {
     li {
       padding-left: 18px;
@@ -154,7 +159,6 @@ h3 {
       font-size: 1.125rem;
 
       a {
-        margin-right: 2rem;
         border-bottom: 1px solid var(--link);
 
         &:hover {
@@ -172,12 +176,11 @@ h3 {
         transform: translate(-18px, 14px);
       }
     }
+  }
 
-    &__current {}
-
-    &__desc {
-      opacity: 0.5;
-    }
+  &__desc {
+    opacity: 0.5;
+    margin-right: 1rem;
   }
 }
 
@@ -189,10 +192,6 @@ h3 {
     img {
       display: none;
     }
-  }
-
-  h3 {
-    font-weight: 500;
   }
 
   p {
@@ -210,13 +209,55 @@ h3 {
   font-size: 1.125rem;
   line-height: 2;
 
-  h3 {
-    font-weight: 500;
-  }
-
   span {
     display: inline-block;
     margin: 0 0.5rem 0 0;
+  }
+}
+
+.reviews {
+  p {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+  }
+
+  &__number {
+    font-family: monospace;
+    margin: 0 .5rem;
+    font-weight: 600;
+  }
+
+  table {
+    margin-top: 1rem;
+    width: 100%;
+
+    th {
+      font-weight: 600;
+      opacity: .5;
+      text-align: left;
+      padding: 0 1rem 0 0;
+      border-bottom: 1px solid rgba(242, 241, 239, 0.2);
+      padding: .5rem 0;
+
+      &:nth-child(2) {
+        text-align: right;
+      }
+    }
+
+    td {
+      font-size: 1.125rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(242, 241, 239, 0.2);
+
+      &:nth-child(2) {
+        text-align: right;
+        font-family: monospace;
+        font-weight: 600;
+        span {
+          color: yellow;
+        }
+      }
+    }
   }
 }
 

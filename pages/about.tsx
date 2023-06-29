@@ -63,7 +63,7 @@ export default function Home() {
         </section>
         <section className="social">
           <div className="container">
-            <h3>
+            <h3 className="opacity-100 italic">
               This website was built using NextJS, TypeScript, SASS, and Vercel.
             </h3>
           </div>
