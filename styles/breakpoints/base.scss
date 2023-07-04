@@ -33,7 +33,7 @@ a {
 
 h3 {
   font-size: 1.25rem !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   opacity: .5;
   margin-bottom: 1rem !important;
 }
@@ -46,6 +46,7 @@ h3 {
   width: 100%;
   padding: 1rem;
   z-index: 9999;
+  mix-blend-mode: exclusion;
 
   .header__logo {
     display: flex;
@@ -253,10 +254,33 @@ h3 {
         text-align: right;
         font-family: monospace;
         font-weight: 600;
+        display: flex;
+        justify-content: flex-end;
+
         span {
           color: yellow;
         }
+
+        img {
+          margin-right: 1rem;
+        }
       }
+    }
+  }
+
+  &__select {
+    display: flex;
+    border: 1px solid rgba(242, 241, 239, 0.2);
+    background: var(--black);
+    outline: 0;
+    padding: 1rem 2rem;
+    border-radius: 50rem;
+    position: relative;
+
+    &:hover {
+      border-color: var(--link);
+      cursor: pointer;
+      transition: 0.2s;
     }
   }
 }

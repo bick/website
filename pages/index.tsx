@@ -9,12 +9,12 @@ export default function Home() {
     <>
       <Head>
         <title>
-          Owen Bick – A software engineer and angel investor based in Boston
+          Owen Bick – A software engineer based in Boston
         </title>
         <link rel="icon" href="./static/favicon.ico" />
         <meta
           name="description"
-          content="Owen Bick is a software engineer and angel investor based in Boston."
+          content="Owen Bick is a software engineer based in Boston."
         />
         <meta name="author" content="Owen Bick" />
       </Head>
@@ -27,7 +27,7 @@ export default function Home() {
               <span className="wave">👋</span>
             </h1>
             <h2>
-              I&apos;m a software engineer and angel investor based in Boston
+              I&apos;m a software engineer based in Boston
             </h2>
           </div>
         </section>
@@ -67,13 +67,13 @@ export default function Home() {
           <div className="container">
             <h3>About Me</h3>
             <p>
-              Hi, my name is Owen, and I'm a software engineer and (occasional)
-              angel investor based in Boston. With a passion for startups, I
-              enjoy working with early-stage companies to help them develop
-              innovative software solutions that drive growth and success. As an
-              investor, I bring a unique perspective to the table, combining my
-              technical expertise with my experience in identifying promising
-              startups with strong potential for success.
+              Hi, my name is Owen, and I'm a software engineer based in Boston.
+              With a passion for startups, I enjoy working with early-stage
+              companies to help them develop innovative software solutions that
+              drive growth and success. As an investor, I bring a unique
+              perspective to the table, combining my technical expertise with my
+              experience in identifying promising startups with strong potential
+              for success.
             </p>
             <Link href="/about">Read more &#8594;</Link>
           </div>
