@@ -25,8 +25,8 @@ export default function Home() {
           <div className="container">
             <h3>About Me</h3>
             <p className="about__boston">
-              I&apos;m Owen, I&apos;m a software engineer and (occasional) angel
-              investor that currently lives in Boston.
+              I&apos;m Owen, I&apos;m a software engineer that currently lives
+              in Boston.
               <Image
                 src="/static/boston.webp"
                 alt="Owen Bick"
