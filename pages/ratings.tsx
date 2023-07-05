@@ -30,7 +30,11 @@ export default function Home() {
     { name: "In the Aeroplane Over the Sea", rating: 8.5, tags: ["Movie"] },
     { name: "Apple M1 Pro 14-inch MacBook Pro", rating: 8, tags: ["Tech"] },
     { name: "Ed Sheeran +–=÷× Tour", rating: 9, tags: ["Music"] },
-    { name: "Vance Joy In Our Own Sweet Time Tour", rating: 9, tags: ["Music"] },
+    {
+      name: "Vance Joy In Our Own Sweet Time Tour",
+      rating: 9,
+      tags: ["Music"],
+    },
     { name: "DAMN.", rating: 9.5, tags: ["Music"] },
     { name: "Mr. Morale & The Big Steppers", rating: 9, tags: ["Music"] },
     { name: "The Marshall Mathers LP", rating: 9.5, tags: ["Music"] },

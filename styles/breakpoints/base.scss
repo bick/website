@@ -97,8 +97,8 @@ h3 {
         font-weight: 500;
         font-size: 1rem;
         margin-left: 1.5rem;
-        height: 3rem;
-        line-height: 3rem;
+        height: 4rem;
+        line-height: 4rem;
         border-bottom: 0;
 
         &:hover {
@@ -111,6 +111,39 @@ h3 {
           color: var(--white);
         }
       }
+
+      .header__dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .header__dropdown__list {
+        background-color: #0E0F11;
+        display: none;
+        position: absolute;
+        min-width: 12rem;
+        z-index: 1;
+        right: 0;
+      }
+
+      .header__dropdown__list a {
+        display: flex;
+        padding: 12px;
+        text-decoration: none;
+        width: 100%;
+        border: none;
+        max-width: 100%;
+      }
+
+      .header__dropdown__list a:hover {
+        color: #fff;
+        background-color: #18191A;
+        font-style: normal;
+      }
+
+      .header__dropdown:hover .header__dropdown__list {
+        display: block;
+      }
     }
   }
 }
@@ -121,6 +154,7 @@ h3 {
   h1 {
     font-weight: 500;
     font-size: 2rem;
+    margin-bottom: .25rem;
 
     .line {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4' viewBox='0 0 16 4'%3E%3Cpath d='M0,3.5c4,0,4-3,8-3s4,3,8,3' fill='none' stroke='%23ff6204' opacity='1' stroke-miterlimit='20'/%3E%3C/svg%3E");

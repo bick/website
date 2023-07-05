@@ -43,16 +43,6 @@ export default function Header() {
         <li className="header__item">
           <Link
             className={
-              currentRoute === "/ratings" ? "header__link active" : "header__link"
-            }
-            href="/ratings"
-          >
-            Ratings
-          </Link>
-        </li>
-        <li className="header__item">
-          <Link
-            className={
               currentRoute === "/contact"
                 ? "header__link active"
                 : "header__link"
@@ -61,6 +51,16 @@ export default function Header() {
           >
             Contact
           </Link>
+        </li>
+        <li className="header__item">
+          <div className={"header__dropdown"}>
+            <button className="header__link">More ↓</button>
+            <ul className="header__dropdown__list">
+              <Link href="/link1">Link 1</Link>
+              <Link href="/link2">Link 2</Link>
+              <Link href="/link3">Link 3</Link>
+            </ul>
+          </div>
         </li>
       </ul>
     </header>
