@@ -97,8 +97,8 @@ h3 {
         font-weight: 500;
         font-size: 1rem;
         margin-left: 1.5rem;
-        height: 4rem;
-        line-height: 4rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
         border-bottom: 0;
 
         &:hover {
@@ -124,6 +124,7 @@ h3 {
         min-width: 12rem;
         z-index: 1;
         right: 0;
+        text-align: right;
       }
 
       .header__dropdown__list a {
@@ -133,6 +134,7 @@ h3 {
         width: 100%;
         border: none;
         max-width: 100%;
+        font-weight: 500;
       }
 
       .header__dropdown__list a:hover {

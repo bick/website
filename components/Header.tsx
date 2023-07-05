@@ -56,9 +56,9 @@ export default function Header() {
           <div className={"header__dropdown"}>
             <button className="header__link">More ↓</button>
             <ul className="header__dropdown__list">
-              <Link href="/link1">Link 1</Link>
-              <Link href="/link2">Link 2</Link>
-              <Link href="/link3">Link 3</Link>
+              <Link href="/ratings">Ratings & Reviews</Link>
+              <Link href="https://hourlytomonthly.com" target="_blank" rel="nofollow">Hourly to Monthly</Link>
+              <Link href="https://whois.weekendlabs.net" target="_blank" rel="nofollow">WHOIS</Link>
             </ul>
           </div>
         </li>
