@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+interface OffCanvasMenuProps {
+  isOpen: boolean;
+  toggleOpen: () => void;
+}
 
-const OffCanvasMenu = ({ isOpen, toggleOpen }) => {
+const OffCanvasMenu: React.FC<OffCanvasMenuProps> = ({
+  isOpen,
+  toggleOpen,
+}) => {
   return (
     <div
       className={`header__dropdown ${
