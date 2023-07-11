@@ -35,9 +35,9 @@ export default function Home() {
               />
             </p>
             <p>
-              <br />I first started developing for the web about 14 years ago.
-              My experience has led me to work on some of the most challenging
-              and intricate business cases, where I've mastered the art of
+              <br />I first started developing for the web in 2012. My
+              experience has led me to work on some of the most challenging and
+              intricate business cases, where I've mastered the art of
               simplifying and building out complex infrastructures with
               cost-effectiveness in mind.
               <br />
