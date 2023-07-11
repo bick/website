@@ -1,6 +1,22 @@
 .header {
     background: none;
     padding: 1rem 3rem;
+
+    .header__list {
+        display: flex;
+        margin-left: auto;
+
+        .header__item {
+            .header__link {
+                display: block;
+            }
+        }
+    }
+
+    .header__dropdown {
+        display: block;
+        padding: 7rem 3rem;
+    }
 }
 
 .hero {

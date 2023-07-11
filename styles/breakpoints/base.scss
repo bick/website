@@ -46,7 +46,6 @@ h3 {
   width: 100%;
   padding: 1rem;
   z-index: 9999;
-  mix-blend-mode: exclusion;
 
   .header__logo {
     display: flex;
@@ -92,7 +91,7 @@ h3 {
 
     .header__item {
       .header__link {
-        display: block;
+        display: none;
         color: var(--link);
         font-weight: 500;
         font-size: 1rem;
@@ -100,6 +99,7 @@ h3 {
         height: 3.5rem;
         line-height: 3.5rem;
         border-bottom: 0;
+        mix-blend-mode: exclusion;
 
         &:hover {
           color: var(--white);
@@ -112,40 +112,56 @@ h3 {
         }
       }
 
-      .header__dropdown {
-        position: relative;
-        display: inline-block;
-      }
-
-      .header__dropdown__list {
-        background-color: #0E0F11;
-        display: none;
-        position: absolute;
-        min-width: 12rem;
-        z-index: 9998;
-        right: 0;
-        text-align: right;
-      }
-
-      .header__dropdown__list a {
-        display: flex;
-        padding: 12px;
-        text-decoration: none;
-        width: 100%;
-        border: none;
-        max-width: 100%;
-        font-weight: 500;
-      }
-
-      .header__dropdown__list a:hover {
-        color: #fff;
-        background-color: #18191A;
-        font-style: normal;
-      }
-
-      .header__dropdown:hover .header__dropdown__list {
+      .header__button {
         display: block;
+        color: var(--link);
+        font-weight: 500;
+        font-size: 1rem;
+        margin-left: 1.5rem;
+        height: 3.5rem;
+        line-height: 3.5rem;
+        border-bottom: 0;
+        mix-blend-mode: exclusion;
       }
+    }
+  }
+
+  &__dropdown {
+    position: fixed;
+    right: 0;
+    top: 0;
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: transform 0.3s ease-in-out;
+    overflow: scroll;
+    z-index: -1;
+    padding: 7rem 1rem;
+
+    ul {
+      li {
+        margin-bottom: 1rem;
+
+        a {
+          display: block;
+          color: var(--black);
+          font-size: 2rem;
+          font-weight: 700;
+
+          &:hover {
+            color: var(--);
+          }
+        }
+      }
+    }
+
+    &__closed {
+      transform: translateX(100%);
+    }
+
+    &__open {
+      transform: translateX(0);
     }
   }
 }
