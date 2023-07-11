@@ -1,13 +1,8 @@
-import React, { FC, useCallback, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-interface OffCanvasMenuProps {
-  isOpen: boolean;
-  onToggle: () => void;
-}
-
-const OffCanvasMenu: FC<OffCanvasMenuProps> = ({ isOpen, onToggle }) => {
+const OffCanvasMenu = ({ isOpen, toggleOpen }) => {
   return (
     <div
       className={`header__dropdown ${
@@ -50,52 +45,56 @@ const OffCanvasMenu: FC<OffCanvasMenuProps> = ({ isOpen, onToggle }) => {
   );
 };
 
-interface MenuItemProps {
-  href: string;
-  isActive: boolean;
-  children: React.ReactNode;
-}
-
-const MenuItem: FC<MenuItemProps> = ({ href, children, isActive }) => (
-  <li className="header__item">
-    <Link
-      href={href}
-      className={isActive ? "header__link active" : "header__link"}
-    >
-      {children}
-    </Link>
-  </li>
-);
-
 export default function Header() {
   const router = useRouter();
   const currentRoute = router.pathname;
 
   const [isMenuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = useCallback(() => {
-    setMenuOpen((prevIsMenuOpen) => !prevIsMenuOpen);
-  }, []);
-
-  const routes = {
-    index: "/",
-    about: "/about",
-    contact: "/contact",
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
   };
 
   return (
     <header className="header">
       <div className="header__logo">
         <Link href="/">
-          <img src="/static/earth.gif" alt="logo" width={50} height={50} />
+          <img src="/static/earth.gif" className="header__logo__img" />
         </Link>
       </div>
       <ul className="header__list">
-        {Object.entries(routes).map(([key, href]) => (
-          <MenuItem key={key} href={href} isActive={currentRoute === href}>
-            {key.charAt(0).toUpperCase() + key.slice(1)}
-          </MenuItem>
-        ))}
+        <li className="header__item">
+          <Link
+            href="/"
+            className={
+              currentRoute === "/" ? "header__link active" : "header__link"
+            }
+          >
+            Index
+          </Link>
+        </li>
+        <li className="header__item">
+          <Link
+            href="/about"
+            className={
+              currentRoute === "/about" ? "header__link active" : "header__link"
+            }
+          >
+            About
+          </Link>
+        </li>
+        <li className="header__item">
+          <Link
+            href="/contact"
+            className={
+              currentRoute === "/contact"
+                ? "header__link active"
+                : "header__link"
+            }
+          >
+            Contact
+          </Link>
+        </li>
         <li className="header__item">
           <button onClick={toggleMenu} className="header__button">
             {isMenuOpen ? (
@@ -109,7 +108,7 @@ export default function Header() {
           </button>
         </li>
       </ul>
-      <OffCanvasMenu isOpen={isMenuOpen} onToggle={toggleMenu} />
+      <OffCanvasMenu isOpen={isMenuOpen} toggleOpen={toggleMenu} />
     </header>
   );
 }
