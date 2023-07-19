@@ -8,9 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>
-          Owen Bick – A software engineer based in Boston
-        </title>
+        <title>Owen Bick – A software engineer based in Boston</title>
         <link rel="icon" href="./static/favicon.ico" />
         <meta
           name="description"
@@ -26,9 +24,7 @@ export default function Home() {
               Hi, I&apos;m <span className="line">Owen Bick</span>
               <span className="wave">👋</span>
             </h1>
-            <h2>
-              I&apos;m a software engineer based in Boston
-            </h2>
+            <h2>I&apos;m a software engineer based in Boston</h2>
           </div>
         </section>
         <section className="portfolio">
@@ -49,7 +45,7 @@ export default function Home() {
                   Weekend Labs
                 </Link>
                 <span className="portfolio__desc">
-                  , A full-service product consultancy
+                  , A full-service software consultancy
                 </span>
               </li>
               <li>
@@ -81,6 +77,11 @@ export default function Home() {
         <section className="social">
           <div className="container">
             <h3>Follow me</h3>
+            <span>GitHub: </span>
+            <Link href="https://github.com/bick" target="_blank">
+              @bick
+            </Link>
+            <br />
             <span>Twitter: </span>
             <Link href="https://twitter.com/owenbick" target="_blank">
               @owenbick
@@ -91,19 +92,14 @@ export default function Home() {
               @bick
             </Link>
             <br />
-            <span>GitHub: </span>
-            <Link href="https://github.com/bick" target="_blank">
-              @bick
+            <span>Instagram: </span>
+            <Link href="https://instagram.com/owenbick" target="_blank">
+              @owenbick
             </Link>
             <br />
             <span>ProductHunt: </span>
             <Link href="https://producthunt.com/@bick" target="_blank">
               @bick
-            </Link>
-            <br />
-            <span>Instagram: </span>
-            <Link href="https://instagram.com/owenbick" target="_blank">
-              @owenbick
             </Link>
           </div>
         </section>

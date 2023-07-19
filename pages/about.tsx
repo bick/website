@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <Header></Header>
       <Layout>
-        <section className="hero">
+        <section className="hero about">
           <div className="container">
             <h1>About Owen Bick</h1>
           </div>
@@ -35,7 +35,7 @@ export default function Home() {
               />
             </p>
             <p>
-              <br />I first started developing for the web in 2012. My
+              <br />I first started developing for the web around 2012. My
               experience has led me to work on some of the most challenging and
               intricate business cases, where I've mastered the art of
               simplifying and building out complex infrastructures with
@@ -57,14 +57,19 @@ export default function Home() {
         </section>
         <section className="social">
           <div className="container">
-            <h3 className="opacity-100 italic">
+            <h4>
               This website was built using NextJS, TypeScript, SASS, and Vercel.
-            </h3>
+            </h4>
           </div>
         </section>
         <section className="social">
           <div className="container">
             <h3>Follow me</h3>
+            <span>GitHub: </span>
+            <Link href="https://github.com/bick" target="_blank">
+              @bick
+            </Link>
+            <br />
             <span>Twitter: </span>
             <Link href="https://twitter.com/owenbick" target="_blank">
               @owenbick
@@ -75,19 +80,14 @@ export default function Home() {
               @bick
             </Link>
             <br />
-            <span>GitHub: </span>
-            <Link href="https://github.com/bick" target="_blank">
-              @bick
+            <span>Instagram: </span>
+            <Link href="https://instagram.com/owenbick" target="_blank">
+              @owenbick
             </Link>
             <br />
             <span>ProductHunt: </span>
             <Link href="https://producthunt.com/@bick" target="_blank">
               @bick
-            </Link>
-            <br />
-            <span>Instagram: </span>
-            <Link href="https://instagram.com/owenbick" target="_blank">
-              @owenbick
             </Link>
           </div>
         </section>

@@ -6,6 +6,10 @@ interface OffCanvasMenuProps {
   toggleOpen: () => void;
 }
 
+const Backdrop: React.FC<{ isOpen: boolean }> = ({ isOpen }) => {
+  return <div className={`backdrop ${isOpen ? "backdrop__open" : ""}`}></div>;
+};
+
 const OffCanvasMenu: React.FC<OffCanvasMenuProps> = ({
   isOpen,
   toggleOpen,
@@ -20,6 +24,22 @@ const OffCanvasMenu: React.FC<OffCanvasMenuProps> = ({
         <li className="md:hidden">
           <Link href="/">Index</Link>
         </li>
+        <li className="md:hidden">
+          <Link href="/about">About</Link>
+        </li>
+        <li className="md:hidden">
+          <Link href="/contact">Contact</Link>
+        </li>
+        <li className="block mt-12 opacity-75">More Projects</li>
+        <li>
+          <Link
+            href="https://weekendlabs.net"
+            target="_blank"
+            rel="nofollow"
+          >
+            Weekend Labs
+          </Link>
+        </li>
         <li>
           <Link href="/ratings">Ratings & Reviews</Link>
         </li>
@@ -32,22 +52,8 @@ const OffCanvasMenu: React.FC<OffCanvasMenuProps> = ({
             Hourly to Monthly
           </Link>
         </li>
-        <li>
-          <Link
-            href="https://whois.weekendlabs.net"
-            target="_blank"
-            rel="nofollow"
-          >
-            WHOIS
-          </Link>
-        </li>
-        <li className="md:hidden">
-          <Link href="/about">About</Link>
-        </li>
-        <li className="md:hidden">
-          <Link href="/contact">Contact</Link>
-        </li>
       </ul>
+      <img src="/static/floppydisk.gif" className="header__floppy" />
     </div>
   );
 };
@@ -115,6 +121,7 @@ export default function Header() {
           </button>
         </li>
       </ul>
+      <Backdrop isOpen={isMenuOpen} />
       <OffCanvasMenu isOpen={isMenuOpen} toggleOpen={toggleMenu} />
     </header>
   );

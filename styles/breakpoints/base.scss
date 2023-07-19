@@ -15,9 +15,8 @@ a {
   &:hover {
     border-bottom: 1px dashed var(--link);
     text-decoration: none !important;
-    opacity: .75;
+    color: #788491;
     text-decoration: underline;
-    font-style: italic;
   }
 
   &:link[href^="https://"]:after {
@@ -32,9 +31,8 @@ a {
 }
 
 h3 {
-  font-size: 1.25rem !important;
-  font-weight: 700 !important;
-  opacity: .5;
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
   margin-bottom: 1rem !important;
 }
 
@@ -104,7 +102,6 @@ h3 {
         &:hover {
           color: var(--white);
           text-decoration: none;
-          font-style: normal;
         }
 
         &.active {
@@ -122,6 +119,12 @@ h3 {
         line-height: 3.5rem;
         border-bottom: 0;
         mix-blend-mode: exclusion;
+
+        &:hover,
+        &__open {
+          color: var(--white);
+          text-decoration: none;
+        }
       }
     }
   }
@@ -130,23 +133,28 @@ h3 {
     position: fixed;
     right: 0;
     top: 0;
-    max-width: 500px;
     width: 100%;
     height: 100%;
-    background: white;
-    transition: transform 0.3s ease-in-out;
     overflow: scroll;
     z-index: -1;
-    padding: 7rem 1rem;
-    transform: translateX(0);
+    backdrop-filter: saturate(180%) blur(5px);
+    background: #000;
+    max-width: 500px;
+    transition: transform 0.3s ease-in-out;
+    backface-visibility: hidden;
+    padding: 8rem 1rem;
+
 
     ul {
+      margin-left: auto;
+      margin-bottom: 5rem;
+
       li {
         margin-bottom: 1rem;
 
         a {
           display: block;
-          color: var(--black);
+          color: var(--white);
           font-size: 2rem;
           font-weight: 700;
 
@@ -158,17 +166,51 @@ h3 {
     }
 
     &__closed {
-      transform: translateX(100%);
+      transform: translateX(100%) !important;
     }
 
     &__open {
-      transform: translateX(0);
+      transform: translateX(0) !important;
     }
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .backdrop__open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__floppy {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
   }
 }
 
+
 .hero {
   padding-top: 3rem;
+
+  &.about {
+    margin-top: 0 !important;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+    }
+  }
 
   h1 {
     font-weight: 500;
@@ -233,7 +275,7 @@ h3 {
   }
 
   &__desc {
-    opacity: 0.5;
+    color: #788491;
     margin-right: 1rem;
   }
 }
@@ -357,7 +399,7 @@ h3 {
   }
 
   span {
-    opacity: .5;
+    color: #788491;
   }
 }
 

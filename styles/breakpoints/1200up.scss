@@ -17,10 +17,22 @@
         display: block;
         padding: 7rem 3rem;
     }
+
+    &__floppy {
+        display: block;
+        margin-left: auto;
+        position: relative;
+        top: 0;
+        right: 0;
+    }
 }
 
 .hero {
     padding-top: 0;
+
+    &.about h1 {
+        font-size: 4rem;
+    }
 }
 
 .back-home {

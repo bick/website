@@ -9,13 +9,14 @@
   },
   "dependencies": {
     "@react-three/drei": "^9.56.4",
-    "@react-three/fiber": "^8.10.1",
+    "@react-three/fiber": "^8.13.5",
     "@vercel/analytics": "^0.1.8",
     "next": "^13.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-globe": "^2.0.1",
-    "sass": "^1.45.1"
+    "sass": "^1.45.1",
+    "three": "^0.154.0"
   },
   "devDependencies": {
     "@types/node": "18.13.0",
