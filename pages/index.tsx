@@ -35,8 +35,8 @@ export default function Home() {
                 <Link href="https://spoteasy.com" target="_blank">
                   SpotEasy
                 </Link>
-                <span className="portfolio__desc">
-                  , Boston's rental marketplace
+                <span className="portfolio__desc hidden lg:block">
+                  , Boston's homegrown rental marketplace
                 </span>
                 👈 Current project
               </li>
