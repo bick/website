@@ -36,7 +36,7 @@ export default function Home() {
                   SpotEasy
                 </Link>
                 <span className="portfolio__desc">
-                  , Boston's #1 apartment marketplace
+                  , Boston's rental marketplace
                 </span>
                 👈 Current project
               </li>
