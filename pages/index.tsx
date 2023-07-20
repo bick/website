@@ -44,7 +44,7 @@ export default function Home() {
                 <Link href="https://weekendlabs.net" target="_blank">
                   Weekend Labs
                 </Link>
-                <span className="portfolio__desc">
+                <span className="portfolio__desc hidden lg:block">
                   , A full-service software consultancy
                 </span>
               </li>
@@ -52,7 +52,7 @@ export default function Home() {
                 <Link href="https://hourlytomonthly.com" target="_blank">
                   Hourly to Monthly
                 </Link>
-                <span className="portfolio__desc">
+                <span className="portfolio__desc hidden lg:block">
                   , Convert the hourly costs of services to its monthly cost
                 </span>
               </li>
