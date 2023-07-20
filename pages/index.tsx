@@ -32,7 +32,7 @@ export default function Home() {
             <h3>Featured Projects</h3>
             <ul className="portfolio__list">
               <li>
-                <Link href="https://spoteasy.com" target="_blank">
+                  <Link href="https://spoteasy.com" target="_blank" className="mr-2">
                   SpotEasy
                 </Link>
                 <span className="portfolio__desc hidden lg:block">
