@@ -32,7 +32,11 @@ export default function Home() {
             <h3>Featured Projects</h3>
             <ul className="portfolio__list">
               <li>
-                  <Link href="https://spoteasy.com" target="_blank" className="mr-2 md:mr-0">
+                <Link
+                  href="https://spoteasy.com"
+                  target="_blank"
+                  className="mr-2 md:mr-0"
+                >
                   SpotEasy
                 </Link>
                 <span className="portfolio__desc hidden lg:inline-block">
@@ -44,7 +48,7 @@ export default function Home() {
                 <Link href="https://weekendlabs.net" target="_blank">
                   Weekend Labs
                 </Link>
-                <span className="portfolio__desc hidden lg:block">
+                <span className="portfolio__desc hidden lg:inline-block">
                   , A full-service software consultancy
                 </span>
               </li>
@@ -52,7 +56,7 @@ export default function Home() {
                 <Link href="https://hourlytomonthly.com" target="_blank">
                   Hourly to Monthly
                 </Link>
-                <span className="portfolio__desc hidden lg:block">
+                <span className="portfolio__desc hidden lg:inline-block">
                   , Convert the hourly costs of services to its monthly cost
                 </span>
               </li>
