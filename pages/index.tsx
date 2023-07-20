@@ -32,10 +32,10 @@ export default function Home() {
             <h3>Featured Projects</h3>
             <ul className="portfolio__list">
               <li>
-                  <Link href="https://spoteasy.com" target="_blank" className="mr-2">
+                  <Link href="https://spoteasy.com" target="_blank" className="mr-2 md:mr-0">
                   SpotEasy
                 </Link>
-                <span className="portfolio__desc hidden lg:block">
+                <span className="portfolio__desc hidden lg:inline-block">
                   , Boston's homegrown rental marketplace
                 </span>
                 👈 Current project
