@@ -42,7 +42,7 @@ const OffCanvasMenu: React.FC<OffCanvasMenuProps> = ({
           <Link href="/writing">Writing</Link>
         </li>
         <li>
-          <Link href="/ratings">Reviews</Link>
+          <Link href="/reviews">Reviews</Link>
         </li>
         <li className="block mt-12 opacity-75">More Projects</li>
         <li>

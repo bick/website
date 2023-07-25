@@ -15,9 +15,14 @@ export default function Home() {
     { name: "Django: Unchained", rating: 9, tags: ["Movie"] },
     { name: "The Wolf of Wall Street", rating: 10, tags: ["Movie"] },
     { name: "Goodfellas", rating: 10, tags: ["Movie"] },
-    { name: "To Pimp A Butterfly", rating: 10, tags: ["Music"] },
-    { name: "The Dark Side of the Moon", rating: 10, tags: ["Music"] },
-    { name: "Madvillany", rating: 9.5, tags: ["Music"] },
+    {
+      name: "To Pimp A Butterfly",
+      credit: ["Kendrick Lamar"],
+      rating: 10,
+      tags: ["Music"],
+    },
+    { name: "The Dark Side of the Moon", credit: ["Pink Floyd"], rating: 10, tags: ["Music"] },
+    { name: "Madvillany", credit: ["MF DOOM"], rating: 9.5, tags: ["Music"] },
     { name: "The Shawshank Redemption", rating: 10, tags: ["Movie"] },
     { name: "The Godfather", rating: 10, tags: ["Movie"] },
     { name: "The Godfather Part II", rating: 10, tags: ["Movie"] },
@@ -26,19 +31,30 @@ export default function Home() {
     { name: "The Batman", rating: 8, tags: ["Movie"] },
     { name: "It", rating: 9.5, tags: ["Movie"] },
     { name: "It Chapter Two", rating: 7, tags: ["Movie"] },
-    { name: "My Beautiful Dark Twisted Fantasy", rating: 9.5, tags: ["Music"] },
-    { name: "In the Aeroplane Over the Sea", rating: 8.5, tags: ["Movie"] },
+    { name: "My Beautiful Dark Twisted Fantasy", credit: ["Kanye West"], rating: 9.5, tags: ["Music"] },
+    { name: "In the Aeroplane Over the Sea", credit: ["Neutral Milk Hotel"], rating: 8.5, tags: ["Movie"] },
     { name: "Apple M1 Pro 14-inch MacBook Pro", rating: 8, tags: ["Tech"] },
-    { name: "Ed Sheeran +–=÷× Tour", rating: 9, tags: ["Music"] },
+    { name: "+–=÷× Tour", credit: ["Ed Sheeran"], rating: 9, tags: ["Music"] },
     {
-      name: "Vance Joy In Our Own Sweet Time Tour",
+      name: "In Our Own Sweet Time Tour",
       rating: 9,
       tags: ["Music"],
+      credit: ["Vance Joy"],
     },
-    { name: "DAMN.", rating: 9.5, tags: ["Music"] },
-    { name: "Mr. Morale & The Big Steppers", rating: 9, tags: ["Music"] },
-    { name: "The Marshall Mathers LP", rating: 9.5, tags: ["Music"] },
-    { name: "Beerbongs & Bentleys", rating: 8.5, tags: ["Music"] },
+    { name: "DAMN.", credit: ["Kendrick Lamar"], rating: 9.5, tags: ["Music"] },
+    { name: "Mr. Morale & The Big Steppers", credit: ["Kendrick Lamar"], rating: 9, tags: ["Music"] },
+    { name: "The Marshall Mathers LP", credit: ["Eminem"], rating: 9.5, tags: ["Music"] },
+    { name: "Beerbongs & Bentleys", credit: ["Post Malone"], rating: 8.5, tags: ["Music"] },
+    { name: "Stoney", credit: ["Post Malone"], rating: 8, tags: ["Music"] },
+    { name: "Wrestlemania 24", rating: 9, tags: ["TV"] },
+    { name: "Wrestlemania 26", rating: 9, tags: ["TV"] },
+    { name: "Wrestlemania 27", rating: 3, tags: ["TV"] },
+    { name: "Wrestlemania 28", rating: 5, tags: ["TV"] },
+    { name: "Wrestlemania 29", rating: 8, tags: ["TV"] },
+    { name: "Wrestlemania 38 Night 1", rating: 10, tags: ["TV"] },
+    { name: "Wrestlemania 38 Night 2", rating: 9, tags: ["TV"] },
+    { name: "Wrestlemania 39 Night 1", rating: 10, tags: ["TV"] },
+    { name: "Wrestlemania 39 Night 2", rating: 9.5, tags: ["TV"] },
   ]);
 
   const [selectedTag, setSelectedTag] = useState("All");
@@ -87,6 +103,8 @@ export default function Home() {
                     ? "Movies"
                     : tag === "Video Game"
                     ? "Video Games"
+                    : tag === "TV"
+                    ? "TV"
                     : tag}
                 </option>
               ))}
@@ -104,7 +122,14 @@ export default function Home() {
                 .map((ratingData) => {
                   return (
                     <tr key={ratingData.name}>
-                      <td>{ratingData.name}</td>
+                      <td>
+                        {ratingData.name}
+                        {ratingData.credit !== undefined && (
+                          <span className="reviews__credit">
+                            by {ratingData.credit}
+                          </span>
+                        )}
+                      </td>
                       <td>
                         {ratingData.rating === 10 && (
                           <Image

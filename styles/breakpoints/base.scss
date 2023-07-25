@@ -333,6 +333,12 @@ h3 {
     font-weight: 600;
   }
 
+  &__credit {
+    color: var(--link);
+    font-style: italic;
+    margin-left: 1rem;
+  }
+
   table {
     display: grid;
     margin-top: 1rem;
@@ -353,8 +359,8 @@ h3 {
 
     tr {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: 3fr 1fr;
+      grid-template-rows: 1fr;
     }
 
     td {
