@@ -8,21 +8,13 @@ import { useState } from "react";
 
 export default function Home() {
   const [ratings] = useState([
+    // Movies
     { name: "Star Wars: Episode VI", rating: 8.5, tags: ["Movie"] },
     { name: "Star Wars: Episode V", rating: 8.5, tags: ["Movie"] },
     { name: "Star Wars: Episode IV", rating: 8, tags: ["Movie"] },
-    { name: "Red Dead Redemption 2", rating: 9.5, tags: ["Video Game"] },
     { name: "Django: Unchained", rating: 9, tags: ["Movie"] },
     { name: "The Wolf of Wall Street", rating: 10, tags: ["Movie"] },
     { name: "Goodfellas", rating: 10, tags: ["Movie"] },
-    {
-      name: "To Pimp A Butterfly",
-      credit: ["Kendrick Lamar"],
-      rating: 10,
-      tags: ["Music"],
-    },
-    { name: "The Dark Side of the Moon", credit: ["Pink Floyd"], rating: 10, tags: ["Music"] },
-    { name: "Madvillany", credit: ["MF DOOM"], rating: 9.5, tags: ["Music"] },
     { name: "The Shawshank Redemption", rating: 10, tags: ["Movie"] },
     { name: "The Godfather", rating: 10, tags: ["Movie"] },
     { name: "The Godfather Part II", rating: 10, tags: ["Movie"] },
@@ -31,9 +23,34 @@ export default function Home() {
     { name: "The Batman", rating: 8, tags: ["Movie"] },
     { name: "It", rating: 9.5, tags: ["Movie"] },
     { name: "It Chapter Two", rating: 7, tags: ["Movie"] },
-    { name: "My Beautiful Dark Twisted Fantasy", credit: ["Kanye West"], rating: 9.5, tags: ["Music"] },
-    { name: "In the Aeroplane Over the Sea", credit: ["Neutral Milk Hotel"], rating: 8.5, tags: ["Movie"] },
-    { name: "Apple M1 Pro 14-inch MacBook Pro", rating: 8, tags: ["Tech"] },
+    // Video Games
+    { name: "Red Dead Redemption 2", rating: 9.5, tags: ["Video Game"] },
+    // Music
+    {
+      name: "To Pimp A Butterfly",
+      credit: ["Kendrick Lamar"],
+      rating: 10,
+      tags: ["Music"],
+    },
+    {
+      name: "The Dark Side of the Moon",
+      credit: ["Pink Floyd"],
+      rating: 10,
+      tags: ["Music"],
+    },
+    { name: "Madvillany", credit: ["MF DOOM"], rating: 9.5, tags: ["Music"] },
+    {
+      name: "My Beautiful Dark Twisted Fantasy",
+      credit: ["Kanye West"],
+      rating: 9.5,
+      tags: ["Music"],
+    },
+    {
+      name: "In the Aeroplane Over the Sea",
+      credit: ["Neutral Milk Hotel"],
+      rating: 8.5,
+      tags: ["Music"],
+    },
     { name: "+–=÷× Tour", credit: ["Ed Sheeran"], rating: 9, tags: ["Music"] },
     {
       name: "In Our Own Sweet Time Tour",
@@ -42,10 +59,28 @@ export default function Home() {
       credit: ["Vance Joy"],
     },
     { name: "DAMN.", credit: ["Kendrick Lamar"], rating: 9.5, tags: ["Music"] },
-    { name: "Mr. Morale & The Big Steppers", credit: ["Kendrick Lamar"], rating: 9, tags: ["Music"] },
-    { name: "The Marshall Mathers LP", credit: ["Eminem"], rating: 9.5, tags: ["Music"] },
-    { name: "Beerbongs & Bentleys", credit: ["Post Malone"], rating: 8.5, tags: ["Music"] },
+    {
+      name: "Mr. Morale & The Big Steppers",
+      credit: ["Kendrick Lamar"],
+      rating: 9,
+      tags: ["Music"],
+    },
+    {
+      name: "The Marshall Mathers LP",
+      credit: ["Eminem"],
+      rating: 9.5,
+      tags: ["Music"],
+    },
+    {
+      name: "Beerbongs & Bentleys",
+      credit: ["Post Malone"],
+      rating: 8.5,
+      tags: ["Music"],
+    },
     { name: "Stoney", credit: ["Post Malone"], rating: 8, tags: ["Music"] },
+    // Tech
+    { name: "Apple M1 Pro 14-inch MacBook Pro", rating: 8, tags: ["Tech"] },
+    // TV Shows
     { name: "Wrestlemania 24", rating: 9, tags: ["TV"] },
     { name: "Wrestlemania 26", rating: 9, tags: ["TV"] },
     { name: "Wrestlemania 27", rating: 3, tags: ["TV"] },
