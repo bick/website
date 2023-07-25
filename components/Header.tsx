@@ -6,8 +6,16 @@ interface OffCanvasMenuProps {
   toggleOpen: () => void;
 }
 
-const Backdrop: React.FC<{ isOpen: boolean }> = ({ isOpen }) => {
-  return <div className={`backdrop ${isOpen ? "backdrop__open" : ""}`}></div>;
+const Backdrop: React.FC<{ isOpen: boolean; toggleOpen: () => void }> = ({
+  isOpen,
+  toggleOpen,
+}) => {
+  return (
+    <div
+      className={`backdrop ${isOpen ? "backdrop__open" : ""}`}
+      onClick={toggleOpen}
+    ></div>
+  );
 };
 
 const OffCanvasMenu: React.FC<OffCanvasMenuProps> = ({
@@ -30,14 +38,17 @@ const OffCanvasMenu: React.FC<OffCanvasMenuProps> = ({
         <li className="md:hidden">
           <Link href="/contact">Contact</Link>
         </li>
+        <li>
+          <Link href="/writing">Writing</Link>
+        </li>
+        <li>
+          <Link href="/ratings">Reviews</Link>
+        </li>
         <li className="block mt-12 opacity-75">More Projects</li>
         <li>
           <Link href="https://weekendlabs.net" target="_blank" rel="nofollow">
             Weekend Labs
           </Link>
-        </li>
-        <li>
-          <Link href="/ratings">Ratings & Reviews</Link>
         </li>
         <li>
           <Link
@@ -49,7 +60,46 @@ const OffCanvasMenu: React.FC<OffCanvasMenuProps> = ({
           </Link>
         </li>
       </ul>
-      <img src="/static/floppydisk.gif" className="header__floppy" />
+      <li className="block opacity-75 mb-4">Follow me</li>
+      <ul className="header__dropdown__social">
+        <li>
+          <Link href="https://github.com/bick" target="_blank" rel="nofollow">
+            GitHub
+          </Link>
+        </li>
+        <li>
+          <Link href="https://twitter.com/bick" target="_blank" rel="nofollow">
+            Twitter
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="https://linkedin.com/in/bick"
+            target="_blank"
+            rel="nofollow"
+          >
+            LinkedIn
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="https://instagram.com/owenbick"
+            target="_blank"
+            rel="nofollow"
+          >
+            Instagram
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="https://producthunt.com/@bick"
+            target="_blank"
+            rel="nofollow"
+          >
+            ProductHunt
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };
@@ -105,7 +155,10 @@ export default function Header() {
           </Link>
         </li>
         <li className="header__item">
-          <button onClick={toggleMenu} className="header__button">
+          <button
+            onClick={toggleMenu}
+            className={`header__button ${isMenuOpen ? "active" : ""}`}
+          >
             {isMenuOpen ? (
               "← Close"
             ) : (
@@ -117,7 +170,7 @@ export default function Header() {
           </button>
         </li>
       </ul>
-      <Backdrop isOpen={isMenuOpen} />
+      <Backdrop isOpen={isMenuOpen} toggleOpen={toggleMenu} />
       <OffCanvasMenu isOpen={isMenuOpen} toggleOpen={toggleMenu} />
     </header>
   );

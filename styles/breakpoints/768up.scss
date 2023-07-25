@@ -13,9 +13,14 @@
         }
     }
 
-    .header__dropdown {
+    &__dropdown {
         display: block;
         padding: 7rem 5rem;
+        max-width: 600px;
+
+        &__open {
+            overflow-x: hidden;
+        }
     }
 
     &__floppy {

@@ -17,6 +17,7 @@ a {
     text-decoration: none !important;
     color: #788491;
     text-decoration: underline;
+    opacity: .75;
   }
 
   &:link[href^="https://"]:after {
@@ -121,7 +122,7 @@ h3 {
         mix-blend-mode: exclusion;
 
         &:hover,
-        &__open {
+        &.active {
           color: var(--white);
           text-decoration: none;
         }
@@ -138,15 +139,14 @@ h3 {
     z-index: -1;
     backdrop-filter: saturate(180%) blur(5px);
     background: #111;
-    max-width: 600px;
     transition: transform 0.3s ease-in-out;
     backface-visibility: hidden;
     padding: 8rem 1rem;
-
+    overflow-x: auto;
 
     ul {
       margin-left: auto;
-      margin-bottom: 5rem;
+      margin-bottom: 3rem;
 
       li {
         margin-bottom: 1rem;
@@ -159,6 +159,19 @@ h3 {
 
           &:hover {
             color: var(--);
+          }
+        }
+      }
+
+      &.header__dropdown__social {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin-bottom: 0;
+
+        li {
+          a {
+            font-size: 1.125rem;
           }
         }
       }
@@ -184,17 +197,15 @@ h3 {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .backdrop__open {
     opacity: 1;
     visibility: visible;
-  }
-
-  &__floppy {
-    position: absolute;
-    top: 4rem;
-    right: 4rem;
   }
 }
 
