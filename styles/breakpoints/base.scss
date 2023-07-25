@@ -323,7 +323,7 @@ h3 {
 
 .reviews {
   p {
-    margin-top: 1rem;
+    margin: 1rem 0;
     font-size: 1.125rem;
   }
 
@@ -334,6 +334,7 @@ h3 {
   }
 
   table {
+    display: grid;
     margin-top: 1rem;
     width: 100%;
 
@@ -350,10 +351,18 @@ h3 {
       }
     }
 
+    tr {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+    }
+
     td {
       font-size: 1.125rem;
       padding: 1rem 0;
       border-bottom: 1px solid rgba(242, 241, 239, 0.2);
+      overflow: hidden;
+      white-space: nowrap;
 
       &:nth-child(2) {
         text-align: right;
@@ -369,6 +378,29 @@ h3 {
         img {
           margin-right: 1rem;
         }
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      th,
+      td {
+        padding: .5rem;
+        font-size: 1rem;
+      }
+
+      td:nth-child(2) {
+        img {
+          margin-right: .5rem;
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      th,
+      td {
+        font-size: .875rem;
       }
     }
   }
@@ -387,8 +419,13 @@ h3 {
       cursor: pointer;
       transition: 0.2s;
     }
+
+    @media (max-width: 768px) {
+      padding: .5rem 1rem;
+    }
   }
 }
+
 
 .footer {
   margin: 15rem 0 5rem;

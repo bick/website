@@ -15,7 +15,7 @@
 
     &__dropdown {
         display: block;
-        padding: 7rem 5rem;
+        padding: 7rem 5rem 0;
         max-width: 600px;
 
         &__open {
@@ -53,11 +53,5 @@
             display: flex;
             margin-left: 1rem;
         }
-    }
-}
-
-.reviews {
-    &__select {
-        margin-left: auto;
     }
 }
