@@ -22,7 +22,7 @@ export default function Home() {
     { name: "Reservoir Dogs", rating: 9, tags: ["Movie"] },
     { name: "The Batman", rating: 8, tags: ["Movie"] },
     { name: "It", rating: 9.5, tags: ["Movie"] },
-    { name: "It Chapter Two", rating: 7, tags: ["Movie"] },
+    { name: "It Chapter Two", rating: 5, tags: ["Movie"] },
     // Video Games
     { name: "Red Dead Redemption 2", rating: 9.5, tags: ["Video Game"] },
     // Music
@@ -68,18 +68,19 @@ export default function Home() {
     {
       name: "The Marshall Mathers LP",
       credit: ["Eminem"],
-      rating: 9.5,
+      rating: 10,
       tags: ["Music"],
     },
     {
       name: "Beerbongs & Bentleys",
       credit: ["Post Malone"],
-      rating: 8.5,
+      rating: 9,
       tags: ["Music"],
     },
     { name: "Stoney", credit: ["Post Malone"], rating: 8, tags: ["Music"] },
     // Tech
     { name: "Apple M1 Pro 14-inch MacBook Pro", rating: 8, tags: ["Tech"] },
+    { name: "Apple iPhone 12", rating: 9, tags: ["Tech"] },
     // TV Shows
     { name: "Wrestlemania 24", rating: 9, tags: ["TV"] },
     { name: "Wrestlemania 26", rating: 9, tags: ["TV"] },
@@ -146,7 +147,7 @@ export default function Home() {
             </select>
             <table>
               <tr>
-                <th>Content Name</th>
+                <th>Name</th>
                 <th>Rating</th>
               </tr>
               {ratings
