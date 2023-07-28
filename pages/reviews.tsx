@@ -23,6 +23,7 @@ export default function Home() {
     { name: "The Batman", rating: 8, tags: ["Movie"] },
     { name: "It", rating: 9.5, tags: ["Movie"] },
     { name: "It Chapter Two", rating: 5, tags: ["Movie"] },
+    { name: "Oppenheimer", rating: 10, tags: ["Movie"] },
     // Video Games
     { name: "Red Dead Redemption 2", rating: 9.5, tags: ["Video Game"] },
     // Music
