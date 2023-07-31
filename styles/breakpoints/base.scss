@@ -107,7 +107,8 @@ h3 {
           text-decoration: none;
         }
 
-        &.active {
+        &.active,
+        &.active:hover {
           color: var(--white);
         }
       }
