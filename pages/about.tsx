@@ -18,7 +18,7 @@ export default function Home() {
       <Layout>
         <section className="hero about">
           <div className="container">
-            <h1>About Owen Bick</h1>
+            <h1>About <span className="owen">Owen Bick</span></h1>
           </div>
         </section>
         <section className="about">
