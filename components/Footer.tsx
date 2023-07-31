@@ -21,6 +21,11 @@ export default function Footer() {
             </Link>
           </li>
           <li className="footer__list__item">
+            <Link href="/writing" className="footer__list__link">
+              Writing
+            </Link>
+          </li>
+          <li className="footer__list__item">
             <Link href="/contact" className="footer__list__link">
               Contact
             </Link>
