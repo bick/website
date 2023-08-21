@@ -24,8 +24,16 @@ export default function Home() {
     { name: "It", rating: 9.5, tags: ["Movie"] },
     { name: "It Chapter Two", rating: 5, tags: ["Movie"] },
     { name: "Oppenheimer", rating: 10, tags: ["Movie"] },
+    { name: "Star Wars: Episode 1", rating: 9, tags: ["Movie"] },
+    { name: "Star Wars: Episode 2", rating: 9, tags: ["Movie"] },
+    { name: "Star Wars: Episode 3", rating: 8, tags: ["Movie"] },
+    { name: "Star Wars: Episode 4", rating: 6, tags: ["Movie"] },
+    { name: "Star Wars: Episode 5", rating: 7, tags: ["Movie"] },
+    { name: "Star Wars: Episode 6", rating: 9, tags: ["Movie"] },
     // Video Games
-    { name: "Red Dead Redemption 2", rating: 9.5, tags: ["Video Game"] },
+    { name: "Red Dead Redemption 2", rating: 9, tags: ["Video Game"] },
+    { name: "Elden Ring", rating: 10, tags: ["Video Game"] },
+    { name: "Rocket League", rating: 10, tags: ["Video Game"] },
     // Music
     {
       name: "To Pimp A Butterfly",
