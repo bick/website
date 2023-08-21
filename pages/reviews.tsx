@@ -9,9 +9,13 @@ import { useState } from "react";
 export default function Home() {
   const [ratings] = useState([
     // Movies
-    { name: "Star Wars: Episode VI", rating: 8.5, tags: ["Movie"] },
+    { name: "Star Wars: Episode I", rating: 6, tags: ["Movie"] },
+    { name: "Star Wars: Episode II", rating: 7, tags: ["Movie"] },
+    { name: "Star Wars: Episode III", rating: 9, tags: ["Movie"] },
+    { name: "Star Wars: Episode IV", rating: 8.5, tags: ["Movie"] },
     { name: "Star Wars: Episode V", rating: 8.5, tags: ["Movie"] },
-    { name: "Star Wars: Episode IV", rating: 8, tags: ["Movie"] },
+    { name: "Star Wars: Episode VI", rating: 8, tags: ["Movie"] },
+    { name: "Oppenheimer", rating: 10, tags: ["Movie"] },
     { name: "Django: Unchained", rating: 9, tags: ["Movie"] },
     { name: "The Wolf of Wall Street", rating: 10, tags: ["Movie"] },
     { name: "Goodfellas", rating: 10, tags: ["Movie"] },
@@ -23,13 +27,6 @@ export default function Home() {
     { name: "The Batman", rating: 8, tags: ["Movie"] },
     { name: "It", rating: 9.5, tags: ["Movie"] },
     { name: "It Chapter Two", rating: 5, tags: ["Movie"] },
-    { name: "Oppenheimer", rating: 10, tags: ["Movie"] },
-    { name: "Star Wars: Episode 1", rating: 9, tags: ["Movie"] },
-    { name: "Star Wars: Episode 2", rating: 9, tags: ["Movie"] },
-    { name: "Star Wars: Episode 3", rating: 8, tags: ["Movie"] },
-    { name: "Star Wars: Episode 4", rating: 6, tags: ["Movie"] },
-    { name: "Star Wars: Episode 5", rating: 7, tags: ["Movie"] },
-    { name: "Star Wars: Episode 6", rating: 9, tags: ["Movie"] },
     // Video Games
     { name: "Red Dead Redemption 2", rating: 9, tags: ["Video Game"] },
     { name: "Elden Ring", rating: 10, tags: ["Video Game"] },
