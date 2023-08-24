@@ -51,12 +51,6 @@ export default function Home() {
         </section>
         <section className="social">
           <div className="container">
-            <h3>My tech stack</h3>
-            <span>MacBook Pro (14-inch, M1 Pro)</span>
-          </div>
-        </section>
-        <section className="social">
-          <div className="container">
             <h4>
               This website was built using NextJS, TypeScript, SASS, and Vercel.
             </h4>
