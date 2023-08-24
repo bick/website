@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Germanica";
+  src: url('/public/fonts/Germanica.ttf');
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -502,4 +507,8 @@ h3 {
   to {
     background-position: 16px 100%;
   }
+}
+.owen {
+  font-family: Germanica;
+  font-weight: 500;
 }
