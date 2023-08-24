@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Germanica";
-  src: url('/public/fonts/Germanica.ttf');
+  src: url('~/public/fonts/Germanica.ttf');
 }
 
 body {
@@ -509,6 +509,6 @@ h3 {
   }
 }
 .owen {
-  font-family: Germanica;
+  font-family: 'Germanica';
   font-weight: 500;
 }
