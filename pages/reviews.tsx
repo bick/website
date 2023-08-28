@@ -92,11 +92,12 @@ export default function Home() {
     { name: "Wrestlemania 26", rating: 9, tags: ["TV"] },
     { name: "Wrestlemania 27", rating: 3, tags: ["TV"] },
     { name: "Wrestlemania 28", rating: 5, tags: ["TV"] },
-    { name: "Wrestlemania 29", rating: 8, tags: ["TV"] },
+    { name: "Wrestlemania 29", rating: 6, tags: ["TV"] },
     { name: "Wrestlemania 38 Night 1", rating: 10, tags: ["TV"] },
     { name: "Wrestlemania 38 Night 2", rating: 9, tags: ["TV"] },
     { name: "Wrestlemania 39 Night 1", rating: 10, tags: ["TV"] },
     { name: "Wrestlemania 39 Night 2", rating: 9.5, tags: ["TV"] },
+    { name: "AEW All In 2023", rating: 8, tags: ["TV"] },
   ]);
 
   const [selectedTag, setSelectedTag] = useState("All");
