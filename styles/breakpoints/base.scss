@@ -447,8 +447,10 @@ h3 {
   font-size: 1rem;
 
   .footer__list {
-    display: flex;
+    display: grid;
     margin: 2rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 
     .footer__list__item {
       margin: 0 2rem 0 0;
