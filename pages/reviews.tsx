@@ -93,6 +93,7 @@ export default function Home() {
     { name: "Wrestlemania 27", rating: 3, tags: ["TV"] },
     { name: "Wrestlemania 28", rating: 5, tags: ["TV"] },
     { name: "Wrestlemania 29", rating: 6, tags: ["TV"] },
+    { name: "Wrestlemania 30", rating: 10, tags: ["TV"] },
     { name: "Wrestlemania 38 Night 1", rating: 10, tags: ["TV"] },
     { name: "Wrestlemania 38 Night 2", rating: 9, tags: ["TV"] },
     { name: "Wrestlemania 39 Night 1", rating: 10, tags: ["TV"] },
