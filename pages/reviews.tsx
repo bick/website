@@ -15,6 +15,8 @@ export default function Home() {
     { name: "Star Wars: Episode IV", rating: 8.5, tags: ["Movie"] },
     { name: "Star Wars: Episode V", rating: 8.5, tags: ["Movie"] },
     { name: "Star Wars: Episode VI", rating: 8, tags: ["Movie"] },
+    { name: "Star Wars: Episode VII", rating: 6.5, tags: ["Movie"] },
+    { name: "Star Wars: Episode VIII", rating: 4, tags: ["Movie"] },
     { name: "Oppenheimer", rating: 10, tags: ["Movie"] },
     { name: "Django: Unchained", rating: 9, tags: ["Movie"] },
     { name: "The Wolf of Wall Street", rating: 10, tags: ["Movie"] },
