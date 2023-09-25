@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const filePath = path.join(process.cwd(), "downloads", "ygl.xml"); // Adjust if you use a different path
+  const filePath = path.join(process.cwd(), "static", "downloads", "ygl.xml");
   const xmlContent = fs.readFileSync(filePath, "utf-8");
 
   res.setHeader("Content-Type", "application/xml");
