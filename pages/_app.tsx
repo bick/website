@@ -1,6 +1,6 @@
-import React from 'react';
-import { Analytics } from '@vercel/analytics/react';
-import '../styles/style.scss';
+import React from "react";
+import { Analytics } from "@vercel/analytics/react";
+import "../styles/style.scss";
 
 interface BickProps {
   Component: React.ComponentType;
