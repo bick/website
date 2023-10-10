@@ -83,18 +83,18 @@ export default function Home() {
     { name: "Apple M1 Pro 14-inch MacBook Pro", rating: 8, tags: ["Tech"] },
     { name: "Apple iPhone 12", rating: 9, tags: ["Tech"] },
     { name: "Apple iPhone 15", rating: 9.5, tags: ["Tech"] },
-    // TV Shows
-    { name: "Wrestlemania 24", rating: 9, tags: ["TV"] },
-    { name: "Wrestlemania 26", rating: 9, tags: ["TV"] },
-    { name: "Wrestlemania 27", rating: 3, tags: ["TV"] },
-    { name: "Wrestlemania 28", rating: 5, tags: ["TV"] },
-    { name: "Wrestlemania 29", rating: 6, tags: ["TV"] },
-    { name: "Wrestlemania 30", rating: 10, tags: ["TV"] },
-    { name: "Wrestlemania 38 Night 1", rating: 10, tags: ["TV"] },
-    { name: "Wrestlemania 38 Night 2", rating: 9, tags: ["TV"] },
-    { name: "Wrestlemania 39 Night 1", rating: 10, tags: ["TV"] },
-    { name: "Wrestlemania 39 Night 2", rating: 9.5, tags: ["TV"] },
-    { name: "AEW All In 2023", rating: 8, tags: ["TV"] },
+    // Wrestling Shows
+    { name: "Wrestlemania 24", rating: 9, tags: ["Wrestling"] },
+    { name: "Wrestlemania 26", rating: 9, tags: ["Wrestling"] },
+    { name: "Wrestlemania 27", rating: 3, tags: ["Wrestling"] },
+    { name: "Wrestlemania 28", rating: 5, tags: ["Wrestling"] },
+    { name: "Wrestlemania 29", rating: 6, tags: ["Wrestling"] },
+    { name: "Wrestlemania 30", rating: 10, tags: ["Wrestling"] },
+    { name: "Wrestlemania 38 Night 1", rating: 10, tags: ["Wrestling"] },
+    { name: "Wrestlemania 38 Night 2", rating: 9, tags: ["Wrestling"] },
+    { name: "Wrestlemania 39 Night 1", rating: 10, tags: ["Wrestling"] },
+    { name: "Wrestlemania 39 Night 2", rating: 9.5, tags: ["Wrestling"] },
+    { name: "AEW All In 2023", rating: 8, tags: ["Wrestling"] },
   ]);
 
   const [selectedTag, setSelectedTag] = useState("All");
@@ -143,8 +143,8 @@ export default function Home() {
                     ? "Movies"
                     : tag === "Video Game"
                     ? "Video Games"
-                    : tag === "TV"
-                    ? "TV"
+                    : tag === "Wrestling"
+                    ? "Wrestling"
                     : tag}
                 </option>
               ))}
