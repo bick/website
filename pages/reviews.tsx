@@ -85,6 +85,7 @@ export default function Home() {
     { name: "Apple iPhone 15", rating: 9.5, tags: ["Tech"] },
     // Wrestling Shows
     { name: "Wrestlemania 24", rating: 9, tags: ["Wrestling"] },
+    { name: "Wrestlemania 25", rating: 9.5, tags: ["Wrestling"] },
     { name: "Wrestlemania 26", rating: 9, tags: ["Wrestling"] },
     { name: "Wrestlemania 27", rating: 3, tags: ["Wrestling"] },
     { name: "Wrestlemania 28", rating: 5, tags: ["Wrestling"] },
