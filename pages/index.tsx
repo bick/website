@@ -32,13 +32,20 @@ export default function Home() {
             <h3>Featured Projects</h3>
             <ul className="portfolio__list">
               <li>
+                <Link href="https://devgigs.com" target="_blank">
+                  Devgigs
+                </Link>
+                <span className="portfolio__desc hidden lg:inline-block">
+                  , A remote job community for coders
+                </span>
+              </li>
+              <li>
                 <Link href="https://weekendlabs.net" target="_blank">
                   Weekend Labs
                 </Link>
                 <span className="portfolio__desc hidden lg:inline-block">
                   , A full-service software consultancy
                 </span>
-                👈 Current project
               </li>
               <li>
                 <Link href="https://hourlytomonthly.com" target="_blank">

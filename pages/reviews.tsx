@@ -21,7 +21,7 @@ export default function Home() {
     { name: "Oppenheimer", rating: 9, tags: ["Movie"] },
     { name: "Django: Unchained", rating: 10, tags: ["Movie"] },
     { name: "The Wolf of Wall Street", rating: 10, tags: ["Movie"] },
-    { name: "Goodfellas", rating: 10, tags: ["Movie"] },
+    { name: "Goodfellas", rating: 9.5, tags: ["Movie"] },
     { name: "The Shawshank Redemption", rating: 9.5, tags: ["Movie"] },
     { name: "The Godfather", rating: 9, tags: ["Movie"] },
     { name: "The Godfather Part II", rating: 9, tags: ["Movie"] },
@@ -38,45 +38,45 @@ export default function Home() {
       name: "To Pimp A Butterfly",
       credit: ["Kendrick Lamar"],
       rating: 10,
-      tags: ["Music"],
+      tags: ["Music"]
     },
     {
       name: "The Dark Side of the Moon",
       credit: ["Pink Floyd"],
       rating: 10,
-      tags: ["Music"],
+      tags: ["Music"]
     },
     { name: "Madvillany", credit: ["MF DOOM"], rating: 9, tags: ["Music"] },
     {
       name: "My Beautiful Dark Twisted Fantasy",
       credit: ["Kanye West"],
       rating: 9,
-      tags: ["Music"],
+      tags: ["Music"]
     },
     {
       name: "In the Aeroplane Over the Sea",
       credit: ["Neutral Milk Hotel"],
       rating: 8,
-      tags: ["Music"],
+      tags: ["Music"]
     },
     { name: "DAMN.", credit: ["Kendrick Lamar"], rating: 9.5, tags: ["Music"] },
     {
       name: "Mr. Morale & The Big Steppers",
       credit: ["Kendrick Lamar"],
       rating: 9,
-      tags: ["Music"],
+      tags: ["Music"]
     },
     {
       name: "The Marshall Mathers LP",
       credit: ["Eminem"],
       rating: 10,
-      tags: ["Music"],
+      tags: ["Music"]
     },
     {
       name: "Beerbongs & Bentleys",
       credit: ["Post Malone"],
       rating: 8,
-      tags: ["Music"],
+      tags: ["Music"]
     },
     { name: "Stoney", credit: ["Post Malone"], rating: 7, tags: ["Music"] },
     // Tech
@@ -95,7 +95,7 @@ export default function Home() {
     { name: "Wrestlemania 38 Night 2", rating: 9, tags: ["Wrestling"] },
     { name: "Wrestlemania 39 Night 1", rating: 10, tags: ["Wrestling"] },
     { name: "Wrestlemania 39 Night 2", rating: 9.5, tags: ["Wrestling"] },
-    { name: "AEW All In 2023", rating: 8, tags: ["Wrestling"] },
+    { name: "AEW All In 2023", rating: 8, tags: ["Wrestling"] }
   ]);
 
   const [selectedTag, setSelectedTag] = useState("All");
