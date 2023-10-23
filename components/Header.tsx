@@ -8,7 +8,7 @@ interface OffCanvasMenuProps {
 
 const Backdrop: React.FC<{ isOpen: boolean; toggleOpen: () => void }> = ({
   isOpen,
-  toggleOpen,
+  toggleOpen
 }) => {
   return (
     <div
@@ -20,7 +20,7 @@ const Backdrop: React.FC<{ isOpen: boolean; toggleOpen: () => void }> = ({
 
 const OffCanvasMenu: React.FC<OffCanvasMenuProps> = ({
   isOpen,
-  toggleOpen,
+  toggleOpen
 }) => {
   return (
     <div
@@ -44,7 +44,12 @@ const OffCanvasMenu: React.FC<OffCanvasMenuProps> = ({
         <li>
           <Link href="/reviews">Reviews</Link>
         </li>
-        <li className="block mt-12 opacity-75">More Projects</li>
+        <li className="block mt-12 opacity-75">Featured Projects</li>
+        <li>
+          <Link href="https://devgigs.com" target="_blank" rel="nofollow">
+            Devgigs
+          </Link>
+        </li>
         <li>
           <Link href="https://weekendlabs.net" target="_blank" rel="nofollow">
             Weekend Labs
