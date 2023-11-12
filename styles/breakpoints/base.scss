@@ -12,17 +12,21 @@ body {
 
 a {
   border-bottom: 1px solid var(--link);
-  text-decoration: none;
+  text-decoration: underline;
   padding-bottom: 1px;
   max-width: fit-content;
   color: #2997ff;
+  transition: 0.2s ease;
 
   &:hover {
-    border-bottom: 1px dashed var(--link);
+    border-bottom: 1px solid var(--link);
     text-decoration: none !important;
-    color: #788491;
-    text-decoration: underline;
     opacity: .75;
+  }
+
+  &:focus,
+  &:active {
+    transform: scale(0.95) !important;
   }
 
   &:link[href^="https://"]:after {
@@ -60,6 +64,11 @@ h3 {
 
       &:hover {
         opacity: 1;
+      }
+
+      &:focus,
+      &:active {
+        transform: scale(1) !important;
       }
 
       img {
@@ -104,16 +113,24 @@ h3 {
         line-height: 3.5rem;
         border-bottom: 0;
         mix-blend-mode: exclusion;
+        transition: 0.15s ease;
 
         &:hover {
           color: var(--white);
           text-decoration: none;
+          text-shadow: rgba(255, 255, 255, 0.85) 0px 0px 32px;
+          opacity: 1;
         }
 
         &.active,
         &.active:hover {
           color: var(--white);
           opacity: 1;
+
+          &:active,
+          &:focus {
+            transform: scale(1) !important;
+          }
         }
       }
 
@@ -272,14 +289,6 @@ h3 {
       padding-left: 18px;
       line-height: 1.8;
       font-size: 1.125rem;
-
-      a {
-        border-bottom: 1px solid var(--link);
-
-        &:hover {
-          border-bottom: 1px dashed var(--link);
-        }
-      }
 
       &:before {
         content: "";
