@@ -82,7 +82,7 @@ export default function Home() {
     // Tech
     { name: "Apple M1 Pro 14-inch MacBook Pro", rating: 8, tags: ["Tech"] },
     { name: "Apple iPhone 12", rating: 9, tags: ["Tech"] },
-    { name: "Apple iPhone 15", rating: 9.5, tags: ["Tech"] },
+    { name: "Apple iPhone 15", rating: 10, tags: ["Tech"] },
     // Wrestling Shows
     { name: "Wrestlemania 24", rating: 9, tags: ["Wrestling"] },
     { name: "Wrestlemania 25", rating: 9.5, tags: ["Wrestling"] },
