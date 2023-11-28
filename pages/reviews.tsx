@@ -20,7 +20,7 @@ export default function Home() {
     { name: "Star Wars: Episode IX", rating: 4, tags: ["Movie"] },
     { name: "Oppenheimer", rating: 9, tags: ["Movie"] },
     { name: "Django: Unchained", rating: 10, tags: ["Movie"] },
-    { name: "The Wolf of Wall Street", rating: 10, tags: ["Movie"] },
+    { name: "The Wolf of Wall Street", rating: 9.5, tags: ["Movie"] },
     { name: "Goodfellas", rating: 9.5, tags: ["Movie"] },
     { name: "The Shawshank Redemption", rating: 9.5, tags: ["Movie"] },
     { name: "The Godfather", rating: 9, tags: ["Movie"] },
@@ -28,7 +28,7 @@ export default function Home() {
     { name: "Pulp Fiction", rating: 9, tags: ["Movie"] },
     { name: "Reservoir Dogs", rating: 9, tags: ["Movie"] },
     { name: "The Batman", rating: 8, tags: ["Movie"] },
-    { name: "It", rating: 8.5, tags: ["Movie"] },
+    { name: "It", rating: 8, tags: ["Movie"] },
     { name: "It Chapter Two", rating: 5, tags: ["Movie"] },
     // Video Games
     { name: "Red Dead Redemption 2", rating: 9, tags: ["Video Game"] },
