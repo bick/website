@@ -1,0 +1,97 @@
+import Header from "../../components/Header";
+
+<Header />
+
+<div className="container article">
+
+# Setting Up the Langchain Chat UI
+
+The Langchain Chat UI is a powerful tool for creating a chatbot interface using OpenAI's language models. This guide will walk you through the setup process, step by step.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js
+- npm or yarn
+
+## Getting Started
+
+1. **Clone the Repository**
+
+   Start by cloning the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/DennisKo/langchain-3-chat-ui.git
+   cd langchain-3-chat-ui
+   ```
+
+2. **Install Dependencies**
+
+   Inside the project directory, run the following command to install the necessary dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Environment Setup**
+
+   Copy the `.env.template` file to `.env.development.local` and fill in your OpenAI API key:
+
+   ```plaintext
+   OPENAI_API_KEY=your_api_key_here
+   ```
+
+   [`.env.template`](https://github.com/DennisKo/langchain-3-chat-ui/blob/main/.env.template)
+
+4. **Run the Development Server**
+
+   Start the development server with:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## Project Structure
+
+- `src/app/api/route.ts`: Contains the API route logic for handling chat requests.
+  [View File](https://github.com/DennisKo/langchain-3-chat-ui/blob/main/src/app/api/route.ts)
+
+- `src/app/layout.tsx`: The layout component for the application.
+  [View File](https://github.com/DennisKo/langchain-3-chat-ui/blob/main/src/app/layout.tsx)
+
+- `src/app/page.tsx`: The main page component where the chat UI is implemented.
+  [View File](https://github.com/DennisKo/langchain-3-chat-ui/blob/main/src/app/page.tsx)
+
+- `src/components/Message.tsx`: Component for displaying chat messages.
+  [View File](https://github.com/DennisKo/langchain-3-chat-ui/blob/main/src/components/Message.tsx)
+
+- `src/components/SendIcon.tsx`: The send icon component in the chat UI.
+  [View File](https://github.com/DennisKo/langchain-3-chat-ui/blob/main/src/components/SendIcon.tsx)
+
+- `src/components/Spinner.tsx`: A spinner component used during loading states.
+  [View File](https://github.com/DennisKo/langchain-3-chat-ui/blob/main/src/components/Spinner.tsx)
+
+## Customization
+
+You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+
+## Deployment
+
+For deployment, the easiest way is to use the Vercel Platform. Follow the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+---
+
+This guide should help you get started with setting up the Langchain Chat UI. For more detailed information, refer to the [README.md](https://github.com/DennisKo/langchain-3-chat-ui/blob/main/README.md) file in the repository.
+
+---
+
+**Note:** AskTheCode is currently available as a custom GPT. You can try it out with your active subscription at [AskTheCode GPT](https://chat.openai.com/g/g-3s6SJ5V7S-askthecode).
+
+</div>

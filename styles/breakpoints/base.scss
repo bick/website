@@ -532,3 +532,18 @@ h3 {
   display: block;
   margin-top: 1rem;
 }
+
+.article {
+  h1 {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  li {
+    margin-top: 1rem;
+
+    p strong {
+      font-size: 1.5rem;
+    }
+  }
+}

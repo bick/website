@@ -20,7 +20,8 @@ export default function Home() {
       <Layout>
         <section className="hero">
           <div className="container">
-            <h1>Coming soon!</h1>
+            <h1>Blog</h1>
+            <a href="/blog/nextjs-openai-starter">NextJS OpenAI Starter</a>
           </div>
         </section>
       </Layout>
