@@ -27,89 +27,85 @@ const OffCanvasMenu: React.FC<OffCanvasMenuProps> = ({
   toggleOpen
 }) => {
   return (
-    <div
-      className={`header__dropdown ${
-        isOpen ? "header__dropdown__open" : "header__dropdown__closed"
-      }`}
-    >
-      <ul>
-        <li className="md:hidden">
-          <Link href="/">Index</Link>
-        </li>
-        <li className="md:hidden">
-          <Link href="/about">About</Link>
-        </li>
-        <li className="md:hidden">
-          <Link href="/contact">Contact</Link>
-        </li>
-        <li>
-          <Link href="/blog">Writing</Link>
-        </li>
-        <li>
-          <Link href="/reviews">Reviews</Link>
-        </li>
-        <li className="block mt-12 opacity-75">Featured Projects</li>
-        <li>
-          <Link href="https://devgigs.com" target="_blank" rel="nofollow">
-            Devgigs
-          </Link>
-        </li>
-        <li>
-          <Link href="https://weekendlabs.net" target="_blank" rel="nofollow">
-            Weekend Labs
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="https://hourlytomonthly.com"
-            target="_blank"
-            rel="nofollow"
-          >
-            Hourly to Monthly
-          </Link>
-        </li>
-      </ul>
-      <li className="block opacity-75 mb-4">Follow me</li>
-      <ul className="header__dropdown__social">
-        <li>
-          <Link href="https://github.com/bick" target="_blank" rel="nofollow">
-            GitHub
-          </Link>
-        </li>
-        <li>
-          <Link href="https://twitter.com/bick" target="_blank" rel="nofollow">
-            Twitter
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="https://linkedin.com/in/bick"
-            target="_blank"
-            rel="nofollow"
-          >
-            LinkedIn
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="https://instagram.com/owenbick"
-            target="_blank"
-            rel="nofollow"
-          >
-            Instagram
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="https://producthunt.com/@bick"
-            target="_blank"
-            rel="nofollow"
-          >
-            ProductHunt
-          </Link>
-        </li>
-      </ul>
-    </div>
+      <div className={`${isOpen ? `${styles['header__dropdown--open']} ${styles.header__dropdown}` : styles.header__dropdown}`}>
+        <ul>
+          <li className="md:hidden">
+            <Link href="/">Index</Link>
+          </li>
+          <li className="md:hidden">
+            <Link href="/about">About</Link>
+          </li>
+          <li className="md:hidden">
+            <Link href="/contact">Contact</Link>
+          </li>
+          <li>
+            <Link href="/blog">Writing</Link>
+          </li>
+          <li>
+            <Link href="/reviews">Reviews</Link>
+          </li>
+          <li className="block mt-12 opacity-75">Featured Projects</li>
+          <li>
+            <Link href="https://devgigs.com" target="_blank" rel="nofollow">
+              Devgigs
+            </Link>
+          </li>
+          <li>
+            <Link href="https://weekendlabs.net" target="_blank" rel="nofollow">
+              Weekend Labs
+            </Link>
+          </li>
+          <li>
+            <Link
+                href="https://hourlytomonthly.com"
+                target="_blank"
+                rel="nofollow"
+            >
+              Hourly to Monthly
+            </Link>
+          </li>
+        </ul>
+        <li className="block opacity-75 mb-4">Follow me</li>
+        <ul className="header__dropdown__social">
+          <li>
+            <Link href="https://github.com/bick" target="_blank" rel="nofollow">
+              GitHub
+            </Link>
+          </li>
+          <li>
+            <Link href="https://twitter.com/bick" target="_blank" rel="nofollow">
+              Twitter
+            </Link>
+          </li>
+          <li>
+            <Link
+                href="https://linkedin.com/in/bick"
+                target="_blank"
+                rel="nofollow"
+            >
+              LinkedIn
+            </Link>
+          </li>
+          <li>
+            <Link
+                href="https://instagram.com/owenbick"
+                target="_blank"
+                rel="nofollow"
+            >
+              Instagram
+            </Link>
+          </li>
+          <li>
+            <Link
+                href="https://producthunt.com/@bick"
+                target="_blank"
+                rel="nofollow"
+            >
+              ProductHunt
+            </Link>
+          </li>
+        </ul>
+      </div>
   );
 };
 
@@ -124,60 +120,64 @@ export default function Header() {
   };
 
   return (
-    <header className="header">
+    <header className={styles.header}>
       {/* <div className="header__logo">
         <Link href="/">
           <img src="/static/earth.gif" className="header__logo__img" />
         </Link>
       </div> */}
-      <ul className="header__list">
-        <li className="header__item">
+      <ul className={styles.header__list}>
+        <li className={styles.header__item}>
           <Link
-            href="/"
-            className={
-              currentRoute === "/" ? "header__link active" : "header__link"
-            }
+              href="/"
+              className={
+                currentRoute === "/"
+                    ? styles.header__link
+                    : `${styles.header__link} ${styles.header__active}`
+              }
           >
-            Index
+          Index
           </Link>
         </li>
-        <li className="header__item">
+        <li className={styles.header__item}>
           <Link
-            href="/about"
-            className={
-              currentRoute === "/about" ? "header__link active" : "header__link"
-            }
+              href="/"
+              className={
+                currentRoute === "/"
+                    ? styles.header__link
+                    : `${styles.header__link} ${styles.header__active}`
+              }
           >
             About
           </Link>
         </li>
-        <li className="header__item">
+        <li className={styles.header__item}>
           <Link
-            href="/resume"
-            className={
-              currentRoute === "/resume"
-                ? "header__link active"
-                : "header__link"
-            }
+              href="/"
+              className={
+                currentRoute === "/"
+                    ? styles.header__link
+                    : `${styles.header__link} ${styles.header__active}`
+              }
           >
             Resume
           </Link>
         </li>
-        <li className="header__item">
+        <li className={styles.header__item}>
           <Link
-            href="/contact"
-            className={
-              currentRoute === "/contact"
-                ? "header__link active"
-                : "header__link"
-            }
+              href="/"
+              className={
+                currentRoute === "/"
+                    ? styles.header__link
+                    : `${styles.header__link} ${styles.header__active}`
+              }
           >
             Contact
           </Link>
         </li>
-        <li className="header__item">
+        <li className={styles.header__item}>
           <Link
-            href="/contact"
+              href="/contact"
             className={
               currentRoute === "/contact"
                 ? "header__link header__social active"
@@ -187,9 +187,9 @@ export default function Header() {
             <FaLinkedin />
           </Link>
         </li>
-        <li className="header__item">
+        <li className={styles.header__item}>
           <Link
-            href="/contact"
+              href="/contact"
             className={
               currentRoute === "/contact"
                 ? "header__link header__social active"
@@ -199,30 +199,25 @@ export default function Header() {
             <FaGithub />
           </Link>
         </li>
-        <li className="header__item">
+        <li className={styles.header__item}>
           <button
-            onClick={toggleMenu}
-            className={`header__link ${
-              isMenuOpen ? "header__button active" : "header__button"
-            }`}
+              onClick={toggleMenu}
+              className={`${isMenuOpen ? `${styles.header__button} ${styles['header__button--active']}` : styles.header__button}`}
           >
             {isMenuOpen ? (
-              <PiXBold />
+                <>
+                <PiXBold/> Close
+                </>
             ) : (
-              <>
-                <span className="lg:hidden">
-                  <PiDotsNineBold />
-                </span>
-                <span className="hidden lg:inline">
-                  <PiDotsNineBold />
-                </span>
-              </>
+                <>
+                  <PiDotsNineBold/> Menu
+                </>
             )}
           </button>
         </li>
       </ul>
-      <Backdrop isOpen={isMenuOpen} toggleOpen={toggleMenu} />
-      <OffCanvasMenu isOpen={isMenuOpen} toggleOpen={toggleMenu} />
+      <Backdrop isOpen={isMenuOpen} toggleOpen={toggleMenu}/>
+      <OffCanvasMenu isOpen={isMenuOpen} toggleOpen={toggleMenu}/>
     </header>
   );
 }
