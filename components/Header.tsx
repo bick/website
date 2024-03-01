@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { PiDotsNineBold, PiXBold, PiLinkedinLogoFill } from "react-icons/pi";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import styles from "@/styles/components/header.module.scss";
+
 interface OffCanvasMenuProps {
   isOpen: boolean;
   toggleOpen: () => void;
@@ -121,11 +125,11 @@ export default function Header() {
 
   return (
     <header className="header">
-      <div className="header__logo">
+      {/* <div className="header__logo">
         <Link href="/">
           <img src="/static/earth.gif" className="header__logo__img" />
         </Link>
-      </div>
+      </div> */}
       <ul className="header__list">
         <li className="header__item">
           <Link
@@ -149,6 +153,18 @@ export default function Header() {
         </li>
         <li className="header__item">
           <Link
+            href="/resume"
+            className={
+              currentRoute === "/resume"
+                ? "header__link active"
+                : "header__link"
+            }
+          >
+            Resume
+          </Link>
+        </li>
+        <li className="header__item">
+          <Link
             href="/contact"
             className={
               currentRoute === "/contact"
@@ -160,16 +176,46 @@ export default function Header() {
           </Link>
         </li>
         <li className="header__item">
+          <Link
+            href="/contact"
+            className={
+              currentRoute === "/contact"
+                ? "header__link header__social active"
+                : "header__link header__social"
+            }
+          >
+            <FaLinkedin />
+          </Link>
+        </li>
+        <li className="header__item">
+          <Link
+            href="/contact"
+            className={
+              currentRoute === "/contact"
+                ? "header__link header__social active"
+                : "header__link header__social"
+            }
+          >
+            <FaGithub />
+          </Link>
+        </li>
+        <li className="header__item">
           <button
             onClick={toggleMenu}
-            className={`header__button ${isMenuOpen ? "active" : ""}`}
+            className={`header__link ${
+              isMenuOpen ? "header__button active" : "header__button"
+            }`}
           >
             {isMenuOpen ? (
-              "← Close"
+              <PiXBold />
             ) : (
               <>
-                <span className="lg:hidden">Menu →</span>
-                <span className="hidden lg:inline">More →</span>
+                <span className="lg:hidden">
+                  <PiDotsNineBold />
+                </span>
+                <span className="hidden lg:inline">
+                  <PiDotsNineBold />
+                </span>
               </>
             )}
           </button>

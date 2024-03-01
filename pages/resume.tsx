@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>About – Owen Bick</title>
+        <title>Resume – Owen Bick</title>
         <link rel="icon" href="./static/favicon.ico" />
         <meta name="description" content="About Owen Bick" />
         <meta name="author" content="Owen Bick" />
@@ -18,9 +18,7 @@ export default function Home() {
       <Layout>
         <section className="hero about">
           <div className="container">
-            <h1>
-              About <span className="owen">Owen Bick</span>
-            </h1>
+            <h1>Resume <span className="owen">Owen Bick</span></h1>
           </div>
         </section>
         <section className="about">
@@ -45,7 +43,7 @@ export default function Home() {
               <br />
               <br />
               Currently, my primary focus is working with ambitious startups in
-              Series C or higher rounds helping them develop cutting-edge
+              Series A, B, and C rounds, helping them develop cutting-edge
               digital products, secure funding, and scale their engineering and
               product teams.
             </p>

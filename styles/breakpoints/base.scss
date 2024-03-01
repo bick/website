@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Germanica";
-  src: url('~/public/fonts/Germanica.ttf');
+  src: url("~/public/fonts/Germanica.ttf");
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--white);
   background: var(--black);
 }
@@ -21,7 +21,7 @@ a {
   &:hover {
     border-bottom: 1px solid var(--link);
     text-decoration: none !important;
-    opacity: .75;
+    opacity: 0.75;
   }
 
   &:focus,
@@ -29,7 +29,8 @@ a {
     transform: scale(0.95) !important;
   }
 
-  &:link[href^="https://"]:after {
+  &:link[href^="https://"]:after
+  {
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 1;
@@ -52,7 +53,7 @@ h3 {
   align-items: center;
   top: 0;
   width: 100%;
-  padding: 1rem;
+  padding: 0.25rem;
   z-index: 9999;
 
   .header__logo {
@@ -100,7 +101,16 @@ h3 {
 
   .header__list {
     display: flex;
-    margin-left: auto;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 100%;
+    max-width: 32rem;
+    transition: box-shadow 0.2s ease-in-out;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 
     .header__item {
       .header__link {
@@ -108,7 +118,7 @@ h3 {
         color: var(--link);
         font-weight: 500;
         font-size: 1rem;
-        margin-left: 1.5rem;
+        margin: 0 1rem;
         height: 3.5rem;
         line-height: 3.5rem;
         border-bottom: 0;
@@ -134,22 +144,17 @@ h3 {
         }
       }
 
-      .header__button {
-        display: block;
-        color: var(--link);
-        font-weight: 500;
-        font-size: 1rem;
-        margin-left: 1.5rem;
-        height: 3.5rem;
-        line-height: 3.5rem;
-        border-bottom: 0;
-        mix-blend-mode: exclusion;
-
-        &:hover,
-        &.active {
-          color: var(--white);
-          text-decoration: none;
+      .header__social {
+        font-size: 1.125rem;
+        svg {
+          display: flex;
+          margin: auto;
+          height: 100%;
         }
+      }
+
+      .header__button {
+        font-size: 1.5rem;
       }
     }
   }
@@ -162,7 +167,7 @@ h3 {
     height: 100%;
     z-index: -1;
     backdrop-filter: saturate(180%) blur(5px);
-    background: #101010;
+    background: #111112;
     transition: transform 0.3s ease-in-out;
     backface-visibility: hidden;
     padding: 8rem 1rem;
@@ -235,7 +240,6 @@ h3 {
   }
 }
 
-
 .hero {
   padding-top: 3rem;
 
@@ -251,7 +255,7 @@ h3 {
   h1 {
     font-weight: 500;
     font-size: 2rem;
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
 
     .line {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4' viewBox='0 0 16 4'%3E%3Cpath d='M0,3.5c4,0,4-3,8-3s4,3,8,3' fill='none' stroke='%23ff6204' opacity='1' stroke-miterlimit='20'/%3E%3C/svg%3E");
@@ -278,7 +282,7 @@ h3 {
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
   display: inline-block;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .portfolio {
@@ -347,7 +351,7 @@ h3 {
 
   &__number {
     font-family: monospace;
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
     font-weight: 600;
   }
 
@@ -368,11 +372,11 @@ h3 {
 
     th {
       font-weight: 600;
-      opacity: .5;
+      opacity: 0.5;
       text-align: left;
       padding: 0 1rem 0 0;
       border-bottom: 1px solid rgba(242, 241, 239, 0.2);
-      padding: .5rem 0;
+      padding: 0.5rem 0;
 
       &:nth-child(2) {
         text-align: right;
@@ -410,25 +414,23 @@ h3 {
     }
 
     @media (max-width: 768px) {
-
       th,
       td {
-        padding: .5rem;
+        padding: 0.5rem;
         font-size: 1rem;
       }
 
       td:nth-child(2) {
         img {
-          margin-right: .5rem;
+          margin-right: 0.5rem;
         }
       }
     }
 
     @media (max-width: 480px) {
-
       th,
       td {
-        font-size: .875rem;
+        font-size: 0.875rem;
       }
     }
   }
@@ -449,11 +451,10 @@ h3 {
     }
 
     @media (max-width: 768px) {
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
     }
   }
 }
-
 
 .footer {
   margin: 15rem 0 5rem;
@@ -482,35 +483,35 @@ h3 {
 
 @keyframes wave-animation {
   0% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
   }
 
   10% {
-    transform: rotate(14.0deg)
+    transform: rotate(14deg);
   }
 
   20% {
-    transform: rotate(-8.0deg)
+    transform: rotate(-8deg);
   }
 
   30% {
-    transform: rotate(14.0deg)
+    transform: rotate(14deg);
   }
 
   40% {
-    transform: rotate(-4.0deg)
+    transform: rotate(-4deg);
   }
 
   50% {
-    transform: rotate(10.0deg)
+    transform: rotate(10deg);
   }
 
   60% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
   }
 
   100% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
   }
 }
 
@@ -525,8 +526,8 @@ h3 {
 }
 
 .owen {
-  font-family: 'Germanica', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: "Germanica", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-weight: 500;
   line-height: 1;
   display: block;
