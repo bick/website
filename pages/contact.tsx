@@ -43,23 +43,13 @@ export default function Home() {
               @bick
             </Link>
             <br />
-            <span>Twitter: </span>
-            <Link href="https://twitter.com/owenbick" target="_blank">
+            <span>X: </span>
+            <Link href="https://x.com/owenbick" target="_blank">
               @owenbick
             </Link>
             <br />
             <span>LinkedIn: </span>
             <Link href="https://linkedin.com/in/bick" target="_blank">
-              @bick
-            </Link>
-            <br />
-            <span>Instagram: </span>
-            <Link href="https://instagram.com/owenbick" target="_blank">
-              @owenbick
-            </Link>
-            <br />
-            <span>ProductHunt: </span>
-            <Link href="https://producthunt.com/@bick" target="_blank">
               @bick
             </Link>
           </div>

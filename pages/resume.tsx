@@ -51,36 +51,19 @@ export default function Home() {
         </section>
         <section className="social">
           <div className="container">
-            <h4>
-              This website was built using NextJS, TypeScript, SASS, and Vercel.
-            </h4>
-          </div>
-        </section>
-        <section className="social">
-          <div className="container">
             <h3>Follow me</h3>
             <span>GitHub: </span>
             <Link href="https://github.com/bick" target="_blank">
               @bick
             </Link>
             <br />
-            <span>Twitter: </span>
-            <Link href="https://twitter.com/owenbick" target="_blank">
+            <span>X: </span>
+            <Link href="https://x.com/owenbick" target="_blank">
               @owenbick
             </Link>
             <br />
             <span>LinkedIn: </span>
             <Link href="https://linkedin.com/in/bick" target="_blank">
-              @bick
-            </Link>
-            <br />
-            <span>Instagram: </span>
-            <Link href="https://instagram.com/owenbick" target="_blank">
-              @owenbick
-            </Link>
-            <br />
-            <span>ProductHunt: </span>
-            <Link href="https://producthunt.com/@bick" target="_blank">
               @bick
             </Link>
           </div>
