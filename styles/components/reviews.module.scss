@@ -1,0 +1,112 @@
+.reviews {
+  p {
+    margin: 1rem 0;
+    font-size: 1.125rem;
+  }
+
+  &__number {
+    font-family: monospace;
+    margin: 0 0.5rem;
+    font-weight: 600;
+  }
+
+  &__credit {
+    color: var(--link);
+    font-style: italic;
+    margin-left: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  table {
+    display: grid;
+    margin-top: 1rem;
+    width: 100%;
+
+    th {
+      font-weight: 600;
+      opacity: 0.5;
+      text-align: left;
+      padding: 0 1rem 0 0;
+      border-bottom: 1px solid rgba(242, 241, 239, 0.2);
+      padding: 0.5rem 0;
+
+      &:nth-child(2) {
+        text-align: right;
+      }
+    }
+
+    tr {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    td {
+      font-size: 1.125rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(242, 241, 239, 0.2);
+      overflow: hidden;
+      white-space: nowrap;
+
+      &:nth-child(2) {
+        text-align: right;
+        font-family: monospace;
+        font-weight: 600;
+        display: flex;
+        justify-content: flex-end;
+
+        span {
+          color: yellow;
+        }
+
+        img {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      th,
+      td {
+        padding: 0.5rem;
+        font-size: 1rem;
+      }
+
+      td:nth-child(2) {
+        img {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+      th,
+      td {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  &__select {
+    display: flex;
+    border: 1px solid rgba(242, 241, 239, 0.2);
+    background: var(--black);
+    outline: 0;
+    padding: 1rem 2rem;
+    border-radius: 50rem;
+    position: relative;
+
+    &:hover {
+      border-color: var(--link);
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0.5rem 1rem;
+    }
+  }
+}

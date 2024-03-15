@@ -1,182 +1,82 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-interface OffCanvasMenuProps {
-  isOpen: boolean;
-  toggleOpen: () => void;
-}
-
-const Backdrop: React.FC<{ isOpen: boolean; toggleOpen: () => void }> = ({
-  isOpen,
-  toggleOpen
-}) => {
-  return (
-    <div
-      className={`backdrop ${isOpen ? "backdrop__open" : ""}`}
-      onClick={toggleOpen}
-    ></div>
-  );
-};
-
-const OffCanvasMenu: React.FC<OffCanvasMenuProps> = ({
-  isOpen,
-  toggleOpen
-}) => {
-  return (
-    <div
-      className={`header__dropdown ${
-        isOpen ? "header__dropdown__open" : "header__dropdown__closed"
-      }`}
-    >
-      <ul>
-        <li className="md:hidden">
-          <Link href="/">Index</Link>
-        </li>
-        <li className="md:hidden">
-          <Link href="/about">About</Link>
-        </li>
-        <li className="md:hidden">
-          <Link href="/contact">Contact</Link>
-        </li>
-        <li>
-          <Link href="/writing">Writing</Link>
-        </li>
-        <li>
-          <Link href="/reviews">Reviews</Link>
-        </li>
-        <li className="block mt-12 opacity-75">Featured Projects</li>
-        <li>
-          <Link href="https://devgigs.com" target="_blank" rel="nofollow">
-            Devgigs
-          </Link>
-        </li>
-        <li>
-          <Link href="https://weekendlabs.net" target="_blank" rel="nofollow">
-            Weekend Labs
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="https://hourlytomonthly.com"
-            target="_blank"
-            rel="nofollow"
-          >
-            Hourly to Monthly
-          </Link>
-        </li>
-      </ul>
-      <li className="block opacity-75 mb-4">Follow me</li>
-      <ul className="header__dropdown__social">
-        <li>
-          <Link href="https://github.com/bick" target="_blank" rel="nofollow">
-            GitHub
-          </Link>
-        </li>
-        <li>
-          <Link href="https://twitter.com/bick" target="_blank" rel="nofollow">
-            Twitter
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="https://linkedin.com/in/bick"
-            target="_blank"
-            rel="nofollow"
-          >
-            LinkedIn
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="https://instagram.com/owenbick"
-            target="_blank"
-            rel="nofollow"
-          >
-            Instagram
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="https://producthunt.com/@bick"
-            target="_blank"
-            rel="nofollow"
-          >
-            ProductHunt
-          </Link>
-        </li>
-      </ul>
-    </div>
-  );
-};
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import styles from "@/styles/components/header.module.scss";
 
 export default function Header() {
   const router = useRouter();
   const currentRoute = router.pathname;
 
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
-
   return (
-    <header className="header">
-      <div className="header__logo">
-        <Link href="/">
-          <img src="/static/earth.gif" className="header__logo__img" />
-        </Link>
-      </div>
-      <ul className="header__list">
-        <li className="header__item">
+    <header className={styles.header}>
+      <ul className={styles.header__list}>
+        <li className={styles.header__item}>
           <Link
             href="/"
             className={
-              currentRoute === "/" ? "header__link active" : "header__link"
+              currentRoute === "/"
+                  ? `${styles.header__link} ${styles.header__active}`
+                  : styles.header__link
             }
           >
             Index
           </Link>
         </li>
-        <li className="header__item">
+        <li className={styles.header__item}>
           <Link
-            href="/about"
+            href="/resume"
             className={
-              currentRoute === "/about" ? "header__link active" : "header__link"
+              currentRoute === "/resume"
+                  ? `${styles.header__link} ${styles.header__active}`
+                  : styles.header__link
             }
           >
-            About
+            Resume
           </Link>
         </li>
-        <li className="header__item">
+        <li className={styles.header__item}>
+          <Link
+            href="/reviews"
+            className={
+              currentRoute === "/reviews"
+                ? `${styles.header__link} ${styles.header__active}`
+                : styles.header__link
+            }
+          >
+            Reviews
+          </Link>
+        </li>
+        <li className={styles.header__item}>
+          <Link
+            href="https://linkedin.com/in/bick"
+            className={`${styles.header__link} ${styles.header__social}`}
+          >
+            <FaLinkedin />
+          </Link>
+        </li>
+        <li className={styles.header__item}>
+          <Link
+              href="https://github.com/bick"
+              className={`${styles.header__link} ${styles.header__social}`}
+          >
+            <FaGithub />
+          </Link>
+        </li>
+        <li className={styles.header__item}>
           <Link
             href="/contact"
-            className={
-              currentRoute === "/contact"
-                ? "header__link active"
-                : "header__link"
-            }
+            className={styles.header__button}
           >
-            Contact
+            <span className="hidden md:block">
+            🤩&nbsp;&nbsp;Start A Project
+              </span>
+            <span className="md:hidden">
+              Contact
+            </span>
           </Link>
         </li>
-        <li className="header__item">
-          <button
-            onClick={toggleMenu}
-            className={`header__button ${isMenuOpen ? "active" : ""}`}
-          >
-            {isMenuOpen ? (
-              "← Close"
-            ) : (
-              <>
-                <span className="lg:hidden">Menu →</span>
-                <span className="hidden lg:inline">More →</span>
-              </>
-            )}
-          </button>
-        </li>
       </ul>
-      <Backdrop isOpen={isMenuOpen} toggleOpen={toggleMenu} />
-      <OffCanvasMenu isOpen={isMenuOpen} toggleOpen={toggleMenu} />
     </header>
   );
 }

@@ -1,32 +1,28 @@
 import Link from "next/link";
+import styles from "@/styles/components/footer.module.scss";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className={styles.footer}>
       <div className="container">
-        <ul className="footer__list">
-          <li className="footer__list__item">
-            <Link href="/" className="footer__list__link">
+        <ul className={styles.footer__list}>
+          <li className={styles.footer__list__item}>
+            <Link href="/" className={styles.footer__list__link}>
               Index
             </Link>
           </li>
-          <li className="footer__list__item">
-            <Link href="/about" className="footer__list__link">
-              About
+          <li className={styles.footer__list__item}>
+            <Link href="/resume" className={styles.footer__list__link}>
+              Resume
             </Link>
           </li>
-          <li className="footer__list__item">
-            <Link href="/reviews" className="footer__list__link">
+          <li className={styles.footer__list__item}>
+            <Link href="/reviews" className={styles.footer__list__link}>
               Reviews
             </Link>
           </li>
-          <li className="footer__list__item">
-            <Link href="/writing" className="footer__list__link">
-              Writing
-            </Link>
-          </li>
-          <li className="footer__list__item">
-            <Link href="/contact" className="footer__list__link">
+          <li className={styles.footer__list__item}>
+            <Link href="/contact" className={styles.footer__list__link}>
               Contact
             </Link>
           </li>

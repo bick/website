@@ -4,25 +4,20 @@ import Image from "next/image";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Reviews from "../components/Reviews"
+import Resume from "../components/Resume";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Reviews – Owen Bick</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Ratings and reviews by Owen Bick" />
+        <title>Resume – Owen Bick</title>
+        <link rel="icon" href="./static/favicon.ico" />
+        <meta name="description" content="About Owen Bick" />
         <meta name="author" content="Owen Bick" />
       </Head>
       <Header></Header>
       <Layout>
-        <section className="hero">
-          <div className="container">
-            <h1>Reviews &amp; Ratings</h1>
-          </div>
-        </section>
-        <Reviews />
+        <Resume />
       </Layout>
       <Footer></Footer>
     </>
