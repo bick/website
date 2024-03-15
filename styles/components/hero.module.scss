@@ -1,36 +1,19 @@
 .hero {
-  padding-top: 2rem;
-
-  &.about {
-    margin-top: 0 !important;
-
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-    }
-  }
+  padding: 2rem 0;
 
   h1 {
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 0.25rem;
-
-    .line {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4' viewBox='0 0 16 4'%3E%3Cpath d='M0,3.5c4,0,4-3,8-3s4,3,8,3' fill='none' stroke='%23ff6204' opacity='1' stroke-miterlimit='20'/%3E%3C/svg%3E");
-      background-repeat: repeat-x;
-      background-repeat-y: no-repeat;
-      background-position: 0px 100%;
-      transition: 0.2s;
-      background-size: 16px 4px;
-      animation: fancy-line 0.4s linear infinite;
-      padding: 0 0 0.5rem;
-    }
   }
 
   h2 {
     font-weight: 500;
     font-size: 2rem;
     line-height: 1.5;
+  }
+  &.home {
+    padding: 5rem 0;
   }
 }
 
@@ -40,7 +23,7 @@
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
   display: inline-block;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 
 @keyframes wave-animation {
@@ -74,15 +57,5 @@
 
   100% {
     transform: rotate(0deg);
-  }
-}
-
-@keyframes fancy-line {
-  from {
-    background-position: 0px 100%;
-  }
-
-  to {
-    background-position: 16px 100%;
   }
 }

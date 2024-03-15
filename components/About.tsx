@@ -10,12 +10,6 @@ export default function Social() {
                 <p className="about__boston">
                     I&apos;m Owen, I&apos;m a software engineer that currently lives
                     in Boston.
-                    <Image
-                        src="/static/boston.webp"
-                        alt="Owen Bick"
-                        width={42}
-                        height={42}
-                    />
                 </p>
                 <p>
                     <br/>I first started writing code for the web around 2012. My

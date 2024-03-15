@@ -1,0 +1,35 @@
+.resume {
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 3rem;
+  }
+  .resume__item {
+    display: flex;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    .resume__item__meta {
+      h3 {
+        font-size: 1.125rem !important;
+        margin: 0 !important;
+      }
+
+      h4 {
+        font-size: 1.125rem;
+      }
+    }
+    time {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      i {
+        margin-left: .25rem;
+      }
+    }
+  }
+}

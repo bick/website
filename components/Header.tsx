@@ -16,8 +16,8 @@ export default function Header() {
             href="/"
             className={
               currentRoute === "/"
-                ? styles.header__link
-                : `${styles.header__link} ${styles.header__active}`
+                  ? `${styles.header__link} ${styles.header__active}`
+                  : styles.header__link
             }
           >
             Index
@@ -27,9 +27,9 @@ export default function Header() {
           <Link
             href="/resume"
             className={
-              currentRoute === "/"
-                ? styles.header__link
-                : `${styles.header__link} ${styles.header__active}`
+              currentRoute === "/resume"
+                  ? `${styles.header__link} ${styles.header__active}`
+                  : styles.header__link
             }
           >
             Resume
@@ -39,9 +39,9 @@ export default function Header() {
           <Link
             href="/reviews"
             className={
-              currentRoute === "/"
-                ? styles.header__link
-                : `${styles.header__link} ${styles.header__active}`
+              currentRoute === "/reviews"
+                ? `${styles.header__link} ${styles.header__active}`
+                : styles.header__link
             }
           >
             Reviews
@@ -49,24 +49,16 @@ export default function Header() {
         </li>
         <li className={styles.header__item}>
           <Link
-            href="/contact"
-            className={
-              currentRoute === "/contact"
-                  ? `${styles.header__link} ${styles.header__social} ${styles.active}`
-                  : `${styles.header__link} ${styles.header__social}`
-            }
+            href="https://linkedin.com/in/bick"
+            className={`${styles.header__link} ${styles.header__social}`}
           >
             <FaLinkedin />
           </Link>
         </li>
         <li className={styles.header__item}>
           <Link
-              href="/contact"
-              className={
-                currentRoute === "/contact"
-                    ? `${styles.header__link} ${styles.header__social} ${styles.active}`
-                    : `${styles.header__link} ${styles.header__social}`
-              }
+              href="https://github.com/bick"
+              className={`${styles.header__link} ${styles.header__social}`}
           >
             <FaGithub />
           </Link>
@@ -76,7 +68,12 @@ export default function Header() {
             href="/contact"
             className={styles.header__button}
           >
+            <span className="hidden md:block">
             🤩&nbsp;&nbsp;Start A Project
+              </span>
+            <span className="md:hidden">
+              Contact
+            </span>
           </Link>
         </li>
       </ul>

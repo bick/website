@@ -22,7 +22,7 @@ export default function Home() {
       </Head>
       <Header></Header>
       <Layout>
-        <Hero />
+        <Hero type="home" />
         <Portfolio />
         <About />
         <Social />

@@ -106,16 +106,16 @@ export default function Footer() {
     };
 
     return (
-        <section className="reviews">
+        <section className={styles.reviews}>
             <div className="container">
                 <p>
                     Here is where I'll rate anything that I feel deserves a documented
                     rating out of
-                    <span className="reviews__number">10</span>stars. These are just
+                    <span className={styles.reviews__number}>10</span>stars. These are just
                     my opinion with no further context.
                 </p>
                 <select
-                    className="reviews__select"
+                    className={styles.reviews__select}
                     value={selectedTag}
                     onChange={(e) => setSelectedTag(e.target.value)}
                 >
@@ -148,7 +148,7 @@ export default function Footer() {
                                     <td>
                                         {ratingData.name}
                                         {ratingData.credit !== undefined && (
-                                            <span className="reviews__credit">
+                                            <span className={styles.reviews__credit}>
                             by {ratingData.credit}
                           </span>
                                         )}

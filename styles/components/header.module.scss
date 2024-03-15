@@ -14,7 +14,7 @@
     backdrop-filter: blur(9px);
     -webkit-backdrop-filter: blur(9px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border);
     width: 100%;
     max-width: fit-content;
     transition: box-shadow 0.2s ease-in-out;
@@ -42,20 +42,24 @@
           opacity: 1;
         }
 
-        &.active,
-        &.active:hover {
+        &:after {
+          content: '';
+        }
+
+        &.header__active,
+        &.header__active:hover {
           color: var(--white);
           opacity: 1;
-
-          &:active,
-          &:focus {
-            transform: scale(1) !important;
-          }
         }
       }
 
       .header__social {
+        display: none;
         font-size: 1.125rem;
+
+        @media (min-width: 768px) {
+          display: block;
+        }
 
         svg {
           display: flex;

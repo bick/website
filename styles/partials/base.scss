@@ -49,3 +49,10 @@ h3 {
   display: block;
   margin-top: 1rem;
 }
+@media (min-width: 768px) {
+  .owen {
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-top: 0;
+  }
+}

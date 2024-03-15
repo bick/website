@@ -1,12 +1,10 @@
 .footer {
-  margin: 15rem 0 5rem;
+  margin: 5rem 0;
   font-size: 1rem;
 
   .footer__list {
-    display: grid;
-    margin: 2rem 0;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+   display: flex;
+    margin-bottom: 1rem;
 
     .footer__list__item {
       margin: 0 2rem 0 0;
