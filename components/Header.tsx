@@ -50,6 +50,8 @@ export default function Header() {
         <li className={styles.header__item}>
           <Link
             href="https://linkedin.com/in/bick"
+            target="_blank"
+            rel="nofollow"
             className={`${styles.header__link} ${styles.header__social}`}
           >
             <FaLinkedin />
@@ -58,6 +60,8 @@ export default function Header() {
         <li className={styles.header__item}>
           <Link
               href="https://github.com/bick"
+              target="_blank"
+              rel="nofollow"
               className={`${styles.header__link} ${styles.header__social}`}
           >
             <FaGithub />
