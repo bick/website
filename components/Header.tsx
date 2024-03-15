@@ -129,7 +129,7 @@ export default function Header() {
         </li>
         <li className={styles.header__item}>
           <Link
-            href="/"
+            href="/about"
             className={
               currentRoute === "/"
                 ? styles.header__link
@@ -141,7 +141,7 @@ export default function Header() {
         </li>
         <li className={styles.header__item}>
           <Link
-            href="/"
+            href="/resume"
             className={
               currentRoute === "/"
                 ? styles.header__link
@@ -153,7 +153,7 @@ export default function Header() {
         </li>
         <li className={styles.header__item}>
           <Link
-            href="/"
+            href="/contact"
             className={
               currentRoute === "/"
                 ? styles.header__link
@@ -168,8 +168,8 @@ export default function Header() {
             href="/contact"
             className={
               currentRoute === "/contact"
-                ? "header__link header__social active"
-                : "header__link header__social"
+                  ? `${styles.header__link} ${styles.header__social} ${styles.active}`
+                  : `${styles.header__link} ${styles.header__social}`
             }
           >
             <FaLinkedin />
@@ -177,12 +177,12 @@ export default function Header() {
         </li>
         <li className={styles.header__item}>
           <Link
-            href="/contact"
-            className={
-              currentRoute === "/contact"
-                ? "header__link header__social active"
-                : "header__link header__social"
-            }
+              href="/contact"
+              className={
+                currentRoute === "/contact"
+                    ? `${styles.header__link} ${styles.header__social} ${styles.active}`
+                    : `${styles.header__link} ${styles.header__social}`
+              }
           >
             <FaGithub />
           </Link>

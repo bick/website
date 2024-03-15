@@ -24,11 +24,6 @@ a {
     opacity: 0.75;
   }
 
-  &:focus,
-  &:active {
-    transform: scale(0.95) !important;
-  }
-
   &:link[href^="https://"]:after
   {
     font-size: 0.75rem;
