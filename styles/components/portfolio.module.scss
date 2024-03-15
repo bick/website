@@ -1,0 +1,26 @@
+.portfolio {
+  margin-top: 3rem;
+
+  .portfolio__list {
+    li {
+      padding-left: 18px;
+      line-height: 1.8;
+      font-size: 1.125rem;
+
+      &:before {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        position: absolute;
+        background: rgba(242, 241, 239, 0.2);
+        transform: translate(-18px, 14px);
+      }
+    }
+  }
+
+  &__desc {
+    color: #788491;
+    margin-right: 1rem;
+  }
+}
