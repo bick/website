@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import Layout from "../components/Layout";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Resume from "../components/Resume";
+import Layout from "@/components/Layout";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import Resume from "@/components/Resume";
 
 export default function Home() {
   return (

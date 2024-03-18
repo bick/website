@@ -10,7 +10,8 @@ export default function Hero({ type }: HeroProps) {
         <section className={heroClass}>
             <div className="container">
                 <h1>
-                    Hi, I&apos;m <span className="owen">Owen Bick <span className={styles.wave}>👋</span></span>
+                    Hi, I&apos;m <div className="flex"><span className="owen">Owen Bick</span><span
+                    className={styles.wave}>👋</span></div>
                 </h1>
                 <h2>I&apos;m a software engineer based in Boston</h2>
             </div>

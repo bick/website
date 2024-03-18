@@ -4,6 +4,13 @@
   padding-block-start: 0;
   padding-block-end: 0;
   margin: 0 auto;
+  &.home {
+    padding: 5rem 0;
+    background-image: url('/static/background.webp');
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+  }
 }
 
 @keyframes hello {

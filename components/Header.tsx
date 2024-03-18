@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import styles from "@/styles/components/header.module.scss";
+import VanillaTilt from 'vanilla-tilt';
 
 export default function Header() {
   const router = useRouter();
   const currentRoute = router.pathname;
+  const tiltRef = useRef(null);
+
+  useEffect(() => {
+    VanillaTilt.init(tiltRef.current, {
+      max: 5,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.05,
+    });
+
+    // Cleanup function to destroy the VanillaTilt effect when the component unmounts
+    return () => {
+      if (tiltRef.current) {
+        tiltRef.current.vanillaTilt.destroy();
+      }
+    };
+  }, []);
 
   return (
     <header className={styles.header}>
-      <ul className={styles.header__list}>
+      <ul className={styles.header__list} ref={tiltRef}>
         <li className={styles.header__item}>
           <Link
             href="/"
