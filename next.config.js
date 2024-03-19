@@ -8,7 +8,7 @@ const nextConfig = {
 
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Resolve modules and aliases
-    config.resolve.alias['@'] = join(__dirname, '.'); // Adjust the path as needed
+    config.resolve.alias['@'] = join(__dirname, '.');
 
     // Important: return the modified config
     return config;
