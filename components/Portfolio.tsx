@@ -6,7 +6,7 @@ export default function Portfolio() {
     return (
         <section className={styles.portfolio}>
             <div className="container">
-                <h3>What I'm Currently Working On</h3>
+                <h3>💯 Current Projects</h3>
                 <div className={styles.portfolio__list}>
                     <Link
                         className={styles.portfolio__item}
