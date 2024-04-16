@@ -40,9 +40,6 @@ export default function Portfolio() {
                             alt="Devgigs."
                         />
                         <div className={styles.portfolio__meta}>
-                            <blockquote>
-                                A job board, powered by AI, for coders
-                            </blockquote>
                             <h3>Devgigs</h3>
                         </div>
                     </Link>
