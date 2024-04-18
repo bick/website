@@ -11,6 +11,7 @@ export default function Header() {
   const tiltRef = useRef(null);
 
   useEffect(() => {
+    // @ts-ignore
     VanillaTilt.init(tiltRef.current, {
       max: 5,
       speed: 400,
