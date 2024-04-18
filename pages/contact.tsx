@@ -1,11 +1,11 @@
+import React from "react";
 import Head from "next/head";
+import Clock from "react-live-clock";
 import Layout from "@/components/Layout";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Clock from "react-live-clock";
-import heroStyles from "@/styles/components/hero.module.scss";
-import React from "react";
 import Social from "@/components/Social";
+import Footer from "@/components/Footer";
+import heroStyles from "@/styles/components/hero.module.scss";
 
 export default function Home() {
     return (
