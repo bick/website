@@ -48,13 +48,14 @@
       font-size: 1.125rem;
       padding: 1rem 0;
       border-bottom: 1px solid rgba(242, 241, 239, 0.2);
-      overflow: hidden;
+      overflow-y: hidden;
       white-space: nowrap;
 
       &:nth-child(2) {
         text-align: right;
         font-family: monospace;
         font-weight: 600;
+        overflow-y: scroll;
         display: flex;
         justify-content: flex-end;
 
