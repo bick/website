@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import styles from "@/styles/components/header.module.scss";
 import VanillaTilt from 'vanilla-tilt';
+import { GiHolosphere } from "react-icons/gi";
 
 export default function Header() {
   const router = useRouter();
@@ -40,7 +41,7 @@ export default function Header() {
                     : `${styles.header__link} text-xl`
               }
           >
-            ✦
+            👻
           </Link>
         </li>
         <li className={styles.header__item}>
