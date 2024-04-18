@@ -3,7 +3,7 @@ import styles from "@/styles/components/layout.module.scss";
 
 interface LayoutProps {
   children: ReactNode;
-  type: string;
+  type?: string;
 }
 
 const Layout = ({ children, type }: LayoutProps) => {
