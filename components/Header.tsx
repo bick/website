@@ -48,7 +48,7 @@ export default function Header() {
           <Link
               href="/#projects"
               className={
-                currentRoute === "/resume"
+                currentRoute === "/#projects"
                     ? `${styles.header__link} ${styles.header__active}`
                     : styles.header__link
               }
