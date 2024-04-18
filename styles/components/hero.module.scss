@@ -30,6 +30,10 @@
   transform-origin: 70% 70%;
   display: inline-block;
   z-index: 9998;
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    line-height: 1.5;
+  }
 }
 
 @keyframes wave-animation {
