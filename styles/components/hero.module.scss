@@ -12,8 +12,10 @@
     font-size: 2rem;
     line-height: 1.5;
   }
+
   &.home {
     padding: 0 0 5rem;
+
     h1 {
       display: block;
       line-height: 3rem;
@@ -23,6 +25,7 @@
     }
   }
 }
+
 .wave {
   animation-name: wave-animation;
   animation-duration: 2.5s;

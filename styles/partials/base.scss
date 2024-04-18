@@ -5,7 +5,7 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   color: var(--white);
   background: var(--black);
 }
@@ -24,8 +24,7 @@ a {
     opacity: 0.75;
   }
 
-  &:link[href^="https://"]:after
-  {
+  &:link[href^="https://"]:after {
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 1;
@@ -50,6 +49,7 @@ h3 {
   margin-top: 2rem;
   margin-right: 2rem;
 }
+
 @media (min-width: 768px) {
   .owen {
     margin: 1rem 1.5rem 0;
