@@ -39,10 +39,11 @@
         display: flex;
         color: var(--link);
         font-weight: 500;
-        font-size: 15px;
+        font-size: 14px;
         margin: 0 .5rem;
         @media (min-width: 768px) {
           margin: 0 .75rem;
+          font-size: 15px;
         }
         height: 3rem;
         line-height: 3rem;
