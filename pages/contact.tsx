@@ -4,6 +4,8 @@ import Layout from "@/components/Layout";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Clock from "react-live-clock";
+import heroStyles from "@/styles/components/hero.module.scss";
+import React from "react";
 
 export default function Home() {
   return (
@@ -16,9 +18,9 @@ export default function Home() {
       </Head>
       <Header></Header>
       <Layout>
-        <section className="hero">
+        <section className={heroStyles.hero}>
           <div className="container">
-            <h1>Contact Me</h1>
+            <h1>✉️ Contact Me</h1>
           </div>
         </section>
         <section className="social">
