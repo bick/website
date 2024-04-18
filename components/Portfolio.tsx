@@ -40,6 +40,9 @@ export default function Portfolio() {
                             alt="Devgigs."
                         />
                         <div className={styles.portfolio__meta}>
+                            <blockquote className="hidden md:block">
+                                Coming 2024
+                            </blockquote>
                             <h3>Devgigs</h3>
                         </div>
                     </Link>
