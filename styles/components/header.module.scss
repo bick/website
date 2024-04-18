@@ -4,7 +4,10 @@
   align-items: center;
   top: 0;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 0;
+  @media (min-width: 768px) {
+    padding: 1rem;
+  }
   z-index: 9999;
 
   .header__list {
