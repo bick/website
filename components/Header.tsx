@@ -37,11 +37,11 @@ export default function Header() {
               href="/"
               className={
                 currentRoute === "/"
-                    ? `${styles.header__link} ${styles.header__active} text-xl ml-0`
-                    : `${styles.header__link} text-xl ml-0`
+                    ? `${styles.header__link} ${styles.header__logo} text-xl ml-0`
+                    : `${styles.header__link} ${styles.header__logo} text-xl ml-0`
               }
           >
-            👻
+            &nbsp;
           </Link>
         </li>
         <li className={styles.header__item}>

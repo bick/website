@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  position: sticky;
+  position: fixed;
   align-items: center;
   top: 0;
   width: 100%;
@@ -22,9 +22,19 @@
     transition: box-shadow 0.2s ease-in-out;
     margin: auto;
     align-items: center;
-    padding: .125rem .5rem;
+    padding: .125rem 1rem;
 
     .header__item {
+      .header__logo {
+        &:before {
+          content: '👻'
+        }
+
+        &:hover:before {
+          content: '🏠';
+        }
+      }
+
       .header__link {
         display: flex;
         color: var(--link);
@@ -32,7 +42,7 @@
         font-size: 15px;
         margin: 0 .5rem;
         @media (min-width: 768px) {
-          margin: 0 1rem;
+          margin: 0 .75rem;
         }
         height: 3rem;
         line-height: 3rem;

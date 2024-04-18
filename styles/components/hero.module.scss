@@ -14,13 +14,15 @@
   }
 
   &.home {
-    padding: 0 0 5rem;
+    padding: 5rem 0;
 
     h1 {
       display: block;
       line-height: 3rem;
+      font-size: 2.5rem;
       @media (min-width: 768px) {
         display: flex;
+        font-size: 4rem;
       }
     }
   }
