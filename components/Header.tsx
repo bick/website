@@ -22,6 +22,7 @@ export default function Header() {
     // Cleanup function to destroy the VanillaTilt effect when the component unmounts
     return () => {
       if (tiltRef.current) {
+        // @ts-ignore
         tiltRef.current.vanillaTilt.destroy();
       }
     };
