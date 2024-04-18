@@ -48,10 +48,12 @@ h3 {
   display: block;
   margin-top: 2rem;
   margin-right: 2rem;
+  font-size: 3rem;
 }
 
 @media (min-width: 768px) {
   .owen {
     margin: 1rem 1.5rem 0;
+    font-size: inherit;
   }
 }
