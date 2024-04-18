@@ -4,7 +4,7 @@ import styles from "@/styles/components/portfolio.module.scss";
 
 export default function Portfolio() {
     return (
-        <section className={styles.portfolio}>
+        <section className={styles.portfolio} name="projects">
             <div className="container">
                 <h3>💯 Current Projects</h3>
                 <div className={styles.portfolio__list}>

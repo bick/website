@@ -33,48 +33,60 @@ export default function Header() {
       <ul className={styles.header__list} ref={tiltRef}>
         <li className={styles.header__item}>
           <Link
-            href="/"
-            className={
-              currentRoute === "/"
-                  ? `${styles.header__link} ${styles.header__active}`
-                  : styles.header__link
-            }
+              href="/"
+              className={
+                currentRoute === "/"
+                    ? `${styles.header__link} ${styles.header__active} text-xl`
+                    : `${styles.header__link} text-xl`
+              }
           >
-            Index
+            ✦
           </Link>
         </li>
         <li className={styles.header__item}>
           <Link
-            href="/resume"
-            className={
-              currentRoute === "/resume"
-                  ? `${styles.header__link} ${styles.header__active}`
-                  : styles.header__link
-            }
+              href="/#projects"
+              className={
+                currentRoute === "/resume"
+                    ? `${styles.header__link} ${styles.header__active}`
+                    : styles.header__link
+              }
+          >
+            Projects
+          </Link>
+        </li>
+        <li className={styles.header__item}>
+          <Link
+              href="/resume"
+              className={
+                currentRoute === "/resume"
+                    ? `${styles.header__link} ${styles.header__active}`
+                    : styles.header__link
+              }
           >
             Resume
           </Link>
         </li>
         <li className={styles.header__item}>
           <Link
-            href="/reviews"
-            className={
-              currentRoute === "/reviews"
-                ? `${styles.header__link} ${styles.header__active}`
-                : styles.header__link
-            }
+              href="/reviews"
+              className={
+                currentRoute === "/reviews"
+                    ? `${styles.header__link} ${styles.header__active}`
+                    : styles.header__link
+              }
           >
             Reviews
           </Link>
         </li>
         <li className={styles.header__item}>
           <Link
-            href="https://linkedin.com/in/bick"
-            target="_blank"
-            rel="nofollow"
-            className={`${styles.header__link} ${styles.header__social}`}
+              href="https://linkedin.com/in/bick"
+              target="_blank"
+              rel="nofollow"
+              className={`${styles.header__link} ${styles.header__social}`}
           >
-            <FaLinkedin />
+            <FaLinkedin/>
           </Link>
         </li>
         <li className={styles.header__item}>
@@ -84,13 +96,13 @@ export default function Header() {
               rel="nofollow"
               className={`${styles.header__link} ${styles.header__social}`}
           >
-            <FaGithub />
+            <FaGithub/>
           </Link>
         </li>
         <li className={styles.header__item}>
           <Link
-            href="/contact"
-            className={styles.header__button}
+              href="/contact"
+              className={styles.header__button}
           >
             <span className="hidden md:block">
             🤩&nbsp;&nbsp;Start A Project
