@@ -35,13 +35,13 @@ export default function Footer() {
             <section className={heroStyles.hero}>
                 <div className="container">
                     <h1>⭐️ Reviews</h1>
+                    <p>Here is where I'll rate anything that I feel deserves a documented rating out of <span
+                        className={styles.reviews__number}>10</span> stars. These are just my opinion with no further
+                        context.</p>
                 </div>
             </section>
             <section className={styles.reviews}>
                 <div className="container">
-                    <p>Here is where I'll rate anything that I feel deserves a documented rating out of <span
-                        className={styles.reviews__number}>10</span> stars. These are just my opinion with no further
-                        context.</p>
                     <select className={styles.reviews__select} value={selectedTag}
                             onChange={(e) => setSelectedTag(e.target.value)}>
                         <option value="All">All Ratings</option>
