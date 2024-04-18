@@ -5,7 +5,7 @@ export default function Social() {
     return (
         <section className={styles.social}>
             <div className="container">
-                <h3>Follow me</h3>
+                <h3>👀 Follow me</h3>
                 <span>GitHub: </span>
                 <Link href="https://github.com/bick" target="_blank">
                     @bick

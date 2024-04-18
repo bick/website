@@ -6,7 +6,7 @@ export default function Social() {
     return (
         <section className={styles.about}>
             <div className="container">
-                <h3>About Me</h3>
+                <h3>😺 About Me</h3>
                 <p className="about__boston">
                     I&apos;m Owen, I&apos;m a software engineer that currently lives
                     in Boston.

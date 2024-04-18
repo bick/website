@@ -8,7 +8,7 @@ export default function Footer() {
         <section className={heroStyles.hero}>
             <div className="container">
                 <h1>
-                    Resume
+                    👔 Resume
                 </h1>
             </div>
         </section>
