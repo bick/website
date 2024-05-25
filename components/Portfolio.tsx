@@ -29,25 +29,40 @@ export default function Portfolio() {
                     </Link>
                     <Link
                         className={styles.portfolio__item}
-                        href="https://devgigs.com"
+                        href="https://placeholderjs.com"
                         target="_blank"
                         rel="nofollow"
                     >
-                        <Image
-                            src="/static/devgigs.png"
-                            width="400"
-                            height="50"
-                            alt="Devgigs."
-                        />
+                        <span className={styles.portfolio__item__placeholder}>
+                            PlaceholderJS
+                        </span>
                         <div className={styles.portfolio__meta}>
                             <blockquote className="hidden md:block">
-                                Coming Fall 2024
+                                Ridiculously simple and lightweight placeholders
                             </blockquote>
-                            <h3>Devgigs</h3>
+                            <h3>PlaceholderJS</h3>
                         </div>
                     </Link>
                 </div>
-            </div>
+                <Link
+                    className={styles.portfolio__item}
+                    href="https://devgigs.com"
+                    target="_blank"
+                    rel="nofollow"
+                >
+                    <Image
+                        src="/static/devgigs.png"
+                        width="400"
+                        height="50"
+                        alt="Devgigs."
+                    />
+                    <div className={styles.portfolio__meta}>
+                        <blockquote className="hidden md:block">
+                            Coming Fall 2024
+                        </blockquote>
+                        <h3>Devgigs</h3>
+                    </div>
+                </Link></div>
         </section>
-    );
+    )
 };
