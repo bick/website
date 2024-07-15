@@ -13,7 +13,7 @@ export default function Hero({ type }: HeroProps) {
                     Hi, I&apos;m <div className="flex"><span className="owen">Owen Bick</span><span
                     className={styles.wave}>👋</span></div>
                 </h1>
-                <h2>I&apos;m a software engineer based in Boston</h2>
+                <h2>I&apos;m a software engineer based in Dallas</h2>
             </div>
         </section>
     );

@@ -11,7 +11,7 @@ export default function Home() {
                 <link rel="icon" href="./static/favicon.ico"/>
                 <meta
                     name="description"
-                    content="Owen Bick is a software engineer based in Boston."
+                    content="Owen Bick is a software engineer based in Dallas."
                 />
                 <meta name="author" content="Owen Bick"/>
             </Head>

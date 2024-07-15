@@ -31,9 +31,9 @@ export default function Home() {
                             <Clock
                                 format={"MMMM Mo, YYYY, h:mm:ss A"}
                                 ticking={true}
-                                timezone={"US/Eastern"}
+                                timezone={"US/Central"}
                             ></Clock>
-                            <span className="opacity-50">UTC-05:00 - Boston, MA</span>
+                            <span className="opacity-50">UTC-06:00 - Dallas, TX</span>
                         </div>
                     </div>
                 </section>

@@ -29,7 +29,7 @@ export default function Footer() {
         </ul>
         <span>
           Copyright &copy; {new Date().getFullYear()} Owen Bick. All Rights
-          Reserved. Made with ❤️ and ☕ in Boston.
+          Reserved. Made with ❤️ and ☕ in Dallas.
         </span>
       </div>
     </footer>
