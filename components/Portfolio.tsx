@@ -29,6 +29,25 @@ export default function Portfolio() {
                     </Link>
                     <Link
                         className={styles.portfolio__item}
+                        href="https://instagram.com/genzswe"
+                        target="_blank"
+                        rel="nofollow"
+                    >
+                        <Image
+                            src="/static/devgigs.png"
+                            width="400"
+                            height="25"
+                            alt="Devgigs."
+                        />
+                        <div className={styles.portfolio__meta}>
+                            <blockquote className="hidden md:block">
+                                Coming Fall 2024
+                            </blockquote>
+                            <h3>Devgigs</h3>
+                        </div>
+                    </Link>
+                    <Link
+                        className={styles.portfolio__item}
                         href="https://placeholderjs.com"
                         target="_blank"
                         rel="nofollow"
@@ -43,26 +62,28 @@ export default function Portfolio() {
                             <h3>PlaceholderJS</h3>
                         </div>
                     </Link>
+                    <Link
+                        className={styles.portfolio__item}
+                        href="https://instagram.com/genzswe"
+                        target="_blank"
+                        rel="nofollow"
+                    >
+                        <Image
+                            src="/static/genzswe.png"
+                            width="400"
+                            height="400"
+                            alt="genzswe."
+                            className="px-0 py-6"
+                        />
+                        <div className={styles.portfolio__meta}>
+                            <blockquote className="hidden md:block">
+                                I post software engineering memes sometimes
+                            </blockquote>
+                            <h3>@genzswe</h3>
+                        </div>
+                    </Link>
                 </div>
-                <Link
-                    className={styles.portfolio__item}
-                    href="https://devgigs.com"
-                    target="_blank"
-                    rel="nofollow"
-                >
-                    <Image
-                        src="/static/devgigs.png"
-                        width="400"
-                        height="50"
-                        alt="Devgigs."
-                    />
-                    <div className={styles.portfolio__meta}>
-                        <blockquote className="hidden md:block">
-                            Coming Fall 2024
-                        </blockquote>
-                        <h3>Devgigs</h3>
-                    </div>
-                </Link></div>
+            </div>
         </section>
     )
 };
