@@ -29,7 +29,7 @@ export default function Portfolio() {
                     </Link>
                     <Link
                         className={styles.portfolio__item}
-                        href="https://instagram.com/genzswe"
+                        href="https://devgigs.com"
                         target="_blank"
                         rel="nofollow"
                     >
