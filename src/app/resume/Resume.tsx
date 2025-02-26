@@ -1,13 +1,15 @@
-'use client'
-import ResumeTable from "@/app/resume/ResumeTable";
-import Hero from "@/components/Hero";
-import React from "react";
+"use client"
+
+import React from "react"
+import ResumeTable from "@/app/resume/ResumeTable"
+
+import Hero from "@/components/Hero"
 
 export default function ResumePage() {
-    return (
-        <>
-            <Hero title="👔 Resume"/>
-            <ResumeTable/>
-        </>
-    );
+  return (
+    <>
+      <Hero title="👔 Resume" />
+      <ResumeTable />
+    </>
+  )
 }

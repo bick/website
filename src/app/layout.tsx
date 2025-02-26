@@ -1,32 +1,32 @@
 import "./globals.css"
-import {GoogleAnalytics} from "@next/third-parties/google"
-import {Analytics} from "@vercel/analytics/react"
 
-import Header from "@/components/Header"
+import { GoogleAnalytics } from "@next/third-parties/google"
+import { Analytics } from "@vercel/analytics/react"
+
 import Footer from "@/components/Footer"
-import {ThemeProvider} from "@/components/theme-provider"
+import Header from "@/components/Header"
+import { ThemeProvider } from "@/components/theme-provider"
 
-export default function RootLayout({children}: {
-    children: React.ReactNode
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
 }) {
-
-    return (
-        <html lang="en" suppressHydrationWarning>
-        <body>
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body>
         <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            storageKey="theme-preference"
+          attribute="class"
+          defaultTheme="dark"
+          storageKey="theme-preference"
         >
-            <Header/>
-            <main className="flex min-h-screen flex-col">
-                {children}
-            </main>
-            <Footer/>
+          <Header />
+          <main className="flex min-h-screen flex-col">{children}</main>
+          <Footer />
         </ThemeProvider>
-        <Analytics/>
-        <GoogleAnalytics gaId="G-7FQPVSFHG9"/>
-        </body>
-        </html>
-    )
+        <Analytics />
+        <GoogleAnalytics gaId="G-7FQPVSFHG9" />
+      </body>
+    </html>
+  )
 }

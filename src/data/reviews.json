@@ -2,374 +2,256 @@
   {
     "name": "Star Wars: Episode I",
     "rating": 6,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "Star Wars: Episode II",
     "rating": 6.5,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "Star Wars: Episode III",
     "rating": 7,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "Star Wars: Episode IV",
     "rating": 9,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "Star Wars: Episode V",
     "rating": 9,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "Star Wars: Episode VI",
     "rating": 9,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "Star Wars: Episode VII",
     "rating": 6,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "Star Wars: Episode VIII",
     "rating": 4,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "Star Wars: Episode IX",
     "rating": 4,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "Oppenheimer",
     "rating": 9,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "Django: Unchained",
     "rating": 10,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "The Wolf of Wall Street",
     "rating": 9.5,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "Goodfellas",
     "rating": 9.5,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "The Shawshank Redemption",
     "rating": 9.5,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "The Godfather",
     "rating": 9,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "The Godfather Part II",
     "rating": 9,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "Pulp Fiction",
     "rating": 9,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "Reservoir Dogs",
     "rating": 9,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "The Batman",
     "rating": 8,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "It",
     "rating": 8,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "It Chapter Two",
     "rating": 5,
-    "tags": [
-      "Movie"
-    ]
+    "tags": ["Movie"]
   },
   {
     "name": "Red Dead Redemption 2",
     "rating": 9,
-    "tags": [
-      "Video Game"
-    ]
+    "tags": ["Video Game"]
   },
   {
     "name": "Elden Ring",
     "rating": 10,
-    "tags": [
-      "Video Game"
-    ]
+    "tags": ["Video Game"]
   },
   {
     "name": "To Pimp A Butterfly",
-    "credit": [
-      "Kendrick Lamar"
-    ],
+    "credit": ["Kendrick Lamar"],
     "rating": 10,
-    "tags": [
-      "Music"
-    ]
+    "tags": ["Music"]
   },
   {
     "name": "The Dark Side of the Moon",
-    "credit": [
-      "Pink Floyd"
-    ],
+    "credit": ["Pink Floyd"],
     "rating": 10,
-    "tags": [
-      "Music"
-    ]
+    "tags": ["Music"]
   },
   {
     "name": "Madvillany",
-    "credit": [
-      "MF DOOM"
-    ],
+    "credit": ["MF DOOM"],
     "rating": 9,
-    "tags": [
-      "Music"
-    ]
+    "tags": ["Music"]
   },
   {
     "name": "My Beautiful Dark Twisted Fantasy",
-    "credit": [
-      "Kanye West"
-    ],
+    "credit": ["Kanye West"],
     "rating": 9,
-    "tags": [
-      "Music"
-    ]
+    "tags": ["Music"]
   },
   {
     "name": "In the Aeroplane Over the Sea",
-    "credit": [
-      "Neutral Milk Hotel"
-    ],
+    "credit": ["Neutral Milk Hotel"],
     "rating": 8,
-    "tags": [
-      "Music"
-    ]
+    "tags": ["Music"]
   },
   {
     "name": "DAMN.",
-    "credit": [
-      "Kendrick Lamar"
-    ],
+    "credit": ["Kendrick Lamar"],
     "rating": 9.5,
-    "tags": [
-      "Music"
-    ]
+    "tags": ["Music"]
   },
   {
     "name": "Mr. Morale & The Big Steppers",
-    "credit": [
-      "Kendrick Lamar"
-    ],
+    "credit": ["Kendrick Lamar"],
     "rating": 9,
-    "tags": [
-      "Music"
-    ]
+    "tags": ["Music"]
   },
   {
     "name": "The Marshall Mathers LP",
-    "credit": [
-      "Eminem"
-    ],
+    "credit": ["Eminem"],
     "rating": 10,
-    "tags": [
-      "Music"
-    ]
+    "tags": ["Music"]
   },
   {
     "name": "Beerbongs & Bentleys",
-    "credit": [
-      "Post Malone"
-    ],
+    "credit": ["Post Malone"],
     "rating": 8,
-    "tags": [
-      "Music"
-    ]
+    "tags": ["Music"]
   },
   {
     "name": "Stoney",
-    "credit": [
-      "Post Malone"
-    ],
+    "credit": ["Post Malone"],
     "rating": 7,
-    "tags": [
-      "Music"
-    ]
+    "tags": ["Music"]
   },
   {
     "name": "Apple M1 Pro 14-inch MacBook Pro",
     "rating": 8,
-    "tags": [
-      "Tech"
-    ]
+    "tags": ["Tech"]
   },
   {
     "name": "Apple iPhone 12",
     "rating": 9,
-    "tags": [
-      "Tech"
-    ]
+    "tags": ["Tech"]
   },
   {
     "name": "Apple iPhone 15",
     "rating": 10,
-    "tags": [
-      "Tech"
-    ]
+    "tags": ["Tech"]
   },
   {
     "name": "Wrestlemania 24",
     "rating": 9,
-    "tags": [
-      "Wrestling"
-    ]
+    "tags": ["Wrestling"]
   },
   {
     "name": "Wrestlemania 25",
     "rating": 9.5,
-    "tags": [
-      "Wrestling"
-    ]
+    "tags": ["Wrestling"]
   },
   {
     "name": "Wrestlemania 26",
     "rating": 9,
-    "tags": [
-      "Wrestling"
-    ]
+    "tags": ["Wrestling"]
   },
   {
     "name": "Wrestlemania 27",
     "rating": 3,
-    "tags": [
-      "Wrestling"
-    ]
+    "tags": ["Wrestling"]
   },
   {
     "name": "Wrestlemania 28",
     "rating": 5,
-    "tags": [
-      "Wrestling"
-    ]
+    "tags": ["Wrestling"]
   },
   {
     "name": "Wrestlemania 29",
     "rating": 6,
-    "tags": [
-      "Wrestling"
-    ]
+    "tags": ["Wrestling"]
   },
   {
     "name": "Wrestlemania 30",
     "rating": 10,
-    "tags": [
-      "Wrestling"
-    ]
+    "tags": ["Wrestling"]
   },
   {
     "name": "Wrestlemania 38 Night 1",
     "rating": 10,
-    "tags": [
-      "Wrestling"
-    ]
+    "tags": ["Wrestling"]
   },
   {
     "name": "Wrestlemania 38 Night 2",
     "rating": 9,
-    "tags": [
-      "Wrestling"
-    ]
+    "tags": ["Wrestling"]
   },
   {
     "name": "Wrestlemania 39 Night 1",
     "rating": 10,
-    "tags": [
-      "Wrestling"
-    ]
+    "tags": ["Wrestling"]
   },
   {
     "name": "Wrestlemania 39 Night 2",
     "rating": 9.5,
-    "tags": [
-      "Wrestling"
-    ]
+    "tags": ["Wrestling"]
   },
   {
     "name": "Wrestlemania XL Night 1",
     "rating": 7,
-    "tags": [
-      "Wrestling"
-    ]
+    "tags": ["Wrestling"]
   },
   {
     "name": "Wrestlemania XL Night 2",
     "rating": 10,
-    "tags": [
-      "Wrestling"
-    ]
+    "tags": ["Wrestling"]
   }
 ]

@@ -1,10 +1,10 @@
-import type {Metadata} from "next"
+import type { Metadata } from "next"
 
-import {siteMetadata} from "@/lib/seo"
-import ReviewsPage from "./Reviews";
+import ReviewsPage from "./Reviews"
+import { siteMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = siteMetadata.about
 
 export default function Page() {
-    return <ReviewsPage/>
+  return <ReviewsPage />
 }
