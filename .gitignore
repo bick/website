@@ -39,3 +39,9 @@ jspm_packages
 .DS_Store
 *.idea
 .idea
+
+.env
+.env.local
+
+.turbo
+/apps/api/dist

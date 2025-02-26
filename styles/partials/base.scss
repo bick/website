@@ -53,7 +53,7 @@ h3 {
 .owen {
   font-family: "Germanica", serif;
   font-weight: 500;
-  line-height: 1;
+  line-height: 3rem;
   display: block;
   margin-top: 2rem;
   margin-right: 2rem;
@@ -62,7 +62,6 @@ h3 {
 
 @media (min-width: 768px) {
   .owen {
-    margin: 1rem 1.5rem 0;
-    font-size: inherit;
+    font-size: 4rem !important;
   }
 }

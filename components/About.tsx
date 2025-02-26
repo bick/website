@@ -1,10 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import styles from "@/styles/components/about.module.scss";
 
 export default function Social() {
     return (
-        <section className={styles.about}>
+        <section className="about my-12 text-lg">
             <div className="container">
                 <h3>😺 About Me</h3>
                 <p className="about__boston">

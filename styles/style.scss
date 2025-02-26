@@ -5,6 +5,4 @@
 @import "partials/grid.scss";
 
 /* Tailwind */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";

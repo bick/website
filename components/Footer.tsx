@@ -1,37 +1,36 @@
 import Link from "next/link";
-import styles from "@/styles/components/footer.module.scss";
 
 export default function Footer() {
-  return (
-    <footer className={styles.footer}>
-      <div className="container">
-        <ul className={styles.footer__list}>
-          <li className={styles.footer__list__item}>
-            <Link href="/" className={styles.footer__list__link}>
-              Index
-            </Link>
-          </li>
-          <li className={styles.footer__list__item}>
-            <Link href="/resume" className={styles.footer__list__link}>
-              Resume
-            </Link>
-          </li>
-          <li className={styles.footer__list__item}>
-            <Link href="/reviews" className={styles.footer__list__link}>
-              Reviews
-            </Link>
-          </li>
-          <li className={styles.footer__list__item}>
-            <Link href="/contact" className={styles.footer__list__link}>
-              Contact
-            </Link>
-          </li>
-        </ul>
-        <span>
+    return (
+        <footer className="my-20 text-base">
+            <div className="container">
+                <ul className="flex mb-4">
+                    <li className="mr-8">
+                        <Link href="/" className="text-white text-lg">
+                            Index
+                        </Link>
+                    </li>
+                    <li className="mr-8">
+                        <Link href="/resume" className="text-white text-lg">
+                            Resume
+                        </Link>
+                    </li>
+                    <li className="mr-8">
+                        <Link href="/reviews" className="text-white text-lg">
+                            Reviews
+                        </Link>
+                    </li>
+                    <li className="mr-8">
+                        <Link href="/contact" className="text-white text-lg">
+                            Contact
+                        </Link>
+                    </li>
+                </ul>
+                <span className="text-[#788491]">
           Copyright &copy; {new Date().getFullYear()} Owen Bick. All Rights
           Reserved. Made with ❤️ and ☕ in Dallas.
         </span>
-      </div>
-    </footer>
-  );
+            </div>
+        </footer>
+    );
 }
