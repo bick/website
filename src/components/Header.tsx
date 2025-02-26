@@ -6,6 +6,12 @@ import {usePathname} from "next/navigation";
 import {FaGithub, FaLinkedin} from "react-icons/fa";
 import VanillaTilt from 'vanilla-tilt';
 
+interface VanillaTiltElement extends HTMLElement {
+    vanillaTilt?: {
+        destroy: () => void;
+    };
+}
+
 export default function Header() {
     const pathname = usePathname();
     const tiltRef = useRef(null);
@@ -25,7 +31,6 @@ export default function Header() {
     const activeLinkClasses = "text-white opacity-100";
 
     useEffect(() => {
-        // Using type assertion to handle the element properly
         VanillaTilt.init(tiltRef.current as unknown as HTMLElement, {
             max: 5,
             speed: 400,
@@ -36,7 +41,7 @@ export default function Header() {
         return () => {
             if (tiltRef.current) {
                 // Using proper type assertion to avoid TypeScript error
-                (tiltRef.current as any).vanillaTilt?.destroy();
+                (tiltRef.current as VanillaTiltElement).vanillaTilt?.destroy();
             }
         };
     }, []);

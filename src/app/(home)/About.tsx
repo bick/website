@@ -9,7 +9,7 @@ export default function Social() {
                 <h2>😺 About Me</h2>
                 <p className="mt-4">
                     I&apos;m Owen, I&apos;m a software engineer that currently lives
-                    in Dallas.
+                    in Austin.
                 </p>
                 <p>
                     <br/>I first started writing code for the web around 2012. My

@@ -1,6 +1,5 @@
 'use client'
 import React from "react";
-import Head from "next/head";
 import Clock from "react-live-clock";
 import Social from "@/components/Social";
 import Hero from "@/components/Hero";
@@ -19,7 +18,7 @@ export default function Home() {
                             ticking={true}
                             timezone={"US/Central"}
                         ></Clock>
-                        <span className="opacity-50 mt-2">UTC-06:00 - Dallas, TX</span>
+                        <span className="opacity-50 mt-2">UTC-06:00 - Austin, TX</span>
                     </div>
                 </div>
             </section>
