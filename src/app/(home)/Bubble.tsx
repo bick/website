@@ -38,8 +38,8 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
           initial="initial"
           animate="float"
           style={{
-            width: "min(1000px, 500px)",
-            height: "min(1000px, 500px)",
+            width: "min(1000px, 700px)",
+            height: "min(1000px, 700px)",
             marginLeft: "min(-200px, -15vw)",
             marginTop: "min(-200px, -15vw)",
           }}

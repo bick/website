@@ -137,9 +137,9 @@ const Header: React.FC = () => {
   }, [])
 
   return (
-    <header className="header fixed top-0 z-[9999] flex w-full items-center px-2 py-4">
+    <header className="header fixed top-0 z-[9999] flex w-full items-center p-1">
       <ul
-        className="mx-auto flex w-full items-center justify-center rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.38)] px-4 py-0.5 backdrop-blur-md transition-shadow duration-200 ease-in-out md:max-w-fit"
+        className="mx-auto flex w-full items-center justify-center rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.25)] px-4 py-0.5 backdrop-blur-md transition-shadow duration-200 ease-in-out md:max-w-fit"
         ref={tiltRef}
       >
         {/* Logo */}

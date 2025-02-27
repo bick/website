@@ -28,7 +28,7 @@ export default function Hero({ type, title, subtitle }: HeroProps) {
     return (
       <section className="pt-48 pb-32">
         <div className="container">
-          <h1 className="mb-1 block h-32 text-3xl font-bold md:flex md:items-center lg:text-6xl">
+          <h1 className="block text-3xl font-bold md:flex md:items-center lg:text-6xl">
             <motion.span
               className="mr-4 inline-block origin-bottom-right lg:mr-8"
               variants={waveVariants}
@@ -37,7 +37,7 @@ export default function Hero({ type, title, subtitle }: HeroProps) {
               👋
             </motion.span>
             Howdy, I&apos;m{" "}
-            <span className="my-4 block origin-bottom-right font-['Funsized'] text-5xl font-medium md:mx-4 md:text-6xl">
+            <span className="mb-12 h-full mt-6 block relative font-['Funsized'] text-5xl font-medium md:mx-4 md:text-6xl">
               Owen Bick
             </span>
           </h1>

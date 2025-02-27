@@ -67,7 +67,7 @@ export default function Portfolio() {
                 {project.badge && (
                   <Badge
                     variant={project.badgeType as "default" | "secondary" | "destructive" | "outline" | undefined}
-                    className="absolute right-4 top-4"
+                    className="absolute right-2 top-2 md:right-4 md:top-4"
                   >
                     {project.badge}
                   </Badge>
@@ -83,7 +83,7 @@ export default function Portfolio() {
                         ? index % 2 === 0
                           ? "h-auto max-h-32 odd:px-20 odd:py-12"
                           : "h-auto max-h-32 even:p-20"
-                        : "h-full px-24"
+                        : "my-auto px-24"
                     }`}
                   />
                 ) : (
