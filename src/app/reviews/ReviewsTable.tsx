@@ -30,7 +30,7 @@ const RATING_COLORS = {
 
 // Tag label mapping
 const TAG_LABELS = {
-    Movie: "Movies",
+    Movie: "Films",
     "Video Game": "Video Games",
     Wrestling: "Wrestling",
     Music: "Music",
@@ -181,7 +181,7 @@ export default function ReviewsTable() {
             </>
         )}
                                     <span className="italic">
-          {ratings.length} {tag === "Movie" ? "movies" : tag === "Music" ? "albums" : tag === "Video Games" ? "games" : tag.toLowerCase()}
+          {ratings.length} {tag === "Movie" ? "films" : tag === "Music" ? "albums" : tag === "Video Game" ? "games" : tag.toLowerCase()}
         </span>
       </span>
                             </div>
