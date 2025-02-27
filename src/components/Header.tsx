@@ -170,7 +170,7 @@ const Header: React.FC = () => {
               target="_blank"
               rel="nofollow"
               aria-label={social.label}
-              className={`${linkClasses} !py-0 hidden !text-lg md:block`}
+              className={`${linkClasses} !py-0 hidden !text-xl md:block`}
             >
               <social.icon className="m-auto flex h-full" />
             </Link>
