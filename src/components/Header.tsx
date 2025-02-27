@@ -89,7 +89,7 @@ const Header: React.FC = () => {
   ]
 
   const linkClasses: string =
-    "flex text-[#9797a0] font-medium text-base md:text-[15px] mx-2 md:mx-3 h-12 leading-[3rem] transition-all duration-150 ease mix-blend-exclusion hover:text-white hover:no-underline hover:opacity-100 hover:[text-shadow:rgba(255,255,255,0.85)_0_0_32px]"
+    "flex text-[#9797a0] font-medium text-[15px] mx-2 md:mx-3 h-12 leading-[3rem] transition-all duration-150 ease mix-blend-exclusion hover:text-white hover:no-underline hover:opacity-100 hover:[text-shadow:rgba(255,255,255,0.85)_0_0_32px]"
 
   const activeLinkClasses: string = "text-white opacity-100"
 
