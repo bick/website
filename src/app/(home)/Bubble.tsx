@@ -30,8 +30,7 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
   }
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Container for the floating bubble */}
+    <div className="bubble relative min-h-screen w-full overflow-hidden">
       <div className="pointer-events-none absolute inset-0 top-0 z-0">
         <motion.div
           className="absolute"
@@ -39,8 +38,8 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
           initial="initial"
           animate="float"
           style={{
-            width: "min(1000px, 60vw)",
-            height: "min(1000px, 60vw)",
+            width: "min(1000px, 500px)",
+            height: "min(1000px, 500px)",
             marginLeft: "min(-200px, -15vw)",
             marginTop: "min(-200px, -15vw)",
           }}

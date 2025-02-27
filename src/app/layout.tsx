@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           <Loading />
           <PageTransitionProvider>
-            <main className="flex min-h-screen flex-col">{children}</main>
+            <div className="flex min-h-screen flex-col">{children}</div>
           </PageTransitionProvider>
           <Footer />
         </ThemeProvider>

@@ -26,7 +26,7 @@ export default function Hero({ type, title, subtitle }: HeroProps) {
 
   if (type === "home") {
     return (
-      <section className="py-20">
+      <section className="pt-48 pb-32">
         <div className="container">
           <h1 className="mb-1 block h-32 text-3xl font-bold md:flex md:items-center lg:text-6xl">
             <motion.span

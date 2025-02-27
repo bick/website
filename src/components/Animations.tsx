@@ -19,7 +19,7 @@ export function PageTransitionProvider({ children }: { children: ReactNode }) {
   }, [])
 
   return (
-    <div className="relative">
+    <>
       <AnimatePresence mode="wait">
         {isLoading && (
           <>
@@ -74,7 +74,7 @@ export function PageTransitionProvider({ children }: { children: ReactNode }) {
       >
         {children}
       </motion.main>
-    </div>
+    </>
   )
 }
 
