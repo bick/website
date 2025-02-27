@@ -504,6 +504,48 @@
     "credit": "Eminem"
   },
   {
+    "name": "Channel Orange",
+    "rating": 9.5,
+    "tags": "Music",
+    "credit": "Frank Ocean"
+  },
+  {
+    "name": "Blonde",
+    "rating": 10,
+    "tags": "Music",
+    "credit": "Frank Ocean"
+  },
+  {
+    "name": "Nostalgia, Ultra",
+    "rating": 9.5,
+    "tags": "Music",
+    "credit": "Frank Ocean"
+  },
+  {
+    "name": "OK Computer",
+    "rating": 10,
+    "tags": "Music",
+    "credit": "Radiohead"
+  },
+  {
+    "name": "Kid A",
+    "rating": 9,
+    "tags": "Music",
+    "credit": "Radiohead"
+  },
+  {
+    "name": "In Rainbows",
+    "rating": 9,
+    "tags": "Music",
+    "credit": "Radiohead"
+  },
+  {
+    "name": "Pablo Honey",
+    "rating": 9,
+    "tags": "Music",
+    "credit": "Radiohead"
+  },
+  {
     "name": "Stoney (2016)",
     "rating": 8.5,
     "tags": "Music",
@@ -623,48 +665,7 @@
     "tags": "Wrestling",
     "credit": "Wrestlemania XL"
   },
-  {
-    "name": "Channel Orange",
-    "rating": 9.5,
-    "tags": "Music",
-    "credit": "Frank Ocean"
-  },
-  {
-    "name": "Blonde",
-    "rating": 10,
-    "tags": "Music",
-    "credit": "Frank Ocean"
-  },
-  {
-    "name": "Nostalgia, Ultra",
-    "rating": 9.5,
-    "tags": "Music",
-    "credit": "Frank Ocean"
-  },
-  {
-    "name": "OK Computer",
-    "rating": 10,
-    "tags": "Music",
-    "credit": "Radiohead"
-  },
-  {
-    "name": "Kid A",
-    "rating": 9,
-    "tags": "Music",
-    "credit": "Radiohead"
-  },
-  {
-    "name": "In Rainbows",
-    "rating": 9,
-    "tags": "Music",
-    "credit": "Radiohead"
-  },
-  {
-    "name": "Pablo Honey",
-    "rating": 9,
-    "tags": "Music",
-    "credit": "Radiohead"
-  },
+
   {
     "name": "Minecraft",
     "rating": 10,
@@ -732,18 +733,6 @@
     "credit": ""
   },
   {
-    "name": "Cities: Skylines",
-    "rating": 9,
-    "tags": "Video Game",
-    "credit": "Cities: Skylines"
-  },
-  {
-    "name": "Cities: Skylines II",
-    "rating": "7",
-    "tags": "Video Game",
-    "credit": "Cities: Skylines"
-  },
-  {
     "name": "The Sims",
     "rating": 8,
     "tags": "Video Game",
@@ -751,7 +740,7 @@
   },
   {
     "name": "The Sims 2",
-    "rating": 9,
+    "rating": 10,
     "tags": "Video Game",
     "credit": "The Sims"
   },
@@ -796,5 +785,17 @@
     "rating": 9,
     "tags": "Video Game",
     "credit": "Call of Duty"
+  }
+  {
+    "name": "Cities: Skylines",
+    "rating": 9,
+    "tags": "Video Game",
+    "credit": "Cities: Skylines"
+  },
+  {
+    "name": "Cities: Skylines II",
+    "rating": "7",
+    "tags": "Video Game",
+    "credit": "Cities: Skylines"
   }
 ]
