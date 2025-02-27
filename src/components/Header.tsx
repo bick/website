@@ -1,28 +1,85 @@
 "use client"
 
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { AnimatePresence, motion } from "framer-motion"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import VanillaTilt from "vanilla-tilt"
 
+// Define interfaces for type safety
 interface VanillaTiltElement extends HTMLElement {
   vanillaTilt?: {
     destroy: () => void
   }
 }
 
-export default function Header() {
-  const pathname = usePathname()
-  const tiltRef = useRef(null)
+interface MenuItem {
+  href: string
+  label: string
+}
 
-  const menuItems = [
+interface SocialLink {
+  href: string
+  icon: React.ComponentType<{ className: string }>
+  label: string
+}
+
+interface SparkleProps {
+  x: number
+  y: number
+}
+
+interface SparkleData {
+  id: string
+  x: number
+  y: number
+}
+
+const SparkleEffect: React.FC<SparkleProps> = ({ x, y }) => {
+  const randomDuration: number = Math.random() * 0.6 + 0.8 // Random duration between 0.8 and 1.4s
+  const randomScale: number = Math.random() * 0.7 + 0.7 // Random scale between 0.7 and 1.4
+
+  return (
+    <motion.div
+      className="pointer-events-none absolute text-lg"
+      initial={{
+        x,
+        y,
+        scale: 0,
+        opacity: 0,
+      }}
+      animate={{
+        y: y - 80 - Math.random() * 40, // Float up by 80-120px
+        x: x + (Math.random() * 60 - 30), // Drift left or right randomly
+        scale: randomScale,
+        opacity: [0, 1, 0],
+        rotate: Math.random() * 360,
+      }}
+      transition={{
+        duration: randomDuration,
+        ease: "easeOut",
+      }}
+      exit={{ opacity: 0 }}
+    >
+      ✨
+    </motion.div>
+  )
+}
+
+const Header: React.FC = () => {
+  const pathname: string = usePathname()
+  const tiltRef = useRef<HTMLUListElement>(null)
+  const [sparkles, setSparkles] = useState<SparkleData[]>([])
+  const buttonRef = useRef<HTMLDivElement>(null)
+
+  const menuItems: MenuItem[] = [
     { href: "/#projects", label: "Projects" },
     { href: "/resume", label: "Resume" },
     { href: "/reviews", label: "Reviews" },
   ]
 
-  const socialLinks = [
+  const socialLinks: SocialLink[] = [
     { href: "https://github.com/bick", icon: FaGithub, label: "GitHub" },
     {
       href: "https://linkedin.com/in/bick",
@@ -31,23 +88,50 @@ export default function Header() {
     },
   ]
 
-  const linkClasses =
+  const linkClasses: string =
     "flex text-[#9797a0] font-medium text-base md:text-[15px] mx-2 md:mx-3 h-12 leading-[3rem] transition-all duration-150 ease mix-blend-exclusion hover:text-white hover:no-underline hover:opacity-100 hover:[text-shadow:rgba(255,255,255,0.85)_0_0_32px]"
-  const activeLinkClasses = "text-white opacity-100"
+
+  const activeLinkClasses: string = "text-white opacity-100"
+
+  // Sparkle effect function
+  const createSparkles = (): void => {
+    if (!buttonRef.current) return
+
+    const buttonRect: DOMRect = buttonRef.current.getBoundingClientRect()
+    const newSparkles: SparkleData[] = []
+
+    // Create multiple sparkles
+    for (let i = 0; i < 12; i++) {
+      newSparkles.push({
+        id: `sparkle-${Date.now()}-${i}`,
+        x: Math.random() * buttonRect.width,
+        y: Math.random() * buttonRect.height,
+      })
+    }
+
+    setSparkles(newSparkles)
+
+    // Clear sparkles after they've animated
+    setTimeout(() => {
+      setSparkles([])
+    }, 1500)
+  }
 
   useEffect(() => {
-    const tiltElement = tiltRef.current as unknown as HTMLElement
+    if (tiltRef.current) {
+      VanillaTilt.init(tiltRef.current, {
+        max: 5,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.05,
+      })
 
-    VanillaTilt.init(tiltElement, {
-      max: 5,
-      speed: 400,
-      glare: true,
-      "max-glare": 0.05,
-    })
-
-    return () => {
-      if (tiltElement) {
-        ;(tiltElement as VanillaTiltElement).vanillaTilt?.destroy()
+      return () => {
+        if (tiltRef.current) {
+          // eslint-disable-next-line react-hooks/exhaustive-deps
+          const tiltElement = tiltRef.current as VanillaTiltElement
+          tiltElement.vanillaTilt?.destroy()
+        }
       }
     }
   }, [])
@@ -94,16 +178,28 @@ export default function Header() {
         ))}
 
         {/* Contact Button */}
-        <li>
-          <Link
-            href="/contact"
-            className="ease my-0 ml-2 flex items-center rounded-[10px] border-b-0 border-none bg-white/10 px-[14px] py-[7px] text-[15px] font-medium leading-5 text-white shadow-[inset_0_0_20px_rgba(255,255,255,0.15),inset_0_1px_1px_rgba(255,255,255,0.15)] transition-all duration-200 hover:shadow-none"
-          >
-            <span className="hidden md:block">🤩&nbsp;&nbsp;Start A Project</span>
-            <span className="md:hidden">Contact</span>
-          </Link>
+        <li className="relative">
+          <motion.div ref={buttonRef} className="relative" whileTap={{ scale: 0.97 }}>
+            <Link
+              href="/contact"
+              className="ease my-0 ml-2 flex items-center rounded-[10px] border-b-0 border-none bg-white/10 px-[14px] py-[7px] text-[15px] font-medium leading-5 text-white shadow-[inset_0_0_20px_rgba(255,255,255,0.15),inset_0_1px_1px_rgba(255,255,255,0.15)] transition-all duration-200 hover:shadow-none"
+              onClick={createSparkles}
+            >
+              <span className="hidden md:block">✨&nbsp;&nbsp;Start A Project</span>
+              <span className="md:hidden">Contact</span>
+            </Link>
+
+            {/* Sparkle elements with Framer Motion */}
+            <AnimatePresence>
+              {sparkles.map((sparkle) => (
+                <SparkleEffect key={sparkle.id} x={sparkle.x} y={sparkle.y} />
+              ))}
+            </AnimatePresence>
+          </motion.div>
         </li>
       </ul>
     </header>
   )
 }
+
+export default Header
