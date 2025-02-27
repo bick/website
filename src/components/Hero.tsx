@@ -24,7 +24,6 @@ export default function Hero({ type, title, subtitle }: HeroProps) {
     },
   }
 
-  // Home type
   if (type === "home") {
     return (
       <section className="py-20">

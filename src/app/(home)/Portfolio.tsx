@@ -34,7 +34,7 @@ export default function Portfolio() {
       title: "Devgigs",
       url: "https://devgigs.com",
       imageSrc: "/static/devgigs.png",
-      imageWidth: 400,
+      imageWidth: 350,
       imageHeight: 25,
       imageAlt: "Devgigs.",
       badge: "Summer 2025",
@@ -50,7 +50,6 @@ export default function Portfolio() {
       imageAlt: "genzswe.",
       description: "I post software engineering memes sometimes",
       hasImage: true,
-      customImageClasses: "p",
     },
   ]
 
@@ -79,9 +78,7 @@ export default function Portfolio() {
                     width={project.imageWidth}
                     height={project.imageHeight}
                     alt={project.imageAlt}
-                    className={`h-32 object-contain py-4 ${
-                      project.customImageClasses ||
-                      (project.description
+                    className={`h-32 object-contain py-4 ${(project.description
                         ? index % 2 === 0
                           ? "h-auto max-h-32 odd:px-20 odd:py-12"
                           : "h-auto max-h-32 even:p-20"
