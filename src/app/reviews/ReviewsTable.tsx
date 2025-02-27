@@ -10,7 +10,7 @@ import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/co
 // Type definitions
 interface Rating {
     name: string
-    rating: number | string // Some ratings might be empty strings
+    rating: number | string
     tags: string
     credit: string
 }
@@ -174,14 +174,14 @@ export default function ReviewsTable() {
                         {showCredit ? (
                             <div className="flex w-full">
                                 {credit}
-                                <span className="flex justify-end ml-auto mr-12 text-muted-foreground">
+                                <span className="flex justify-end ml-auto mr-4 lg:mr-12 text-muted-foreground">
         {perfectScores > 0 && (
             <>
                 <RatingStar/> x{perfectScores} <span className="mx-2">•</span>
             </>
         )}
                                     <span className="italic">
-          {ratings.length} {tag === "Movie" ? "movies" : tag === "Music" ? "albums" : tag.toLowerCase()}
+          {ratings.length} {tag === "Movie" ? "movies" : tag === "Music" ? "albums" : tag === "Video Games" ? "games" : tag.toLowerCase()}
         </span>
       </span>
                             </div>
