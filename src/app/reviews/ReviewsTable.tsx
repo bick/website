@@ -89,6 +89,7 @@ export default function ReviewsTable() {
     }, [ratings, selectedTag, uniqueTags])
 
     // Group ratings by credit
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const groupRatingsByCredit = useCallback((ratingsList: Rating[], tag: string) => {
         const creditGroups: Record<string, Rating[]> = {}
         const uncreditedItems: Rating[] = []
