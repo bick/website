@@ -5,7 +5,7 @@ export default function Social() {
         <div className="container">
           <h2>😺 About Me</h2>
           <p className="mt-4">
-            I'm Owen, a Senior Software Engineer with 12+ years of coding experience.
+            I&apos;m Owen, a Senior Software Engineer with 12+ years of coding experience.
           </p>
           <p>
             <br />
@@ -13,7 +13,7 @@ export default function Social() {
             <br />
             <br />
             I excel at architecting scalable applications, optimizing performance, and delivering exceptional user experiences.
-            Beyond coding, I'm passionate about mentoring engineers, maintaining high code quality standards, and making
+            Beyond coding, I&apos;m passionate about mentoring engineers, maintaining high code quality standards, and making
             strategic architectural decisions that drive business outcomes.
             <br />
             <br />
