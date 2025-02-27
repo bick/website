@@ -42,7 +42,7 @@ export default function Hero({ type, title, subtitle }: HeroProps) {
             </span>
           </h1>
           <h2 className="text-3xl mt-12 font-medium leading-normal">
-            I&apos;m a software engineer based in <GiTexas className="mx-1 inline" /> Austin
+            I&apos;m a software engineer based in <GiTexas className="mx-1 inline" /> Austin &amp; Dallas
           </h2>
         </div>
       </section>
