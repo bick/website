@@ -1,7 +1,9 @@
 "use client"
-import { useEffect, useState, useMemo, useCallback } from "react"
+
+import { useCallback, useEffect, useMemo, useState } from "react"
 import Image from "next/image"
 import ratingsData from "@/data/reviews.json"
+
 import { Card, CardContent } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
@@ -23,10 +25,7 @@ export default function ReviewsTable() {
   }, [])
 
   // Memoize unique tags to prevent recalculation on every render
-  const uniqueTags = useMemo(() =>
-          [...new Set(ratings.flatMap((rating) => rating.tags))],
-      [ratings]
-  )
+  const uniqueTags = useMemo(() => [...new Set(ratings.flatMap((rating) => rating.tags))], [ratings])
 
   // Memoize the getRatingColor function to avoid recreating on each render
   const getRatingColor = useCallback((rating: number): string => {
@@ -56,66 +55,66 @@ export default function ReviewsTable() {
   }, [])
 
   // Memoize filtered ratings to prevent recalculating on every render
-  const filteredRatings = useMemo(() =>
-          ratings.filter((rating) => selectedTag === "All" || rating.tags.includes(selectedTag)),
-      [ratings, selectedTag]
+  const filteredRatings = useMemo(
+    () => ratings.filter((rating) => selectedTag === "All" || rating.tags.includes(selectedTag)),
+    [ratings, selectedTag]
   )
 
   return (
-      <section className="pb-20">
-        <div className="container">
-          <div className="mb-6">
-            <Select value={selectedTag} onValueChange={setSelectedTag}>
-              <SelectTrigger className="w-[200px]">
-                <SelectValue placeholder="Filter by category" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="All">All Ratings</SelectItem>
-                {uniqueTags.map((tag) => (
-                    <SelectItem key={tag} value={tag}>
-                      {getTagLabel(tag)}
-                    </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-          <Card>
-            <CardContent className="p-0">
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead className="w-[70%]">Name</TableHead>
-                    <TableHead className="text-right">Rating</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {filteredRatings.map((ratingData) => (
-                      <TableRow key={ratingData.name}>
-                        <TableCell className="font-medium">
-                          {ratingData.name}
-                          {ratingData.credit && (
-                              <>
-                                <br />
-                                <span className="italic opacity-75">by {ratingData.credit.join(", ")}</span>
-                              </>
-                          )}
-                        </TableCell>
-                        <TableCell className="text-right font-mono font-semibold">
-                          <div className="flex items-center justify-end">
-                            {ratingData.rating === 10 && (
-                                <Image src="/static/star.gif" alt="Star" width={20} height={20} className="mr-2" />
-                            )}
-                            <span className={getRatingColor(ratingData.rating)}>{ratingData.rating}</span>
-                            /10
-                          </div>
-                        </TableCell>
-                      </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </CardContent>
-          </Card>
+    <section className="pb-20">
+      <div className="container">
+        <div className="mb-6">
+          <Select value={selectedTag} onValueChange={setSelectedTag}>
+            <SelectTrigger className="w-[200px]">
+              <SelectValue placeholder="Filter by category" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="All">All Ratings</SelectItem>
+              {uniqueTags.map((tag) => (
+                <SelectItem key={tag} value={tag}>
+                  {getTagLabel(tag)}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
-      </section>
+        <Card>
+          <CardContent className="p-0">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-[70%]">Name</TableHead>
+                  <TableHead className="text-right">Rating</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {filteredRatings.map((ratingData) => (
+                  <TableRow key={ratingData.name}>
+                    <TableCell className="font-medium">
+                      {ratingData.name}
+                      {ratingData.credit && (
+                        <>
+                          <br />
+                          <span className="italic opacity-75">by {ratingData.credit.join(", ")}</span>
+                        </>
+                      )}
+                    </TableCell>
+                    <TableCell className="text-right font-mono font-semibold">
+                      <div className="flex items-center justify-end">
+                        {ratingData.rating === 10 && (
+                          <Image src="/static/star.gif" alt="Star" width={20} height={20} className="mr-2" />
+                        )}
+                        <span className={getRatingColor(ratingData.rating)}>{ratingData.rating}</span>
+                        /10
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
   )
 }

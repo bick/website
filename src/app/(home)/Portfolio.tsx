@@ -78,11 +78,12 @@ export default function Portfolio() {
                     width={project.imageWidth}
                     height={project.imageHeight}
                     alt={project.imageAlt}
-                    className={`h-32 object-contain py-4 ${(project.description
+                    className={`h-32 object-contain py-4 ${
+                      project.description
                         ? index % 2 === 0
                           ? "h-auto max-h-32 odd:px-20 odd:py-12"
                           : "h-auto max-h-32 even:p-20"
-                        : "h-full px-24")
+                        : "h-full px-24"
                     }`}
                   />
                 ) : (
