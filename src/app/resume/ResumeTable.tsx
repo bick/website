@@ -56,20 +56,15 @@ export default function ResumeTable() {
   return (
     <section>
       <div className="container">
-        <h2 className="text-2xl font-semibold mt-12">Experience</h2>
+        <h2 className="mt-12 text-2xl font-semibold">Experience</h2>
         {resumeData.experience.map((job, index) => (
-          <div
-            key={index}
-            className="flex py-8 border-b border-[rgba(255,255,255,0.2)] last:border-b-0"
-          >
+          <div key={index} className="flex border-b border-[rgba(255,255,255,0.2)] py-8 last:border-b-0">
             <div>
-              <h3 className="text-lg font-bold m-0">{job.title}</h3>
+              <h3 className="m-0 text-lg font-bold">{job.title}</h3>
               <h4 className="text-base">{job.company}</h4>
-              {job.location && (
-                <p className="text-base text-gray-400">{job.location}</p>
-              )}
+              {job.location && <p className="text-base text-gray-400">{job.location}</p>}
             </div>
-            <time className="flex items-center ml-auto">
+            <time className="ml-auto flex items-center">
               {job.isPresentJob ? (
                 <>
                   {job.period.split(" - ")[0]} - <i className="ml-1">Present</i>
@@ -80,17 +75,14 @@ export default function ResumeTable() {
             </time>
           </div>
         ))}
-        <h2 className="text-2xl font-semibold mt-12">Education</h2>
+        <h2 className="mt-12 text-2xl font-semibold">Education</h2>
         {resumeData.education.map((edu, index) => (
-          <div
-            key={index}
-            className="flex py-8 border-b border-[rgba(255,255,255,0.2)] last:border-b-0"
-          >
+          <div key={index} className="flex border-b border-[rgba(255,255,255,0.2)] py-8 last:border-b-0">
             <div>
-              <h3 className="text-lg m-0">{edu.degree}</h3>
+              <h3 className="m-0 text-lg">{edu.degree}</h3>
               <h4 className="text-lg">{edu.institution}</h4>
             </div>
-            <time className="flex items-center ml-auto">{edu.period}</time>
+            <time className="ml-auto flex items-center">{edu.period}</time>
           </div>
         ))}
       </div>

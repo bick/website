@@ -52,16 +52,16 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="header flex fixed items-center top-0 w-full px-2 py-4 z-[9999]">
+    <header className="header fixed top-0 z-[9999] flex w-full items-center px-2 py-4">
       <ul
-        className="flex justify-center bg-[rgba(0,0,0,0.38)] backdrop-blur-md w-full md:max-w-fit transition-shadow duration-200 ease-in-out mx-auto items-center py-0.5 px-4 rounded-[10px] border border-[rgba(255,255,255,0.2)]"
+        className="mx-auto flex w-full items-center justify-center rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.38)] px-4 py-0.5 backdrop-blur-md transition-shadow duration-200 ease-in-out md:max-w-fit"
         ref={tiltRef}
       >
         {/* Logo */}
         <li>
           <Link
             href="/"
-            className={`${linkClasses} !text-3xl items-center !ml-0 before:content-['🗿'] hover:before:content-['🏠'] ${pathname === "/" ? activeLinkClasses : ""}`}
+            className={`${linkClasses} !ml-0 items-center !text-3xl before:content-['🗿'] hover:before:content-['🏠'] ${pathname === "/" ? activeLinkClasses : ""}`}
           ></Link>
         </li>
 
@@ -85,9 +85,9 @@ export default function Header() {
               target="_blank"
               rel="nofollow"
               aria-label={social.label}
-              className={`${linkClasses} hidden md:block text-lg`}
+              className={`${linkClasses} hidden text-lg md:block`}
             >
-              <social.icon className="flex m-auto h-full" />
+              <social.icon className="m-auto flex h-full" />
             </Link>
           </li>
         ))}
@@ -96,11 +96,9 @@ export default function Header() {
         <li>
           <Link
             href="/contact"
-            className="flex items-center text-[15px] bg-white/10 rounded-[10px] text-white shadow-[inset_0_0_20px_rgba(255,255,255,0.15),inset_0_1px_1px_rgba(255,255,255,0.15)] py-[7px] px-[14px] font-medium leading-5 my-0 transition-all border-b-0 duration-200 ease ml-2 border-none hover:shadow-none"
+            className="ease my-0 ml-2 flex items-center rounded-[10px] border-b-0 border-none bg-white/10 px-[14px] py-[7px] text-[15px] font-medium leading-5 text-white shadow-[inset_0_0_20px_rgba(255,255,255,0.15),inset_0_1px_1px_rgba(255,255,255,0.15)] transition-all duration-200 hover:shadow-none"
           >
-            <span className="hidden md:block">
-              🤩&nbsp;&nbsp;Start A Project
-            </span>
+            <span className="hidden md:block">🤩&nbsp;&nbsp;Start A Project</span>
             <span className="md:hidden">Contact</span>
           </Link>
         </li>

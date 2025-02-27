@@ -14,13 +14,9 @@ export default function Home() {
         <div className="container">
           <h3 className="mb-2 text-lg">✉ Email me</h3>
           <a href="mailto:owenbick@gmail.com">owenbick@gmail.com</a>
-          <div className="flex flex-col my-12">
-            <Clock
-              format={"MMMM Mo, YYYY, h:mm:ss A"}
-              ticking={true}
-              timezone={"US/Central"}
-            ></Clock>
-            <span className="opacity-50 mt-2">UTC-06:00 - Austin, TX</span>
+          <div className="my-12 flex flex-col">
+            <Clock format={"MMMM Mo, YYYY, h:mm:ss A"} ticking={true} timezone={"US/Central"}></Clock>
+            <span className="mt-2 opacity-50">UTC-06:00 - Austin, TX</span>
           </div>
         </div>
       </section>

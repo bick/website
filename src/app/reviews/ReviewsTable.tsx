@@ -5,21 +5,8 @@ import Image from "next/image"
 import ratingsData from "@/data/reviews.json"
 
 import { Card, CardContent } from "@/components/ui/card"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 
 interface Rating {
   name: string
@@ -94,10 +81,7 @@ export default function ReviewsTable() {
               </TableHeader>
               <TableBody>
                 {ratings
-                  .filter(
-                    (rating) =>
-                      selectedTag === "All" || rating.tags.includes(selectedTag)
-                  )
+                  .filter((rating) => selectedTag === "All" || rating.tags.includes(selectedTag))
                   .map((ratingData) => (
                     <TableRow key={ratingData.name}>
                       <TableCell className="font-medium">
@@ -105,26 +89,16 @@ export default function ReviewsTable() {
                         {ratingData.credit && (
                           <>
                             <br />
-                            <span className="opacity-75 italic">
-                              by {ratingData.credit.join(", ")}
-                            </span>
+                            <span className="italic opacity-75">by {ratingData.credit.join(", ")}</span>
                           </>
                         )}
                       </TableCell>
                       <TableCell className="text-right font-mono font-semibold">
                         <div className="flex items-center justify-end">
                           {ratingData.rating === 10 && (
-                            <Image
-                              src="/static/star.gif"
-                              alt="Star"
-                              width={20}
-                              height={20}
-                              className="mr-2"
-                            />
+                            <Image src="/static/star.gif" alt="Star" width={20} height={20} className="mr-2" />
                           )}
-                          <span className={getRatingColor(ratingData.rating)}>
-                            {ratingData.rating}
-                          </span>
+                          <span className={getRatingColor(ratingData.rating)}>{ratingData.rating}</span>
                           /10
                         </div>
                       </TableCell>

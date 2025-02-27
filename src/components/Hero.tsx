@@ -29,22 +29,21 @@ export default function Hero({ type, title, subtitle }: HeroProps) {
     return (
       <section className="py-20">
         <div className="container">
-          <h1 className="font-medium text-2xl md:text-6xl block leading-[3rem] md:flex md:items-center h-32 mb-1">
+          <h1 className="mb-1 block h-32 text-3xl font-bold md:flex md:items-center lg:text-6xl">
             <motion.span
-              className="inline-block origin-bottom-right mr-8"
+              className="mr-4 inline-block origin-bottom-right lg:mr-8"
               variants={waveVariants}
               animate="wave"
             >
               👋
             </motion.span>
             Howdy, I&apos;m{" "}
-            <span className="font-['Funsized'] font-medium leading-[3rem] block text-3xl md:text-6xl origin-bottom-right md:mx-4">
+            <span className="my-4 block origin-bottom-right font-['Funsized'] text-4xl font-medium md:mx-4 md:text-6xl">
               Owen Bick
             </span>
           </h1>
-          <h2 className="flex items-center font-medium text-3xl leading-normal">
-            I&apos;m a software engineer based in{" "}
-            <GiTexas className="ml-2 mr-1" /> Austin
+          <h2 className="text-3xl font-medium leading-normal">
+            I&apos;m a software engineer based in <GiTexas className="mx-1 inline" /> Austin
           </h2>
         </div>
       </section>
@@ -52,10 +51,10 @@ export default function Hero({ type, title, subtitle }: HeroProps) {
   }
 
   return (
-    <section className="pt-40 pb-20">
+    <section className="pb-20 pt-40">
       <div className="container">
-        <h1 className="font-bold text-4xl mb-1">{title}</h1>
-        <h2 className="font-medium text-xl mt-4 leading-normal">{subtitle}</h2>
+        <h1 className="mb-1 text-4xl font-bold">{title}</h1>
+        <h2 className="mt-4 text-xl font-medium leading-normal">{subtitle}</h2>
       </div>
     </section>
   )

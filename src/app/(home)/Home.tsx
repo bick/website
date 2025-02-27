@@ -18,10 +18,8 @@ const LayoutAnimation = ({ children, type }: LayoutProps) => {
 
   return (
     <motion.div
-      className={`w-full mx-auto py-0 ${
-        isHome
-          ? "py-28 bg-[url('/static/background.svg')] bg-no-repeat bg-[length:1000px] bg-[center_-500px]"
-          : ""
+      className={`mx-auto w-full py-0 ${
+        isHome ? "bg-[url('/static/background.svg')] bg-[length:1000px] bg-[center_-500px] bg-no-repeat py-28" : ""
       }`}
       initial={{ opacity: 0, y: 3 }}
       animate={{ opacity: 1, y: 0 }}

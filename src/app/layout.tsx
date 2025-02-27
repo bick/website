@@ -7,19 +7,11 @@ import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import { ThemeProvider } from "@/components/theme-provider"
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          storageKey="theme-preference"
-        >
+        <ThemeProvider attribute="class" defaultTheme="dark" storageKey="theme-preference">
           <Header />
           <main className="flex min-h-screen flex-col">{children}</main>
           <Footer />
