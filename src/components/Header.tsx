@@ -85,7 +85,7 @@ export default function Header() {
               target="_blank"
               rel="nofollow"
               aria-label={social.label}
-              className={`${linkClasses} hidden text-lg md:block`}
+              className={`${linkClasses} hidden !text-lg md:block`}
             >
               <social.icon className="m-auto flex h-full" />
             </Link>
