@@ -1,57 +1,45 @@
 [
   {
-    "name": "Star Wars: Episode I (1999)",
-    "rating": 6,
-    "tags": "Film",
-    "credit": "Star Wars"
-  },
-  {
-    "name": "Star Wars: Episode II (2002)",
-    "rating": 6.5,
-    "tags": "Film",
-    "credit": "Star Wars"
-  },
-  {
-    "name": "Star Wars: Episode III (2005)",
-    "rating": 7,
-    "tags": "Film",
-    "credit": "Star Wars"
-  },
-  {
-    "name": "Star Wars: Episode IV (1977)",
+    "name": "Taxi Driver (1976)",
     "rating": 9,
     "tags": "Film",
-    "credit": "Star Wars"
+    "credit": "Martin Scorsese"
   },
   {
-    "name": "Star Wars: Episode V (1980)",
+    "name": "Raging Bull (1980)",
     "rating": 9,
     "tags": "Film",
-    "credit": "Star Wars"
+    "credit": "Martin Scorsese"
   },
   {
-    "name": "Star Wars: Episode VI (1983)",
+    "name": "Goodfellas (1990)",
+    "rating": 10,
+    "tags": "Film",
+    "credit": "Martin Scorsese"
+  },
+  {
+    "name": "Casino (1995)",
+    "rating": 9.5,
+    "tags": "Film",
+    "credit": "Martin Scorsese"
+  },
+  {
+    "name": "The Departed (2006)",
     "rating": 9,
     "tags": "Film",
-    "credit": "Star Wars"
+    "credit": "Martin Scorsese"
   },
   {
-    "name": "Star Wars: Episode VII (2015)",
-    "rating": 6,
+    "name": "The Irishman (2019)",
+    "rating": 8.5,
     "tags": "Film",
-    "credit": "Star Wars"
+    "credit": "Martin Scorsese"
   },
   {
-    "name": "Star Wars: Episode VIII (2017)",
-    "rating": 4,
+    "name": "The Wolf of Wall Street (2013)",
+    "rating": 10,
     "tags": "Film",
-    "credit": "Star Wars"
-  },
-  {
-    "name": "Star Wars: Episode IX (2019)",
-    "rating": 4,
-    "tags": "Film",
-    "credit": "Star Wars"
+    "credit": "Martin Scorsese"
   },
   {
     "name": "Reservoir Dogs (1992)",
@@ -88,48 +76,6 @@
     "rating": 9,
     "tags": "Film",
     "credit": "Quentin Tarantino"
-  },
-  {
-    "name": "Taxi Driver (1976)",
-    "rating": 9,
-    "tags": "Film",
-    "credit": "Martin Scorsese"
-  },
-  {
-    "name": "Raging Bull (1980)",
-    "rating": 9,
-    "tags": "Film",
-    "credit": "Martin Scorsese"
-  },
-  {
-    "name": "Goodfellas (1990)",
-    "rating": 10,
-    "tags": "Film",
-    "credit": "Martin Scorsese"
-  },
-  {
-    "name": "Casino (1995)",
-    "rating": 9.5,
-    "tags": "Film",
-    "credit": "Martin Scorsese"
-  },
-  {
-    "name": "The Departed (2006)",
-    "rating": 9,
-    "tags": "Film",
-    "credit": "Martin Scorsese"
-  },
-  {
-    "name": "The Wolf of Wall Street (2013)",
-    "rating": 10,
-    "tags": "Film",
-    "credit": "Martin Scorsese"
-  },
-  {
-    "name": "The Irishman (2019)",
-    "rating": 8.5,
-    "tags": "Film",
-    "credit": "Martin Scorsese"
   },
   {
     "name": "Batman Begins (2005)",
@@ -196,6 +142,60 @@
     "rating": 9,
     "tags": "Film",
     "credit": "Stephen King"
+  },
+  {
+    "name": "Star Wars: Episode I (1999)",
+    "rating": 6,
+    "tags": "Film",
+    "credit": "Star Wars"
+  },
+  {
+    "name": "Star Wars: Episode II (2002)",
+    "rating": 6.5,
+    "tags": "Film",
+    "credit": "Star Wars"
+  },
+  {
+    "name": "Star Wars: Episode III (2005)",
+    "rating": 7,
+    "tags": "Film",
+    "credit": "Star Wars"
+  },
+  {
+    "name": "Star Wars: Episode IV (1977)",
+    "rating": 9,
+    "tags": "Film",
+    "credit": "Star Wars"
+  },
+  {
+    "name": "Star Wars: Episode V (1980)",
+    "rating": 9,
+    "tags": "Film",
+    "credit": "Star Wars"
+  },
+  {
+    "name": "Star Wars: Episode VI (1983)",
+    "rating": 9,
+    "tags": "Film",
+    "credit": "Star Wars"
+  },
+  {
+    "name": "Star Wars: Episode VII (2015)",
+    "rating": 6,
+    "tags": "Film",
+    "credit": "Star Wars"
+  },
+  {
+    "name": "Star Wars: Episode VIII (2017)",
+    "rating": 4,
+    "tags": "Film",
+    "credit": "Star Wars"
+  },
+  {
+    "name": "Star Wars: Episode IX (2019)",
+    "rating": 4,
+    "tags": "Film",
+    "credit": "Star Wars"
   },
   {
     "name": "Harry Potter and the Sorcerer's Stone (2001)",
@@ -271,7 +271,7 @@
   },
   {
     "name": "good kid, m.A.A.d city (2012)",
-    "rating": 9.5,
+    "rating": 10,
     "tags": "Music",
     "credit": "Kendrick Lamar"
   },
@@ -427,13 +427,13 @@
   },
   {
     "name": "Wish You Were Here (1975)",
-    "rating": 10,
+    "rating": 9,
     "tags": "Music",
     "credit": "Pink Floyd"
   },
   {
     "name": "The Wall (1979)",
-    "rating": 10,
+    "rating": 9,
     "tags": "Music",
     "credit": "Pink Floyd"
   },
@@ -649,19 +649,19 @@
   },
   {
     "name": "Kid A",
-    "rating": 10,
+    "rating": 9,
     "tags": "Music",
     "credit": "Radiohead"
   },
   {
     "name": "In Rainbows",
-    "rating": 9.5,
+    "rating": 9,
     "tags": "Music",
     "credit": "Radiohead"
   },
   {
     "name": "Pablo Honey",
-    "rating": 9.5,
+    "rating": 9,
     "tags": "Music",
     "credit": "Radiohead"
   },
