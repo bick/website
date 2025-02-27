@@ -36,7 +36,9 @@ export default function Header() {
   const activeLinkClasses = "text-white opacity-100"
 
   useEffect(() => {
-    VanillaTilt.init(tiltRef.current as unknown as HTMLElement, {
+    const tiltElement = tiltRef.current as unknown as HTMLElement
+
+    VanillaTilt.init(tiltElement, {
       max: 5,
       speed: 400,
       glare: true,
@@ -44,9 +46,8 @@ export default function Header() {
     })
 
     return () => {
-      if (tiltRef.current) {
-        // Using proper type assertion to avoid TypeScript error
-        ;(tiltRef.current as VanillaTiltElement).vanillaTilt?.destroy()
+      if (tiltElement) {
+        ;(tiltElement as VanillaTiltElement).vanillaTilt?.destroy()
       }
     }
   }, [])

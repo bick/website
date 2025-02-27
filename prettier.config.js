@@ -28,10 +28,7 @@ module.exports = {
     "",
   ],
   importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
-  plugins: [
-    "@ianvs/prettier-plugin-sort-imports",
-    "prettier-plugin-tailwindcss"
-  ],
-  tailwindConfig: './tailwind.config.js', // Make sure this points to your Tailwind config
-  tailwindFunctions: ['clsx', 'cn', 'cva'], // Add any utility functions you use for class composition
+  plugins: ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+  tailwindConfig: "./tailwind.config.js", // Make sure this points to your Tailwind config
+  tailwindFunctions: ["clsx", "cn", "cva"], // Add any utility functions you use for class composition
 }
