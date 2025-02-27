@@ -249,13 +249,19 @@
     "name": "The Godfather (1972)",
     "rating": 9,
     "tags": "Film",
-    "credit": ""
+    "credit": "The Godfather"
   },
   {
     "name": "The Godfather Part II (1974)",
     "rating": 9,
     "tags": "Film",
-    "credit": ""
+    "credit": "The Godfather"
+  },
+  {
+    "name": "The Godfather Part III (1990)",
+    "rating": 6,
+    "tags": "Film",
+    "credit": "The Godfather"
   },
   {
     "name": "Section.80 (2011)",
