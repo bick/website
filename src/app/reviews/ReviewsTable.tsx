@@ -181,7 +181,7 @@ export default function ReviewsTable() {
             </>
         )}
                                     <span className="italic">
-          {ratings.length} {tag === "Movie" ? "films" : tag === "Music" ? "albums" : tag === "Video Game" ? "games" : tag.toLowerCase()}
+          {ratings.length} {tag === "Film" ? "films" : tag === "Music" ? "albums" : tag === "Video Game" ? "games" : tag.toLowerCase()}
         </span>
       </span>
                             </div>
