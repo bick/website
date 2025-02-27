@@ -37,11 +37,11 @@ export default function Hero({ type, title, subtitle }: HeroProps) {
               👋
             </motion.span>
             Howdy, I&apos;m{" "}
-            <span className="mb-12 h-full mt-6 block relative font-['Funsized'] text-5xl font-medium md:mx-4 md:text-6xl">
+            <span className="mb-12 h-full mt-6 block relative font-['Funsized'] text-5xl font-medium md:mx-4 md:my-0 md:text-6xl">
               Owen Bick
             </span>
           </h1>
-          <h2 className="text-3xl font-medium leading-normal">
+          <h2 className="text-3xl mt-12 font-medium leading-normal">
             I&apos;m a software engineer based in <GiTexas className="mx-1 inline" /> Austin
           </h2>
         </div>
