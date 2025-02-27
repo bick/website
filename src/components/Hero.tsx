@@ -38,7 +38,7 @@ export default function Hero({ type, title, subtitle }: HeroProps) {
               👋
             </motion.span>
             Howdy, I&apos;m{" "}
-            <span className="my-4 block origin-bottom-right font-['Funsized'] text-4xl font-medium md:mx-4 md:text-6xl">
+            <span className="my-4 block origin-bottom-right font-['Funsized'] text-5xl font-medium md:mx-4 md:text-6xl">
               Owen Bick
             </span>
           </h1>

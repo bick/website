@@ -11,8 +11,7 @@ export default function Portfolio() {
       imageSrc: "/static/smile-doctors.png",
       imageWidth: 400,
       imageHeight: 150,
-      imageAlt: "Discount Drug Network.",
-      description: "Building an enterprise-grade pharmaceutical API",
+      imageAlt: "Smile Doctors.",
       hasImage: true,
     },
     {
@@ -72,9 +71,11 @@ export default function Portfolio() {
                 </div>
               )}
               <div className="p-4">
-                <blockquote className="m-0 mb-8 hidden p-0 text-lg leading-normal md:block">
-                  {project.description}
-                </blockquote>
+                {project.description && (
+                    <blockquote className="m-0 mb-8 p-0 text-lg leading-normal block">
+                      {project.description}
+                    </blockquote>
+                )}
                 <h3 className="mb-0 text-lg font-semibold after:ml-1 after:align-top after:text-xs after:font-medium after:leading-none after:opacity-50 after:content-['↗']">
                   {project.title}
                 </h3>
