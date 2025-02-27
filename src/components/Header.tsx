@@ -155,7 +155,7 @@ const Header: React.FC = () => {
           <li key={item.href}>
             <Link
               href={item.href}
-              className={`${linkClasses} ${pathname === item.href || (item.href.startsWith("/#") && pathname === "/") ? activeLinkClasses : ""}`}
+              className={linkClasses}
             >
               {item.label}
             </Link>
