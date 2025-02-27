@@ -89,7 +89,7 @@ const Header: React.FC = () => {
   ]
 
   const linkClasses: string =
-    "flex text-[#9797a0] font-medium text-[15px] mx-2 md:mx-3 h-12 leading-[3rem] transition-all duration-150 ease mix-blend-exclusion hover:text-white hover:no-underline hover:opacity-100 hover:[text-shadow:rgba(255,255,255,0.85)_0_0_32px]"
+    "flex text-[#9797a0] font-medium text-[15px] mx-2 md:mx-3 py-5 transition-all duration-150 ease mix-blend-exclusion hover:text-white hover:no-underline hover:opacity-100 hover:[text-shadow:rgba(255,255,255,0.85)_0_0_32px]"
 
   const activeLinkClasses: string = "text-white opacity-100"
 
@@ -146,7 +146,7 @@ const Header: React.FC = () => {
         <li>
           <Link
             href="/"
-            className={`${linkClasses} !ml-0 items-center !text-3xl before:content-['🗿'] hover:before:content-['🏠'] ${pathname === "/" ? activeLinkClasses : ""}`}
+            className={`${linkClasses} !py-0 !ml-0 items-center !text-3xl before:content-['🗿'] hover:before:content-['🏠'] ${pathname === "/" ? activeLinkClasses : ""}`}
           ></Link>
         </li>
 
@@ -170,7 +170,7 @@ const Header: React.FC = () => {
               target="_blank"
               rel="nofollow"
               aria-label={social.label}
-              className={`${linkClasses} hidden !text-lg md:block`}
+              className={`${linkClasses} !py-0 hidden !text-lg md:block`}
             >
               <social.icon className="m-auto flex h-full" />
             </Link>
