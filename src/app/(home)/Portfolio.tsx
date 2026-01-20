@@ -3,6 +3,8 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { Badge } from "@/components/ui/badge"
+
 export default function Portfolio() {
   const projects = [
     {
@@ -11,77 +13,94 @@ export default function Portfolio() {
       imageSrc: "/static/smile-doctors.png",
       imageWidth: 400,
       imageHeight: 150,
-      imageAlt: "Discount Drug Network.",
-      description: "Building an enterprise-grade pharmaceutical API",
+      imageAlt: "Smile Doctors.",
+      badge: "2024 - Present",
+      badgeType: "default",
       hasImage: true,
     },
     {
       title: "PlaceholderJS",
+      description: "Ridiculously simple and lightweight placeholders",
       url: "https://placeholderjs.com",
       imageSrc: "",
       imageWidth: 0,
       imageHeight: 0,
       imageAlt: "",
-      description: "Ridiculously simple and lightweight placeholders",
+      badge: "Open Source",
+      badgeType: "outline",
       hasImage: false,
     },
     {
       title: "Devgigs",
       url: "https://devgigs.com",
       imageSrc: "/static/devgigs.png",
-      imageWidth: 400,
+      imageWidth: 350,
       imageHeight: 25,
       imageAlt: "Devgigs.",
-      description: "Coming Summer 2025",
+      badge: "Summer 2025",
+      badgeType: "outline",
       hasImage: true,
     },
     {
       title: "@genzswe",
       url: "https://instagram.com/genzswe",
       imageSrc: "/static/genzswe.png",
-      imageWidth: 400,
-      imageHeight: 400,
+      imageWidth: 100,
+      imageHeight: 100,
       imageAlt: "genzswe.",
       description: "I post software engineering memes sometimes",
       hasImage: true,
-      customImageClasses: "py-6 px-0",
     },
   ]
 
   const cardStyles =
-    "inline-block portfolio-item bg-black border border-[rgba(255,255,255,0.2)] mb-4 p-0 w-full rounded-xl no-underline box-border break-inside-avoid rounded-lg overflow-hidden min-w-full hover:border-[#666] transition-colors duration-200"
+    "flex flex-col portfolio-item bg-black border border-[rgba(255,255,255,0.2)] mb-4 p-0 w-full rounded-xl no-underline box-border break-inside-avoid rounded-lg overflow-hidden min-w-full hover:border-[#666] transition-colors duration-200"
 
   return (
     <section className="mt-12" id="projects">
       <div className="container">
         <h2>🤘 Current Projects</h2>
-        <div className="md:grid md:grid-cols-2 md:gap-8 mt-8">
+        <div className="mt-8 md:grid md:grid-cols-2 md:gap-8">
           {projects.map((project, index) => (
-            <Link
-              key={index}
-              className={cardStyles}
-              href={project.url}
-              target="_blank"
-              rel="nofollow"
-            >
-              {project.hasImage ? (
-                <Image
-                  src={project.imageSrc}
-                  width={project.imageWidth}
-                  height={project.imageHeight}
-                  alt={project.imageAlt}
-                  className={`w-full h-auto object-contain bg-[#111] max-h-32 ${project.customImageClasses || (index % 2 === 0 ? "odd:py-12 odd:px-20" : "even:p-20")}`}
-                />
-              ) : (
-                <div className="flex items-center justify-center text-2xl font-semibold h-32 bg-[#111]">
-                  {project.title}
-                </div>
-              )}
+            <Link key={index} className={cardStyles} href={project.url} target="_blank" rel="nofollow">
+              <div className="relative flex h-full w-full justify-center bg-[#111]">
+                {project.badge && (
+                  <Badge
+                    variant={project.badgeType as "default" | "secondary" | "destructive" | "outline" | undefined}
+                    className="absolute right-2 top-2 md:right-4 md:top-4"
+                  >
+                    {project.badge}
+                  </Badge>
+                )}
+                {project.hasImage ? (
+                  <Image
+                    src={project.imageSrc}
+                    width={project.imageWidth}
+                    height={project.imageHeight}
+                    alt={project.imageAlt}
+                    className={`h-32 object-contain py-4 ${
+                      project.description
+                        ? index % 2 === 0
+                          ? "h-auto max-h-32 odd:px-20 odd:py-12"
+                          : "h-auto max-h-32 even:p-20"
+                        : "my-auto px-24"
+                    }`}
+                  />
+                ) : (
+                  <div
+                    className={`flex items-center justify-center bg-[#111] text-2xl font-semibold ${!project.description ? "h-48" : "h-32"}`}
+                  >
+                    {project.title}
+                  </div>
+                )}
+              </div>
               <div className="p-4">
-                <blockquote className="p-0 m-0 mb-8 text-lg leading-normal hidden md:block">
-                  {project.description}
-                </blockquote>
-                <h3 className="mb-0 text-lg font-semibold after:content-['↗'] after:text-xs after:font-medium after:leading-none after:ml-1 after:align-top after:opacity-50">
+                {project.description && (
+                  <blockquote className="mb-6 block p-0 text-lg leading-normal opacity-75">
+                    {project.description}
+                  </blockquote>
+                )}
+                <h3 className="mb-0 text-xl font-bold after:ml-1 after:align-top after:text-xs after:font-medium after:leading-none after:opacity-50 after:content-['↗']">
                   {project.title}
                 </h3>
               </div>

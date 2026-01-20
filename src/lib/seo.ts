@@ -6,11 +6,11 @@ type PageMetadata = {
 
 export const siteMetadata: PageMetadata = {
   home: {
-    title: "Owen Bick – A software engineer based in Austin",
-    description: "Owen Bick is a software engineer based in Austin.",
+    title: "Owen Bick – A software engineer based in Austin and Dallas",
+    description: "Owen Bick is a software engineer based in Austin and Dallas.",
     openGraph: {
-      title: "Owen Bick – A software engineer based in Austin",
-      description: "Owen Bick is a software engineer based in Austin.",
+      title: "Owen Bick – A software engineer based in Austin and Dallas",
+      description: "Owen Bick is a software engineer based in Austin and Dallas.",
     },
   },
   about: {

@@ -7,17 +7,17 @@ export default function Social() {
     <section className="mt-20 text-lg leading-8">
       <div className="container">
         <h2>👀 Follow me</h2>
-        <span className="inline-block mr-2 mt-4">GitHub: </span>
+        <span className="mr-2 mt-4 inline-block">GitHub: </span>
         <Link href="https://github.com/bick" target="_blank">
           @bick
         </Link>
         <br />
-        <span className="inline-block mr-2">X: </span>
+        <span className="mr-2 inline-block">X: </span>
         <Link href="https://x.com/owenbick" target="_blank">
           @owenbick
         </Link>
         <br />
-        <span className="inline-block mr-2">LinkedIn: </span>
+        <span className="mr-2 inline-block">LinkedIn: </span>
         <Link href="https://linkedin.com/in/bick" target="_blank">
           @bick
         </Link>
