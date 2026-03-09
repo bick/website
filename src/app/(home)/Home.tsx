@@ -4,6 +4,7 @@ import Hero from "@/components/Hero"
 import Social from "@/components/Social"
 import About from "./About"
 import BubbleWrapper from "./Bubble"
+import News from "./News"
 import Portfolio from "./Portfolio"
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <BubbleWrapper>
         <Hero type="home" />
         <Portfolio />
+        <News />
       </BubbleWrapper>
       <About />
       <Social />

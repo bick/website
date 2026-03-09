@@ -30,7 +30,7 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
   }
 
   return (
-    <div className="bubble relative min-h-screen w-full overflow-hidden">
+    <div className="bubble relative w-full overflow-hidden">
       <div className="pointer-events-none absolute inset-0 top-0 z-0">
         <motion.div
           className="absolute"

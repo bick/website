@@ -29,28 +29,7 @@ export default function Portfolio() {
       badge: "Open Source",
       badgeType: "outline",
       hasImage: false,
-    },
-    {
-      title: "Devgigs",
-      url: "https://devgigs.com",
-      imageSrc: "/static/devgigs.png",
-      imageWidth: 350,
-      imageHeight: 25,
-      imageAlt: "Devgigs.",
-      badge: "Summer 2025",
-      badgeType: "outline",
-      hasImage: true,
-    },
-    {
-      title: "@genzswe",
-      url: "https://instagram.com/genzswe",
-      imageSrc: "/static/genzswe.png",
-      imageWidth: 100,
-      imageHeight: 100,
-      imageAlt: "genzswe.",
-      description: "I post software engineering memes sometimes",
-      hasImage: true,
-    },
+    }
   ]
 
   const cardStyles =
