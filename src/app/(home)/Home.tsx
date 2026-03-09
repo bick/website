@@ -9,14 +9,12 @@ import Portfolio from "./Portfolio"
 
 export default function Home() {
   return (
-    <>
-      <BubbleWrapper>
-        <Hero type="home" />
-        <Portfolio />
-        <News />
-      </BubbleWrapper>
+    <BubbleWrapper>
+      <Hero type="home" />
+      <Portfolio />
+      <News />
       <About />
       <Social />
-    </>
+    </BubbleWrapper>
   )
 }

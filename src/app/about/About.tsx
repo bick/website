@@ -2,15 +2,35 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { motion, type Variants } from "framer-motion"
 import ResumeTable from "./ResumeTable"
 
 export default function AboutPage() {
+  const bubbleFloatVariants: Variants = {
+    initial: {
+      x: "30vw",
+      y: "20vh",
+      rotate: 0,
+    },
+    float: {
+      x: ["30vw", "60vw", "15vw", "50vw", "25vw", "65vw", "30vw"],
+      y: ["20vh", "50vh", "30vh", "10vh", "60vh", "25vh", "20vh"],
+      rotate: [0, 8, -5, 10, -8, 5, 0],
+      transition: {
+        duration: 90,
+        repeat: Number.POSITIVE_INFINITY,
+        repeatType: "loop",
+        ease: "easeInOut",
+      },
+    },
+  }
+
   return (
     <>
-      {/* Gritty gradient hero */}
+      {/* Gritty gradient hero with blob */}
       <section className="relative overflow-hidden pt-40 pb-24">
-        {/* Gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-950 via-black to-blue-950" />
+        {/* Gradient background - orange tones */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-950/80 via-black to-amber-950/60" />
 
         {/* Noise/grain overlay */}
         <div className="absolute inset-0 opacity-30 mix-blend-overlay">
@@ -23,8 +43,29 @@ export default function AboutPage() {
           </svg>
         </div>
 
-        {/* Subtle radial glow */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/10 rounded-full blur-3xl" />
+        {/* Floating blob animation */}
+        <div className="pointer-events-none absolute inset-0 z-0">
+          <motion.div
+            className="absolute"
+            variants={bubbleFloatVariants}
+            initial="initial"
+            animate="float"
+            style={{
+              width: "min(1000px, 700px)",
+              height: "min(1000px, 700px)",
+              marginLeft: "min(-200px, -15vw)",
+              marginTop: "min(-200px, -15vw)",
+            }}
+          >
+            <Image
+              src="/static/background.svg"
+              alt="Background decoration"
+              fill
+              className="object-contain opacity-60"
+              priority
+            />
+          </motion.div>
+        </div>
 
         {/* Content */}
         <div className="container relative z-10">
