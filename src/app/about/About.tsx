@@ -29,7 +29,7 @@ export default function AboutPage() {
     <>
       {/* Gritty gradient hero with blob */}
       <section className="relative overflow-hidden pt-40 pb-24">
-        {/* Gradient background - orange tones */}
+        {/* Gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-950/80 via-black to-indigo-950/50" />
 
         {/* Noise/grain overlay */}
