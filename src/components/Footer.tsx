@@ -13,8 +13,8 @@ export default function Footer() {
             </Link>
           </li>
           <li className="mr-8">
-            <Link href="/resume" className="text-lg text-white">
-              Resume
+            <Link href="/about" className="text-lg text-white">
+              About
             </Link>
           </li>
           <li className="mr-8">

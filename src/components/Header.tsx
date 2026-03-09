@@ -75,7 +75,7 @@ const Header: React.FC = () => {
 
   const menuItems: MenuItem[] = [
     { href: "/#projects", label: "Projects" },
-    { href: "/resume", label: "Resume" },
+    { href: "/about", label: "About" },
     { href: "/reviews", label: "Reviews" },
   ]
 
