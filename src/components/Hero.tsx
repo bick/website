@@ -37,7 +37,12 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
     return (
       <section className="pt-48 pb-32">
         <div className="container">
-          <h1 className="block text-3xl font-bold md:flex md:items-center lg:text-6xl">
+          <motion.h1
+            className="block text-3xl font-bold md:flex md:items-center lg:text-6xl"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+          >
             <motion.span
               className="mr-4 inline-block origin-bottom-right lg:mr-8"
               variants={waveVariants}
@@ -49,10 +54,15 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
             <span className="mb-12 h-full mt-6 block relative font-['Funsized'] text-5xl font-medium md:mx-4 md:my-0 md:text-6xl">
               Owen Bick
             </span>
-          </h1>
-          <h2 className="text-3xl mt-12 font-medium leading-normal">
+          </motion.h1>
+          <motion.h2
+            className="text-3xl mt-12 font-medium leading-normal"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.35 }}
+          >
             I&apos;m a software engineer based in <GiTexas className="mx-1 inline" /> Austin &amp; Dallas
-          </h2>
+          </motion.h2>
         </div>
       </section>
     )
@@ -64,11 +74,21 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
 
   return (
     <section className="relative overflow-hidden pb-20 pt-40">
-      {/* Gradient background */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${gradientClass}`} />
+      {/* Gradient background - fades in */}
+      <motion.div
+        className={`absolute inset-0 bg-gradient-to-br ${gradientClass}`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      />
 
-      {/* Noise/grain texture */}
-      <div className="pointer-events-none absolute inset-0 opacity-25 mix-blend-overlay">
+      {/* Noise/grain texture - fades in with gradient */}
+      <motion.div
+        className="pointer-events-none absolute inset-0 mix-blend-overlay"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.25 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <svg className="h-full w-full">
           <filter id="heroGrain">
             <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
@@ -76,13 +96,27 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
           </filter>
           <rect width="100%" height="100%" filter="url(#heroGrain)" />
         </svg>
-      </div>
+      </motion.div>
 
-      {/* Content */}
+      {/* Content - slides up and fades in */}
       <div className="container relative z-10">
-        <h1 className="mb-1 text-4xl font-bold">{title}</h1>
+        <motion.h1
+          className="mb-1 text-4xl font-bold"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+        >
+          {title}
+        </motion.h1>
         {subtitle && (
-          <h2 className="mt-4 max-w-2xl text-xl font-medium leading-normal text-white/60">{subtitle}</h2>
+          <motion.h2
+            className="mt-4 max-w-2xl text-xl font-medium leading-normal text-white/60"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.35 }}
+          >
+            {subtitle}
+          </motion.h2>
         )}
       </div>
 

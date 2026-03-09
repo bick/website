@@ -2,6 +2,8 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { motion } from "framer-motion"
+
 import { Badge } from "@/components/ui/badge"
 import type { Project } from "@/data/projects"
 
@@ -10,11 +12,21 @@ export default function CaseStudy({ project }: { project: Project }) {
     <>
       {/* Hero with full-width screenshot */}
       <section className="relative overflow-hidden pt-32 pb-0">
-        {/* Gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-950/70 via-black to-amber-950/40" />
+        {/* Gradient background - fades in */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-br from-orange-950/70 via-black to-amber-950/40"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        />
 
-        {/* Noise/grain */}
-        <div className="pointer-events-none absolute inset-0 opacity-25 mix-blend-overlay">
+        {/* Noise/grain - fades in */}
+        <motion.div
+          className="pointer-events-none absolute inset-0 mix-blend-overlay"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.25 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <svg className="h-full w-full">
             <filter id="caseGrain">
               <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
@@ -22,9 +34,15 @@ export default function CaseStudy({ project }: { project: Project }) {
             </filter>
             <rect width="100%" height="100%" filter="url(#caseGrain)" />
           </svg>
-        </div>
+        </motion.div>
 
-        <div className="container relative z-10">
+        {/* Content - slides up */}
+        <motion.div
+          className="container relative z-10"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+        >
           <Link
             href="/projects"
             className="portfolio-item mb-8 inline-block text-sm font-medium text-white/50 no-underline transition-colors hover:text-white/80"
@@ -63,10 +81,15 @@ export default function CaseStudy({ project }: { project: Project }) {
               </span>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Screenshot */}
-        <div className="container relative z-10 mt-12">
+        <motion.div
+          className="container relative z-10 mt-12"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+        >
           <div className="overflow-hidden rounded-t-xl border border-b-0 border-[rgba(255,255,255,0.15)]">
             <div className="relative aspect-video w-full bg-[#111]">
               <Image
@@ -78,7 +101,7 @@ export default function CaseStudy({ project }: { project: Project }) {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Case study content */}

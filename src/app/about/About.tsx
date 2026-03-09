@@ -29,11 +29,21 @@ export default function AboutPage() {
     <>
       {/* Gritty gradient hero with blob */}
       <section className="relative overflow-hidden pt-40 pb-24">
-        {/* Gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-950/80 via-black to-indigo-950/50" />
+        {/* Gradient background - fades in */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-br from-purple-950/80 via-black to-indigo-950/50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        />
 
-        {/* Noise/grain overlay */}
-        <div className="absolute inset-0 opacity-30 mix-blend-overlay">
+        {/* Noise/grain overlay - fades in */}
+        <motion.div
+          className="absolute inset-0 mix-blend-overlay"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.3 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
           <svg className="h-full w-full">
             <filter id="grain">
               <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
@@ -41,7 +51,7 @@ export default function AboutPage() {
             </filter>
             <rect width="100%" height="100%" filter="url(#grain)" />
           </svg>
-        </div>
+        </motion.div>
 
         {/* Floating blob animation */}
         <div className="pointer-events-none absolute inset-0 z-0">
@@ -67,11 +77,16 @@ export default function AboutPage() {
           </motion.div>
         </div>
 
-        {/* Content */}
+        {/* Content - slides up */}
         <div className="container relative z-10">
           <div className="flex flex-col items-center gap-10 md:flex-row md:items-start md:gap-16">
             {/* Photo */}
-            <div className="flex-shrink-0">
+            <motion.div
+              className="flex-shrink-0"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
+            >
               <div className="relative h-48 w-48 overflow-hidden rounded-2xl border-2 border-white/10 shadow-2xl md:h-64 md:w-64">
                 <Image
                   src="/static/headshot.jpg"
@@ -81,10 +96,15 @@ export default function AboutPage() {
                   priority
                 />
               </div>
-            </div>
+            </motion.div>
 
             {/* Bio */}
-            <div className="text-center md:text-left">
+            <motion.div
+              className="text-center md:text-left"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
+            >
               <h1 className="text-4xl font-bold md:text-5xl">Owen Bick</h1>
               <p className="mt-3 text-lg text-white/60">
                 Software Engineering Leader &middot; Austin &amp; Dallas
@@ -110,7 +130,7 @@ export default function AboutPage() {
                   LinkedIn
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 

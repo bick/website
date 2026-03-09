@@ -76,14 +76,24 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
 
   return (
     <div className="bubble relative w-full overflow-hidden">
-      {/* Gritty gradient base */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-950/40 via-black to-amber-950/30" />
+      {/* Gritty gradient base - fades in */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-br from-orange-950/40 via-black to-amber-950/30"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      />
 
       {/* Twinkling stars */}
       <Stars />
 
-      {/* Noise/grain texture */}
-      <div className="pointer-events-none absolute inset-0 z-[1] opacity-20 mix-blend-overlay">
+      {/* Noise/grain texture - fades in */}
+      <motion.div
+        className="pointer-events-none absolute inset-0 z-[1] mix-blend-overlay"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.2 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <svg className="h-full w-full">
           <filter id="homeGrain">
             <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch" />
@@ -91,7 +101,7 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
           </filter>
           <rect width="100%" height="100%" filter="url(#homeGrain)" />
         </svg>
-      </div>
+      </motion.div>
 
       {/* Floating blob */}
       <div className="pointer-events-none absolute inset-0 top-0 z-[2]">
