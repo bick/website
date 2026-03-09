@@ -12,10 +12,10 @@ export default function News() {
   ]
 
   return (
-    <section className="mt-12" id="news">
+    <section className="mt-24" id="news">
       <div className="container">
         <h2>📰 In the News</h2>
-        <ul className="mt-8 list-disc space-y-3 pl-6">
+        <ul className="mt-6 space-y-3 pl-6 list-disc">
           {articles.map((article, index) => (
             <li key={index} className="text-lg">
               <Link
@@ -26,7 +26,7 @@ export default function News() {
               >
                 {article.title}
               </Link>
-              <span className="ml-2 opacity-50">— {article.source}</span>
+              <span className="ml-2 opacity-40">— {article.source}</span>
             </li>
           ))}
         </ul>

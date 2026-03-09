@@ -1,11 +1,57 @@
 "use client"
 
-import type { ReactNode } from "react"
+import { useMemo, type ReactNode } from "react"
 import Image from "next/image"
 import { motion, type Variants } from "framer-motion"
 
 interface BackgroundWrapperProps {
   children: ReactNode
+}
+
+function Stars() {
+  const stars = useMemo(() => {
+    const seed = 42
+    const rng = (i: number) => {
+      const x = Math.sin(seed + i * 127.1) * 43758.5453
+      return x - Math.floor(x)
+    }
+
+    return Array.from({ length: 60 }, (_, i) => ({
+      left: `${rng(i * 3) * 100}%`,
+      top: `${rng(i * 3 + 1) * 100}%`,
+      size: rng(i * 3 + 2) < 0.1 ? 6 : rng(i * 3 + 2) < 0.35 ? 4 : 3,
+      delay: rng(i * 7) * 6,
+      duration: 3 + rng(i * 11) * 4,
+      brightness: 0.4 + rng(i * 13) * 0.6,
+    }))
+  }, [])
+
+  return (
+    <div className="pointer-events-none absolute inset-0 z-[1]">
+      {stars.map((star, i) => (
+        <motion.div
+          key={i}
+          className="absolute rounded-full bg-white"
+          style={{
+            left: star.left,
+            top: star.top,
+            width: star.size,
+            height: star.size,
+          }}
+          animate={{
+            opacity: [star.brightness * 0.3, star.brightness, star.brightness * 0.3],
+          }}
+          transition={{
+            duration: star.duration,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+            delay: star.delay,
+          }}
+        />
+      ))}
+    </div>
+  )
 }
 
 export default function BackgroundWrapper({ children }: BackgroundWrapperProps) {
@@ -32,6 +78,9 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
     <div className="bubble relative w-full overflow-hidden">
       {/* Gritty gradient base */}
       <div className="absolute inset-0 bg-gradient-to-br from-orange-950/40 via-black to-amber-950/30" />
+
+      {/* Twinkling stars */}
+      <Stars />
 
       {/* Noise/grain texture */}
       <div className="pointer-events-none absolute inset-0 z-[1] opacity-20 mix-blend-overlay">

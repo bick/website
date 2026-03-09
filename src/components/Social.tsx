@@ -3,24 +3,26 @@
 import Link from "next/link"
 
 export default function Social() {
+  const links = [
+    { label: "GitHub", handle: "@bick", href: "https://github.com/bick" },
+    { label: "X", handle: "@owenbick", href: "https://x.com/owenbick" },
+    { label: "LinkedIn", handle: "@bick", href: "https://linkedin.com/in/bick" },
+  ]
+
   return (
-    <section className="mt-20 text-lg leading-8">
+    <section className="mt-24 pb-8">
       <div className="container">
         <h2>👀 Follow me</h2>
-        <span className="mr-2 mt-4 inline-block">GitHub: </span>
-        <Link href="https://github.com/bick" target="_blank">
-          @bick
-        </Link>
-        <br />
-        <span className="mr-2 inline-block">X: </span>
-        <Link href="https://x.com/owenbick" target="_blank">
-          @owenbick
-        </Link>
-        <br />
-        <span className="mr-2 inline-block">LinkedIn: </span>
-        <Link href="https://linkedin.com/in/bick" target="_blank">
-          @bick
-        </Link>
+        <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-lg">
+          {links.map((link) => (
+            <div key={link.label}>
+              <span className="opacity-50">{link.label}: </span>
+              <Link href={link.href} target="_blank">
+                {link.handle}
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

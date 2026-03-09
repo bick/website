@@ -4,14 +4,16 @@ import Hero from "@/components/Hero"
 import Social from "@/components/Social"
 import About from "./About"
 import BubbleWrapper from "./Bubble"
+import Journal from "./Journal"
 import News from "./News"
-import Portfolio from "./Portfolio"
+import Projects from "./Portfolio"
 
 export default function Home() {
   return (
     <BubbleWrapper>
       <Hero type="home" />
-      <Portfolio />
+      <Projects />
+      <Journal />
       <News />
       <About />
       <Social />

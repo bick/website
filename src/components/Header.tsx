@@ -1,11 +1,15 @@
-"use client"
+"use client";
 
-import React, { useEffect, useRef, useState } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { AnimatePresence, motion } from "framer-motion"
-import { FaGithub, FaLinkedin } from "react-icons/fa"
-import VanillaTilt from "vanilla-tilt"
+import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import VanillaTilt from "vanilla-tilt";
+
+
+
+
 
 // Define interfaces for type safety
 interface VanillaTiltElement extends HTMLElement {
@@ -74,8 +78,9 @@ const Header: React.FC = () => {
   const buttonRef = useRef<HTMLDivElement>(null)
 
   const menuItems: MenuItem[] = [
-    { href: "/#projects", label: "Projects" },
+    { href: "/projects", label: "Projects" },
     { href: "/about", label: "About" },
+    { href: "/journal", label: "Journal" },
     { href: "/reviews", label: "Reviews" },
   ]
 

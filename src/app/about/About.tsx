@@ -30,7 +30,7 @@ export default function AboutPage() {
       {/* Gritty gradient hero with blob */}
       <section className="relative overflow-hidden pt-40 pb-24">
         {/* Gradient background - orange tones */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-950/80 via-black to-amber-950/60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-950/80 via-black to-indigo-950/50" />
 
         {/* Noise/grain overlay */}
         <div className="absolute inset-0 opacity-30 mix-blend-overlay">

@@ -9,7 +9,7 @@ import Social from "@/components/Social"
 export default function Home() {
   return (
     <>
-      <Hero title="🛰️ Contact Me" />
+      <Hero title="🛰️ Contact Me" gradient="red" />
       <section className="social">
         <div className="container">
           <h3 className="mb-2 text-lg">✉ Email me</h3>
