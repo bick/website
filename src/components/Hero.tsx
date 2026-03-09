@@ -56,13 +56,33 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
             </span>
           </motion.h1>
           <motion.h2
-            className="text-3xl mt-12 font-medium leading-normal"
+            className="text-2xl mt-12 font-medium leading-relaxed max-w-2xl text-white/70 md:text-3xl"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.35 }}
           >
-            I&apos;m a software engineer based in <GiTexas className="mx-1 inline" /> Austin &amp; Dallas
+            Engineering leader based in <GiTexas className="mx-1 inline text-white" /> Texas.
+            I build teams, ship products, and scale startups.
           </motion.h2>
+          <motion.div
+            className="mt-10 flex flex-wrap gap-4"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+          >
+            <a
+              href="/projects"
+              className="portfolio-item rounded-lg bg-white/10 px-6 py-3 text-base font-medium text-white shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] transition-all hover:bg-white/20 no-underline"
+            >
+              View my work
+            </a>
+            <a
+              href="/contact"
+              className="portfolio-item rounded-lg border border-white/20 px-6 py-3 text-base font-medium text-white/70 transition-all hover:border-white/40 hover:text-white no-underline"
+            >
+              Get in touch
+            </a>
+          </motion.div>
         </div>
       </section>
     )
