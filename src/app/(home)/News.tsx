@@ -1,13 +1,17 @@
-"use client"
+"use client";
 
-import Link from "next/link"
+import Link from "next/link";
+
+
+
+
 
 export default function News() {
   const articles = [
     {
-      title: "Article Title Here",
-      source: "Publication Name",
-      url: "https://example.com/article",
+      title: "The human coders hired to mop up AI slop (2025)",
+      source: "KUOW Seattle - NPR Network",
+      url: "https://www.kuow.org/stories/the-human-coders-hired-to-mop-up-ai-slop",
     },
   ]
 

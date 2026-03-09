@@ -13,7 +13,7 @@ export default function Projects() {
   return (
     <section className="mt-24" id="projects">
       <div className="container">
-        <h2>🚀 Projects</h2>
+        <h2>🚀 Featured Projects</h2>
         <div className="mt-8 md:grid md:grid-cols-2 md:gap-6">
           {projects.slice(0, 2).map((project) => (
             <Link key={project.slug} className={cardStyles} href={`/projects/${project.slug}`}>

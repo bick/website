@@ -50,7 +50,7 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
             >
               👋
             </motion.span>
-            Howdy, I&apos;m{" "}
+            Hey, I&apos;m{" "}
             <span className="mb-12 h-full mt-6 block relative font-['Funsized'] text-5xl font-medium md:mx-4 md:my-0 md:text-6xl">
               Owen Bick
             </span>
