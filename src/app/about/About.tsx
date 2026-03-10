@@ -98,11 +98,11 @@ export default function AboutPage() {
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80">
                 I&apos;m a Software Engineering Leader with 12+ years of experience building and scaling high-performing
                 engineering teams. I started as a developer working with everything from WordPress to modern React and
-                TypeScript stacks&mdash;that foundation shapes how I lead today.
+                TypeScript stacks, that foundation shapes how I lead today.
               </p>
               <p className="mt-4 max-w-xl text-lg leading-relaxed text-white/80">
                 Currently, I partner with Series C+ startups to build and scale their engineering
-                organizations&mdash;hiring senior talent, establishing technical strategy, and ensuring teams deliver on
+                organizations where I work on hiring senior talent, establishing technical strategy, and ensuring teams deliver on
                 ambitious roadmaps.
               </p>
               <div className="mt-8 flex justify-center gap-4 md:justify-start">

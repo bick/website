@@ -39,7 +39,7 @@ export default function Footer() {
           </li>
         </ul>
         <span className="text-[#788491]">
-          Copyright &copy; {new Date().getFullYear()} Owen Bick. All Rights Reserved. Made with ❤️ and ☕ in Austin.
+          Copyright &copy; {new Date().getFullYear()} Owen Bick. All Rights Reserved. Made with ❤️ and ☕
         </span>
       </div>
     </footer>
