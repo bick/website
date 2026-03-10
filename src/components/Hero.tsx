@@ -1,8 +1,12 @@
-"use client"
+"use client";
 
-import React from "react"
-import { motion, Variants } from "framer-motion"
-import { GiTexas } from "react-icons/gi"
+import React from "react";
+import { motion, Variants } from "framer-motion";
+import { GiTexas } from "react-icons/gi";
+
+
+
+
 
 type HeroProps = {
   type?: string
@@ -35,7 +39,7 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
 
   if (type === "home") {
     return (
-      <section className="pt-48 pb-32">
+      <section className="pb-32 pt-48">
         <div className="container">
           <motion.h1
             className="block text-3xl font-bold md:flex md:items-center lg:text-6xl"
@@ -51,18 +55,18 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
               👋
             </motion.span>
             Hey, I&apos;m{" "}
-            <span className="mb-12 h-full mt-6 block relative font-['Funsized'] text-5xl font-medium md:mx-4 md:my-0 md:text-6xl">
+            <span className="relative mb-12 mt-6 block h-full font-['Germanica'] text-[72px] font-medium md:mx-4 md:my-0 md:text-6xl">
               Owen Bick
             </span>
           </motion.h1>
           <motion.h2
-            className="text-2xl mt-12 font-medium leading-relaxed max-w-2xl text-white/70 md:text-3xl"
+            className="mt-12 max-w-2xl text-2xl font-medium leading-relaxed text-white/70 md:text-3xl"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.35 }}
           >
-            Engineering leader based in <GiTexas className="mx-1 inline text-white" /> Texas.
-            I build teams, ship products, and scale startups.
+            Engineering leader based in <GiTexas className="mx-1 inline text-white" /> Texas. I build teams, ship
+            products, and scale startups.
           </motion.h2>
           <motion.div
             className="mt-10 flex flex-wrap gap-4"
@@ -72,13 +76,13 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
           >
             <a
               href="/projects"
-              className="portfolio-item rounded-lg bg-white/10 px-6 py-3 text-base font-medium text-white shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] transition-all hover:bg-white/20 no-underline"
+              className="portfolio-item rounded-lg bg-white/10 px-6 py-3 text-base font-medium text-white no-underline shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] transition-all hover:bg-white/20"
             >
               View my work
             </a>
             <a
               href="/contact"
-              className="portfolio-item rounded-lg border border-white/20 px-6 py-3 text-base font-medium text-white/70 transition-all hover:border-white/40 hover:text-white no-underline"
+              className="portfolio-item rounded-lg border border-white/20 px-6 py-3 text-base font-medium text-white/70 no-underline transition-all hover:border-white/40 hover:text-white"
             >
               Get in touch
             </a>
