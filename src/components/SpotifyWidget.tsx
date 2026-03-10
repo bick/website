@@ -66,12 +66,12 @@ export default function SpotifyWidget() {
       href={url!}
       target="_blank"
       rel="nofollow"
-      className="portfolio-item fixed right-2 top-2 z-[9999] hidden items-center gap-2.5 rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.25)] px-3.5 py-2 no-underline backdrop-blur-md transition-all duration-200 hover:border-[rgba(255,255,255,0.4)] md:right-4 md:top-5 md:flex"
+      className="portfolio-item fixed bottom-4 left-4 z-[9999] flex items-center gap-2.5 rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.25)] px-3.5 py-2 no-underline backdrop-blur-md transition-all duration-200 hover:border-[rgba(255,255,255,0.4)]"
     >
       <SoundBars active={isPlaying} />
-      <div className="flex flex-col">
-        <span className="text-xs font-medium text-white/90 leading-tight">{title}</span>
-        <span className="text-[10px] text-white/40 leading-tight">{artist}</span>
+      <div className="flex flex-col max-w-[120px]">
+        <span className="text-xs font-medium text-white/90 leading-tight truncate">{title}</span>
+        <span className="text-[10px] text-white/40 leading-tight truncate">{artist}</span>
       </div>
     </Link>
   )
