@@ -24,7 +24,7 @@ export default function Projects() {
                   fill
                   className="object-cover opacity-60 transition-transform duration-500 hover:scale-105"
                 />
-                <Badge variant="outline" className="absolute right-2 top-2 md:right-4 md:top-4 z-10">
+                <Badge variant="outline" className="absolute right-2 top-2 md:right-4 md:top-4 z-10 bg-black/60 backdrop-blur-sm">
                   {project.year}
                 </Badge>
               </div>

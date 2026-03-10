@@ -145,6 +145,25 @@ export default function CaseStudy({ project }: { project: Project }) {
           </div>
         </div>
       </section>
+
+      {/* CTA */}
+      <section className="relative overflow-hidden py-24">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.03] to-transparent" />
+        <div className="container relative z-10">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-bold">Got something worth building?</h2>
+            <p className="mt-4 text-lg leading-relaxed text-white/60">
+              I&apos;m always down to talk shop. Whether it&apos;s a ground-up build, a redesign, or just an idea on a napkin. Let&apos;s figure it out together.
+            </p>
+            <Link
+              href="/contact"
+              className="portfolio-item mt-8 inline-block rounded-lg bg-white/10 px-8 py-3.5 text-base font-medium text-white no-underline shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] transition-all hover:bg-white/20"
+            >
+              Get in touch &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
