@@ -1,17 +1,28 @@
-"use client"
+"use client";
 
-import "./globals.css"
 
-import React from "react"
-import Head from "next/head"
-import { GoogleAnalytics } from "@next/third-parties/google"
-import { Analytics } from "@vercel/analytics/react"
 
-import { PageTransitionProvider } from "@/components/Animations"
-import Footer from "@/components/Footer"
-import Header from "@/components/Header"
-import Loading from "@/components/Loading"
-import { ThemeProvider } from "@/components/theme-provider"
+
+import "./globals.css";
+
+
+
+import React from "react";
+import Head from "next/head";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
+
+
+
+import { PageTransitionProvider } from "@/components/Animations";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Loading from "@/components/Loading";
+import { ThemeProvider } from "@/components/theme-provider";
+
+
+
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -29,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
         </ThemeProvider>
         <Analytics />
-        <GoogleAnalytics gaId="G-7FQPVSFHG9" />
+        <GoogleAnalytics gaId="G-3X4LD4BT5X" />
       </body>
     </html>
   )
