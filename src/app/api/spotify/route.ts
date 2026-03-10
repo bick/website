@@ -29,44 +29,37 @@ export const dynamic = "force-dynamic"
 
 export async function GET() {
   if (!client_id || !client_secret || !refresh_token) {
-    return NextResponse.json({ isPlaying: false, debug: "missing env vars" }, { status: 200 })
+    return NextResponse.json({ isPlaying: false })
   }
 
   try {
-    const tokenData = await getAccessToken()
+    const { access_token } = await getAccessToken()
 
-    if (!tokenData.access_token) {
-      return NextResponse.json({ isPlaying: false, debug: "token error", tokenData }, { status: 200 })
+    if (!access_token) {
+      return NextResponse.json({ isPlaying: false })
     }
 
     const response = await fetch(SPOTIFY_NOW_PLAYING_URL, {
-      headers: { Authorization: `Bearer ${tokenData.access_token}` },
+      headers: { Authorization: `Bearer ${access_token}` },
     })
 
-    if (response.status === 204) {
-      return NextResponse.json({ isPlaying: false, debug: "nothing playing (204)" }, { status: 200 })
-    }
-
-    if (response.status > 400) {
-      return NextResponse.json({ isPlaying: false, debug: `spotify error ${response.status}` }, { status: 200 })
+    if (response.status === 204 || response.status > 400) {
+      return NextResponse.json({ isPlaying: false })
     }
 
     const data = await response.json()
 
     if (!data.item) {
-      return NextResponse.json({ isPlaying: false, debug: "no item in response", data }, { status: 200 })
+      return NextResponse.json({ isPlaying: false })
     }
 
-    return NextResponse.json(
-      {
-        isPlaying: data.is_playing,
-        title: data.item.name,
-        artist: data.item.artists.map((a: { name: string }) => a.name).join(", "),
-        url: data.item.external_urls.spotify,
-      },
-      { status: 200 },
-    )
-  } catch (e) {
-    return NextResponse.json({ isPlaying: false, debug: "catch error", error: String(e) }, { status: 200 })
+    return NextResponse.json({
+      isPlaying: data.is_playing,
+      title: data.item.name,
+      artist: data.item.artists.map((a: { name: string }) => a.name).join(", "),
+      url: data.item.external_urls.spotify,
+    })
+  } catch {
+    return NextResponse.json({ isPlaying: false })
   }
 }
