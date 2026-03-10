@@ -13,8 +13,18 @@ export default function Footer() {
             </Link>
           </li>
           <li className="mr-8">
-            <Link href="/resume" className="text-lg text-white">
-              Resume
+            <Link href="/projects" className="text-lg text-white">
+              Projects
+            </Link>
+          </li>
+          <li className="mr-8">
+            <Link href="/journal" className="text-lg text-white">
+              Journal
+            </Link>
+          </li>
+          <li className="mr-8">
+            <Link href="/about" className="text-lg text-white">
+              About
             </Link>
           </li>
           <li className="mr-8">
@@ -29,7 +39,7 @@ export default function Footer() {
           </li>
         </ul>
         <span className="text-[#788491]">
-          Copyright &copy; {new Date().getFullYear()} Owen Bick. All Rights Reserved. Made with ❤️ and ☕ in Austin.
+          Copyright &copy; {new Date().getFullYear()} Owen Bick. All Rights Reserved. Made with ❤️ and ☕
         </span>
       </div>
     </footer>

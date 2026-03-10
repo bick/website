@@ -1,5 +1,9 @@
 import type { Metadata } from "next"
 
+
+
+
+
 type PageMetadata = {
   [key: string]: Metadata
 }
@@ -27,6 +31,22 @@ export const siteMetadata: PageMetadata = {
     openGraph: {
       title: "Resume – Owen Bick",
       description: "Owen Bick's resume.",
+    },
+  },
+  projects: {
+    title: "Projects – Owen Bick",
+    description: "A selection of work I've led, built, or shipped.",
+    openGraph: {
+      title: "Projects – Owen Bick",
+      description: "A selection of work I've led, built, or shipped.",
+    },
+  },
+  journal: {
+    title: "Journal – Owen Bick",
+    description: "Thoughts on engineering, leadership, and building things.",
+    openGraph: {
+      title: "Journal – Owen Bick",
+      description: "Thoughts on engineering, leadership, and building things.",
     },
   },
   reviews: {

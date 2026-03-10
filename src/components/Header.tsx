@@ -1,13 +1,17 @@
-"use client"
+"use client";
 
-import React, { useEffect, useRef, useState } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { AnimatePresence, motion } from "framer-motion"
+import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa"
-import VanillaTilt from "vanilla-tilt"
+import SpotifyWidget from "@/components/SpotifyWidget";
+import VanillaTilt from "vanilla-tilt";
 
-// Define interfaces for type safety
+
+
+
+
 interface VanillaTiltElement extends HTMLElement {
   vanillaTilt?: {
     destroy: () => void
@@ -69,13 +73,22 @@ const SparkleEffect: React.FC<SparkleProps> = ({ x, y }) => {
 
 const Header: React.FC = () => {
   const pathname: string = usePathname()
+  const isHome = pathname === "/"
   const tiltRef = useRef<HTMLUListElement>(null)
   const [sparkles, setSparkles] = useState<SparkleData[]>([])
+  const [logoSpin, setLogoSpin] = useState(0)
+  const [tooltipReady, setTooltipReady] = useState(true)
   const buttonRef = useRef<HTMLDivElement>(null)
 
+  useEffect(() => {
+    setLogoSpin(0)
+    setTooltipReady(false)
+  }, [pathname])
+
   const menuItems: MenuItem[] = [
-    { href: "/#projects", label: "Projects" },
-    { href: "/resume", label: "Resume" },
+    { href: "/projects", label: "Projects" },
+    { href: "/about", label: "About" },
+    { href: "/journal", label: "Journal" },
     { href: "/reviews", label: "Reviews" },
   ]
 
@@ -91,16 +104,13 @@ const Header: React.FC = () => {
   const linkClasses: string =
     "flex text-[#9797a0] font-medium text-[15px] mx-2 md:mx-3 py-5 transition-all duration-150 ease mix-blend-exclusion hover:text-white hover:no-underline hover:opacity-100 hover:[text-shadow:rgba(255,255,255,0.85)_0_0_32px]"
 
-  const activeLinkClasses: string = "text-white opacity-100"
 
-  // Sparkle effect function
   const createSparkles = (): void => {
     if (!buttonRef.current) return
 
     const buttonRect: DOMRect = buttonRef.current.getBoundingClientRect()
     const newSparkles: SparkleData[] = []
 
-    // Create multiple sparkles
     for (let i = 0; i < 12; i++) {
       newSparkles.push({
         id: `sparkle-${Date.now()}-${i}`,
@@ -111,7 +121,6 @@ const Header: React.FC = () => {
 
     setSparkles(newSparkles)
 
-    // Clear sparkles after they've animated
     setTimeout(() => {
       setSparkles([])
     }, 1500)
@@ -128,7 +137,6 @@ const Header: React.FC = () => {
 
       return () => {
         if (tiltRef.current) {
-          // eslint-disable-next-line react-hooks/exhaustive-deps
           const tiltElement = tiltRef.current as VanillaTiltElement
           tiltElement.vanillaTilt?.destroy()
         }
@@ -142,27 +150,49 @@ const Header: React.FC = () => {
         className="mx-auto flex w-full items-center justify-center rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.25)] px-4 py-0.5 backdrop-blur-md transition-shadow duration-200 ease-in-out md:max-w-fit"
         ref={tiltRef}
       >
-        {/* Logo */}
-        <li>
-          <Link
-            href="/"
-            className={`${linkClasses} !py-0 !ml-0 items-center !text-3xl before:content-['🗿'] hover:before:content-['🏠'] ${pathname === "/" ? activeLinkClasses : ""}`}
-          ></Link>
+        <li
+          className="relative group mr-4"
+          onMouseLeave={() => { if (!tooltipReady) setTooltipReady(true) }}
+        >
+          {isHome ? (
+            <>
+              <motion.span
+                className={`${linkClasses} !mx-0 items-center !py-0 !text-3xl cursor-pointer select-none`}
+                animate={{ rotate: logoSpin }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                onClick={() => setLogoSpin((prev) => prev + 720)}
+              >
+                🧙🏻‍♂️
+              </motion.span>
+              {tooltipReady && (
+                <div className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 rounded-md bg-neutral-800 dark:bg-neutral-200 px-2.5 py-1.5 text-xs font-medium text-white dark:text-black opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap">
+                  <div className="absolute -top-[6px] left-1/2 -translate-x-1/2 h-0 w-0 border-l-[6px] border-r-[6px] border-b-[6px] border-l-transparent border-r-transparent border-b-neutral-800 dark:border-b-neutral-200" />
+                  Gotta blast!
+                </div>
+              )}
+            </>
+          ) : (
+            <>
+              <Link
+                href="/"
+                className={`${linkClasses} !mx-0 items-center !py-0 !text-3xl before:content-['🧙🏻‍♂️'] hover:before:content-['🏠']`}
+              ></Link>
+              <div className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 rounded-md bg-neutral-800 dark:bg-neutral-200 px-2.5 py-1.5 text-xs font-medium text-white dark:text-black opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap">
+                <div className="absolute -top-[6px] left-1/2 -translate-x-1/2 h-0 w-0 border-l-[6px] border-r-[6px] border-b-[6px] border-l-transparent border-r-transparent border-b-neutral-800 dark:border-b-neutral-200" />
+                Go home
+              </div>
+            </>
+          )}
         </li>
 
-        {/* Menu Items */}
         {menuItems.map((item) => (
           <li key={item.href}>
-            <Link
-              href={item.href}
-              className={linkClasses}
-            >
+            <Link href={item.href} className={linkClasses}>
               {item.label}
             </Link>
           </li>
         ))}
 
-        {/* Social Links */}
         {socialLinks.map((social) => (
           <li key={social.href}>
             <Link
@@ -170,14 +200,13 @@ const Header: React.FC = () => {
               target="_blank"
               rel="nofollow"
               aria-label={social.label}
-              className={`${linkClasses} !py-0 hidden !text-xl md:block`}
+              className={`${linkClasses} hidden !py-0 !text-xl md:block`}
             >
               <social.icon className="m-auto flex h-full" />
             </Link>
           </li>
         ))}
 
-        {/* Contact Button */}
         <li className="relative">
           <motion.div ref={buttonRef} className="relative" whileTap={{ scale: 0.97 }}>
             <Link
@@ -189,7 +218,6 @@ const Header: React.FC = () => {
               <span className="md:hidden">Contact</span>
             </Link>
 
-            {/* Sparkle elements with Framer Motion */}
             <AnimatePresence>
               {sparkles.map((sparkle) => (
                 <SparkleEffect key={sparkle.id} x={sparkle.x} y={sparkle.y} />
@@ -198,6 +226,8 @@ const Header: React.FC = () => {
           </motion.div>
         </li>
       </ul>
+
+      <SpotifyWidget />
     </header>
   )
 }
