@@ -251,7 +251,6 @@ const Header: React.FC = () => {
                   <social.icon className="h-4 w-4" />
                 </Link>
               ))}
-              <SpotifyWidget compact />
               <button
                 onClick={() => setMobileOpen((prev) => !prev)}
                 className="relative z-[10001] flex h-8 w-8 items-center justify-center"
@@ -285,7 +284,7 @@ const Header: React.FC = () => {
                     ))}
                   </nav>
 
-                  <div className="mt-3">
+                  <div className="mt-3 flex items-center justify-between">
                     <Link
                       href="/contact"
                       onClick={() => setMobileOpen(false)}
@@ -293,6 +292,8 @@ const Header: React.FC = () => {
                     >
                       ✨ Start A Project
                     </Link>
+
+                    <SpotifyWidget compact />
                   </div>
                 </div>
               </motion.div>

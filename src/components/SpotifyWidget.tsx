@@ -65,7 +65,15 @@ export default function SpotifyWidget({ compact = false }: { compact?: boolean }
 
   if (!data) {
     if (compact) {
-      return <Skeleton className="h-3.5 w-[15px] rounded-full" />
+      return (
+        <div className="flex items-center gap-2">
+          <Skeleton className="h-3.5 w-[15px] rounded-full" />
+          <div className="flex flex-col gap-1">
+            <Skeleton className="h-3 w-16" />
+            <Skeleton className="h-2.5 w-10" />
+          </div>
+        </div>
+      )
     }
     return (
       <div className="portfolio-item fixed bottom-4 left-4 z-[9999] flex items-center gap-2.5 rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.25)] px-3.5 py-2 no-underline backdrop-blur-md">
@@ -80,8 +88,12 @@ export default function SpotifyWidget({ compact = false }: { compact?: boolean }
 
   if (compact) {
     return (
-      <Link href={url!} target="_blank" rel="nofollow" className="portfolio-item flex items-center no-underline">
+      <Link href={url!} target="_blank" rel="nofollow" className="portfolio-item flex items-center gap-2 no-underline">
         <SoundBars active={isPlaying} />
+        <div className="flex flex-col max-w-[100px]">
+          <span className="text-xs font-medium text-white/90 leading-tight truncate">{title}</span>
+          <span className="text-[10px] text-white/40 leading-tight truncate">{artist}</span>
+        </div>
       </Link>
     )
   }
