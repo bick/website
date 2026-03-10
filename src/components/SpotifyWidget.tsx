@@ -1,0 +1,78 @@
+"use client"
+
+import { useEffect, useState } from "react"
+import Link from "next/link"
+import { motion } from "framer-motion"
+
+interface SpotifyData {
+  isPlaying: boolean
+  title?: string
+  artist?: string
+  url?: string
+}
+
+const FALLBACK = {
+  title: "For A Better Day",
+  artist: "Avicii",
+  url: "https://open.spotify.com/track/2MVGnFCmBRI5LxODz0aLaV",
+}
+
+function SoundBars({ active }: { active: boolean }) {
+  if (!active) {
+    return (
+      <div className="flex h-3.5 items-end gap-[3px]">
+        <div className="w-[3px] h-[40%] rounded-full bg-[#1DB954]" />
+        <div className="w-[3px] h-[70%] rounded-full bg-[#1DB954]" />
+        <div className="w-[3px] h-[50%] rounded-full bg-[#1DB954]" />
+      </div>
+    )
+  }
+
+  return (
+    <div className="flex h-3.5 items-end gap-[3px]">
+      <motion.div className="w-[3px] rounded-full bg-[#1DB954]" animate={{ height: ["40%", "100%", "60%", "90%", "40%"] }} transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }} />
+      <motion.div className="w-[3px] rounded-full bg-[#1DB954]" animate={{ height: ["100%", "50%", "80%", "40%", "100%"] }} transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }} />
+      <motion.div className="w-[3px] rounded-full bg-[#1DB954]" animate={{ height: ["60%", "90%", "40%", "100%", "60%"] }} transition={{ duration: 1.1, repeat: Infinity, ease: "easeInOut" }} />
+    </div>
+  )
+}
+
+export default function SpotifyWidget() {
+  const [data, setData] = useState<SpotifyData | null>(null)
+
+  useEffect(() => {
+    async function fetchNowPlaying() {
+      try {
+        const res = await fetch("/api/spotify")
+        const json = await res.json()
+        setData(json)
+      } catch {
+        setData({ isPlaying: false })
+      }
+    }
+
+    fetchNowPlaying()
+    const interval = setInterval(fetchNowPlaying, 30000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const title = data?.isPlaying ? data.title : FALLBACK.title
+  const artist = data?.isPlaying ? data.artist : FALLBACK.artist
+  const url = data?.isPlaying ? data.url : FALLBACK.url
+  const isPlaying = data?.isPlaying ?? false
+
+  return (
+    <Link
+      href={url!}
+      target="_blank"
+      rel="nofollow"
+      className="portfolio-item fixed right-2 top-2 z-[9999] hidden items-center gap-2.5 rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.25)] px-3.5 py-2 no-underline backdrop-blur-md transition-all duration-200 hover:border-[rgba(255,255,255,0.4)] md:right-4 md:top-5 md:flex"
+    >
+      <SoundBars active={isPlaying} />
+      <div className="flex flex-col">
+        <span className="text-xs font-medium text-white/90 leading-tight">{title}</span>
+        <span className="text-[10px] text-white/40 leading-tight">{artist}</span>
+      </div>
+    </Link>
+  )
+}
