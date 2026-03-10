@@ -72,9 +72,15 @@ const SparkleEffect: React.FC<SparkleProps> = ({ x, y }) => {
 
 const Header: React.FC = () => {
   const pathname: string = usePathname()
+  const isHome = pathname === "/"
   const tiltRef = useRef<HTMLUListElement>(null)
   const [sparkles, setSparkles] = useState<SparkleData[]>([])
+  const [logoSpin, setLogoSpin] = useState(0)
   const buttonRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    setLogoSpin(0)
+  }, [pathname])
 
   const menuItems: MenuItem[] = [
     { href: "/projects", label: "Projects" },
@@ -95,7 +101,6 @@ const Header: React.FC = () => {
   const linkClasses: string =
     "flex text-[#9797a0] font-medium text-[15px] mx-2 md:mx-3 py-5 transition-all duration-150 ease mix-blend-exclusion hover:text-white hover:no-underline hover:opacity-100 hover:[text-shadow:rgba(255,255,255,0.85)_0_0_32px]"
 
-  const activeLinkClasses: string = "text-white opacity-100"
 
   const createSparkles = (): void => {
     if (!buttonRef.current) return
@@ -143,14 +148,33 @@ const Header: React.FC = () => {
         ref={tiltRef}
       >
         <li className="relative group mr-4">
-          <Link
-            href="/"
-            className={`${linkClasses} !mx-0 items-center !py-0 !text-3xl before:content-['🧙🏻‍♂️'] hover:before:content-['🏠'] ${pathname === "/" ? activeLinkClasses : ""}`}
-          ></Link>
-          <div className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 rounded-md bg-neutral-800 dark:bg-neutral-200 px-2.5 py-1.5 text-xs font-medium text-white dark:text-black opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap">
-            <div className="absolute -top-[6px] left-1/2 -translate-x-1/2 h-0 w-0 border-l-[6px] border-r-[6px] border-b-[6px] border-l-transparent border-r-transparent border-b-neutral-800 dark:border-b-neutral-200" />
-            Go home
-          </div>
+          {isHome ? (
+            <>
+              <motion.span
+                className={`${linkClasses} !mx-0 items-center !py-0 !text-3xl cursor-pointer select-none`}
+                animate={{ rotate: logoSpin }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                onClick={() => setLogoSpin((prev) => prev + 360)}
+              >
+                🧙🏻‍♂️
+              </motion.span>
+              <div className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 rounded-md bg-neutral-800 dark:bg-neutral-200 px-2.5 py-1.5 text-xs font-medium text-white dark:text-black opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap">
+                <div className="absolute -top-[6px] left-1/2 -translate-x-1/2 h-0 w-0 border-l-[6px] border-r-[6px] border-b-[6px] border-l-transparent border-r-transparent border-b-neutral-800 dark:border-b-neutral-200" />
+                Gotta blast!
+              </div>
+            </>
+          ) : (
+            <>
+              <Link
+                href="/"
+                className={`${linkClasses} !mx-0 items-center !py-0 !text-3xl before:content-['🧙🏻‍♂️'] hover:before:content-['🏠']`}
+              ></Link>
+              <div className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 rounded-md bg-neutral-800 dark:bg-neutral-200 px-2.5 py-1.5 text-xs font-medium text-white dark:text-black opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap">
+                <div className="absolute -top-[6px] left-1/2 -translate-x-1/2 h-0 w-0 border-l-[6px] border-r-[6px] border-b-[6px] border-l-transparent border-r-transparent border-b-neutral-800 dark:border-b-neutral-200" />
+                Go home
+              </div>
+            </>
+          )}
         </li>
 
         {menuItems.map((item) => (
