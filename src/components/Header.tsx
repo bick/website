@@ -76,10 +76,12 @@ const Header: React.FC = () => {
   const tiltRef = useRef<HTMLUListElement>(null)
   const [sparkles, setSparkles] = useState<SparkleData[]>([])
   const [logoSpin, setLogoSpin] = useState(0)
+  const [tooltipReady, setTooltipReady] = useState(true)
   const buttonRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setLogoSpin(0)
+    setTooltipReady(false)
   }, [pathname])
 
   const menuItems: MenuItem[] = [
@@ -147,7 +149,10 @@ const Header: React.FC = () => {
         className="mx-auto flex w-full items-center justify-center rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.25)] px-4 py-0.5 backdrop-blur-md transition-shadow duration-200 ease-in-out md:max-w-fit"
         ref={tiltRef}
       >
-        <li className="relative group mr-4">
+        <li
+          className="relative group mr-4"
+          onMouseLeave={() => { if (!tooltipReady) setTooltipReady(true) }}
+        >
           {isHome ? (
             <>
               <motion.span
@@ -158,10 +163,12 @@ const Header: React.FC = () => {
               >
                 🧙🏻‍♂️
               </motion.span>
-              <div className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 rounded-md bg-neutral-800 dark:bg-neutral-200 px-2.5 py-1.5 text-xs font-medium text-white dark:text-black opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap">
-                <div className="absolute -top-[6px] left-1/2 -translate-x-1/2 h-0 w-0 border-l-[6px] border-r-[6px] border-b-[6px] border-l-transparent border-r-transparent border-b-neutral-800 dark:border-b-neutral-200" />
-                Gotta blast!
-              </div>
+              {tooltipReady && (
+                <div className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 rounded-md bg-neutral-800 dark:bg-neutral-200 px-2.5 py-1.5 text-xs font-medium text-white dark:text-black opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap">
+                  <div className="absolute -top-[6px] left-1/2 -translate-x-1/2 h-0 w-0 border-l-[6px] border-r-[6px] border-b-[6px] border-l-transparent border-r-transparent border-b-neutral-800 dark:border-b-neutral-200" />
+                  Gotta blast!
+                </div>
+              )}
             </>
           ) : (
             <>
