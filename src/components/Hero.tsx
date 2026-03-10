@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { motion, Variants } from "framer-motion"
+import { motion, type Variants } from "framer-motion"
 import { GiTexas } from "react-icons/gi"
 
 type HeroProps = {
@@ -37,11 +37,9 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
     return (
       <section className="pb-32 pt-48">
         <div className="container">
-          <motion.h1
-            className="block text-3xl font-bold md:flex md:items-center lg:text-6xl"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+          <h1
+            className="hero-fade-in block text-3xl font-bold md:flex md:items-center lg:text-6xl"
+            style={{ animationDelay: "0.2s" }}
           >
             <motion.span
               className="mr-4 inline-block origin-bottom-right lg:mr-8"
@@ -54,21 +52,17 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
             <span className="relative mb-12 mt-6 block h-full font-['Germanica'] text-[72px] font-medium md:mx-4 md:my-0 md:text-6xl">
               Owen Bick
             </span>
-          </motion.h1>
-          <motion.h2
-            className="mt-12 max-w-2xl text-2xl font-medium leading-relaxed text-white/70 md:text-3xl"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.35 }}
+          </h1>
+          <h2
+            className="hero-fade-in mt-12 max-w-2xl text-2xl font-medium leading-relaxed text-white/70 md:text-3xl"
+            style={{ animationDelay: "0.35s" }}
           >
             Engineering leader based in <GiTexas className="mx-1 inline text-white" /> Texas. I build teams, ship
             products, and scale startups.
-          </motion.h2>
-          <motion.div
-            className="mt-10 flex flex-wrap gap-4"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+          </h2>
+          <div
+            className="hero-fade-in mt-10 flex flex-wrap gap-4"
+            style={{ animationDelay: "0.5s" }}
           >
             <a
               href="/projects"
@@ -82,7 +76,7 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
             >
               Get in touch
             </a>
-          </motion.div>
+          </div>
         </div>
       </section>
     )
@@ -92,18 +86,10 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
 
   return (
     <section className="relative overflow-hidden pb-20 pt-40">
-      <motion.div
-        className={`absolute inset-0 bg-gradient-to-br ${gradientClass}`}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-      />
+      <div className={`absolute inset-0 bg-gradient-to-br ${gradientClass} hero-fade-in`} />
 
-      <motion.div
-        className="pointer-events-none absolute inset-0 mix-blend-overlay"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.25 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+      <div
+        className="pointer-events-none absolute inset-0 mix-blend-overlay hero-fade-in opacity-25"
       >
         <svg className="h-full w-full">
           <filter id="heroGrain">
@@ -112,26 +98,22 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
           </filter>
           <rect width="100%" height="100%" filter="url(#heroGrain)" />
         </svg>
-      </motion.div>
+      </div>
 
       <div className="container relative z-10">
-        <motion.h1
-          className="mb-1 text-4xl font-bold"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+        <h1
+          className="hero-fade-in mb-1 text-4xl font-bold"
+          style={{ animationDelay: "0.2s" }}
         >
           {title}
-        </motion.h1>
+        </h1>
         {subtitle && (
-          <motion.h2
-            className="mt-4 max-w-2xl text-xl font-medium leading-normal text-white/60"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.35 }}
+          <h2
+            className="hero-fade-in mt-4 max-w-2xl text-xl font-medium leading-normal text-white/60"
+            style={{ animationDelay: "0.35s" }}
           >
             {subtitle}
-          </motion.h2>
+          </h2>
         )}
       </div>
 

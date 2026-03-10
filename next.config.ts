@@ -3,6 +3,9 @@ import createMDX from "@next/mdx"
 
 const nextConfig: NextConfig = {
   pageExtensions: ["ts", "tsx", "md", "mdx"],
+  experimental: {
+    optimizePackageImports: ["framer-motion", "react-icons", "lucide-react"],
+  },
   headers: async () => [
     {
       source: "/fonts/:path*",
