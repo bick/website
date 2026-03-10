@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
+import { Skeleton } from "@/components/ui/skeleton"
+
 interface SpotifyData {
   isPlaying: boolean
   title?: string
@@ -56,10 +58,22 @@ export default function SpotifyWidget() {
     return () => clearInterval(interval)
   }, [])
 
-  const title = data?.isPlaying ? data.title : FALLBACK.title
-  const artist = data?.isPlaying ? data.artist : FALLBACK.artist
-  const url = data?.isPlaying ? data.url : FALLBACK.url
-  const isPlaying = data?.isPlaying ?? false
+  if (!data) {
+    return (
+      <div className="fixed bottom-4 left-4 z-[9999] flex items-center gap-2.5 rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.25)] px-3.5 py-2 backdrop-blur-md">
+        <Skeleton className="h-3.5 w-[15px] rounded-full" />
+        <div className="flex flex-col gap-1 max-w-[120px]">
+          <Skeleton className="h-3 w-20" />
+          <Skeleton className="h-2.5 w-14" />
+        </div>
+      </div>
+    )
+  }
+
+  const title = data.isPlaying ? data.title : FALLBACK.title
+  const artist = data.isPlaying ? data.artist : FALLBACK.artist
+  const url = data.isPlaying ? data.url : FALLBACK.url
+  const isPlaying = data.isPlaying
 
   return (
     <Link

@@ -1,0 +1,28 @@
+# Owen Bick
+
+> Software engineer based in Austin and Dallas.
+
+## About
+
+Owen Bick is a software engineer who builds web platforms, booking systems, and digital products. He works across the full stack with technologies like Next.js, React, TypeScript, and Tailwind CSS.
+
+## Pages
+
+- [Home](https://owenbick.com)
+- [About](https://owenbick.com/about)
+- [Projects](https://owenbick.com/projects)
+- [Journal](https://owenbick.com/journal)
+- [Reviews](https://owenbick.com/reviews)
+- [Resume](https://owenbick.com/resume)
+- [Contact](https://owenbick.com/contact)
+
+## Projects
+
+- [Flosstime](https://owenbick.com/projects/flosstime): Built the booking platform for Flosstime, a mobile dental service that brings cleanings and exams directly to corporate offices.
+- [Discount Drug Network](https://owenbick.com/projects/discount-drug-network): Built the web platform for Discount Drug Network, helping consumers find discounted prescription drug pricing.
+- [Boston Junior Bruins](https://owenbick.com/projects/boston-junior-bruins): Built a network of websites for the Boston Junior Bruins, a Top 10 amateur hockey program in North America.
+- [Palmer Pads](https://owenbick.com/projects/palmer-pads): Designed and developed the website for Palmer Pads, North America's largest manufacturer of protective elevator pads.
+
+## Journal
+
+- [The 10 Commandments of the Hustle](https://owenbick.com/journal/10-commandments): What they don't teach you in school — but should. Rules that actually hold up, pulled from real failures and hard-won wins.
