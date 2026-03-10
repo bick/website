@@ -154,7 +154,7 @@ const Header: React.FC = () => {
                 className={`${linkClasses} !mx-0 items-center !py-0 !text-3xl cursor-pointer select-none`}
                 animate={{ rotate: logoSpin }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                onClick={() => setLogoSpin((prev) => prev + 360)}
+                onClick={() => setLogoSpin((prev) => prev + 720)}
               >
                 🧙🏻‍♂️
               </motion.span>
