@@ -15,14 +15,15 @@ export default function Projects() {
       <div className="container">
         <h2>🚀 Featured Projects</h2>
         <div className="mt-8 md:grid md:grid-cols-2 md:gap-6">
-          {projects.slice(0, 2).map((project) => (
+          {projects.slice(0, 2).map((project, index) => (
             <Link key={project.slug} className={cardStyles} href={`/projects/${project.slug}`}>
               <div className="relative flex h-40 w-full items-center justify-center overflow-hidden bg-[#111]">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  loading="lazy"
+                  priority={index === 0}
+                  loading={index === 0 ? "eager" : "lazy"}
                   className="object-cover opacity-60 transition-transform duration-500 hover:scale-105"
                 />
                 <Badge
