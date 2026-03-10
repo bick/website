@@ -5,29 +5,7 @@ import Link from "next/link"
 
 import Hero from "@/components/Hero"
 import { Badge } from "@/components/ui/badge"
-
-const posts = [
-  {
-    title: "Building Engineering Teams That Actually Ship",
-    excerpt:
-      "Lessons learned from scaling engineering orgs at startups — what works, what doesn't, and why culture eats process for breakfast.",
-    date: "Mar 2026",
-    badge: "Latest",
-    badgeType: "default",
-    image: "/static/smile-doctors.png",
-    slug: "#",
-  },
-  {
-    title: "The Case for Boring Technology",
-    excerpt:
-      "Why I keep reaching for proven tools over shiny new frameworks, and how it helps teams move faster in the long run.",
-    date: "Feb 2026",
-    badge: "",
-    badgeType: "",
-    image: "",
-    slug: "#",
-  },
-]
+import { posts } from "@/data/posts"
 
 export { posts }
 
@@ -42,7 +20,7 @@ export default function JournalPage() {
         <div className="container">
           <div className="space-y-4">
             {posts.map((post, index) => (
-              <Link key={index} className={cardStyles} href={post.slug}>
+              <Link key={index} className={cardStyles} href={`/journal/${post.slug}`}>
                 <div className="flex flex-col md:flex-row">
                   {post.image && (
                     <div className="relative h-48 w-full flex-shrink-0 bg-[#111] md:h-auto md:w-64">

@@ -36,8 +36,8 @@ export const projects: Project[] = [
   },
   {
     slug: "devgigs",
-    title: "DevGigs",
-    year: "2023",
+    title: "Devgigs",
+    year: "Coming Soon",
     type: "Product Development",
     url: "",
     image: "/static/devgigs.png",

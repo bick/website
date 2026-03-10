@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 
-import { posts } from "@/app/journal/Journal"
+import { posts } from "@/data/posts"
 
 export default function Journal() {
   return (
@@ -13,7 +13,7 @@ export default function Journal() {
           {posts.slice(0, 4).map((post, index) => (
             <Link
               key={index}
-              href={post.slug}
+              href={`/journal/${post.slug}`}
               className="portfolio-item group flex items-baseline justify-between gap-4 py-4 no-underline transition-opacity first:pt-0 hover:opacity-70"
             >
               <div className="min-w-0">

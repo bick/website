@@ -90,7 +90,7 @@ export default function CaseStudy({ project }: { project: Project }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
         >
-          <div className="overflow-hidden rounded-t-xl border border-b-0 border-[rgba(255,255,255,0.15)]">
+          <div className="overflow-hidden rounded-t-xl border mt-12 border-b-0 border-[rgba(255,255,255,0.15)]">
             <div className="relative aspect-video w-full bg-[#111]">
               <Image
                 src={project.image}
