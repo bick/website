@@ -76,7 +76,6 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
 
   return (
     <div className="bubble relative w-full overflow-hidden">
-      {/* Gritty gradient base - fades in */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-br from-orange-950/40 via-black to-amber-950/30"
         initial={{ opacity: 0 }}
@@ -84,10 +83,8 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
         transition={{ duration: 1, ease: "easeOut" }}
       />
 
-      {/* Twinkling stars */}
       <Stars />
 
-      {/* Noise/grain texture - fades in */}
       <motion.div
         className="pointer-events-none absolute inset-0 z-[1] mix-blend-overlay"
         initial={{ opacity: 0 }}
@@ -103,7 +100,6 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
         </svg>
       </motion.div>
 
-      {/* Floating blob */}
       <div className="pointer-events-none absolute inset-0 top-0 z-[2]">
         <motion.div
           className="absolute"
@@ -127,11 +123,9 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
         </motion.div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10">{children}</div>
 
-      {/* Bottom fade to black */}
-      <div className="absolute bottom-0 left-0 right-0 h-64 z-[3] bg-gradient-to-t from-[hsl(0,0%,3%)] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 z-[3] h-64 bg-gradient-to-t from-[hsl(0,0%,3%)] to-transparent" />
     </div>
   )
 }

@@ -1,5 +1,9 @@
 import type { Metadata } from "next"
 
+
+
+
+
 type PageMetadata = {
   [key: string]: Metadata
 }

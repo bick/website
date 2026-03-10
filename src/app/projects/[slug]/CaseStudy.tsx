@@ -2,17 +2,15 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import type { Project } from "@/data/projects"
 import { motion } from "framer-motion"
 
 import { Badge } from "@/components/ui/badge"
-import type { Project } from "@/data/projects"
 
 export default function CaseStudy({ project }: { project: Project }) {
   return (
     <>
-      {/* Hero with full-width screenshot */}
-      <section className="relative overflow-hidden pt-32 pb-0">
-        {/* Gradient background - fades in */}
+      <section className="relative overflow-hidden pb-0 pt-32">
         <motion.div
           className="absolute inset-0 bg-gradient-to-br from-orange-950/70 via-black to-amber-950/40"
           initial={{ opacity: 0 }}
@@ -20,7 +18,6 @@ export default function CaseStudy({ project }: { project: Project }) {
           transition={{ duration: 1, ease: "easeOut" }}
         />
 
-        {/* Noise/grain - fades in */}
         <motion.div
           className="pointer-events-none absolute inset-0 mix-blend-overlay"
           initial={{ opacity: 0 }}
@@ -36,7 +33,6 @@ export default function CaseStudy({ project }: { project: Project }) {
           </svg>
         </motion.div>
 
-        {/* Content - slides up */}
         <motion.div
           className="container relative z-10"
           initial={{ opacity: 0, y: 16 }}
@@ -56,9 +52,7 @@ export default function CaseStudy({ project }: { project: Project }) {
           </div>
 
           <h1 className="mt-4 text-4xl font-bold md:text-5xl">{project.title}</h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/60">
-            {project.summary}
-          </p>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/60">{project.summary}</p>
 
           {project.url && (
             <Link
@@ -73,66 +67,42 @@ export default function CaseStudy({ project }: { project: Project }) {
 
           <div className="mt-6 flex flex-wrap gap-2">
             {project.tech.map((t) => (
-              <span
-                key={t}
-                className="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-white/50"
-              >
+              <span key={t} className="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-white/50">
                 {t}
               </span>
             ))}
           </div>
         </motion.div>
 
-        {/* Screenshot */}
         <motion.div
           className="container relative z-10 mt-12"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
         >
-          <div className="overflow-hidden rounded-t-xl border mt-12 border-b-0 border-[rgba(255,255,255,0.15)]">
+          <div className="mt-12 overflow-hidden rounded-t-xl border border-b-0 border-[rgba(255,255,255,0.15)]">
             <div className="relative aspect-video w-full bg-[#111]">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover"
-                priority
-              />
+              <Image src={project.image} alt={project.title} fill className="object-cover" priority />
             </div>
           </div>
         </motion.div>
       </section>
 
-      {/* Case study content */}
       <section className="pb-20">
         <div className="container">
           <div className="mx-auto max-w-3xl space-y-16 pt-16">
-            {/* Challenge */}
             <div>
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-white/40">
-                The Challenge
-              </h2>
-              <p className="mt-4 text-lg leading-relaxed opacity-80">
-                {project.challenge}
-              </p>
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-white/40">The Challenge</h2>
+              <p className="mt-4 text-lg leading-relaxed opacity-80">{project.challenge}</p>
             </div>
 
-            {/* Approach */}
             <div>
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-white/40">
-                The Approach
-              </h2>
-              <p className="mt-4 text-lg leading-relaxed opacity-80">
-                {project.approach}
-              </p>
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-white/40">The Approach</h2>
+              <p className="mt-4 text-lg leading-relaxed opacity-80">{project.approach}</p>
             </div>
 
-            {/* Results */}
             <div>
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-white/40">
-                Results
-              </h2>
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-white/40">Results</h2>
               <ul className="mt-4 space-y-3">
                 {project.results.map((result, i) => (
                   <li key={i} className="flex gap-3 text-lg opacity-80">
@@ -146,14 +116,14 @@ export default function CaseStudy({ project }: { project: Project }) {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="relative overflow-hidden py-24">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.03] to-transparent" />
         <div className="container relative z-10">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold">Got something worth building?</h2>
             <p className="mt-4 text-lg leading-relaxed text-white/60">
-              I&apos;m always down to talk shop. Whether it&apos;s a ground-up build, a redesign, or just an idea on a napkin. Let&apos;s figure it out together.
+              I&apos;m always down to talk shop. Whether it&apos;s a ground-up build, a redesign, or just an idea on a
+              napkin. Let&apos;s figure it out together.
             </p>
             <Link
               href="/contact"

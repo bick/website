@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-
 import { posts } from "@/data/posts"
 
 export default function Journal() {
@@ -18,16 +17,17 @@ export default function Journal() {
             >
               <div className="min-w-0">
                 <h3 className="text-base font-semibold text-white">{post.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed opacity-50 hidden sm:block">
-                  {post.excerpt}
-                </p>
+                <p className="mt-1 hidden text-sm leading-relaxed opacity-50 sm:block">{post.excerpt}</p>
               </div>
               <time className="flex-shrink-0 text-sm opacity-40">{post.date}</time>
             </Link>
           ))}
         </div>
         <div className="mt-6">
-          <Link href="/journal" className="portfolio-item text-orange-400 hover:text-orange-300 underline underline-offset-4 decoration-orange-400/30 hover:decoration-orange-300 transition-colors text-base font-medium">
+          <Link
+            href="/journal"
+            className="portfolio-item text-base font-medium text-orange-400 underline decoration-orange-400/30 underline-offset-4 transition-colors hover:text-orange-300 hover:decoration-orange-300"
+          >
             Read all posts &rarr;
           </Link>
         </div>

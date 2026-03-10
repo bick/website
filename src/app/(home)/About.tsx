@@ -9,29 +9,26 @@ export default function About() {
         <h2>😺 About Me</h2>
         <div className="mt-6 max-w-3xl space-y-4 text-lg leading-relaxed opacity-80">
           <p>
-            I&apos;m Owen, a Software Engineering Leader with 12+ years of experience building
-            and scaling high-performing engineering teams.
+            I&apos;m Owen, an engineering leader with 12+ years of experience building products and scaling teams. I
+            started writing code as a teenager and never really stopped.
           </p>
           <p>
-            I started my career as a developer, working hands-on with everything from WordPress
-            to modern React and TypeScript stacks. That technical foundation shapes how I lead
-            today&mdash;I understand the challenges engineers face and can speak their language
-            while driving strategic outcomes.
+            I&apos;ve worked across the full stack, from early-stage MVPs at MIT and Harvard-affiliated startups to
+            leading teams at companies processing hundreds of millions in annual transactions. That hands-on technical
+            background is what makes me effective as a leader. I know what good engineering looks like because I&apos;ve
+            done it.
           </p>
           <p>
-            As a leader, I focus on building engineering cultures where teams ship quality
-            software with velocity. I believe great engineering leadership means removing
-            blockers, setting clear direction, and creating environments where talented people
-            do their best work.
-          </p>
-          <p>
-            Currently, I partner with Series C+ startups to build and scale their engineering
-            organizations&mdash;hiring senior talent, establishing technical strategy, and
-            ensuring teams deliver on ambitious roadmaps.
+            Right now I lead engineering at Smile Doctors, where my team builds the booking, payments, and mobile
+            systems behind a $1B+ healthcare platform serving 600+ locations. I also run Weekend Labs, a product
+            consultancy where I help startups go from idea to shipped product.
           </p>
         </div>
         <div className="mt-6">
-          <Link href="/about" className="portfolio-item text-orange-400 hover:text-orange-300 underline underline-offset-4 decoration-orange-400/30 hover:decoration-orange-300 transition-colors text-base font-medium">
+          <Link
+            href="/about"
+            className="portfolio-item text-base font-medium text-orange-400 underline decoration-orange-400/30 underline-offset-4 transition-colors hover:text-orange-300 hover:decoration-orange-300"
+          >
             Read more &rarr;
           </Link>
         </div>

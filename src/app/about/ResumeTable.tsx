@@ -1,15 +1,9 @@
-"use client";
+"use client"
 
-import Image from "next/image";
+import Image from "next/image"
 
-
-
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Card, CardContent } from "@/components/ui/card";
-
-
-
-
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Card, CardContent } from "@/components/ui/card"
 
 export default function ResumeTable() {
   const experience = [
@@ -110,28 +104,30 @@ export default function ResumeTable() {
                           alt={job.company}
                           width={36}
                           height={36}
-                          className="rounded-md flex-shrink-0 object-cover"
+                          className="flex-shrink-0 rounded-md object-cover"
                         />
                       ) : (
                         <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-md bg-white/10 text-sm font-semibold text-white/60">
                           {job.company.charAt(0)}
                         </div>
                       )}
-                      <div className="flex-grow min-w-0">
+                      <div className="min-w-0 flex-grow">
                         <div className="font-medium">{job.title}</div>
                         <div className="text-sm text-muted-foreground">{job.company}</div>
                       </div>
-                      <div className="flex items-center gap-2 flex-shrink-0 mr-2">
-                        <span className="text-sm text-muted-foreground hidden sm:block whitespace-nowrap">{job.period}</span>
+                      <div className="mr-2 flex flex-shrink-0 items-center gap-2">
+                        <span className="hidden whitespace-nowrap text-sm text-muted-foreground sm:block">
+                          {job.period}
+                        </span>
                       </div>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <div className="px-4 pb-2 space-y-3 mt-4">
+                    <div className="mt-4 space-y-3 px-4 pb-2">
                       <ul className="space-y-2 text-sm">
                         {job.achievements.map((achievement, i) => (
                           <li key={i} className="flex gap-2">
-                            <span className="text-muted-foreground mt-0.5">•</span>
+                            <span className="mt-0.5 text-muted-foreground">•</span>
                             <span>{achievement}</span>
                           </li>
                         ))}

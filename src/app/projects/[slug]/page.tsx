@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
+import { projects } from "@/data/projects"
 
 import CaseStudy from "./CaseStudy"
-import { projects } from "@/data/projects"
 
 interface PageProps {
   params: Promise<{ slug: string }>

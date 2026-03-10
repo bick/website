@@ -2,10 +2,10 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { posts } from "@/data/posts"
 
 import Hero from "@/components/Hero"
 import { Badge } from "@/components/ui/badge"
-import { posts } from "@/data/posts"
 
 export { posts }
 
@@ -24,12 +24,7 @@ export default function JournalPage() {
                 <div className="flex flex-col md:flex-row">
                   {post.image && (
                     <div className="relative h-48 w-full flex-shrink-0 bg-[#111] md:h-auto md:w-64">
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        fill
-                        className="object-cover"
-                      />
+                      <Image src={post.image} alt={post.title} fill className="object-cover" />
                     </div>
                   )}
                   <div className="flex flex-grow flex-col justify-between gap-4 p-5 md:p-6">
@@ -44,9 +39,7 @@ export default function JournalPage() {
                           </Badge>
                         )}
                       </div>
-                      <p className="mt-2 text-base leading-relaxed opacity-60">
-                        {post.excerpt}
-                      </p>
+                      <p className="mt-2 text-base leading-relaxed opacity-60">{post.excerpt}</p>
                     </div>
                     <time className="text-sm opacity-40">{post.date}</time>
                   </div>

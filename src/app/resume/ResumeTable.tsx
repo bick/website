@@ -1,8 +1,8 @@
 "use client"
 
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Badge } from "@/components/ui/badge"
+import { Card, CardContent } from "@/components/ui/card"
 
 export default function ResumeTable() {
   const experience = [
@@ -92,20 +92,24 @@ export default function ResumeTable() {
                 <AccordionItem key={index} value={`job-${index}`}>
                   <AccordionTrigger className="px-4 py-4 hover:bg-muted/20">
                     <div className="flex w-full items-center gap-3 text-left">
-                      <div className="flex-grow min-w-0">
+                      <div className="min-w-0 flex-grow">
                         <div className="font-medium">{job.title}</div>
                         <div className="text-sm text-muted-foreground">{job.company}</div>
                       </div>
-                      <div className="flex items-center gap-2 flex-shrink-0 mr-2">
+                      <div className="mr-2 flex flex-shrink-0 items-center gap-2">
                         {job.isPresentJob && (
-                          <Badge variant="default" className="text-xs">Current</Badge>
+                          <Badge variant="default" className="text-xs">
+                            Current
+                          </Badge>
                         )}
-                        <span className="text-sm text-muted-foreground hidden sm:block whitespace-nowrap">{job.duration}</span>
+                        <span className="hidden whitespace-nowrap text-sm text-muted-foreground sm:block">
+                          {job.duration}
+                        </span>
                       </div>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <div className="px-4 pb-2 space-y-3">
+                    <div className="space-y-3 px-4 pb-2">
                       <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground">
                         <span>{job.period}</span>
                         {job.location && <span>{job.location}</span>}
@@ -113,7 +117,7 @@ export default function ResumeTable() {
                       <ul className="space-y-2 text-sm">
                         {job.achievements.map((achievement, i) => (
                           <li key={i} className="flex gap-2">
-                            <span className="text-muted-foreground mt-0.5">•</span>
+                            <span className="mt-0.5 text-muted-foreground">•</span>
                             <span>{achievement}</span>
                           </li>
                         ))}

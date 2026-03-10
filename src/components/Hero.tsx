@@ -1,12 +1,8 @@
-"use client";
+"use client"
 
-import React from "react";
-import { motion, Variants } from "framer-motion";
-import { GiTexas } from "react-icons/gi";
-
-
-
-
+import React from "react"
+import { motion, Variants } from "framer-motion"
+import { GiTexas } from "react-icons/gi"
 
 type HeroProps = {
   type?: string
@@ -92,13 +88,10 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
     )
   }
 
-  const gradientClass = gradient
-    ? GRADIENTS[gradient] || gradient
-    : "from-gray-950/60 via-black to-gray-900/40"
+  const gradientClass = gradient ? GRADIENTS[gradient] || gradient : "from-gray-950/60 via-black to-gray-900/40"
 
   return (
     <section className="relative overflow-hidden pb-20 pt-40">
-      {/* Gradient background - fades in */}
       <motion.div
         className={`absolute inset-0 bg-gradient-to-br ${gradientClass}`}
         initial={{ opacity: 0 }}
@@ -106,7 +99,6 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
         transition={{ duration: 1, ease: "easeOut" }}
       />
 
-      {/* Noise/grain texture - fades in with gradient */}
       <motion.div
         className="pointer-events-none absolute inset-0 mix-blend-overlay"
         initial={{ opacity: 0 }}
@@ -122,7 +114,6 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
         </svg>
       </motion.div>
 
-      {/* Content - slides up and fades in */}
       <div className="container relative z-10">
         <motion.h1
           className="mb-1 text-4xl font-bold"
@@ -144,7 +135,6 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
         )}
       </div>
 
-      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[hsl(0,0%,3%)] to-transparent" />
     </section>
   )

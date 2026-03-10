@@ -2,9 +2,9 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { projects } from "@/data/projects"
 
 import { Badge } from "@/components/ui/badge"
-import { projects } from "@/data/projects"
 
 export default function Projects() {
   const cardStyles =
@@ -17,28 +17,32 @@ export default function Projects() {
         <div className="mt-8 md:grid md:grid-cols-2 md:gap-6">
           {projects.slice(0, 2).map((project) => (
             <Link key={project.slug} className={cardStyles} href={`/projects/${project.slug}`}>
-              <div className="relative flex h-40 w-full items-center justify-center bg-[#111] overflow-hidden">
+              <div className="relative flex h-40 w-full items-center justify-center overflow-hidden bg-[#111]">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover opacity-60 transition-transform duration-500 hover:scale-105"
                 />
-                <Badge variant="outline" className="absolute right-2 top-2 md:right-4 md:top-4 z-10 bg-black/60 backdrop-blur-sm">
+                <Badge
+                  variant="outline"
+                  className="absolute right-2 top-2 z-10 bg-black/60 backdrop-blur-sm md:right-4 md:top-4"
+                >
                   {project.year}
                 </Badge>
               </div>
               <div className="p-4">
-                <p className="mb-4 block text-base leading-normal opacity-60">
-                  {project.summary.slice(0, 120)}...
-                </p>
+                <p className="mb-4 block text-base leading-normal opacity-60">{project.summary.slice(0, 120)}...</p>
                 <h3 className="mb-0 text-lg font-bold">{project.title}</h3>
               </div>
             </Link>
           ))}
         </div>
         <div className="mt-6">
-          <Link href="/projects" className="portfolio-item text-orange-400 hover:text-orange-300 underline underline-offset-4 decoration-orange-400/30 hover:decoration-orange-300 transition-colors text-base font-medium">
+          <Link
+            href="/projects"
+            className="portfolio-item text-base font-medium text-orange-400 underline decoration-orange-400/30 underline-offset-4 transition-colors hover:text-orange-300 hover:decoration-orange-300"
+          >
             View all projects &rarr;
           </Link>
         </div>

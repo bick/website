@@ -11,7 +11,6 @@ import VanillaTilt from "vanilla-tilt";
 
 
 
-// Define interfaces for type safety
 interface VanillaTiltElement extends HTMLElement {
   vanillaTilt?: {
     destroy: () => void
@@ -98,14 +97,12 @@ const Header: React.FC = () => {
 
   const activeLinkClasses: string = "text-white opacity-100"
 
-  // Sparkle effect function
   const createSparkles = (): void => {
     if (!buttonRef.current) return
 
     const buttonRect: DOMRect = buttonRef.current.getBoundingClientRect()
     const newSparkles: SparkleData[] = []
 
-    // Create multiple sparkles
     for (let i = 0; i < 12; i++) {
       newSparkles.push({
         id: `sparkle-${Date.now()}-${i}`,
@@ -116,7 +113,6 @@ const Header: React.FC = () => {
 
     setSparkles(newSparkles)
 
-    // Clear sparkles after they've animated
     setTimeout(() => {
       setSparkles([])
     }, 1500)
@@ -133,7 +129,6 @@ const Header: React.FC = () => {
 
       return () => {
         if (tiltRef.current) {
-          // eslint-disable-next-line react-hooks/exhaustive-deps
           const tiltElement = tiltRef.current as VanillaTiltElement
           tiltElement.vanillaTilt?.destroy()
         }
@@ -147,27 +142,25 @@ const Header: React.FC = () => {
         className="mx-auto flex w-full items-center justify-center rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.25)] px-4 py-0.5 backdrop-blur-md transition-shadow duration-200 ease-in-out md:max-w-fit"
         ref={tiltRef}
       >
-        {/* Logo */}
-        <li>
+        <li className="relative group mr-4">
           <Link
             href="/"
-            className={`${linkClasses} !py-0 !ml-0 items-center !text-3xl before:content-['🗿'] hover:before:content-['🏠'] ${pathname === "/" ? activeLinkClasses : ""}`}
+            className={`${linkClasses} !mx-0 items-center !py-0 !text-3xl before:content-['🧙🏻‍♂️'] hover:before:content-['🏠'] ${pathname === "/" ? activeLinkClasses : ""}`}
           ></Link>
+          <div className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 rounded-md bg-neutral-800 dark:bg-neutral-200 px-2.5 py-1.5 text-xs font-medium text-white dark:text-black opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap">
+            <div className="absolute -top-[6px] left-1/2 -translate-x-1/2 h-0 w-0 border-l-[6px] border-r-[6px] border-b-[6px] border-l-transparent border-r-transparent border-b-neutral-800 dark:border-b-neutral-200" />
+            Go home
+          </div>
         </li>
 
-        {/* Menu Items */}
         {menuItems.map((item) => (
           <li key={item.href}>
-            <Link
-              href={item.href}
-              className={linkClasses}
-            >
+            <Link href={item.href} className={linkClasses}>
               {item.label}
             </Link>
           </li>
         ))}
 
-        {/* Social Links */}
         {socialLinks.map((social) => (
           <li key={social.href}>
             <Link
@@ -175,14 +168,13 @@ const Header: React.FC = () => {
               target="_blank"
               rel="nofollow"
               aria-label={social.label}
-              className={`${linkClasses} !py-0 hidden !text-xl md:block`}
+              className={`${linkClasses} hidden !py-0 !text-xl md:block`}
             >
               <social.icon className="m-auto flex h-full" />
             </Link>
           </li>
         ))}
 
-        {/* Contact Button */}
         <li className="relative">
           <motion.div ref={buttonRef} className="relative" whileTap={{ scale: 0.97 }}>
             <Link
@@ -194,7 +186,6 @@ const Header: React.FC = () => {
               <span className="md:hidden">Contact</span>
             </Link>
 
-            {/* Sparkle elements with Framer Motion */}
             <AnimatePresence>
               {sparkles.map((sparkle) => (
                 <SparkleEffect key={sparkle.id} x={sparkle.x} y={sparkle.y} />

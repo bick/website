@@ -1,10 +1,6 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-
-
-
-
+import Link from "next/link"
 
 export default function News() {
   const articles = [
@@ -19,14 +15,14 @@ export default function News() {
     <section className="mt-24" id="news">
       <div className="container">
         <h2>📰 In the News</h2>
-        <ul className="mt-6 space-y-3 pl-6 list-disc">
+        <ul className="mt-6 list-disc space-y-3 pl-6">
           {articles.map((article, index) => (
             <li key={index} className="text-lg">
               <Link
                 href={article.url}
                 target="_blank"
                 rel="nofollow"
-                className="portfolio-item text-white no-underline hover:opacity-75 transition-opacity"
+                className="portfolio-item text-white no-underline transition-opacity hover:opacity-75"
               >
                 {article.title}
               </Link>
