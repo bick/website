@@ -17,12 +17,12 @@ function Stars() {
     }
 
     return Array.from({ length: 60 }, (_, i) => ({
-      left: `${rng(i * 3) * 100}%`,
-      top: `${rng(i * 3 + 1) * 100}%`,
+      left: `${Math.round(rng(i * 3) * 10000) / 100}%`,
+      top: `${Math.round(rng(i * 3 + 1) * 10000) / 100}%`,
       size: rng(i * 3 + 2) < 0.1 ? 6 : rng(i * 3 + 2) < 0.35 ? 4 : 3,
-      delay: rng(i * 7) * 6,
-      duration: 3 + rng(i * 11) * 4,
-      brightness: 0.4 + rng(i * 13) * 0.6,
+      delay: Math.round(rng(i * 7) * 600) / 100,
+      duration: Math.round((3 + rng(i * 11) * 4) * 100) / 100,
+      brightness: Math.round((0.4 + rng(i * 13) * 0.6) * 100) / 100,
     }))
   }, [])
 
