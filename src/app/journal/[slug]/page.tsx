@@ -66,7 +66,7 @@ export default async function Page({ params }: PageProps) {
           <div className="mt-16 border-t border-white/10 pt-8">
             <Link
               href="/journal"
-              className="portfolio-item text-[var(--link)] no-underline text-base font-medium hover:opacity-75 transition-opacity"
+              className="portfolio-item text-orange-400 hover:text-orange-300 underline underline-offset-4 decoration-orange-400/30 hover:decoration-orange-300 transition-colors text-base font-medium"
             >
               &larr; Back to journal
             </Link>

@@ -89,7 +89,7 @@ export default function AboutPage() {
             >
               <div className="relative h-48 w-48 overflow-hidden rounded-2xl border-2 border-white/10 shadow-2xl md:h-64 md:w-64">
                 <Image
-                  src="/static/headshot.jpg"
+                  src="/static/headshot.jpeg"
                   alt="Owen Bick"
                   fill
                   className="object-cover"

@@ -38,7 +38,7 @@ export default function Projects() {
           ))}
         </div>
         <div className="mt-6">
-          <Link href="/projects" className="portfolio-item text-[var(--link)] no-underline text-base font-medium hover:opacity-75 transition-opacity">
+          <Link href="/projects" className="portfolio-item text-orange-400 hover:text-orange-300 underline underline-offset-4 decoration-orange-400/30 hover:decoration-orange-300 transition-colors text-base font-medium">
             View all projects &rarr;
           </Link>
         </div>

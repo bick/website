@@ -60,7 +60,7 @@ export default function ProjectsPage() {
                       ))}
                     </div>
                     <div className="mt-8">
-                      <span className="text-sm font-medium text-[var(--link)] transition-opacity group-hover:opacity-75">
+                      <span className="text-sm font-medium text-orange-400 group-hover:text-orange-300 underline underline-offset-4 decoration-orange-400/30 group-hover:decoration-orange-300 transition-colors">
                         View case study &rarr;
                       </span>
                     </div>

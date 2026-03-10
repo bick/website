@@ -1,18 +1,25 @@
-"use client"
+"use client";
 
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import Image from "next/image";
+
+
+
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card, CardContent } from "@/components/ui/card";
+
+
+
+
 
 export default function ResumeTable() {
   const experience = [
     {
-      title: "Engineering Manager & Product Lead",
+      title: "Senior Engineering Manager",
       company: "Smile Doctors",
+      logo: "/static/logos/smiledoctors.jpeg",
       period: "Sep 2024 - Present",
       location: "Dallas, Texas",
       duration: "6 mos",
-      isPresentJob: true,
       achievements: [
         "Leading cross-functional engineering teams to deliver customer-facing healthcare products",
         "Driving product strategy that directly impacts revenue and patient acquisition",
@@ -22,10 +29,10 @@ export default function ResumeTable() {
     {
       title: "Founder & CEO",
       company: "Weekend Labs",
+      logo: "/static/logos/rocket.jpeg",
       period: "Feb 2022 - Present",
       location: "Austin, Texas",
       duration: "3 yrs 1 mo",
-      isPresentJob: true,
       achievements: [
         "Built and scaled product development consultancy generating 6-figure ARR",
         "Led engineering teams to deliver revenue-generating products for 15+ clients",
@@ -35,10 +42,10 @@ export default function ResumeTable() {
     {
       title: "Senior Product Engineer",
       company: "Discount Drug Network",
+      logo: "/static/logos/ddn.jpeg",
       period: "May 2022 - Sep 2024",
       location: "Boston, Massachusetts",
       duration: "2 yrs 5 mos",
-      isPresentJob: false,
       achievements: [
         "Architected customer-facing pharmacy platform serving 100K+ users",
         "Led product initiatives that increased user engagement by 40%",
@@ -46,12 +53,12 @@ export default function ResumeTable() {
       ],
     },
     {
-      title: "Product Development Lead",
-      company: "Freelance Consulting",
+      title: "Senior Software Engineer",
+      company: "Freelance",
+      logo: "",
       period: "2017 - 2022",
       location: "",
       duration: "5 yrs",
-      isPresentJob: false,
       achievements: [
         "Delivered 50+ customer-facing products for startups and enterprises",
         "Focused on building products that generate measurable business value",
@@ -61,10 +68,10 @@ export default function ResumeTable() {
     {
       title: "Founder & Product Manager",
       company: "Stacktron",
+      logo: "/static/logos/stacktron.jpeg",
       period: "2014 - 2016",
       location: "",
       duration: "2 yrs",
-      isPresentJob: false,
       achievements: [
         "Founded and managed product development for B2B SaaS platform",
         "Built customer acquisition strategy and managed product-market fit initiatives",
@@ -92,24 +99,30 @@ export default function ResumeTable() {
                 <AccordionItem key={index} value={`job-${index}`}>
                   <AccordionTrigger className="px-4 py-4 hover:bg-muted/20">
                     <div className="flex w-full items-center gap-3 text-left">
+                      {job.logo ? (
+                        <Image
+                          src={job.logo}
+                          alt={job.company}
+                          width={36}
+                          height={36}
+                          className="rounded-md flex-shrink-0 object-cover"
+                        />
+                      ) : (
+                        <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-md bg-white/10 text-sm font-semibold text-white/60">
+                          {job.company.charAt(0)}
+                        </div>
+                      )}
                       <div className="flex-grow min-w-0">
                         <div className="font-medium">{job.title}</div>
                         <div className="text-sm text-muted-foreground">{job.company}</div>
                       </div>
                       <div className="flex items-center gap-2 flex-shrink-0 mr-2">
-                        {job.isPresentJob && (
-                          <Badge variant="default" className="text-xs">Current</Badge>
-                        )}
-                        <span className="text-sm text-muted-foreground hidden sm:block whitespace-nowrap">{job.duration}</span>
+                        <span className="text-sm text-muted-foreground hidden sm:block whitespace-nowrap">{job.period}</span>
                       </div>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <div className="px-4 pb-2 space-y-3">
-                      <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground">
-                        <span>{job.period}</span>
-                        {job.location && <span>{job.location}</span>}
-                      </div>
+                    <div className="px-4 pb-2 space-y-3 mt-4">
                       <ul className="space-y-2 text-sm">
                         {job.achievements.map((achievement, i) => (
                           <li key={i} className="flex gap-2">

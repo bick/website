@@ -128,19 +128,18 @@ button:active {
 }
 
 a:not(.header a, .portfolio-item, .footer a) {
-    border-bottom: 1px solid var(--link);
-    text-decoration: none;
-    padding-bottom: 1px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: rgb(251 146 60 / 0.3);
     max-width: fit-content;
-    color: var(--link);
-    transition: 0.2s ease;
+    color: #fb923c;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
     cursor: pointer;
 }
 
 a:not(.header a, .portfolio-item, .footer a):hover {
-    border-bottom: 1px solid var(--link);
-    text-decoration: none !important;
-    opacity: 0.75;
+    color: #fdba74;
+    text-decoration-color: #fdba74;
 }
 
 a:not(.header a, .portfolio-item, .footer a):link[href^="https://"]:after {
@@ -150,7 +149,7 @@ a:not(.header a, .portfolio-item, .footer a):link[href^="https://"]:after {
     margin-left: 0.25rem;
     content: "↗";
     vertical-align: text-top;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 p {
