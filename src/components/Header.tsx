@@ -5,8 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa"
-import SpotifyWidget from "@/components/SpotifyWidget";
-import VanillaTilt from "vanilla-tilt";
+import dynamic from "next/dynamic";
+
+const SpotifyWidget = dynamic(() => import("@/components/SpotifyWidget"), { ssr: false });
 
 
 
@@ -128,11 +129,15 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     if (tiltRef.current) {
-      VanillaTilt.init(tiltRef.current, {
-        max: 5,
-        speed: 400,
-        glare: true,
-        "max-glare": 0.05,
+      import("vanilla-tilt").then((VanillaTilt) => {
+        if (tiltRef.current) {
+          VanillaTilt.default.init(tiltRef.current, {
+            max: 5,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.05,
+          })
+        }
       })
 
       return () => {

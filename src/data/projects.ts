@@ -37,7 +37,7 @@ export const projects: Project[] = [
   {
     slug: "discount-drug-network",
     title: "Discount Drug Network",
-    year: "2022",
+    year: "2022 - 2025",
     type: "Web Development",
     url: "https://discountdrugnetwork.com",
     image: "/static/discountdrugnetwork.png",

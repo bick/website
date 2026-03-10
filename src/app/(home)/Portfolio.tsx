@@ -22,6 +22,7 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  loading="lazy"
                   className="object-cover opacity-60 transition-transform duration-500 hover:scale-105"
                 />
                 <Badge

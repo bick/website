@@ -1,6 +1,6 @@
 "use client"
 
-import { useMemo, type ReactNode } from "react"
+import { useEffect, useMemo, useState, type ReactNode } from "react"
 import Image from "next/image"
 import { motion, type Variants } from "framer-motion"
 
@@ -9,6 +9,12 @@ interface BackgroundWrapperProps {
 }
 
 function Stars() {
+  const [count, setCount] = useState(20)
+
+  useEffect(() => {
+    if (window.innerWidth >= 768) setCount(60)
+  }, [])
+
   const stars = useMemo(() => {
     const seed = 42
     const rng = (i: number) => {
@@ -16,7 +22,7 @@ function Stars() {
       return x - Math.floor(x)
     }
 
-    return Array.from({ length: 60 }, (_, i) => ({
+    return Array.from({ length: count }, (_, i) => ({
       left: `${Math.round(rng(i * 3) * 10000) / 100}%`,
       top: `${Math.round(rng(i * 3 + 1) * 10000) / 100}%`,
       size: rng(i * 3 + 2) < 0.1 ? 6 : rng(i * 3 + 2) < 0.35 ? 4 : 3,
@@ -24,7 +30,7 @@ function Stars() {
       duration: Math.round((3 + rng(i * 11) * 4) * 100) / 100,
       brightness: Math.round((0.4 + rng(i * 13) * 0.6) * 100) / 100,
     }))
-  }, [])
+  }, [count])
 
   return (
     <div className="pointer-events-none absolute inset-0 z-[1]">
@@ -115,10 +121,10 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
         >
           <Image
             src="/static/background.svg"
-            alt="Background decoration"
+            alt=""
             fill
             className="object-contain opacity-100"
-            priority
+            loading="lazy"
           />
         </motion.div>
       </div>

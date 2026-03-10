@@ -6,10 +6,8 @@ import "./globals.css"
 import { GoogleAnalytics } from "@next/third-parties/google"
 import { Analytics } from "@vercel/analytics/react"
 
-import { PageTransitionProvider } from "@/components/Animations"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
-import Loading from "@/components/Loading"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
@@ -21,13 +19,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preload" href="/fonts/SuisseIntl-Regular-WebM.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/SuisseIntl-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" storageKey="theme-preference">
           <Header />
-          <Loading />
-          <PageTransitionProvider>
-            <div className="flex min-h-screen flex-col">{children}</div>
-          </PageTransitionProvider>
+          <div className="flex min-h-screen flex-col">{children}</div>
           <Footer />
         </ThemeProvider>
         <Analytics />
