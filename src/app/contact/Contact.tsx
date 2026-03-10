@@ -4,7 +4,6 @@ import React from "react"
 import Clock from "react-live-clock"
 
 import Hero from "@/components/Hero"
-import Social from "@/components/Social"
 
 export default function Home() {
   return (
@@ -20,7 +19,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Social />
     </>
   )
 }

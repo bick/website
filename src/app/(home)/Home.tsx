@@ -1,7 +1,6 @@
 "use client"
 
 import Hero from "@/components/Hero"
-import Social from "@/components/Social"
 import About from "./About"
 import BubbleWrapper from "./Bubble"
 import Journal from "./Journal"
@@ -16,7 +15,6 @@ export default function Home() {
       <Journal />
       <News />
       <About />
-      <Social />
     </BubbleWrapper>
   )
 }
