@@ -1,11 +1,15 @@
-"use client"
+"use client";
 
-import React, { useEffect, useRef, useState } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { AnimatePresence, motion } from "framer-motion"
-import { FaGithub, FaLinkedin } from "react-icons/fa"
-import dynamic from "next/dynamic"
+import React, { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+
+
+
 
 const SpotifyWidget = dynamic(() => import("@/components/SpotifyWidget"), { ssr: false })
 
@@ -160,13 +164,15 @@ const Header: React.FC = () => {
           ref={tiltRef}
         >
           <li
-            className="relative group mr-4"
-            onMouseLeave={() => { if (!tooltipReady) setTooltipReady(true) }}
+            className="group relative mr-4"
+            onMouseLeave={() => {
+              if (!tooltipReady) setTooltipReady(true)
+            }}
           >
             {isHome ? (
               <>
                 <motion.span
-                  className={`${linkClasses} !mx-0 items-center !py-0 !text-3xl cursor-pointer select-none`}
+                  className={`${linkClasses} !mx-0 cursor-pointer select-none items-center !py-0 !text-3xl`}
                   animate={{ rotate: logoSpin }}
                   transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                   onClick={() => setLogoSpin((prev) => prev + 720)}
@@ -174,8 +180,8 @@ const Header: React.FC = () => {
                   👻
                 </motion.span>
                 {tooltipReady && (
-                  <div className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 rounded-md bg-neutral-800 dark:bg-neutral-200 px-2.5 py-1.5 text-xs font-medium text-white dark:text-black opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap">
-                    <div className="absolute -top-[6px] left-1/2 -translate-x-1/2 h-0 w-0 border-l-[6px] border-r-[6px] border-b-[6px] border-l-transparent border-r-transparent border-b-neutral-800 dark:border-b-neutral-200" />
+                  <div className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 whitespace-nowrap rounded-md bg-neutral-800 px-2.5 py-1.5 text-xs font-medium text-white opacity-0 transition-opacity group-hover:opacity-100 dark:bg-neutral-200 dark:text-black">
+                    <div className="absolute -top-[6px] left-1/2 h-0 w-0 -translate-x-1/2 border-b-[6px] border-l-[6px] border-r-[6px] border-b-neutral-800 border-l-transparent border-r-transparent dark:border-b-neutral-200" />
                     Gotta blast!
                   </div>
                 )}
@@ -184,10 +190,10 @@ const Header: React.FC = () => {
               <>
                 <Link
                   href="/"
-                  className={`${linkClasses} !mx-0 items-center !py-0 !text-3xl before:content-['🧙🏻‍♂️'] hover:before:content-['🏠']`}
+                  className={`${linkClasses} !mx-0 items-center !py-0 !text-3xl before:content-['👻'] hover:before:content-['🏠']`}
                 />
-                <div className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 rounded-md bg-neutral-800 dark:bg-neutral-200 px-2.5 py-1.5 text-xs font-medium text-white dark:text-black opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap">
-                  <div className="absolute -top-[6px] left-1/2 -translate-x-1/2 h-0 w-0 border-l-[6px] border-r-[6px] border-b-[6px] border-l-transparent border-r-transparent border-b-neutral-800 dark:border-b-neutral-200" />
+                <div className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 whitespace-nowrap rounded-md bg-neutral-800 px-2.5 py-1.5 text-xs font-medium text-white opacity-0 transition-opacity group-hover:opacity-100 dark:bg-neutral-200 dark:text-black">
+                  <div className="absolute -top-[6px] left-1/2 h-0 w-0 -translate-x-1/2 border-b-[6px] border-l-[6px] border-r-[6px] border-b-neutral-800 border-l-transparent border-r-transparent dark:border-b-neutral-200" />
                   Go home
                 </div>
               </>
@@ -196,7 +202,9 @@ const Header: React.FC = () => {
 
           {menuItems.map((item) => (
             <li key={item.href}>
-              <Link href={item.href} className={linkClasses}>{item.label}</Link>
+              <Link href={item.href} className={linkClasses}>
+                {item.label}
+              </Link>
             </li>
           ))}
 
@@ -236,7 +244,7 @@ const Header: React.FC = () => {
         <div className="w-full overflow-hidden rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.25)] backdrop-blur-md md:hidden">
           <div className="flex items-center justify-between px-4 py-2.5">
             <Link href="/" className="text-3xl no-underline">
-              🧙🏻‍♂️
+              👻
             </Link>
             <div className="flex items-center gap-5">
               {socialLinks.map((social) => (
