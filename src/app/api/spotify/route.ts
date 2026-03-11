@@ -7,6 +7,11 @@ const client_id = process.env.SPOTIFY_CLIENT_ID
 const client_secret = process.env.SPOTIFY_CLIENT_SECRET
 const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN
 
+const CACHE_TTL = 15 * 60 * 1000 // 15 minutes
+
+let cachedResponse: { data: Record<string, unknown>; timestamp: number } | null = null
+let lastKnownTrack: { title: string; artist: string; url: string } | null = null
+
 async function getAccessToken() {
   const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64")
 
@@ -28,15 +33,22 @@ async function getAccessToken() {
 export const dynamic = "force-dynamic"
 
 export async function GET() {
+  // Return cached response if still fresh
+  if (cachedResponse && Date.now() - cachedResponse.timestamp < CACHE_TTL) {
+    return NextResponse.json(cachedResponse.data)
+  }
+
   if (!client_id || !client_secret || !refresh_token) {
-    return NextResponse.json({ isPlaying: false })
+    return NextResponse.json({ isPlaying: false, ...lastKnownTrack })
   }
 
   try {
     const { access_token } = await getAccessToken()
 
     if (!access_token) {
-      return NextResponse.json({ isPlaying: false })
+      const fallback = { isPlaying: false, ...lastKnownTrack }
+      cachedResponse = { data: fallback, timestamp: Date.now() }
+      return NextResponse.json(fallback)
     }
 
     const response = await fetch(SPOTIFY_NOW_PLAYING_URL, {
@@ -44,22 +56,34 @@ export async function GET() {
     })
 
     if (response.status === 204 || response.status > 400) {
-      return NextResponse.json({ isPlaying: false })
+      const fallback = { isPlaying: false, ...lastKnownTrack }
+      cachedResponse = { data: fallback, timestamp: Date.now() }
+      return NextResponse.json(fallback)
     }
 
     const data = await response.json()
 
     if (!data.item) {
-      return NextResponse.json({ isPlaying: false })
+      const fallback = { isPlaying: false, ...lastKnownTrack }
+      cachedResponse = { data: fallback, timestamp: Date.now() }
+      return NextResponse.json(fallback)
     }
 
-    return NextResponse.json({
-      isPlaying: data.is_playing,
+    const track = {
       title: data.item.name,
       artist: data.item.artists.map((a: { name: string }) => a.name).join(", "),
       url: data.item.external_urls.spotify,
-    })
+    }
+
+    // Always remember the last track we saw
+    lastKnownTrack = track
+
+    const result = { isPlaying: data.is_playing, ...track }
+    cachedResponse = { data: result, timestamp: Date.now() }
+    return NextResponse.json(result)
   } catch {
-    return NextResponse.json({ isPlaying: false })
+    const fallback = { isPlaying: false, ...lastKnownTrack }
+    cachedResponse = { data: fallback, timestamp: Date.now() }
+    return NextResponse.json(fallback)
   }
 }

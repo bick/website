@@ -14,7 +14,7 @@ export default function Projects() {
     <section className="mt-24" id="projects">
       <div className="container">
         <h2>🚀 Featured Projects</h2>
-        <div className="mt-8 md:grid md:grid-cols-2 md:gap-6 space-y-4 md:space-y-0">
+        <div className="mt-8 md:grid md:grid-cols-2 md:gap-6 space-y-12 md:space-y-0">
           {projects.slice(0, 2).map((project, index) => (
             <Link key={project.slug} className={cardStyles} href={`/projects/${project.slug}`}>
               <div className="relative flex h-40 w-full items-center justify-center overflow-hidden bg-[#111]">
