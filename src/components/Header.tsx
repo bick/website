@@ -234,11 +234,11 @@ const Header: React.FC = () => {
 
         {/* Mobile nav bar */}
         <div className="w-full overflow-hidden rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.25)] backdrop-blur-md md:hidden">
-          <div className="flex items-center justify-between px-4 py-1.5">
-            <Link href="/" className="text-2xl no-underline">
+          <div className="flex items-center justify-between px-4 py-2.5">
+            <Link href="/" className="text-3xl no-underline">
               🧙🏻‍♂️
             </Link>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-5">
               {socialLinks.map((social) => (
                 <Link
                   key={social.href}
@@ -248,12 +248,12 @@ const Header: React.FC = () => {
                   aria-label={social.label}
                   className="text-white/50 no-underline transition-colors hover:text-white"
                 >
-                  <social.icon className="h-4 w-4" />
+                  <social.icon className="h-5 w-5" />
                 </Link>
               ))}
               <button
                 onClick={() => setMobileOpen((prev) => !prev)}
-                className="relative z-[10001] flex h-8 w-8 items-center justify-center"
+                className="relative z-[10001] flex h-9 w-9 items-center justify-center"
                 aria-label="Toggle menu"
               >
                 <HamburgerIcon open={mobileOpen} />
@@ -270,25 +270,25 @@ const Header: React.FC = () => {
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
               >
-                <div className="px-4 pb-4 pt-2">
+                <div className="px-4 pb-5 pt-3">
                   <nav className="flex flex-col gap-1">
                     {menuItems.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
                         onClick={() => setMobileOpen(false)}
-                        className="rounded-lg px-3 py-2.5 text-[15px] font-medium text-white/80 no-underline transition-colors hover:bg-white/5 hover:text-white"
+                        className="rounded-lg px-3 py-3 text-lg font-medium text-white/80 no-underline transition-colors hover:bg-white/5 hover:text-white"
                       >
                         {item.label}
                       </Link>
                     ))}
                   </nav>
 
-                  <div className="mt-3 flex items-center justify-between">
+                  <div className="mt-4 flex items-center justify-between">
                     <Link
                       href="/contact"
                       onClick={() => setMobileOpen(false)}
-                      className="inline-block rounded-lg bg-white/10 px-4 py-2 text-[15px] font-medium text-white no-underline shadow-[inset_0_0_20px_rgba(255,255,255,0.15)] transition-all hover:bg-white/20"
+                      className="inline-block rounded-lg bg-white/10 px-5 py-2.5 text-base font-medium text-white no-underline shadow-[inset_0_0_20px_rgba(255,255,255,0.15)] transition-all hover:bg-white/20"
                     >
                       ✨ Start A Project
                     </Link>
