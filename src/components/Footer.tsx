@@ -1,6 +1,10 @@
-"use client"
+"use client";
 
-import Link from "next/link"
+import Link from "next/link";
+
+
+
+
 
 export default function Footer() {
   return (
@@ -18,13 +22,13 @@ export default function Footer() {
             </Link>
           </li>
           <li className="sm:mr-8">
-            <Link href="/journal" className="text-lg text-white">
-              Journal
+            <Link href="/about" className="text-lg text-white">
+              About
             </Link>
           </li>
           <li className="sm:mr-8">
-            <Link href="/about" className="text-lg text-white">
-              About
+            <Link href="/journal" className="text-lg text-white">
+              Journal
             </Link>
           </li>
           <li className="sm:mr-8">
