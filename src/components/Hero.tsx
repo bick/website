@@ -38,7 +38,7 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
       <section className="pb-32 pt-48">
         <div className="container">
           <h1
-            className="hero-fade-in block text-3xl font-bold md:flex md:items-center lg:text-6xl"
+            className="hero-fade-in block text-4xl font-bold md:flex md:items-center lg:text-6xl"
             style={{ animationDelay: "0.2s" }}
           >
             <motion.span
