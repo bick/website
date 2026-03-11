@@ -171,7 +171,7 @@ const Header: React.FC = () => {
                   transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                   onClick={() => setLogoSpin((prev) => prev + 720)}
                 >
-                  🧙🏻‍♂️
+                  👻
                 </motion.span>
                 {tooltipReady && (
                   <div className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 rounded-md bg-neutral-800 dark:bg-neutral-200 px-2.5 py-1.5 text-xs font-medium text-white dark:text-black opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap">
