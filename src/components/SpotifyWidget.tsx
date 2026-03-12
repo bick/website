@@ -58,9 +58,9 @@ export default function SpotifyWidget({ compact = false }: { compact?: boolean }
     return () => clearInterval(interval)
   }, [])
 
-  const title = data?.isPlaying ? data.title : FALLBACK.title
-  const artist = data?.isPlaying ? data.artist : FALLBACK.artist
-  const url = data?.isPlaying ? data.url : FALLBACK.url
+  const title = data?.title ?? FALLBACK.title
+  const artist = data?.artist ?? FALLBACK.artist
+  const url = data?.url ?? FALLBACK.url
   const isPlaying = data?.isPlaying ?? false
 
   if (!data) {
