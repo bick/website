@@ -1,4 +1,4 @@
-aant actu# Owen Bick's Website
+# Owen Bick's Website
 
 This is the code for my personal website.
 
