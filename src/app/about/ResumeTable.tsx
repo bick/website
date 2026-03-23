@@ -25,7 +25,7 @@ export default function ResumeTable() {
       ],
     },
     {
-      title: "Founder & CEO",
+      title: "Founder",
       company: "Weekend Labs",
       logo: "/static/logos/rocket.jpeg",
       period: "Feb 2022 - Present",
@@ -65,7 +65,7 @@ export default function ResumeTable() {
       ],
     },
     {
-      title: "Founder & Product Manager",
+      title: "Co-Founder",
       company: "Stacktron",
       logo: "/static/logos/stacktron.jpeg",
       period: "2014 - 2016",

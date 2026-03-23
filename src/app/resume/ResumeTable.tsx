@@ -20,7 +20,7 @@ export default function ResumeTable() {
       ],
     },
     {
-      title: "Founder & CEO",
+      title: "Founder",
       company: "Weekend Labs",
       period: "Feb 2022 - Present",
       location: "Austin, Texas",
@@ -59,7 +59,7 @@ export default function ResumeTable() {
       ],
     },
     {
-      title: "Founder & Product Manager",
+      title: "Co-Founder",
       company: "Stacktron",
       period: "2014 - 2016",
       location: "",
