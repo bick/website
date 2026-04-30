@@ -8,18 +8,29 @@ import { Card, CardContent } from "@/components/ui/card"
 export default function ResumeTable() {
   const experience = [
     {
+      title: "Engineering Manager",
+      company: "FieldPulse",
+      logo: "",
+      period: "Mar 2026 - Present",
+      location: "Dallas, Texas",
+      achievements: [
+        "Leading engineering teams building field service management software for trade contractors across HVAC, plumbing, electrical, and other service industries",
+        "Driving technical strategy and roadmap for customer-facing tooling that powers scheduling, dispatching, invoicing, and payments for thousands of service businesses",
+        "Partnering with product and design to deliver revenue-critical features and improve experience for owners and field technicians",
+      ],
+    },
+    {
       title: "Senior Engineering Manager",
       company: "Smile Doctors",
       logo: "/static/logos/smiledoctors.jpeg",
-      period: "Sep 2024 - Present",
+      period: "Sep 2024 - Mar 2026",
       location: "Dallas, Texas",
-      duration: "6 mos",
       achievements: [
-        "Lead a team of 8 engineers across booking, payments, and mobile systems for a $1B+ healthcare platform processing $250MM in annual transactions across 600+ locations",
-        "Architecting a headless CMS platform to replace legacy website infrastructure across 300+ location sites, enabling marketing self-service and reducing engineering maintenance overhead",
+        "Led a team of 8 engineers across booking, payments, and mobile systems for a $1B+ healthcare platform processing $250MM in annual transactions across 600+ locations",
+        "Architected a headless CMS platform to replace legacy website infrastructure across 300+ location sites, enabling marketing self-service and reducing engineering maintenance overhead",
         "Built HIPAA, SOC 2, and CCPA compliant systems including automated audit logging, access controls, and encryption standards for regulated healthcare data",
-        "Architect core platform systems including real-time scheduling, payment processing, and patient data services, maintaining 99.99% uptime across distributed infrastructure",
-        "Partner with product, design, and data teams to define roadmaps and run experiments, reducing time-to-market by 30%",
+        "Architected core platform systems including real-time scheduling, payment processing, and patient data services, maintaining 99.99% uptime across distributed infrastructure",
+        "Partnered with product, design, and data teams to define roadmaps and run experiments, reducing time-to-market by 30%",
         "Drove CI/CD pipeline modernization and hybrid cloud migration, reducing deployment time by 75% and infrastructure costs by 40% through architecture simplification",
         "Scaled mobile app from greenfield to production with 4.9-star App Store rating",
       ],
@@ -30,7 +41,6 @@ export default function ResumeTable() {
       logo: "/static/logos/rocket.jpeg",
       period: "Feb 2022 - Present",
       location: "Austin, Texas",
-      duration: "3 yrs 1 mo",
       achievements: [
         "Built and scaled product development consultancy generating 6-figure ARR",
         "Led engineering teams to deliver revenue-generating products for 15+ clients",
@@ -43,7 +53,6 @@ export default function ResumeTable() {
       logo: "/static/logos/ddn.jpeg",
       period: "May 2022 - Sep 2024",
       location: "Boston, Massachusetts",
-      duration: "2 yrs 5 mos",
       achievements: [
         "Architected and scaled a B2B pharmaceutical pricing API (Node.js/TypeScript, C# backend, PostgreSQL) processing millions of daily requests, enabling enterprise clients to surface real-time drug pricing across 70,000+ US pharmacies",
         "Architected API gateway architecture, rate limiting, and resilience patterns that ensured platform stability at scale; reduced computing costs by 25% through algorithm optimization",
@@ -57,7 +66,6 @@ export default function ResumeTable() {
       logo: "",
       period: "Jul 2015 - May 2022",
       location: "",
-      duration: "7 yrs",
       achievements: [
         "Built internal call center tooling at Liberty Mutual, improving agent workflows across one of the largest US insurance carriers using TypeScript, Java, and MySQL",
         "Developed real-time chat platform features at LivePerson serving enterprise clients processing millions of customer interactions using Python, TypeScript, and Go",
@@ -70,7 +78,6 @@ export default function ResumeTable() {
       logo: "/static/logos/stacktron.jpeg",
       period: "2014 - 2016",
       location: "",
-      duration: "2 yrs",
       achievements: [
         "Founded and managed product development for B2B SaaS platform",
         "Built customer acquisition strategy and managed product-market fit initiatives",

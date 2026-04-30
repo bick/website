@@ -19,9 +19,9 @@ export default function About() {
             done it.
           </p>
           <p>
-            Right now I lead engineering at Smile Doctors, where my team builds the booking, payments, and mobile
-            systems behind a $1B+ healthcare platform serving 600+ locations. I also run Weekend Labs, a product
-            consultancy where I help startups go from idea to shipped product.
+            Right now I lead engineering at FieldPulse, building field service management software for trade
+            contractors across HVAC, plumbing, electrical, and other service industries. I also run Weekend Labs, a
+            product consultancy where I help startups go from idea to shipped product.
           </p>
         </div>
         <div className="mt-6">

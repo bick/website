@@ -7,16 +7,29 @@ import { Card, CardContent } from "@/components/ui/card"
 export default function ResumeTable() {
   const experience = [
     {
-      title: "Engineering Manager & Product Lead",
-      company: "Smile Doctors",
-      period: "Sep 2024 - Present",
+      title: "Senior Engineering Manager",
+      company: "FieldPulse",
+      period: "Apr 2026 - Present",
       location: "Dallas, Texas",
-      duration: "6 mos",
+      duration: "1 mo",
       isPresentJob: true,
       achievements: [
-        "Leading cross-functional engineering teams to deliver customer-facing healthcare products",
-        "Driving product strategy that directly impacts revenue and patient acquisition",
-        "Managing technical roadmaps for client-facing applications with focus on user experience",
+        "Leading engineering teams building field service management software for trade contractors",
+        "Driving product strategy across customer-facing tooling for HVAC, plumbing, and electrical businesses",
+        "Owning technical roadmaps for revenue-critical features serving thousands of service businesses",
+      ],
+    },
+    {
+      title: "Engineering Manager & Product Lead",
+      company: "Smile Doctors",
+      period: "Sep 2024 - Mar 2026",
+      location: "Dallas, Texas",
+      duration: "1 yr 7 mos",
+      isPresentJob: false,
+      achievements: [
+        "Led cross-functional engineering teams to deliver customer-facing healthcare products",
+        "Drove product strategy that directly impacted revenue and patient acquisition",
+        "Managed technical roadmaps for client-facing applications with focus on user experience",
       ],
     },
     {
