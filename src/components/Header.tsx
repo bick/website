@@ -182,7 +182,7 @@ const Header: React.FC = () => {
                 {tooltipReady && (
                   <div className="pointer-events-none absolute left-1/2 top-full mt-3 -translate-x-1/2 whitespace-nowrap rounded-md bg-neutral-800 px-2.5 py-1.5 text-xs font-medium text-white opacity-0 transition-opacity group-hover:opacity-100 dark:bg-neutral-200 dark:text-black">
                     <div className="absolute -top-[6px] left-1/2 h-0 w-0 -translate-x-1/2 border-b-[6px] border-l-[6px] border-r-[6px] border-b-neutral-800 border-l-transparent border-r-transparent dark:border-b-neutral-200" />
-                    Gotta blast!
+                    Hello World!
                   </div>
                 )}
               </>
