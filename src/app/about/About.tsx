@@ -83,7 +83,7 @@ export default function AboutPage() {
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
             >
               <div className="relative h-48 w-48 overflow-hidden rounded-2xl border-2 border-white/10 shadow-2xl md:h-64 md:w-64">
-                <Image src="/static/headshot.jpeg" alt="Owen Bick" fill className="object-cover" priority />
+                <Image src="/static/owen2026.jpeg" alt="Owen Bick" fill className="object-cover" priority />
               </div>
             </motion.div>
 
