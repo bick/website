@@ -10,7 +10,7 @@ export default function ResumeTable() {
     {
       title: "Engineering Manager",
       company: "FieldPulse",
-      logo: "",
+      logo: "/static/logos/fieldpulse.webp",
       period: "Mar 2026 - Present",
       location: "Dallas, Texas",
       achievements: [
