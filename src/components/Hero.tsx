@@ -4,6 +4,8 @@ import React from "react"
 import { motion, type Variants } from "framer-motion"
 import { GiTexas } from "react-icons/gi"
 
+import Signature from "@/components/Signature"
+
 type HeroProps = {
   type?: string
   title?: string
@@ -49,8 +51,9 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
               👋
             </motion.span>
             Hey, I&apos;m{" "}
-            <span className="relative mb-12 mt-6 block h-full font-['Germanica'] text-[72px] font-medium md:mx-4 md:my-0 md:text-6xl">
-              Owen Bick
+            <span className="relative mb-12 mt-6 block md:mx-4 md:my-0">
+              <span className="sr-only">Owen Bick</span>
+              <Signature className="h-auto w-full max-w-sm md:h-20 md:w-auto md:max-w-none lg:h-24" />
             </span>
           </h1>
           <h2
@@ -60,10 +63,7 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
             Engineering leader based in <GiTexas className="mx-1 inline text-white" /> Texas. I build teams, ship
             products, and scale startups.
           </h2>
-          <div
-            className="hero-fade-in mt-10 flex flex-wrap gap-4"
-            style={{ animationDelay: "0.5s" }}
-          >
+          <div className="hero-fade-in mt-10 flex flex-wrap gap-4" style={{ animationDelay: "0.5s" }}>
             <a
               href="/projects"
               className="portfolio-item rounded-lg bg-white/10 px-6 py-3 text-base font-medium text-white no-underline shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] transition-all hover:bg-white/20"
@@ -88,9 +88,7 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
     <section className="relative overflow-hidden pb-20 pt-40">
       <div className={`absolute inset-0 bg-gradient-to-br ${gradientClass} hero-fade-in`} />
 
-      <div
-        className="pointer-events-none absolute inset-0 mix-blend-overlay hero-fade-in opacity-25"
-      >
+      <div className="hero-fade-in pointer-events-none absolute inset-0 opacity-25 mix-blend-overlay">
         <svg className="h-full w-full">
           <filter id="heroGrain">
             <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
@@ -101,10 +99,7 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
       </div>
 
       <div className="container relative z-10">
-        <h1
-          className="hero-fade-in mb-1 text-4xl font-bold"
-          style={{ animationDelay: "0.2s" }}
-        >
+        <h1 className="hero-fade-in mb-1 text-4xl font-bold" style={{ animationDelay: "0.2s" }}>
           {title}
         </h1>
         {subtitle && (

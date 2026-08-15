@@ -202,13 +202,6 @@ h2 {
     text-decoration: none;
 }
 
-@font-face {
-    font-family: "Germanica";
-    src: url("/fonts/Germanica.woff2") format("woff2"),
-         url("/fonts/Germanica.ttf") format("truetype");
-    font-display: swap;
-}
-
 .prose {
     max-width: 720px;
     line-height: 1.8;
