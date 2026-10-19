@@ -11,8 +11,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 
 
-const SpotifyWidget = dynamic(() => import("@/components/SpotifyWidget"), { ssr: false })
-
 interface VanillaTiltElement extends HTMLElement {
   vanillaTilt?: {
     destroy: () => void
@@ -300,8 +298,6 @@ const Header: React.FC = () => {
                     >
                       ✨ Start A Project
                     </Link>
-
-                    <SpotifyWidget compact />
                   </div>
                 </div>
               </motion.div>
@@ -309,11 +305,6 @@ const Header: React.FC = () => {
           </AnimatePresence>
         </div>
       </header>
-
-      {/* Desktop Spotify widget */}
-      <div className="hidden md:block">
-        <SpotifyWidget />
-      </div>
     </>
   )
 }
