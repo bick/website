@@ -33,14 +33,14 @@ export default function AboutPage() {
           className="absolute inset-0 bg-gradient-to-br from-purple-100 dark:from-purple-950/80 via-background to-indigo-100/70 dark:to-indigo-950/50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         />
 
         <motion.div
           className="absolute inset-0 mix-blend-overlay"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.3 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <svg className="h-full w-full">
             <filter id="grain">
@@ -80,7 +80,7 @@ export default function AboutPage() {
               className="flex-shrink-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
+              transition={{ duration: 0.3, ease: "easeOut", delay: 0.05 }}
             >
               <div className="relative h-48 w-48 overflow-hidden rounded-2xl border-2 border-foreground/10 shadow-2xl md:h-64 md:w-64">
                 <Image src="/static/owen2026.jpeg" alt="Owen Bick" fill className="object-cover" priority />
@@ -91,7 +91,7 @@ export default function AboutPage() {
               className="text-center md:text-left"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
+              transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
             >
               <h1 className="text-4xl font-bold md:text-5xl">Owen Bick</h1>
               <p className="mt-3 text-lg text-foreground/60">Software Engineering Leader &middot; Austin &amp; Dallas</p>

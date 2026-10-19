@@ -117,7 +117,7 @@ const Header: React.FC = () => {
   ]
 
   const linkClasses: string =
-    "flex text-[#9797a0] font-medium text-[15px] mx-2 md:mx-3 py-5 transition-all duration-150 ease dark:mix-blend-exclusion hover:text-foreground hover:no-underline hover:opacity-100 hover:[text-shadow:rgba(255,255,255,0.85)_0_0_32px]"
+    "flex text-neutral-600 dark:text-[#9797a0] font-medium text-[15px] mx-2 md:mx-3 py-5 transition-all duration-150 ease dark:mix-blend-exclusion hover:text-foreground hover:no-underline hover:opacity-100 hover:[text-shadow:rgba(255,255,255,0.85)_0_0_32px]"
 
   const createSparkles = (): void => {
     if (!buttonRef.current) return
@@ -258,12 +258,12 @@ const Header: React.FC = () => {
                   target="_blank"
                   rel="nofollow"
                   aria-label={social.label}
-                  className="text-foreground/50 no-underline transition-colors hover:text-foreground"
+                  className="text-neutral-600 dark:text-foreground/50 no-underline transition-colors hover:text-foreground"
                 >
                   <social.icon className="h-5 w-5" />
                 </Link>
               ))}
-              <ThemeToggle className="text-foreground/50 transition-colors hover:text-foreground" />
+              <ThemeToggle className="text-neutral-600 dark:text-foreground/50 transition-colors hover:text-foreground" />
               <button
                 onClick={() => setMobileOpen((prev) => !prev)}
                 className="relative z-[10001] flex h-9 w-9 items-center justify-center"

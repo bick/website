@@ -15,14 +15,14 @@ export default function CaseStudy({ project }: { project: Project }) {
           className="absolute inset-0 bg-gradient-to-br from-orange-100 dark:from-orange-950/70 via-background to-amber-100/70 dark:to-amber-950/40"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         />
 
         <motion.div
           className="pointer-events-none absolute inset-0 mix-blend-overlay"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.25 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <svg className="h-full w-full">
             <filter id="caseGrain">
@@ -37,7 +37,7 @@ export default function CaseStudy({ project }: { project: Project }) {
           className="container relative z-10"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+          transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
         >
           <Link
             href="/projects"
@@ -78,7 +78,7 @@ export default function CaseStudy({ project }: { project: Project }) {
           className="container relative z-10 mt-12"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+          transition={{ duration: 0.35, ease: "easeOut", delay: 0.2 }}
         >
           <div className="mt-12 overflow-hidden rounded-t-xl border border-b-0 border-foreground/15">
             <div className="relative aspect-video w-full bg-neutral-100 dark:bg-[#111]">

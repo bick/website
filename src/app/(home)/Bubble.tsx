@@ -86,7 +86,7 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
         className="absolute inset-0 bg-gradient-to-br from-orange-100/70 dark:from-orange-950/40 via-background to-amber-100/50 dark:to-amber-950/30"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       />
 
       <Stars />
@@ -95,7 +95,7 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
         className="pointer-events-none absolute inset-0 z-[1] mix-blend-overlay"
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.2 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <svg className="h-full w-full">
           <filter id="homeGrain">

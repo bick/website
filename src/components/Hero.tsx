@@ -41,7 +41,7 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
         <div className="container">
           <h1
             className="hero-fade-in block text-4xl font-bold md:flex md:items-center lg:text-6xl"
-            style={{ animationDelay: "0.1s" }}
+            style={{ animationDelay: "0.05s" }}
           >
             <motion.span
               className="mr-4 inline-block origin-bottom-right lg:mr-8"
@@ -58,12 +58,12 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
           </h1>
           <h2
             className="hero-fade-in mt-12 max-w-2xl text-2xl font-medium leading-relaxed text-foreground/70 md:text-3xl"
-            style={{ animationDelay: "0.1s" }}
+            style={{ animationDelay: "0.05s" }}
           >
             Engineering leader based in <GiTexas className="mx-1 inline text-foreground" /> Texas. I build teams, ship
             products, and scale startups.
           </h2>
-          <div className="hero-fade-in mt-10 flex flex-wrap gap-4" style={{ animationDelay: "0.25s" }}>
+          <div className="hero-fade-in mt-10 flex flex-wrap gap-4" style={{ animationDelay: "0.15s" }}>
             <a
               href="/projects"
               className="portfolio-item rounded-lg bg-foreground/10 px-6 py-3 text-base font-medium text-foreground no-underline shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] transition-all hover:bg-foreground/20"
@@ -99,13 +99,13 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
       </div>
 
       <div className="container relative z-10">
-        <h1 className="hero-fade-in mb-1 text-4xl font-bold" style={{ animationDelay: "0.1s" }}>
+        <h1 className="hero-fade-in mb-1 text-4xl font-bold" style={{ animationDelay: "0.05s" }}>
           {title}
         </h1>
         {subtitle && (
           <h2
             className="hero-fade-in mt-4 max-w-2xl text-xl font-medium leading-normal text-foreground/60"
-            style={{ animationDelay: "0.1s" }}
+            style={{ animationDelay: "0.05s" }}
           >
             {subtitle}
           </h2>
