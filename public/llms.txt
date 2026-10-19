@@ -4,7 +4,7 @@
 
 ## About
 
-Owen Bick is a software engineer who builds web platforms, booking systems, and digital products. He works across the full stack with technologies like Next.js, React, TypeScript, and Tailwind CSS.
+Owen Bick is a software engineer who builds web and mobile platforms, booking systems, and digital products. He works across the full stack with technologies like Next.js, React, TypeScript, and Tailwind CSS.
 
 ## Pages
 
@@ -25,4 +25,5 @@ Owen Bick is a software engineer who builds web platforms, booking systems, and 
 
 ## Journal
 
-- [The 10 Commandments of the Hustle](https://owenbick.com/journal/10-commandments): What they don't teach you in school — but should. Rules that actually hold up, pulled from real failures and hard-won wins.
+- [Most SaaS Companies Will Not Survive](https://owenbick.com/journal/most-saas-companies-will-not-survive): Some of my thoughts on why most SaaS companies will not survive the AI era and which ones I think will.
+- [The 10 Commandments of the Hustle](https://owenbick.com/journal/10-commandments): What they don't teach you in school, but should. Rules that actually hold up, pulled from real failures and hard-won wins.
