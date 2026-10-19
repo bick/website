@@ -160,7 +160,7 @@ const Header: React.FC = () => {
       <header className="header fixed top-0 z-[9999] flex w-full items-center p-1 md:py-4">
         {/* Desktop nav */}
         <ul
-          className="mx-auto hidden w-full items-center justify-center rounded-[10px] border border-foreground/20 bg-foreground/60 dark:bg-[rgba(0,0,0,0.25)] px-4 py-0.5 backdrop-blur-md transition-shadow duration-200 ease-in-out md:flex md:max-w-fit"
+          className="mx-auto hidden w-full items-center justify-center rounded-[10px] border border-foreground/20 bg-background/60 dark:bg-[rgba(0,0,0,0.25)] px-4 py-0.5 backdrop-blur-md transition-shadow duration-200 ease-in-out md:flex md:max-w-fit"
           ref={tiltRef}
         >
           <li
@@ -245,7 +245,7 @@ const Header: React.FC = () => {
         </ul>
 
         {/* Mobile nav bar */}
-        <div className="w-full overflow-hidden rounded-[10px] border border-foreground/20 bg-foreground/60 dark:bg-[rgba(0,0,0,0.25)] backdrop-blur-md md:hidden">
+        <div className="w-full overflow-hidden rounded-[10px] border border-foreground/20 bg-background/60 dark:bg-[rgba(0,0,0,0.25)] backdrop-blur-md md:hidden">
           <div className="flex items-center justify-between px-4 py-2.5">
             <Link href="/" className="text-3xl no-underline">
               👻
