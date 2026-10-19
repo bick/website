@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preload" href="/fonts/SuisseIntl-Medium.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="dark" storageKey="theme-preference">
+        <ThemeProvider attribute="class" defaultTheme="dark" storageKey="theme-preference" disableTransitionOnChange>
           <Header />
           <div className="flex min-h-screen flex-col">{children}</div>
           <Footer />

@@ -37,7 +37,7 @@ function Stars() {
       {stars.map((star, i) => (
         <motion.div
           key={i}
-          className="absolute rounded-full bg-white"
+          className="absolute rounded-full bg-neutral-400 dark:bg-white"
           style={{
             left: star.left,
             top: star.top,
@@ -83,7 +83,7 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
   return (
     <div className="bubble relative w-full overflow-hidden">
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-orange-950/40 via-black to-amber-950/30"
+        className="absolute inset-0 bg-gradient-to-br from-orange-100/70 dark:from-orange-950/40 via-background to-amber-100/50 dark:to-amber-950/30"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
@@ -131,7 +131,7 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
 
       <div className="relative z-10">{children}</div>
 
-      <div className="absolute bottom-0 left-0 right-0 z-[3] h-64 bg-gradient-to-t from-[hsl(0,0%,3%)] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 z-[3] h-64 bg-gradient-to-t from-background to-transparent" />
     </div>
   )
 }

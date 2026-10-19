@@ -21,11 +21,11 @@ export default function ProjectsPage() {
                 className="portfolio-item group block no-underline"
               >
                 <div
-                  className={`flex flex-col overflow-hidden rounded-xl border border-[rgba(255,255,255,0.2)] bg-black transition-colors duration-200 hover:border-[#666] ${
+                  className={`flex flex-col overflow-hidden rounded-xl border border-foreground/20 bg-background transition-colors duration-200 hover:border-foreground/40 ${
                     index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                   }`}
                 >
-                  <div className="relative h-64 w-full flex-shrink-0 overflow-hidden bg-[#111] md:h-auto md:w-1/2">
+                  <div className="relative h-64 w-full flex-shrink-0 overflow-hidden bg-neutral-100 dark:bg-[#111] md:h-auto md:w-1/2">
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -43,7 +43,7 @@ export default function ProjectsPage() {
                     <p className="mt-4 text-base leading-relaxed opacity-60">{project.summary}</p>
                     <div className="mt-6 flex flex-wrap gap-2">
                       {project.tech.map((t) => (
-                        <span key={t} className="rounded-md bg-white/5 px-2.5 py-1 text-xs font-medium text-white/50">
+                        <span key={t} className="rounded-md bg-foreground/5 px-2.5 py-1 text-xs font-medium text-foreground/50">
                           {t}
                         </span>
                       ))}

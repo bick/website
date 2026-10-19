@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge"
 
 export default function Projects() {
   const cardStyles =
-    "flex flex-col portfolio-item bg-black border border-[rgba(255,255,255,0.2)] p-0 w-full rounded-xl no-underline box-border break-inside-avoid overflow-hidden min-w-full hover:border-[#666] transition-colors duration-200"
+    "flex flex-col portfolio-item bg-background border border-foreground/20 p-0 w-full rounded-xl no-underline box-border break-inside-avoid overflow-hidden min-w-full hover:border-foreground/40 transition-colors duration-200"
 
   return (
     <section className="mt-24" id="projects">
@@ -17,7 +17,7 @@ export default function Projects() {
         <div className="mt-8 md:grid md:grid-cols-2 md:gap-6 space-y-12 md:space-y-0">
           {projects.slice(0, 2).map((project, index) => (
             <Link key={project.slug} className={cardStyles} href={`/projects/${project.slug}`}>
-              <div className="relative flex h-40 w-full items-center justify-center overflow-hidden bg-[#111]">
+              <div className="relative flex h-40 w-full items-center justify-center overflow-hidden bg-neutral-100 dark:bg-[#111]">
                 <Image
                   src={project.image}
                   alt={project.title}

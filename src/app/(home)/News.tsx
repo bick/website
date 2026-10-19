@@ -22,7 +22,7 @@ export default function News() {
                 href={article.url}
                 target="_blank"
                 rel="nofollow"
-                className="portfolio-item text-white no-underline transition-opacity hover:opacity-75"
+                className="portfolio-item text-foreground no-underline transition-opacity hover:opacity-75"
               >
                 {article.title}
               </Link>

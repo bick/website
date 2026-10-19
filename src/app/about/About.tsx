@@ -30,7 +30,7 @@ export default function AboutPage() {
     <>
       <section className="relative overflow-hidden pb-24 pt-40">
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-purple-950/80 via-black to-indigo-950/50"
+          className="absolute inset-0 bg-gradient-to-br from-purple-100 dark:from-purple-950/80 via-background to-indigo-100/70 dark:to-indigo-950/50"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
@@ -82,7 +82,7 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
             >
-              <div className="relative h-48 w-48 overflow-hidden rounded-2xl border-2 border-white/10 shadow-2xl md:h-64 md:w-64">
+              <div className="relative h-48 w-48 overflow-hidden rounded-2xl border-2 border-foreground/10 shadow-2xl md:h-64 md:w-64">
                 <Image src="/static/owen2026.jpeg" alt="Owen Bick" fill className="object-cover" priority />
               </div>
             </motion.div>
@@ -94,13 +94,13 @@ export default function AboutPage() {
               transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
             >
               <h1 className="text-4xl font-bold md:text-5xl">Owen Bick</h1>
-              <p className="mt-3 text-lg text-white/60">Software Engineering Leader &middot; Austin &amp; Dallas</p>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80">
+              <p className="mt-3 text-lg text-foreground/60">Software Engineering Leader &middot; Austin &amp; Dallas</p>
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/80">
                 I&apos;m a Software Engineering Leader with 12+ years of experience building and scaling high-performing
                 engineering teams. I started as a developer working with everything from WordPress to modern React and
                 TypeScript stacks, that foundation shapes how I lead today.
               </p>
-              <p className="mt-4 max-w-xl text-lg leading-relaxed text-white/80">
+              <p className="mt-4 max-w-xl text-lg leading-relaxed text-foreground/80">
                 Currently, I partner with Series C+ startups to build and scale their engineering
                 organizations where I work on hiring senior talent, establishing technical strategy, and ensuring teams deliver on
                 ambitious roadmaps.
@@ -108,14 +108,14 @@ export default function AboutPage() {
               <div className="mt-8 flex justify-center gap-4 md:justify-start">
                 <Link
                   href="/contact"
-                  className="portfolio-item rounded-lg bg-white/10 px-5 py-2.5 text-sm font-medium text-white no-underline shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] transition-all hover:bg-white/20"
+                  className="portfolio-item rounded-lg bg-foreground/10 px-5 py-2.5 text-sm font-medium text-foreground no-underline shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] transition-all hover:bg-foreground/20"
                 >
                   Get in touch
                 </Link>
                 <Link
                   href="https://linkedin.com/in/bick"
                   target="_blank"
-                  className="portfolio-item rounded-lg border border-white/20 px-5 py-2.5 text-sm font-medium text-white/70 no-underline transition-all hover:border-white/40 hover:text-white"
+                  className="portfolio-item rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-medium text-foreground/70 no-underline transition-all hover:border-foreground/40 hover:text-foreground"
                 >
                   LinkedIn
                 </Link>
@@ -124,7 +124,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[hsl(0,0%,3%)] to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
       </section>
 
       <ResumeTable />

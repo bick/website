@@ -114,7 +114,7 @@ export default function ResumeTable() {
                           className="flex-shrink-0 rounded-md object-cover"
                         />
                       ) : (
-                        <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-md bg-white/10 text-sm font-semibold text-white/60">
+                        <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-md bg-foreground/10 text-sm font-semibold text-foreground/60">
                           {job.company.charAt(0)}
                         </div>
                       )}

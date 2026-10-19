@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
+import ThemeToggle from "@/components/ThemeToggle";
+
 
 
 
@@ -66,17 +68,17 @@ function HamburgerIcon({ open }: { open: boolean }) {
   return (
     <div className="flex h-5 w-5 flex-col items-center justify-center gap-[5px]">
       <motion.span
-        className="block h-[2px] w-5 rounded-full bg-white"
+        className="block h-[2px] w-5 rounded-full bg-foreground"
         animate={open ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
         transition={{ duration: 0.3 }}
       />
       <motion.span
-        className="block h-[2px] w-5 rounded-full bg-white"
+        className="block h-[2px] w-5 rounded-full bg-foreground"
         animate={open ? { opacity: 0 } : { opacity: 1 }}
         transition={{ duration: 0.2 }}
       />
       <motion.span
-        className="block h-[2px] w-5 rounded-full bg-white"
+        className="block h-[2px] w-5 rounded-full bg-foreground"
         animate={open ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
         transition={{ duration: 0.3 }}
       />
@@ -115,7 +117,7 @@ const Header: React.FC = () => {
   ]
 
   const linkClasses: string =
-    "flex text-[#9797a0] font-medium text-[15px] mx-2 md:mx-3 py-5 transition-all duration-150 ease mix-blend-exclusion hover:text-white hover:no-underline hover:opacity-100 hover:[text-shadow:rgba(255,255,255,0.85)_0_0_32px]"
+    "flex text-[#9797a0] font-medium text-[15px] mx-2 md:mx-3 py-5 transition-all duration-150 ease dark:mix-blend-exclusion hover:text-foreground hover:no-underline hover:opacity-100 hover:[text-shadow:rgba(255,255,255,0.85)_0_0_32px]"
 
   const createSparkles = (): void => {
     if (!buttonRef.current) return
@@ -158,7 +160,7 @@ const Header: React.FC = () => {
       <header className="header fixed top-0 z-[9999] flex w-full items-center p-1 md:py-4">
         {/* Desktop nav */}
         <ul
-          className="mx-auto hidden w-full items-center justify-center rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.25)] px-4 py-0.5 backdrop-blur-md transition-shadow duration-200 ease-in-out md:flex md:max-w-fit"
+          className="mx-auto hidden w-full items-center justify-center rounded-[10px] border border-foreground/20 bg-foreground/60 dark:bg-[rgba(0,0,0,0.25)] px-4 py-0.5 backdrop-blur-md transition-shadow duration-200 ease-in-out md:flex md:max-w-fit"
           ref={tiltRef}
         >
           <li
@@ -220,11 +222,15 @@ const Header: React.FC = () => {
             </li>
           ))}
 
+          <li>
+            <ThemeToggle className={`${linkClasses} !py-0 cursor-pointer`} />
+          </li>
+
           <li className="relative">
             <motion.div ref={buttonRef} className="relative" whileTap={{ scale: 0.97 }}>
               <Link
                 href="/contact"
-                className="ease my-0 ml-2 flex items-center rounded-[10px] border-b-0 border-none bg-white/10 px-[14px] py-[7px] text-[15px] font-medium leading-5 text-white shadow-[inset_0_0_20px_rgba(255,255,255,0.15),inset_0_1px_1px_rgba(255,255,255,0.15)] transition-all duration-200 hover:shadow-none"
+                className="ease my-0 ml-2 flex items-center rounded-[10px] border-b-0 border-none bg-foreground/10 px-[14px] py-[7px] text-[15px] font-medium leading-5 text-foreground shadow-[inset_0_0_20px_rgba(255,255,255,0.15),inset_0_1px_1px_rgba(255,255,255,0.15)] transition-all duration-200 hover:shadow-none"
                 onClick={createSparkles}
               >
                 ✨&nbsp;&nbsp;Start A Project
@@ -239,7 +245,7 @@ const Header: React.FC = () => {
         </ul>
 
         {/* Mobile nav bar */}
-        <div className="w-full overflow-hidden rounded-[10px] border border-[rgba(255,255,255,0.2)] bg-[rgba(0,0,0,0.25)] backdrop-blur-md md:hidden">
+        <div className="w-full overflow-hidden rounded-[10px] border border-foreground/20 bg-foreground/60 dark:bg-[rgba(0,0,0,0.25)] backdrop-blur-md md:hidden">
           <div className="flex items-center justify-between px-4 py-2.5">
             <Link href="/" className="text-3xl no-underline">
               👻
@@ -252,11 +258,12 @@ const Header: React.FC = () => {
                   target="_blank"
                   rel="nofollow"
                   aria-label={social.label}
-                  className="text-white/50 no-underline transition-colors hover:text-white"
+                  className="text-foreground/50 no-underline transition-colors hover:text-foreground"
                 >
                   <social.icon className="h-5 w-5" />
                 </Link>
               ))}
+              <ThemeToggle className="text-foreground/50 transition-colors hover:text-foreground" />
               <button
                 onClick={() => setMobileOpen((prev) => !prev)}
                 className="relative z-[10001] flex h-9 w-9 items-center justify-center"
@@ -283,7 +290,7 @@ const Header: React.FC = () => {
                         key={item.href}
                         href={item.href}
                         onClick={() => setMobileOpen(false)}
-                        className="rounded-lg px-3 py-3 text-lg font-medium text-white/80 no-underline transition-colors hover:bg-white/5 hover:text-white"
+                        className="rounded-lg px-3 py-3 text-lg font-medium text-foreground/80 no-underline transition-colors hover:bg-foreground/5 hover:text-foreground"
                       >
                         {item.label}
                       </Link>
@@ -294,7 +301,7 @@ const Header: React.FC = () => {
                     <Link
                       href="/contact"
                       onClick={() => setMobileOpen(false)}
-                      className="inline-block rounded-lg bg-white/10 px-5 py-2.5 text-base font-medium text-white no-underline shadow-[inset_0_0_20px_rgba(255,255,255,0.15)] transition-all hover:bg-white/20"
+                      className="inline-block rounded-lg bg-foreground/10 px-5 py-2.5 text-base font-medium text-foreground no-underline shadow-[inset_0_0_20px_rgba(255,255,255,0.15)] transition-all hover:bg-foreground/20"
                     >
                       ✨ Start A Project
                     </Link>

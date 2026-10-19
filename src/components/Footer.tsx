@@ -12,32 +12,32 @@ export default function Footer() {
       <div className="container">
         <ul className="mb-4 grid grid-cols-2 gap-3 sm:flex sm:gap-0">
           <li className="sm:mr-8">
-            <Link href="/" className="text-lg text-white">
+            <Link href="/" className="text-lg text-foreground">
               Index
             </Link>
           </li>
           <li className="sm:mr-8">
-            <Link href="/projects" className="text-lg text-white">
+            <Link href="/projects" className="text-lg text-foreground">
               Projects
             </Link>
           </li>
           <li className="sm:mr-8">
-            <Link href="/about" className="text-lg text-white">
+            <Link href="/about" className="text-lg text-foreground">
               About
             </Link>
           </li>
           <li className="sm:mr-8">
-            <Link href="/journal" className="text-lg text-white">
+            <Link href="/journal" className="text-lg text-foreground">
               Journal
             </Link>
           </li>
           <li className="sm:mr-8">
-            <Link href="/reviews" className="text-lg text-white">
+            <Link href="/reviews" className="text-lg text-foreground">
               Reviews
             </Link>
           </li>
           <li className="sm:mr-8">
-            <Link href="/contact" className="text-lg text-white">
+            <Link href="/contact" className="text-lg text-foreground">
               Contact
             </Link>
           </li>

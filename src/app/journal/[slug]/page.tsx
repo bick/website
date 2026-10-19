@@ -57,7 +57,7 @@ export default async function Page({ params }: PageProps) {
           <div className="prose">
             <Content />
           </div>
-          <div className="mt-16 border-t border-white/10 pt-8">
+          <div className="mt-16 border-t border-foreground/10 pt-8">
             <Link
               href="/journal"
               className="portfolio-item text-base font-medium text-orange-400 underline decoration-orange-400/30 underline-offset-4 transition-colors hover:text-orange-300 hover:decoration-orange-300"

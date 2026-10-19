@@ -11,7 +11,7 @@ export { posts }
 
 export default function JournalPage() {
   const cardStyles =
-    "flex flex-col portfolio-item bg-black border border-[rgba(255,255,255,0.2)] p-0 w-full rounded-xl no-underline box-border overflow-hidden hover:border-[#666] transition-colors duration-200"
+    "flex flex-col portfolio-item bg-background border border-foreground/20 p-0 w-full rounded-xl no-underline box-border overflow-hidden hover:border-foreground/40 transition-colors duration-200"
 
   return (
     <>
@@ -23,7 +23,7 @@ export default function JournalPage() {
               <Link key={index} className={cardStyles} href={`/journal/${post.slug}`}>
                 <div className="flex flex-col md:flex-row">
                   {post.image && (
-                    <div className="relative h-48 w-full flex-shrink-0 bg-[#111] md:h-auto md:w-64">
+                    <div className="relative h-48 w-full flex-shrink-0 bg-neutral-100 dark:bg-[#111] md:h-auto md:w-64">
                       <Image src={post.image} alt={post.title} fill className="object-cover" />
                     </div>
                   )}

@@ -2,6 +2,8 @@
 
 @config "../../tailwind.config.ts";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @font-face {
     font-family: "SuisseIntl";
     src: url("/fonts/SuisseIntl-Regular-WebM.woff2") format("woff2"),
@@ -69,6 +71,9 @@
         --chart-4: 43 74% 66%;
         --chart-5: 27 87% 67%;
         --link: #4493f8;
+        --link-color: #c2410c;
+        --link-hover: #ea580c;
+        --link-underline: rgb(194 65 12 / 0.3);
         --radius: 0.5rem;
     }
 
@@ -97,6 +102,9 @@
         --chart-3: 30 80% 55%;
         --chart-4: 280 65% 60%;
         --chart-5: 340 75% 55%;
+        --link-color: #fb923c;
+        --link-hover: #fdba74;
+        --link-underline: rgb(251 146 60 / 0.3);
     }
 
     * {
@@ -121,7 +129,7 @@
 }
 
 .hero-fade-in {
-    animation: heroFadeIn 0.5s ease-out both;
+    animation: heroFadeIn 0.4s ease-out both;
 }
 
 html {
@@ -138,7 +146,7 @@ body {
     sans-serif,
     "Apple Color Emoji",
     "Segoe UI Emoji";
-    color: white;
+    color: hsl(var(--foreground));
     font-weight: 400;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
@@ -155,16 +163,16 @@ button:active {
 a:not(.header a, .portfolio-item, .footer a) {
     text-decoration: underline;
     text-underline-offset: 4px;
-    text-decoration-color: rgb(251 146 60 / 0.3);
+    text-decoration-color: var(--link-underline);
     max-width: fit-content;
-    color: #fb923c;
+    color: var(--link-color);
     transition: color 0.2s ease, text-decoration-color 0.2s ease;
     cursor: pointer;
 }
 
 a:not(.header a, .portfolio-item, .footer a):hover {
-    color: #fdba74;
-    text-decoration-color: #fdba74;
+    color: var(--link-hover);
+    text-decoration-color: var(--link-hover);
 }
 
 a:not(.header a, .portfolio-item, .footer a):link[href^="https://"]:after {
@@ -233,21 +241,21 @@ h2 {
 .prose p {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: hsl(var(--foreground) / 0.85);
 }
 
 .prose strong {
     font-weight: 700;
-    color: white;
+    color: hsl(var(--foreground));
 }
 
 .prose em {
-    color: rgba(255, 255, 255, 0.6);
+    color: hsl(var(--foreground) / 0.6);
 }
 
 .prose hr {
     border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid hsl(var(--foreground) / 0.1);
     margin: 2rem 0;
 }
 
@@ -261,28 +269,28 @@ h2 {
 .prose li {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: hsl(var(--foreground) / 0.85);
     line-height: 1.8;
 }
 
 .prose blockquote {
-    border-left: 3px solid rgba(255, 255, 255, 0.2);
+    border-left: 3px solid hsl(var(--foreground) / 0.2);
     padding-left: 1rem;
     margin: 1.5rem 0;
-    color: rgba(255, 255, 255, 0.6);
+    color: hsl(var(--foreground) / 0.6);
     font-style: italic;
 }
 
 .prose code {
-    background: rgba(255, 255, 255, 0.1);
+    background: hsl(var(--foreground) / 0.1);
     padding: 0.15rem 0.4rem;
     border-radius: 4px;
     font-size: 0.9em;
 }
 
 .prose pre {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: hsl(var(--foreground) / 0.05);
+    border: 1px solid hsl(var(--foreground) / 0.1);
     border-radius: 8px;
     padding: 1rem;
     overflow-x: auto;
