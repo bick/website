@@ -34,6 +34,7 @@ const TAG_LABELS = {
   Wrestling: "Wrestling",
   Music: "Music",
   Tech: "Technology",
+  TV: "TV Shows",
 }
 
 export default function ReviewsTable() {
@@ -167,7 +168,9 @@ export default function ReviewsTable() {
                         ? "albums"
                         : tag === "Video Game"
                           ? "games"
-                          : tag.toLowerCase()}
+                          : tag === "TV"
+                            ? "shows"
+                            : tag.toLowerCase()}
                   </span>
                 </span>
               </div>

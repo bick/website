@@ -797,5 +797,11 @@
     "rating": "7",
     "tags": "Video Game",
     "credit": "Cities: Skylines"
+  },
+  {
+    "name": "Chernobyl (2019)",
+    "rating": 10,
+    "tags": "TV",
+    "credit": "Craig Mazin"
   }
 ]
