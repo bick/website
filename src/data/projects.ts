@@ -58,7 +58,7 @@ export const projects: Project[] = [
   {
     slug: "boston-junior-bruins",
     title: "Boston Junior Bruins",
-    year: "2022 – 2023",
+    year: "2022 - 2023",
     type: "Web Platform",
     url: "https://bostonjuniorbruins.com",
     image: "/static/bostonjuniorbruins.png",

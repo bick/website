@@ -22,10 +22,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!post) return {}
 
   return {
-    title: `${post.title} – Owen Bick`,
+    title: `${post.title} | Owen Bick`,
     description: post.excerpt,
     openGraph: {
-      title: `${post.title} – Owen Bick`,
+      title: `${post.title} | Owen Bick`,
       description: post.excerpt,
     },
   }

@@ -26,7 +26,7 @@ export default function News() {
               >
                 {article.title}
               </Link>
-              <span className="ml-2 opacity-40">— {article.source}</span>
+              <span className="ml-2 opacity-40">· {article.source}</span>
             </li>
           ))}
         </ul>

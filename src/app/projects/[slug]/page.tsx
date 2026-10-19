@@ -20,10 +20,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!project) return {}
 
   return {
-    title: `${project.title} – Owen Bick`,
+    title: `${project.title} | Owen Bick`,
     description: project.summary,
     openGraph: {
-      title: `${project.title} – Owen Bick`,
+      title: `${project.title} | Owen Bick`,
       description: project.summary,
     },
   }
