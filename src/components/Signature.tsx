@@ -42,21 +42,21 @@ export default function Signature({ className }: SignatureProps) {
             {...stroke}
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
-            transition={{ duration: 1.3, delay: 0.5, ease: "easeInOut" }}
+            transition={{ duration: 0.75, delay: 0.2, ease: "easeInOut" }}
           />
           <motion.path
             d={BICK}
             {...stroke}
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
-            transition={{ duration: 1.0, delay: 1.9, ease: "easeInOut" }}
+            transition={{ duration: 0.55, delay: 0.95, ease: "easeInOut" }}
           />
           <motion.path
             d={I_DOT}
             {...stroke}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.2, delay: 2.95 }}
+            transition={{ duration: 0.15, delay: 1.5 }}
           />
         </g>
       )}
