@@ -33,19 +33,11 @@ export const siteMetadata: PageMetadata = {
       description: "Owen Bick's resume.",
     },
   },
-  projects: {
-    title: "Projects – Owen Bick",
-    description: "A selection of work I've led, built, or shipped.",
-    openGraph: {
-      title: "Projects – Owen Bick",
-      description: "A selection of work I've led, built, or shipped.",
-    },
-  },
   journal: {
-    title: "Journal – Owen Bick",
+    title: "Blog – Owen Bick",
     description: "Thoughts on engineering, leadership, and building things.",
     openGraph: {
-      title: "Journal – Owen Bick",
+      title: "Blog – Owen Bick",
       description: "Thoughts on engineering, leadership, and building things.",
     },
   },
@@ -55,6 +47,14 @@ export const siteMetadata: PageMetadata = {
     openGraph: {
       title: "Reviews – Owen Bick",
       description: "Owen Bick's reviews where I review random stuff.",
+    },
+  },
+  speaking: {
+    title: "Speaking – Owen Bick",
+    description: "Owen Bick speaks about building engineering teams, shipping with craft, and where software companies go next.",
+    openGraph: {
+      title: "Speaking – Owen Bick",
+      description: "Owen Bick speaks about building engineering teams, shipping with craft, and where software companies go next.",
     },
   },
   contact: {

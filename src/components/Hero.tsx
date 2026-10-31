@@ -1,10 +1,9 @@
 "use client"
 
 import React from "react"
-import { motion, type Variants } from "framer-motion"
 import { GiTexas } from "react-icons/gi"
 
-import Signature from "@/components/Signature"
+import SplitText from "@/components/SplitText"
 
 type HeroProps = {
   type?: string
@@ -22,61 +21,22 @@ const GRADIENTS: Record<string, string> = {
 }
 
 export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
-  const waveVariants: Variants = {
-    wave: {
-      rotate: [0, 14, -8, 14, -4, 10, 0],
-      transition: {
-        duration: 2.5,
-        repeat: Infinity,
-        repeatType: "loop" as const,
-        ease: "easeInOut",
-        repeatDelay: 1,
-      },
-    },
-  }
-
   if (type === "home") {
     return (
-      <section className="pb-32 pt-48">
+      <section className="pb-24 pt-48">
         <div className="container">
-          <h1
-            className="hero-fade-in block text-4xl font-bold md:flex md:items-center lg:text-6xl"
-            style={{ animationDelay: "0.05s" }}
-          >
-            <motion.span
-              className="mr-4 inline-block origin-bottom-right lg:mr-8"
-              variants={waveVariants}
-              animate="wave"
-            >
-              👋
-            </motion.span>
-            Hey, I&apos;m{" "}
-            <span className="relative mb-12 mt-6 block md:mx-4 md:my-0">
-              <span className="sr-only">Owen Bick</span>
-              <Signature className="h-auto w-full max-w-sm md:h-20 md:w-auto md:max-w-none lg:h-24" />
-            </span>
+          <p className="subtext-in label mb-5">
+            Engineering leader based in <GiTexas className="mx-0.5 inline align-[-4px] text-base text-foreground" /> Austin
+          </p>
+          <h1 className="page-title max-w-155">
+            <SplitText delay={0.1}>
+              I build engineering teams, ship products, and help startups scale without giving up on <em>craft</em>.
+            </SplitText>
           </h1>
-          <h2
-            className="hero-fade-in mt-12 max-w-2xl text-2xl font-medium leading-relaxed text-foreground/70 md:text-3xl"
-            style={{ animationDelay: "0.05s" }}
-          >
-            Engineering leader based in <GiTexas className="mx-1 inline text-foreground" /> Texas. I build teams, ship
-            products, and scale startups.
-          </h2>
-          <div className="hero-fade-in mt-10 flex flex-wrap gap-4" style={{ animationDelay: "0.15s" }}>
-            <a
-              href="/projects"
-              className="portfolio-item rounded-lg bg-foreground/10 px-6 py-3 text-base font-medium text-foreground no-underline shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] transition-all hover:bg-foreground/20"
-            >
-              View my work
-            </a>
-            <a
-              href="/contact"
-              className="portfolio-item rounded-lg border border-foreground/20 px-6 py-3 text-base font-medium text-foreground/70 no-underline transition-all hover:border-foreground/40 hover:text-foreground"
-            >
-              Get in touch
-            </a>
-          </div>
+          <p className="subtext-in mt-7 max-w-140 text-muted-foreground" style={{ animationDelay: "0.5s" }}>
+            I lead engineering at <a href="https://fieldpulse.com">FieldPulse</a>. I write about
+            engineering leadership.
+          </p>
         </div>
       </section>
     )
@@ -86,7 +46,7 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
 
   return (
     <section className="relative overflow-hidden pb-20 pt-40">
-      <div className={`absolute inset-0 bg-gradient-to-br ${gradientClass} hero-fade-in`} />
+      <div className={`absolute inset-0 bg-linear-to-br ${gradientClass} hero-fade-in`} />
 
       <div className="hero-fade-in pointer-events-none absolute inset-0 opacity-25 mix-blend-overlay">
         <svg className="h-full w-full">
@@ -99,20 +59,17 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
       </div>
 
       <div className="container relative z-10">
-        <h1 className="hero-fade-in mb-1 text-4xl font-bold" style={{ animationDelay: "0.05s" }}>
-          {title}
+        <h1 className="page-title">
+          <SplitText>{title}</SplitText>
         </h1>
         {subtitle && (
-          <h2
-            className="hero-fade-in mt-4 max-w-2xl text-xl font-medium leading-normal text-foreground/60"
-            style={{ animationDelay: "0.05s" }}
-          >
+          <p className="subtext-in mt-4 max-w-140 text-muted-foreground" style={{ animationDelay: "0.3s" }}>
             {subtitle}
-          </h2>
+          </p>
         )}
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-background to-transparent" />
     </section>
   )
 }

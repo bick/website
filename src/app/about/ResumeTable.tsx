@@ -23,7 +23,7 @@ export default function ResumeTable() {
       title: "Senior Engineering Manager",
       company: "Smile Doctors",
       logo: "/static/logos/smiledoctors.jpeg",
-      period: "Sep 2024 - Mar 2026",
+      period: "Jan 2025 - Mar 2026",
       location: "Dallas, Texas",
       achievements: [
         "Led a team of 8 engineers across booking, payments, and mobile systems for a $1B+ healthcare platform processing $250MM in annual transactions across 600+ locations",
@@ -34,6 +34,14 @@ export default function ResumeTable() {
         "Drove CI/CD pipeline modernization and hybrid cloud migration, reducing deployment time by 75% and infrastructure costs by 40% through architecture simplification",
         "Scaled mobile app from greenfield to production with 4.9-star App Store rating",
       ],
+    },
+    {
+      title: "Senior Software Engineer",
+      company: "Smile Doctors",
+      logo: "/static/logos/smiledoctors.jpeg",
+      period: "Sep 2024 - Jan 2025",
+      location: "Dallas, Texas",
+      achievements: ["Internal tooling"],
     },
     {
       title: "Founder",
@@ -64,25 +72,25 @@ export default function ResumeTable() {
       title: "Senior Software Engineer",
       company: "Freelance",
       logo: "",
-      period: "Jul 2015 - May 2022",
+      period: "2019 - 2022",
       location: "",
-      achievements: [
-        "Built internal call center tooling at Liberty Mutual, improving agent workflows across one of the largest US insurance carriers using TypeScript, Java, and MySQL",
-        "Developed real-time chat platform features at LivePerson serving enterprise clients processing millions of customer interactions using Python, TypeScript, and Go",
-        "Shipped MVPs for Seed and Series A startups affiliated with MIT and Harvard, making core technology decisions that scaled from prototype to production primarily using TypeScript, C#, Ruby on Rails, and Go",
-      ],
+      achievements: ["Worked with Liberty Mutual, Boston Bruins, 829 Studios, FlossTime, Spot Easy, and Tadzilla"],
     },
     {
-      title: "Co-Founder",
+      title: "Software Engineer",
+      company: "Loud Canvas Media",
+      logo: "",
+      period: "2017 - 2019",
+      location: "",
+      achievements: ["Frontend, ecommerce, and mobile apps"],
+    },
+    {
+      title: "Software Engineer",
       company: "Stacktron",
       logo: "/static/logos/stacktron.jpeg",
-      period: "2014 - 2016",
+      period: "2014 - 2017",
       location: "",
-      achievements: [
-        "Founded and managed product development for B2B SaaS platform",
-        "Built customer acquisition strategy and managed product-market fit initiatives",
-        "Led small engineering team to deliver market-ready products",
-      ],
+      achievements: ["Founding engineer", "Built billing and cloud infrastructure management systems"],
     },
   ]
 
@@ -95,15 +103,15 @@ export default function ResumeTable() {
   ]
 
   return (
-    <section className="pb-20">
+    <section className="subtext-in pb-20" style={{ animationDelay: "0.6s" }}>
       <div className="container">
-        <h2 className="mt-12">💼 Experience</h2>
+        <h2 className="label mt-12">Experience</h2>
         <Card className="mt-6">
           <CardContent className="p-0">
             <Accordion type="single" collapsible className="w-full">
               {experience.map((job, index) => (
                 <AccordionItem key={index} value={`job-${index}`}>
-                  <AccordionTrigger className="px-4 py-4 hover:bg-muted/20">
+                  <AccordionTrigger className="py-4 transition-colors hover:text-muted-foreground">
                     <div className="flex w-full items-center gap-3 text-left">
                       {job.logo ? (
                         <Image
@@ -119,19 +127,19 @@ export default function ResumeTable() {
                         </div>
                       )}
                       <div className="min-w-0 flex-grow">
-                        <div className="font-medium">{job.title}</div>
-                        <div className="text-sm text-muted-foreground">{job.company}</div>
+                        <div className="font-medium leading-snug">{job.title}</div>
+                        <div className="mt-1 text-[15px] font-normal leading-snug text-muted-foreground">{job.company}</div>
                       </div>
                       <div className="mr-2 flex flex-shrink-0 items-center gap-2">
-                        <span className="hidden whitespace-nowrap text-sm text-muted-foreground sm:block">
+                        <span className="hidden whitespace-nowrap font-mono text-[13px] font-normal text-muted-foreground sm:block">
                           {job.period}
                         </span>
                       </div>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <div className="mt-4 space-y-3 px-4 pb-2">
-                      <ul className="space-y-2 text-sm">
+                    <div className="space-y-3 pb-2">
+                      <ul className="space-y-2 text-base leading-normal">
                         {job.achievements.map((achievement, i) => (
                           <li key={i} className="flex gap-2">
                             <span className="mt-0.5 text-muted-foreground">•</span>
@@ -147,16 +155,16 @@ export default function ResumeTable() {
           </CardContent>
         </Card>
 
-        <h2 className="mt-12">🎓 Education</h2>
+        <h2 className="label mt-12">Education</h2>
         <Card className="mt-6">
-          <CardContent className="px-4 py-4">
+          <CardContent className="px-0 py-4">
             {education.map((edu, index) => (
               <div key={index} className="flex items-center justify-between">
                 <div>
                   <div className="font-medium">{edu.degree}</div>
-                  <div className="text-sm text-muted-foreground">{edu.institution}</div>
+                  <div className="mt-1 text-[15px] text-muted-foreground">{edu.institution}</div>
                 </div>
-                <span className="text-sm text-muted-foreground">{edu.period}</span>
+                <span className="font-mono text-[13px] text-muted-foreground">{edu.period}</span>
               </div>
             ))}
           </CardContent>

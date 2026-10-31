@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
+import NewsletterDialog from "@/components/NewsletterDialog";
 import ThemeToggle from "@/components/ThemeToggle";
 
 
@@ -94,6 +95,7 @@ const Header: React.FC = () => {
   const [logoSpin, setLogoSpin] = useState(0)
   const [tooltipReady, setTooltipReady] = useState(true)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [newsletterOpen, setNewsletterOpen] = useState(false)
   const buttonRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -105,9 +107,9 @@ const Header: React.FC = () => {
 
 
   const menuItems: MenuItem[] = [
-    { href: "/projects", label: "Projects" },
     { href: "/about", label: "About" },
-    { href: "/journal", label: "Journal" },
+    { href: "/blog", label: "Blog" },
+    { href: "/speaking", label: "Speaking" },
     { href: "/reviews", label: "Reviews" },
   ]
 
@@ -228,13 +230,16 @@ const Header: React.FC = () => {
 
           <li className="relative">
             <motion.div ref={buttonRef} className="relative" whileTap={{ scale: 0.97 }}>
-              <Link
-                href="/contact"
+              <button
+                type="button"
                 className="ease my-0 ml-2 flex items-center rounded-[10px] border-b-0 border-none bg-foreground/10 px-[14px] py-[7px] text-[15px] font-medium leading-5 text-foreground shadow-[inset_0_0_20px_rgba(255,255,255,0.15),inset_0_1px_1px_rgba(255,255,255,0.15)] transition-all duration-200 hover:shadow-none"
-                onClick={createSparkles}
+                onClick={() => {
+                  createSparkles()
+                  setNewsletterOpen(true)
+                }}
               >
-                ✨&nbsp;&nbsp;Start A Project
-              </Link>
+                ✨&nbsp;&nbsp;Subscribe to newsletter
+              </button>
               <AnimatePresence>
                 {sparkles.map((sparkle) => (
                   <SparkleEffect key={sparkle.id} x={sparkle.x} y={sparkle.y} />
@@ -298,13 +303,16 @@ const Header: React.FC = () => {
                   </nav>
 
                   <div className="mt-4 flex items-center justify-between">
-                    <Link
-                      href="/contact"
-                      onClick={() => setMobileOpen(false)}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setMobileOpen(false)
+                        setNewsletterOpen(true)
+                      }}
                       className="inline-block rounded-lg bg-foreground/10 px-5 py-2.5 text-base font-medium text-foreground no-underline shadow-[inset_0_0_20px_rgba(255,255,255,0.15)] transition-all hover:bg-foreground/20"
                     >
-                      ✨ Start A Project
-                    </Link>
+                      ✨ Subscribe to newsletter
+                    </button>
                   </div>
                 </div>
               </motion.div>
@@ -312,6 +320,7 @@ const Header: React.FC = () => {
           </AnimatePresence>
         </div>
       </header>
+      <NewsletterDialog open={newsletterOpen} onOpenChange={setNewsletterOpen} />
     </>
   )
 }

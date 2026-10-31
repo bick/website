@@ -8,7 +8,7 @@ import Hero from "@/components/Hero"
 export default function ResumePage() {
   return (
     <>
-      <Hero title="👔 Resume" />
+      <Hero title="Resume" />
       <ResumeTable />
     </>
   )

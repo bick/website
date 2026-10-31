@@ -1,7 +1,6 @@
 "use client"
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function ResumeTable() {
@@ -95,39 +94,37 @@ export default function ResumeTable() {
   ]
 
   return (
-    <section className="pb-20">
+    <section className="subtext-in pb-20" style={{ animationDelay: "0.3s" }}>
       <div className="container">
-        <h2 className="mt-12">💼 Experience</h2>
+        <h2 className="label mt-12">Experience</h2>
         <Card className="mt-6">
           <CardContent className="p-0">
             <Accordion type="single" collapsible className="w-full">
               {experience.map((job, index) => (
                 <AccordionItem key={index} value={`job-${index}`}>
-                  <AccordionTrigger className="px-4 py-4 hover:bg-muted/20">
+                  <AccordionTrigger className="py-4 transition-colors hover:text-muted-foreground">
                     <div className="flex w-full items-center gap-3 text-left">
                       <div className="min-w-0 flex-grow">
-                        <div className="font-medium">{job.title}</div>
-                        <div className="text-sm text-muted-foreground">{job.company}</div>
+                        <div className="font-medium leading-snug">{job.title}</div>
+                        <div className="mt-1 text-[15px] font-normal leading-snug text-muted-foreground">{job.company}</div>
                       </div>
                       <div className="mr-2 flex flex-shrink-0 items-center gap-2">
                         {job.isPresentJob && (
-                          <Badge variant="default" className="text-xs">
-                            Current
-                          </Badge>
+                          <span className="label">Current</span>
                         )}
-                        <span className="hidden whitespace-nowrap text-sm text-muted-foreground sm:block">
+                        <span className="hidden whitespace-nowrap font-mono text-[13px] font-normal text-muted-foreground sm:block">
                           {job.duration}
                         </span>
                       </div>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <div className="space-y-3 px-4 pb-2">
-                      <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-muted-foreground">
+                    <div className="space-y-3 pb-2">
+                      <div className="flex flex-wrap gap-x-4 gap-y-1 font-mono text-[13px] text-muted-foreground">
                         <span>{job.period}</span>
                         {job.location && <span>{job.location}</span>}
                       </div>
-                      <ul className="space-y-2 text-sm">
+                      <ul className="space-y-2 text-base leading-normal">
                         {job.achievements.map((achievement, i) => (
                           <li key={i} className="flex gap-2">
                             <span className="mt-0.5 text-muted-foreground">•</span>
@@ -143,16 +140,16 @@ export default function ResumeTable() {
           </CardContent>
         </Card>
 
-        <h2 className="mt-12">🎓 Education</h2>
+        <h2 className="label mt-12">Education</h2>
         <Card className="mt-6">
-          <CardContent className="px-4 py-4">
+          <CardContent className="px-0 py-4">
             {education.map((edu, index) => (
               <div key={index} className="flex items-center justify-between">
                 <div>
                   <div className="font-medium">{edu.degree}</div>
-                  <div className="text-sm text-muted-foreground">{edu.institution}</div>
+                  <div className="mt-1 text-[15px] text-muted-foreground">{edu.institution}</div>
                 </div>
-                <span className="text-sm text-muted-foreground">{edu.period}</span>
+                <span className="font-mono text-[13px] text-muted-foreground">{edu.period}</span>
               </div>
             ))}
           </CardContent>

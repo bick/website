@@ -44,67 +44,87 @@
     font-display: swap;
 }
 
+@theme {
+    --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
 @layer base {
     :root {
-        --background: 0 0% 100%;
-        --foreground: 0 0% 3.9%;
-        --card: 0 0% 100%;
-        --card-foreground: 0 0% 3.9%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 0 0% 3.9%;
-        --primary: 0 0% 9%;
-        --primary-foreground: 0 0% 98%;
-        --secondary: 0 0% 96.1%;
-        --secondary-foreground: 0 0% 9%;
-        --muted: 0 0% 96.1%;
-        --muted-foreground: 0 0% 45.1%;
-        --accent: 0 0% 96.1%;
-        --accent-foreground: 0 0% 9%;
+        --background: 60 23.1% 97.5%;
+        --foreground: 60 4% 9.8%;
+        --card: 60 23.1% 97.5%;
+        --card-foreground: 60 4% 9.8%;
+        --popover: 60 23.1% 97.5%;
+        --popover-foreground: 60 4% 9.8%;
+        --primary: 60 4% 9.8%;
+        --primary-foreground: 60 23.1% 97.5%;
+        --secondary: 47 13.4% 92%;
+        --secondary-foreground: 60 4% 9.8%;
+        --muted: 47 13.4% 92%;
+        --muted-foreground: 51 3.9% 35.5%;
+        --accent: 47 13.4% 92%;
+        --accent-foreground: 60 4% 9.8%;
         --destructive: 0 84.2% 60.2%;
         --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 89.8%;
-        --input: 0 0% 89.8%;
-        --ring: 0 0% 3.9%;
+        --border: 47 13.4% 86.9%;
+        --input: 47 13.4% 86.9%;
+        --ring: 60 4% 9.8%;
         --chart-1: 12 76% 61%;
         --chart-2: 173 58% 39%;
         --chart-3: 197 37% 24%;
         --chart-4: 43 74% 66%;
         --chart-5: 27 87% 67%;
         --link: #4493f8;
-        --link-color: #c2410c;
-        --link-hover: #ea580c;
-        --link-underline: rgb(194 65 12 / 0.3);
+        --link-color: #1a1a18;
+        --link-hover: #5e5d57;
+        --link-underline: rgb(26 26 24 / 0.3);
         --radius: 0.5rem;
     }
 
     .dark {
-        --background: 0 0% 3%;
-        --foreground: 0 0% 98%;
-        --card: 0 0% 3.9%;
-        --card-foreground: 0 0% 98%;
-        --popover: 0 0% 3.9%;
-        --popover-foreground: 0 0% 98%;
-        --primary: 0 0% 98%;
-        --primary-foreground: 0 0% 9%;
-        --secondary: 0 0% 14.9%;
-        --secondary-foreground: 0 0% 98%;
-        --muted: 0 0% 14.9%;
-        --muted-foreground: 0 0% 63.9%;
-        --accent: 0 0% 14.9%;
-        --accent-foreground: 0 0% 98%;
+        --background: 60 2.9% 6.9%;
+        --foreground: 47 19.1% 90.8%;
+        --card: 60 2.9% 6.9%;
+        --card-foreground: 47 19.1% 90.8%;
+        --popover: 60 2.9% 6.9%;
+        --popover-foreground: 47 19.1% 90.8%;
+        --primary: 47 19.1% 90.8%;
+        --primary-foreground: 60 2.9% 6.9%;
+        --secondary: 45 4.8% 16.5%;
+        --secondary-foreground: 47 19.1% 90.8%;
+        --muted: 45 4.8% 16.5%;
+        --muted-foreground: 48 5% 60.8%;
+        --accent: 45 4.8% 16.5%;
+        --accent-foreground: 47 19.1% 90.8%;
         --destructive: 0 62.8% 30.6%;
         --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 14.9%;
-        --input: 0 0% 14.9%;
-        --ring: 0 0% 83.1%;
+        --border: 45 4.8% 16.5%;
+        --input: 45 4.8% 16.5%;
+        --ring: 48 5% 60.8%;
         --chart-1: 220 70% 50%;
         --chart-2: 160 60% 45%;
         --chart-3: 30 80% 55%;
         --chart-4: 280 65% 60%;
         --chart-5: 340 75% 55%;
-        --link-color: #fb923c;
-        --link-hover: #fdba74;
-        --link-underline: rgb(251 146 60 / 0.3);
+        --link-color: #eceae3;
+        --link-hover: #a09e96;
+        --link-underline: rgb(236 234 227 / 0.3);
+    }
+
+    /* The header keeps its original type and colors regardless of the site theme */
+    .header {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 3.9%;
+        --border: 0 0% 89.8%;
+        font-family: SuisseIntl, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    .dark .header {
+        --background: 0 0% 3%;
+        --foreground: 0 0% 98%;
+        --border: 0 0% 14.9%;
     }
 
     * {
@@ -132,23 +152,62 @@
     animation: heroFadeIn 0.3s ease-out both;
 }
 
+@keyframes splitTextIn {
+    from {
+        opacity: 0;
+        transform: translateY(120%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.split-word {
+    display: inline-block;
+    overflow: clip;
+    padding: 0.15em 0.06em 0.2em;
+    margin: -0.15em -0.06em -0.2em;
+    white-space: nowrap;
+}
+
+.split-item {
+    display: inline-block;
+    animation: splitTextIn 0.7s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+@keyframes subtextIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subtext-in {
+    animation: subtextIn 0.6s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .split-item,
+    .subtext-in {
+        animation: none;
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: SuisseIntl,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Helvetica,
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji";
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-size: 16px;
     color: hsl(var(--foreground));
     font-weight: 400;
-    line-height: 1;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
@@ -176,6 +235,7 @@ a:not(.header a, .portfolio-item, .footer a):hover {
 }
 
 a:not(.header a, .portfolio-item, .footer a):link[href^="https://"]:after {
+    display: inline-block;
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 1;
@@ -185,19 +245,103 @@ a:not(.header a, .portfolio-item, .footer a):link[href^="https://"]:after {
     opacity: 0.6;
 }
 
-p {
-    line-height: 2;
-}
-
-h2 {
-    font-size: 1.75rem;
-    font-weight: bold;
-}
-
 .container {
     margin: 0 auto;
-    max-width: 1000px;
-    padding: 0 1rem;
+    max-width: 900px;
+    padding: 0 24px;
+}
+
+.page-title {
+    font-family: var(--font-newsreader), Georgia, serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+}
+
+.label {
+    font-family: var(--font-plex-mono), ui-monospace, monospace;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: hsl(var(--muted-foreground));
+}
+
+a.label {
+    transition: color 0.2s ease;
+}
+
+a.label:hover {
+    color: hsl(var(--foreground));
+}
+
+.section {
+    border-top: 1px solid hsl(var(--border));
+    padding: 40px 0 56px;
+}
+
+.section > .label:first-child {
+    margin-bottom: 24px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 128px minmax(0, 1fr);
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid hsl(var(--border));
+    color: hsl(var(--foreground));
+    text-decoration: none;
+}
+
+.row-meta {
+    font-family: var(--font-plex-mono), ui-monospace, monospace;
+    font-size: 13px;
+    padding-top: 3px;
+    color: hsl(var(--muted-foreground));
+}
+
+.row-title {
+    font-family: var(--font-newsreader), Georgia, serif;
+    font-size: 19px;
+}
+
+a.row .row-title,
+a.row .row-name {
+    transition: color 0.2s ease;
+}
+
+a.row:hover .row-title,
+a.row:hover .row-name {
+    color: hsl(var(--muted-foreground));
+}
+
+.row-name {
+    font-weight: 500;
+}
+
+.more-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 15px;
+    color: hsl(var(--foreground));
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--border));
+    text-underline-offset: 4px;
+    transition: text-decoration-color 0.2s ease;
+}
+
+.more-link:hover {
+    text-decoration-color: hsl(var(--foreground));
+}
+
+@media (max-width: 480px) {
+    .row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2px;
+    }
 }
 
 .home {
@@ -211,13 +355,19 @@ h2 {
 }
 
 .prose {
-    line-height: 1.8;
-    font-size: 1.0625rem;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+    font-family: var(--font-newsreader), Georgia, serif;
 }
 
 .prose h1 {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 500;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
     line-height: 1.3;
@@ -225,7 +375,7 @@ h2 {
 
 .prose h2 {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 500;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     line-height: 1.3;
@@ -233,7 +383,7 @@ h2 {
 
 .prose h3 {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
 }
@@ -241,16 +391,16 @@ h2 {
 .prose p {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
-    color: hsl(var(--foreground) / 0.85);
+    color: hsl(var(--foreground));
 }
 
 .prose strong {
-    font-weight: 700;
+    font-weight: 500;
     color: hsl(var(--foreground));
 }
 
 .prose em {
-    color: hsl(var(--foreground) / 0.6);
+    font-style: italic;
 }
 
 .prose hr {
@@ -266,11 +416,19 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.prose ul {
+    list-style: disc;
+}
+
+.prose ol {
+    list-style: decimal;
+}
+
 .prose li {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    color: hsl(var(--foreground) / 0.85);
-    line-height: 1.8;
+    color: hsl(var(--foreground));
+    line-height: 1.7;
 }
 
 .prose blockquote {
@@ -285,7 +443,8 @@ h2 {
     background: hsl(var(--foreground) / 0.1);
     padding: 0.15rem 0.4rem;
     border-radius: 4px;
-    font-size: 0.9em;
+    font-family: var(--font-plex-mono), ui-monospace, monospace;
+    font-size: 0.8em;
 }
 
 .prose pre {

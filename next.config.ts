@@ -6,6 +6,12 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["framer-motion", "react-icons", "lucide-react"],
   },
+  redirects: async () => [
+    { source: "/projects", destination: "https://weekendlabs.net", permanent: false },
+    { source: "/projects/:slug", destination: "https://weekendlabs.net", permanent: false },
+    { source: "/journal", destination: "/blog", permanent: true },
+    { source: "/journal/:slug", destination: "/blog/:slug", permanent: true },
+  ],
   headers: async () => [
     {
       source: "/fonts/:path*",

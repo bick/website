@@ -17,15 +17,23 @@ interface Rating {
 }
 
 const RATING_COLORS = {
-  "0-3.99": "text-red-600",
-  "4-4.99": "text-orange-500",
-  "5-5.99": "text-gray-500",
-  "6-6.99": "text-gray-600",
-  "7-7.99": "text-lime-500",
-  "8-8.99": "text-green-500",
-  "9-9.99": "text-emerald-500",
-  "10": "text-amber-400",
+  "0-1.99": "text-red-600",
+  "2-2.49": "text-orange-500",
+  "2.5-2.99": "text-gray-500",
+  "3-3.49": "text-gray-600",
+  "3.5-3.99": "text-lime-500",
+  "4-4.49": "text-green-500",
+  "4.5-4.99": "text-emerald-500",
+  "5": "text-amber-400",
   default: "text-gray-400",
+}
+
+const QUARTER_STARS = ["", "¼", "½", "¾"]
+
+function formatStars(rating: number): string {
+  if (rating === 0) return "DUD"
+  const whole = Math.floor(rating)
+  return "★".repeat(whole) + QUARTER_STARS[Math.round((rating - whole) * 4)]
 }
 
 const TAG_LABELS = {
@@ -53,14 +61,14 @@ export default function ReviewsTable() {
   const getRatingColor = useCallback((rating: number | string): string => {
     if (rating === "" || typeof rating !== "number") return RATING_COLORS.default
 
-    if (rating >= 0 && rating < 4) return RATING_COLORS["0-3.99"]
-    if (rating >= 4 && rating < 5) return RATING_COLORS["4-4.99"]
-    if (rating >= 5 && rating < 6) return RATING_COLORS["5-5.99"]
-    if (rating >= 6 && rating < 7) return RATING_COLORS["6-6.99"]
-    if (rating >= 7 && rating < 8) return RATING_COLORS["7-7.99"]
-    if (rating >= 8 && rating < 9) return RATING_COLORS["8-8.99"]
-    if (rating >= 9 && rating < 10) return RATING_COLORS["9-9.99"]
-    if (rating === 10) return RATING_COLORS["10"]
+    if (rating >= 0 && rating < 2) return RATING_COLORS["0-1.99"]
+    if (rating >= 2 && rating < 2.5) return RATING_COLORS["2-2.49"]
+    if (rating >= 2.5 && rating < 3) return RATING_COLORS["2.5-2.99"]
+    if (rating >= 3 && rating < 3.5) return RATING_COLORS["3-3.49"]
+    if (rating >= 3.5 && rating < 4) return RATING_COLORS["3.5-3.99"]
+    if (rating >= 4 && rating < 4.5) return RATING_COLORS["4-4.49"]
+    if (rating >= 4.5 && rating < 5) return RATING_COLORS["4.5-4.99"]
+    if (rating === 5) return RATING_COLORS["5"]
     return RATING_COLORS.default
   }, [])
 
@@ -102,15 +110,17 @@ export default function ReviewsTable() {
 
   const RatingDisplay = ({ value }: { value: number | string }) => {
     if (value === "" || isNaN(Number(value))) {
-      return <div className="flex items-center justify-end font-mono font-semibold text-gray-400">N/A</div>
+      return <div className="flex items-center justify-end whitespace-nowrap text-lg leading-none text-gray-400">N/A</div>
     }
 
     const numericValue = typeof value === "string" ? parseFloat(value) : value
 
     return (
-      <div className="flex items-center justify-end font-mono font-semibold">
-        {numericValue === 10 && <RatingStar />}
-        <span className={getRatingColor(numericValue)}>{numericValue}</span>/10
+      <div className="flex items-center justify-end whitespace-nowrap text-lg leading-none">
+        {numericValue === 5 && <RatingStar />}
+        <span className={getRatingColor(numericValue)} aria-label={`${numericValue} out of 5 stars`}>
+          {formatStars(numericValue)}
+        </span>
       </div>
     )
   }
@@ -125,7 +135,7 @@ export default function ReviewsTable() {
   const CreditGroup = ({ credit, ratings, tag }: { credit: string; ratings: Rating[]; tag: string }) => {
     const showCredit = tag !== "Wrestling"
 
-    const perfectScores = ratings.filter((item) => item.rating === 10).length
+    const perfectScores = ratings.filter((item) => item.rating === 5).length
 
     if (ratings.length <= 1) {
       const rating = ratings[0]
@@ -199,7 +209,7 @@ export default function ReviewsTable() {
       <>
         <TableRow>
           <TableCell colSpan={2} className="bg-muted/50 py-2">
-            <div className="font-semibold">{getTagLabel(tag)}</div>
+            <div className="label">{getTagLabel(tag)}</div>
           </TableCell>
         </TableRow>
         {Object.entries(creditGroups).map(([credit, creditRatings]) => (
@@ -250,7 +260,7 @@ export default function ReviewsTable() {
   }
 
   return (
-    <section className="pb-20">
+    <section className="subtext-in pb-20" style={{ animationDelay: "0.3s" }}>
       <div className="container">
         <div className="mb-6 flex">
           <Select value={selectedTag} onValueChange={setSelectedTag}>

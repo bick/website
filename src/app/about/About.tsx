@@ -4,6 +4,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion, type Variants } from "framer-motion"
 
+import SplitText from "@/components/SplitText"
+
 import ResumeTable from "./ResumeTable"
 
 export default function AboutPage() {
@@ -82,45 +84,38 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, ease: "easeOut", delay: 0.05 }}
             >
-              <div className="relative h-48 w-48 overflow-hidden rounded-2xl border-2 border-foreground/10 shadow-2xl md:h-64 md:w-64">
+              <div className="relative h-48 w-48 overflow-hidden border md:h-56 md:w-56">
                 <Image src="/static/owen2026.jpeg" alt="Owen Bick" fill className="object-cover" priority />
               </div>
             </motion.div>
 
-            <motion.div
-              className="text-center md:text-left"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
-            >
-              <h1 className="text-4xl font-bold md:text-5xl">Owen Bick</h1>
-              <p className="mt-3 text-lg text-foreground/60">Software Engineering Leader &middot; Austin &amp; Dallas</p>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-foreground/80">
-                I&apos;m a Software Engineering Leader with 12+ years of experience building and scaling high-performing
-                engineering teams. I started as a developer working with everything from WordPress to modern React and
-                TypeScript stacks, that foundation shapes how I lead today.
+            <div className="text-center md:text-left">
+              <h1 className="page-title">
+                <SplitText>Owen Bick</SplitText>
+              </h1>
+              <p className="subtext-in label mt-3" style={{ animationDelay: "0.2s" }}>
+                Software Engineering Leader &middot; Austin &amp; Dallas
               </p>
-              <p className="mt-4 max-w-xl text-lg leading-relaxed text-foreground/80">
+              <p className="subtext-in mt-6 max-w-xl" style={{ animationDelay: "0.3s" }}>
+                I&apos;m a Software Engineering Leader with 15+ years of experience building and
+                scaling high-performing engineering teams. I started as a developer working with
+                everything from WordPress to modern React and TypeScript stacks, that foundation
+                shapes how I lead today.
+              </p>
+              <p className="subtext-in mt-4 max-w-xl" style={{ animationDelay: "0.5s" }}>
                 Currently, I partner with Series C+ startups to build and scale their engineering
-                organizations where I work on hiring senior talent, establishing technical strategy, and ensuring teams deliver on
-                ambitious roadmaps.
+                organizations where I work on hiring senior talent, establishing technical strategy,
+                and ensuring teams deliver on ambitious roadmaps.
               </p>
-              <div className="mt-8 flex justify-center gap-4 md:justify-start">
-                <Link
-                  href="/contact"
-                  className="portfolio-item rounded-lg bg-foreground/10 px-5 py-2.5 text-sm font-medium text-foreground no-underline shadow-[inset_0_0_20px_rgba(255,255,255,0.1)] transition-all hover:bg-foreground/20"
-                >
+              <div className="hero-fade-in flex justify-center gap-5 md:justify-start" style={{ animationDelay: "0.9s" }}>
+                <Link href="/contact" className="portfolio-item more-link">
                   Get in touch
                 </Link>
-                <Link
-                  href="https://linkedin.com/in/bick"
-                  target="_blank"
-                  className="portfolio-item rounded-lg border border-foreground/20 px-5 py-2.5 text-sm font-medium text-foreground/70 no-underline transition-all hover:border-foreground/40 hover:text-foreground"
-                >
+                <Link href="https://linkedin.com/in/bick" target="_blank" className="portfolio-item more-link">
                   LinkedIn
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 

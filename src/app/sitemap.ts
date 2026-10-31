@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next"
 
 import { posts } from "@/data/posts"
-import { projects } from "@/data/projects"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://owenbick.com"
@@ -20,16 +19,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/projects`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/journal`,
+      url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/speaking`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/reviews`,
@@ -51,19 +50,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  const projectPages: MetadataRoute.Sitemap = projects.map((project) => ({
-    url: `${baseUrl}/projects/${project.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }))
-
   const journalPages: MetadataRoute.Sitemap = posts.map((post) => ({
-    url: `${baseUrl}/journal/${post.slug}`,
+    url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(),
     changeFrequency: "yearly",
     priority: 0.7,
   }))
 
-  return [...staticPages, ...projectPages, ...journalPages]
+  return [...staticPages, ...journalPages]
 }

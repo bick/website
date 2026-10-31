@@ -3,32 +3,24 @@
 import Link from "next/link"
 import { posts } from "@/data/posts"
 
+import { shortDate } from "@/lib/utils"
+
 export default function Journal() {
   return (
-    <section className="mt-24" id="journal">
+    <section id="blog">
       <div className="container">
-        <h2>✍️ Journal</h2>
-        <div className="mt-8 space-y-0 divide-y divide-foreground/10">
-          {posts.slice(0, 4).map((post, index) => (
-            <Link
-              key={index}
-              href={`/journal/${post.slug}`}
-              className="portfolio-item group flex items-baseline justify-between gap-4 py-4 no-underline transition-opacity first:pt-0 hover:opacity-70"
-            >
-              <div className="min-w-0">
-                <h3 className="text-base font-semibold text-foreground">{post.title}</h3>
-                <p className="mt-1 hidden text-sm leading-relaxed opacity-50 sm:block">{post.excerpt}</p>
-              </div>
-              <time className="flex-shrink-0 text-sm opacity-40">{post.date}</time>
-            </Link>
-          ))}
-        </div>
-        <div className="mt-6">
-          <Link
-            href="/journal"
-            className="portfolio-item text-base font-medium text-orange-400 underline decoration-orange-400/30 underline-offset-4 transition-colors hover:text-orange-300 hover:decoration-orange-300"
-          >
-            Read all posts &rarr;
+        <div className="section">
+          <h2 className="label">Writing</h2>
+          <div className="flex flex-col">
+            {posts.slice(0, 4).map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="portfolio-item row">
+                <time className="row-meta">{shortDate(post.date)}</time>
+                <span className="row-title">{post.title}</span>
+              </Link>
+            ))}
+          </div>
+          <Link href="/blog" className="portfolio-item more-link">
+            All writing
           </Link>
         </div>
       </div>

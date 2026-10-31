@@ -1,481 +1,481 @@
 [
   {
     "name": "Taxi Driver (1976)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Martin Scorsese"
   },
   {
     "name": "Raging Bull (1980)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Martin Scorsese"
   },
   {
     "name": "Goodfellas (1990)",
-    "rating": 10,
+    "rating": 5,
     "tags": "Film",
     "credit": "Martin Scorsese"
   },
   {
     "name": "Casino (1995)",
-    "rating": 9.5,
+    "rating": 4.5,
     "tags": "Film",
     "credit": "Martin Scorsese"
   },
   {
     "name": "The Departed (2006)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Martin Scorsese"
   },
   {
     "name": "The Irishman (2019)",
-    "rating": 8.5,
+    "rating": 3.75,
     "tags": "Film",
     "credit": "Martin Scorsese"
   },
   {
     "name": "The Wolf of Wall Street (2013)",
-    "rating": 10,
+    "rating": 5,
     "tags": "Film",
     "credit": "Martin Scorsese"
   },
   {
     "name": "Reservoir Dogs (1992)",
-    "rating": 8,
+    "rating": 3.5,
     "tags": "Film",
     "credit": "Quentin Tarantino"
   },
   {
     "name": "Pulp Fiction (1994)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Quentin Tarantino"
   },
   {
     "name": "Inglourious Basterds (2009)",
-    "rating": 9.5,
+    "rating": 4.5,
     "tags": "Film",
     "credit": "Quentin Tarantino"
   },
   {
     "name": "Django Unchained (2012)",
-    "rating": 10,
+    "rating": 5,
     "tags": "Film",
     "credit": "Quentin Tarantino"
   },
   {
     "name": "The Hateful Eight (2015)",
-    "rating": 8.5,
+    "rating": 3.75,
     "tags": "Film",
     "credit": "Quentin Tarantino"
   },
   {
     "name": "Once Upon a Time in Hollywood (2019)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Quentin Tarantino"
   },
   {
     "name": "Batman Begins (2005)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Christopher Nolan"
   },
   {
     "name": "The Dark Knight (2008)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Christopher Nolan"
   },
   {
     "name": "Inception (2010)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Christopher Nolan"
   },
   {
     "name": "Interstellar (2014)",
-    "rating": 10,
+    "rating": 5,
     "tags": "Film",
     "credit": "Christopher Nolan"
   },
   {
     "name": "Dunkirk (2017)",
-    "rating": 8.5,
+    "rating": 3.75,
     "tags": "Film",
     "credit": "Christopher Nolan"
   },
   {
     "name": "The Dark Knight Rises (2012)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Christopher Nolan"
   },
   {
     "name": "Oppenheimer (2023)",
-    "rating": 9.5,
+    "rating": 4.5,
     "tags": "Film",
     "credit": "Christopher Nolan"
   },
   {
     "name": "The Shawshank Redemption (1994)",
-    "rating": 10,
+    "rating": 5,
     "tags": "Film",
     "credit": "Stephen King"
   },
   {
     "name": "The Shining (1980)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Stephen King"
   },
   {
     "name": "Stand by Me (1986)",
-    "rating": 8,
+    "rating": 3.5,
     "tags": "Film",
     "credit": "Stephen King"
   },
   {
     "name": "The Green Mile (1999)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Stephen King"
   },
   {
     "name": "Star Wars: Episode I (1999)",
-    "rating": 6,
+    "rating": 2.5,
     "tags": "Film",
     "credit": "Star Wars"
   },
   {
     "name": "Star Wars: Episode II (2002)",
-    "rating": 6.5,
+    "rating": 2.75,
     "tags": "Film",
     "credit": "Star Wars"
   },
   {
     "name": "Star Wars: Episode III (2005)",
-    "rating": 7,
+    "rating": 3,
     "tags": "Film",
     "credit": "Star Wars"
   },
   {
     "name": "Star Wars: Episode IV (1977)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Star Wars"
   },
   {
     "name": "Star Wars: Episode V (1980)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Star Wars"
   },
   {
     "name": "Star Wars: Episode VI (1983)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Star Wars"
   },
   {
     "name": "Star Wars: Episode VII (2015)",
-    "rating": 6,
+    "rating": 2.5,
     "tags": "Film",
     "credit": "Star Wars"
   },
   {
     "name": "Star Wars: Episode VIII (2017)",
-    "rating": 4,
+    "rating": 1.5,
     "tags": "Film",
     "credit": "Star Wars"
   },
   {
     "name": "Star Wars: Episode IX (2019)",
-    "rating": 4,
+    "rating": 1.5,
     "tags": "Film",
     "credit": "Star Wars"
   },
   {
     "name": "Harry Potter and the Sorcerer's Stone (2001)",
-    "rating": 8,
+    "rating": 3.5,
     "tags": "Film",
     "credit": "Harry Potter"
   },
   {
     "name": "Harry Potter and the Chamber of Secrets (2002)",
-    "rating": 8.5,
+    "rating": 3.75,
     "tags": "Film",
     "credit": "Harry Potter"
   },
   {
     "name": "Harry Potter and the Prisoner of Azkaban (2004)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Harry Potter"
   },
   {
     "name": "Harry Potter and the Goblet of Fire (2005)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Harry Potter"
   },
   {
     "name": "Harry Potter and the Order of the Phoenix (2007)",
-    "rating": 8.5,
+    "rating": 3.75,
     "tags": "Film",
     "credit": "Harry Potter"
   },
   {
     "name": "Harry Potter and the Half-Blood Prince (2009)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Harry Potter"
   },
   {
     "name": "Harry Potter and the Deathly Hallows – Part 1 (2010)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Harry Potter"
   },
   {
     "name": "Harry Potter and the Deathly Hallows – Part 2 (2011)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "Harry Potter"
   },
   {
     "name": "The Godfather (1972)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "The Godfather"
   },
   {
     "name": "The Godfather Part II (1974)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Film",
     "credit": "The Godfather"
   },
   {
     "name": "The Godfather Part III (1990)",
-    "rating": 6,
+    "rating": 2.5,
     "tags": "Film",
     "credit": "The Godfather"
   },
   {
     "name": "Section.80 (2011)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Music",
     "credit": "Kendrick Lamar"
   },
   {
     "name": "good kid, m.A.A.d city (2012)",
-    "rating": 10,
+    "rating": 5,
     "tags": "Music",
     "credit": "Kendrick Lamar"
   },
   {
     "name": "To Pimp A Butterfly (2015)",
-    "rating": 10,
+    "rating": 5,
     "tags": "Music",
     "credit": "Kendrick Lamar"
   },
   {
     "name": "DAMN. (2017)",
-    "rating": 9.5,
+    "rating": 4.5,
     "tags": "Music",
     "credit": "Kendrick Lamar"
   },
   {
     "name": "Mr. Morale & The Big Steppers (2022)",
-    "rating": 8,
+    "rating": 3.5,
     "tags": "Music",
     "credit": "Kendrick Lamar"
   },
   {
     "name": "GNX (2024)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Music",
     "credit": "Kendrick Lamar"
   },
   {
     "name": "Super Bowl LIX halftime show (2025)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Music",
     "credit": "Kendrick Lamar"
   },
   {
     "name": "Bastard (2009)",
-    "rating": 7,
+    "rating": 3,
     "tags": "Music",
     "credit": "Tyler, The Creator"
   },
   {
     "name": "Goblin (2011)",
-    "rating": 7.5,
+    "rating": 3.25,
     "tags": "Music",
     "credit": "Tyler, The Creator"
   },
   {
     "name": "Wolf (2013)",
-    "rating": 8,
+    "rating": 3.5,
     "tags": "Music",
     "credit": "Tyler, The Creator"
   },
   {
     "name": "Cherry Bomb (2015)",
-    "rating": 6,
+    "rating": 2.5,
     "tags": "Music",
     "credit": "Tyler, The Creator"
   },
   {
     "name": "Flower Boy (2017)",
-    "rating": 10,
+    "rating": 5,
     "tags": "Music",
     "credit": "Tyler, The Creator"
   },
   {
     "name": "IGOR (2019)",
-    "rating": 10,
+    "rating": 5,
     "tags": "Music",
     "credit": "Tyler, The Creator"
   },
   {
     "name": "CALL ME IF YOU GET LOST (2021)",
-    "rating": 9.5,
+    "rating": 4.5,
     "tags": "Music",
     "credit": "Tyler, The Creator"
   },
   {
     "name": "Chromakopia (2024)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Music",
     "credit": "Tyler, The Creator"
   },
   {
     "name": "K.I.D.S. (2010)",
-    "rating": 8,
+    "rating": 3.5,
     "tags": "Music",
     "credit": "Mac Miller"
   },
   {
     "name": "Blue Slide Park (2011)",
-    "rating": 6.5,
+    "rating": 2.75,
     "tags": "Music",
     "credit": "Mac Miller"
   },
   {
     "name": "Watching Movies with the Sound Off (2013)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Music",
     "credit": "Mac Miller"
   },
   {
     "name": "Faces (2014)",
-    "rating": 10,
+    "rating": 5,
     "tags": "Music",
     "credit": "Mac Miller"
   },
   {
     "name": "GO:OD AM (2015)",
-    "rating": 8.5,
+    "rating": 3.75,
     "tags": "Music",
     "credit": "Mac Miller"
   },
   {
     "name": "The Divine Feminine (2016)",
-    "rating": 8,
+    "rating": 3.5,
     "tags": "Music",
     "credit": "Mac Miller"
   },
   {
     "name": "Swimming (2018)",
-    "rating": 9.5,
+    "rating": 4.5,
     "tags": "Music",
     "credit": "Mac Miller"
   },
   {
     "name": "Circles (2020)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Music",
     "credit": "Mac Miller"
   },
   {
     "name": "Nevermind (1991)",
-    "rating": 10,
+    "rating": 5,
     "tags": "Music",
     "credit": "Nirvana"
   },
   {
     "name": "In Utero (1993)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Music",
     "credit": "Nirvana"
   },
   {
     "name": "MTV Unplugged in New York (1994)",
-    "rating": 9.5,
+    "rating": 4.5,
     "tags": "Music",
     "credit": "Nirvana"
   },
   {
     "name": "The Dark Side of the Moon (1973)",
-    "rating": 10,
+    "rating": 5,
     "tags": "Music",
     "credit": "Pink Floyd"
   },
   {
     "name": "Wish You Were Here (1975)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Music",
     "credit": "Pink Floyd"
   },
   {
     "name": "The Wall (1979)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Music",
     "credit": "Pink Floyd"
   },
   {
     "name": "The Slim Shady LP (1999)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Music",
     "credit": "Eminem"
   },
   {
     "name": "The Marshall Mathers LP (2000)",
-    "rating": 10,
-    "tags": "Music",
-    "credit": "Eminem"
-  },
-  {
-    "name": "The Eminem Show (2002)",
-    "rating": 9,
-    "tags": "Music",
-    "credit": "Eminem"
-  },
-  {
-    "name": "Encore (2004)",
-    "rating": 7,
-    "tags": "Music",
-    "credit": "Eminem"
-  },
-  {
-    "name": "Relapse (2009)",
     "rating": 5,
     "tags": "Music",
     "credit": "Eminem"
   },
   {
+    "name": "The Eminem Show (2002)",
+    "rating": 4,
+    "tags": "Music",
+    "credit": "Eminem"
+  },
+  {
+    "name": "Encore (2004)",
+    "rating": 3,
+    "tags": "Music",
+    "credit": "Eminem"
+  },
+  {
+    "name": "Relapse (2009)",
+    "rating": 2,
+    "tags": "Music",
+    "credit": "Eminem"
+  },
+  {
     "name": "Recovery (2010)",
-    "rating": 6,
+    "rating": 2.5,
     "tags": "Music",
     "credit": "Eminem"
   },
   {
     "name": "The Marshall Mathers LP 2 (2013)",
-    "rating": 7,
+    "rating": 3,
     "tags": "Music",
     "credit": "Eminem"
   },
@@ -487,320 +487,320 @@
   },
   {
     "name": "Kamikaze (2018)",
-    "rating": 8.5,
+    "rating": 3.75,
     "tags": "Music",
     "credit": "Eminem"
   },
   {
     "name": "Music to Be Murdered By (2020)",
-    "rating": 7.5,
+    "rating": 3.25,
     "tags": "Music",
     "credit": "Eminem"
   },
   {
     "name": "Curtain Call 2 (2022)",
-    "rating": 7,
+    "rating": 3,
     "tags": "Music",
     "credit": "Eminem"
   },
   {
     "name": "Channel Orange",
-    "rating": 9.5,
+    "rating": 4.5,
     "tags": "Music",
     "credit": "Frank Ocean"
   },
   {
     "name": "Blonde",
-    "rating": 10,
+    "rating": 5,
     "tags": "Music",
     "credit": "Frank Ocean"
   },
   {
     "name": "Nostalgia, Ultra",
-    "rating": 9.5,
+    "rating": 4.5,
     "tags": "Music",
     "credit": "Frank Ocean"
   },
   {
     "name": "OK Computer",
-    "rating": 10,
+    "rating": 5,
     "tags": "Music",
     "credit": "Radiohead"
   },
   {
     "name": "Kid A",
-    "rating": 9,
+    "rating": 4,
     "tags": "Music",
     "credit": "Radiohead"
   },
   {
     "name": "In Rainbows",
-    "rating": 9,
+    "rating": 4,
     "tags": "Music",
     "credit": "Radiohead"
   },
   {
     "name": "Pablo Honey",
-    "rating": 9,
+    "rating": 4,
     "tags": "Music",
     "credit": "Radiohead"
   },
   {
     "name": "Stoney (2016)",
-    "rating": 8.5,
+    "rating": 3.75,
     "tags": "Music",
     "credit": "Post Malone"
   },
   {
     "name": "Beerbongs & Bentleys (2018)",
-    "rating": 9,
+    "rating": 4,
     "tags": "Music",
     "credit": "Post Malone"
   },
   {
     "name": "Hollywood's Bleeding (2019)",
-    "rating": 8,
+    "rating": 3.5,
     "tags": "Music",
     "credit": "Post Malone"
   },
   {
     "name": "In the Aeroplane Over the Sea (1998)",
-    "rating": 8,
+    "rating": 3.5,
     "tags": "Music",
     "credit": "Neutral Milk Hotel"
   },
   {
     "name": "Apple M1 Pro 14-inch MacBook Pro",
-    "rating": 9,
+    "rating": 4,
     "tags": "Tech",
     "credit": ""
   },
   {
     "name": "Apple iPhone 12",
-    "rating": 9,
+    "rating": 4,
     "tags": "Tech",
     "credit": ""
   },
   {
     "name": "Apple iPhone 15",
-    "rating": 9.5,
+    "rating": 4.5,
     "tags": "Tech",
     "credit": ""
   },
   {
     "name": "Wrestlemania 24",
-    "rating": 9,
+    "rating": 4,
     "tags": "Wrestling",
     "credit": ""
   },
   {
     "name": "Wrestlemania 25",
-    "rating": 9.5,
+    "rating": 4.5,
     "tags": "Wrestling",
     "credit": ""
   },
   {
     "name": "Wrestlemania 26",
-    "rating": 9,
+    "rating": 4,
     "tags": "Wrestling",
     "credit": ""
   },
   {
     "name": "Wrestlemania 27",
-    "rating": 3,
+    "rating": 1,
     "tags": "Wrestling",
     "credit": ""
   },
   {
     "name": "Wrestlemania 28",
-    "rating": 5,
+    "rating": 2,
     "tags": "Wrestling",
     "credit": ""
   },
   {
     "name": "Wrestlemania 29",
-    "rating": 6,
+    "rating": 2.5,
     "tags": "Wrestling",
     "credit": ""
   },
   {
     "name": "Wrestlemania 30",
-    "rating": 10,
+    "rating": 5,
     "tags": "Wrestling",
     "credit": ""
   },
   {
     "name": "Wrestlemania 38 Night 1",
-    "rating": 10,
+    "rating": 5,
     "tags": "Wrestling",
     "credit": "Wrestlemania 38"
   },
   {
     "name": "Wrestlemania 38 Night 2",
-    "rating": 9,
+    "rating": 4,
     "tags": "Wrestling",
     "credit": "Wrestlemania 38"
   },
   {
     "name": "Wrestlemania 39 Night 1",
-    "rating": 10,
+    "rating": 5,
     "tags": "Wrestling",
     "credit": "Wrestlemania 39"
   },
   {
     "name": "Wrestlemania 39 Night 2",
-    "rating": 9.5,
+    "rating": 4.5,
     "tags": "Wrestling",
     "credit": "Wrestlemania 39"
   },
   {
     "name": "Wrestlemania XL Night 1",
-    "rating": 7,
+    "rating": 3,
     "tags": "Wrestling",
     "credit": "Wrestlemania XL"
   },
   {
     "name": "Wrestlemania XL Night 2",
-    "rating": 10,
+    "rating": 5,
     "tags": "Wrestling",
     "credit": "Wrestlemania XL"
   },
 
   {
     "name": "Minecraft",
-    "rating": 10,
+    "rating": 5,
     "tags": "Video Game",
     "credit": ""
   },
   {
     "name": "Rocket League",
-    "rating": 9,
+    "rating": 4,
     "tags": "Video Game",
     "credit": ""
   },
   {
     "name": "Fall Guys",
-    "rating": 7,
+    "rating": 3,
     "tags": "Video Game",
     "credit": ""
   },
   {
     "name": "Phasmophobia",
-    "rating": 8,
+    "rating": 3.5,
     "tags": "Video Game",
     "credit": ""
   },
   {
     "name": "Fortnite",
-    "rating": 9,
+    "rating": 4,
     "tags": "Video Game",
     "credit": ""
   },
   {
     "name": "Ghosts of Tsushima",
-    "rating": 9,
+    "rating": 4,
     "tags": "Video Game",
     "credit": ""
   },
   {
     "name": "Manor Lords",
-    "rating": 9,
+    "rating": 4,
     "tags": "Video Game",
     "credit": ""
   },
   {
     "name": "Elden Ring",
-    "rating": 10,
+    "rating": 5,
     "tags": "Video Game",
     "credit": ""
   },
   {
     "name": "Red Dead Redemption",
-    "rating": 9.5,
+    "rating": 4.5,
     "tags": "Video Game",
     "credit": ""
   },
   {
     "name": "Red Dead Redemption 2",
-    "rating": 10,
+    "rating": 5,
     "tags": "Video Game",
     "credit": ""
   },
   {
     "name": "Grand Theft Auto V",
-    "rating": 9.5,
+    "rating": 4.5,
     "tags": "Video Game",
     "credit": ""
   },
   {
     "name": "The Sims",
-    "rating": 8,
+    "rating": 3.5,
     "tags": "Video Game",
     "credit": "The Sims"
   },
   {
     "name": "The Sims 2",
-    "rating": 10,
-    "tags": "Video Game",
-    "credit": "The Sims"
-  },
-  {
-    "name": "The Sims 3",
-    "rating": 8,
-    "tags": "Video Game",
-    "credit": "The Sims"
-  },
-  {
-    "name": "The Sims 4",
     "rating": 5,
     "tags": "Video Game",
     "credit": "The Sims"
   },
   {
+    "name": "The Sims 3",
+    "rating": 3.5,
+    "tags": "Video Game",
+    "credit": "The Sims"
+  },
+  {
+    "name": "The Sims 4",
+    "rating": 2,
+    "tags": "Video Game",
+    "credit": "The Sims"
+  },
+  {
     "name": "Call of Duty: Modern Warfare II",
-    "rating": 9,
+    "rating": 4,
     "tags": "Video Game",
     "credit": "Call of Duty"
   },
   {
     "name": "Call of Duty: Modern Warfare III",
-    "rating": 8,
+    "rating": 3.5,
     "tags": "Video Game",
     "credit": "Call of Duty"
   },
   {
     "name": "Call of Duty: Black Ops",
-    "rating": 9,
+    "rating": 4,
     "tags": "Video Game",
     "credit": "Call of Duty"
   },
   {
     "name": "Call of Duty: Black Ops II",
-    "rating": 10,
+    "rating": 5,
     "tags": "Video Game",
     "credit": "Call of Duty"
   },
   {
     "name": "Call of Duty: Black Ops VI",
-    "rating": 9,
+    "rating": 4,
     "tags": "Video Game",
     "credit": "Call of Duty"
   },
   {
     "name": "Cities: Skylines",
-    "rating": 9,
+    "rating": 4,
     "tags": "Video Game",
     "credit": "Cities: Skylines"
   },
   {
     "name": "Cities: Skylines II",
-    "rating": "7",
+    "rating": 3,
     "tags": "Video Game",
     "credit": "Cities: Skylines"
   },
   {
     "name": "Chernobyl (2019)",
-    "rating": 10,
+    "rating": 5,
     "tags": "TV",
     "credit": "Craig Mazin"
   }

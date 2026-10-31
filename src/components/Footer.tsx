@@ -1,50 +1,33 @@
-"use client";
+"use client"
 
-import Link from "next/link";
+import Link from "next/link"
 
-
-
-
+const links = [
+  { href: "mailto:owenbick@gmail.com", label: "Email" },
+  { href: "https://github.com/bick", label: "GitHub" },
+  { href: "https://linkedin.com/in/bick", label: "LinkedIn" },
+  { href: "/reviews", label: "Reviews" },
+  { href: "/contact", label: "Contact" },
+]
 
 export default function Footer() {
   return (
-    <footer className="footer my-20 text-base">
+    <footer className="footer">
       <div className="container">
-        <ul className="mb-4 grid grid-cols-2 gap-3 sm:flex sm:gap-0">
-          <li className="sm:mr-8">
-            <Link href="/" className="text-lg text-foreground">
-              Index
-            </Link>
-          </li>
-          <li className="sm:mr-8">
-            <Link href="/projects" className="text-lg text-foreground">
-              Projects
-            </Link>
-          </li>
-          <li className="sm:mr-8">
-            <Link href="/about" className="text-lg text-foreground">
-              About
-            </Link>
-          </li>
-          <li className="sm:mr-8">
-            <Link href="/journal" className="text-lg text-foreground">
-              Journal
-            </Link>
-          </li>
-          <li className="sm:mr-8">
-            <Link href="/reviews" className="text-lg text-foreground">
-              Reviews
-            </Link>
-          </li>
-          <li className="sm:mr-8">
-            <Link href="/contact" className="text-lg text-foreground">
-              Contact
-            </Link>
-          </li>
-        </ul>
-        <span className="block text-sm text-[#788491] sm:text-base">
-          Copyright &copy; {new Date().getFullYear()} Owen Bick. All Rights Reserved. Made with ❤️ and ☕
-        </span>
+        <div className="flex flex-wrap justify-between gap-4 border-t pb-12 pt-8 font-mono text-xs tracking-[0.02em] text-muted-foreground">
+          <span>&copy; {new Date().getFullYear()} Owen Bick</span>
+          <span className="flex flex-wrap gap-5">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="underline decoration-border underline-offset-4 transition-colors hover:text-foreground"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </span>
+        </div>
       </div>
     </footer>
   )

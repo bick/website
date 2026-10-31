@@ -10,21 +10,14 @@ Owen Bick is a software engineer who builds web and mobile platforms, booking sy
 
 - [Home](https://owenbick.com)
 - [About](https://owenbick.com/about)
-- [Projects](https://owenbick.com/projects)
-- [Journal](https://owenbick.com/journal)
+- [Blog](https://owenbick.com/blog)
+- [Speaking](https://owenbick.com/speaking)
 - [Reviews](https://owenbick.com/reviews)
 - [Resume](https://owenbick.com/resume)
 - [Contact](https://owenbick.com/contact)
 
-## Projects
+## Blog
 
-- [Flosstime](https://owenbick.com/projects/flosstime): Built the booking platform for Flosstime, a mobile dental service that brings cleanings and exams directly to corporate offices.
-- [Discount Drug Network](https://owenbick.com/projects/discount-drug-network): Built the web platform for Discount Drug Network, helping consumers find discounted prescription drug pricing.
-- [Boston Junior Bruins](https://owenbick.com/projects/boston-junior-bruins): Built a network of websites for the Boston Junior Bruins, a Top 10 amateur hockey program in North America.
-- [Palmer Pads](https://owenbick.com/projects/palmer-pads): Designed and developed the website for Palmer Pads, North America's largest manufacturer of protective elevator pads.
-
-## Journal
-
-- [Every Level Is Technical Now](https://owenbick.com/journal/every-level-is-technical-now): I was told I was done being technical the day I became a manager. Here's how I think AI changed what each engineering level needs to be good at.
-- [Most SaaS Companies Will Not Survive](https://owenbick.com/journal/most-saas-companies-will-not-survive): Some of my thoughts on why most SaaS companies will not survive the AI era and which ones I think will.
-- [The 10 Commandments of the Hustle](https://owenbick.com/journal/10-commandments): What they don't teach you in school, but should. Rules that actually hold up, pulled from real failures and hard-won wins.
+- [Every Level Is Technical Now](https://owenbick.com/blog/every-level-is-technical-now): I was told I was done being technical the day I became a manager. Here's how I think AI changed what each engineering level needs to be good at.
+- [Most SaaS Companies Will Not Survive](https://owenbick.com/blog/most-saas-companies-will-not-survive): Some of my thoughts on why most SaaS companies will not survive the AI era and which ones I think will.
+- [The 10 Commandments of the Hustle](https://owenbick.com/blog/10-commandments): What they don't teach you in school, but should. Rules that actually hold up, pulled from real failures and hard-won wins.

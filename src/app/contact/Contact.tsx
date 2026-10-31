@@ -33,14 +33,19 @@ function LiveClock() {
 export default function Home() {
   return (
     <>
-      <Hero title="🛰️ Contact Me" gradient="red" />
-      <section className="social">
+      <Hero title="Contact me" gradient="red" />
+      <section className="subtext-in social pb-20" style={{ animationDelay: "0.3s" }}>
         <div className="container">
-          <h3 className="mb-2 text-lg">✉ Email me</h3>
-          <a href="mailto:owenbick@gmail.com">owenbick@gmail.com</a>
-          <div className="my-12 flex flex-col">
-            <LiveClock />
-            <span className="mt-2 opacity-50">UTC-06:00 - Austin, TX</span>
+          <div className="section">
+            <h2 className="label">Email me</h2>
+            <a href="mailto:owenbick@gmail.com">owenbick@gmail.com</a>
+          </div>
+          <div className="section">
+            <h2 className="label">Local time</h2>
+            <div className="flex flex-col">
+              <LiveClock />
+              <span className="mt-2 text-muted-foreground">UTC-06:00 - Austin, TX</span>
+            </div>
           </div>
         </div>
       </section>
