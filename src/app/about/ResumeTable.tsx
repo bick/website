@@ -5,6 +5,19 @@ import Image from "next/image"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Card, CardContent } from "@/components/ui/card"
 
+function Achievements({ items }: { items: string[] }) {
+  return (
+    <ul className="space-y-2 text-base leading-normal">
+      {items.map((achievement, i) => (
+        <li key={i} className="flex gap-2">
+          <span className="mt-0.5 text-muted-foreground">•</span>
+          <span>{achievement}</span>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
 export default function ResumeTable() {
   const experience = [
     {
@@ -20,33 +33,37 @@ export default function ResumeTable() {
       ],
     },
     {
-      title: "Senior Engineering Manager",
+      title: "Senior Software Engineer → Senior Engineering Manager",
       company: "Smile Doctors",
       logo: "/static/logos/smiledoctors.jpeg",
-      period: "Jan 2025 - Mar 2026",
+      period: "Sep 2024 - Mar 2026",
       location: "Dallas, Texas",
-      achievements: [
-        "Led a team of 8 engineers across booking, payments, and mobile systems for a $1B+ healthcare platform processing $250MM in annual transactions across 600+ locations",
-        "Architected a headless CMS platform to replace legacy website infrastructure across 300+ location sites, enabling marketing self-service and reducing engineering maintenance overhead",
-        "Built HIPAA, SOC 2, and CCPA compliant systems including automated audit logging, access controls, and encryption standards for regulated healthcare data",
-        "Architected core platform systems including real-time scheduling, payment processing, and patient data services, maintaining 99.99% uptime across distributed infrastructure",
-        "Partnered with product, design, and data teams to define roadmaps and run experiments, reducing time-to-market by 30%",
-        "Drove CI/CD pipeline modernization and hybrid cloud migration, reducing deployment time by 75% and infrastructure costs by 40% through architecture simplification",
-        "Scaled mobile app from greenfield to production with 4.9-star App Store rating",
+      achievements: [],
+      roles: [
+        {
+          title: "Senior Engineering Manager",
+          period: "Jan 2025 - Mar 2026",
+          achievements: [
+            "Led a team of 8 engineers across booking, payments, and mobile systems for a $1B+ healthcare platform processing $250MM in annual transactions across 600+ locations",
+            "Architected a headless CMS platform to replace legacy website infrastructure across 300+ location sites, enabling marketing self-service and reducing engineering maintenance overhead",
+            "Built HIPAA, SOC 2, and CCPA compliant systems including automated audit logging, access controls, and encryption standards for regulated healthcare data",
+            "Architected core platform systems including real-time scheduling, payment processing, and patient data services, maintaining 99.99% uptime across distributed infrastructure",
+            "Partnered with product, design, and data teams to define roadmaps and run experiments, reducing time-to-market by 30%",
+            "Drove CI/CD pipeline modernization and hybrid cloud migration, reducing deployment time by 75% and infrastructure costs by 40% through architecture simplification",
+            "Scaled mobile app from greenfield to production with 4.9-star App Store rating",
+          ],
+        },
+        {
+          title: "Senior Software Engineer",
+          period: "Sep 2024 - Jan 2025",
+          achievements: ["Internal tooling"],
+        },
       ],
-    },
-    {
-      title: "Senior Software Engineer",
-      company: "Smile Doctors",
-      logo: "/static/logos/smiledoctors.jpeg",
-      period: "Sep 2024 - Jan 2025",
-      location: "Dallas, Texas",
-      achievements: ["Internal tooling"],
     },
     {
       title: "Founder",
       company: "Weekend Labs",
-      logo: "/static/logos/rocket.jpeg",
+      logo: "/static/logos/weekendlabs.jpeg",
       period: "Feb 2022 - Present",
       location: "Austin, Texas",
       achievements: [
@@ -71,7 +88,7 @@ export default function ResumeTable() {
     {
       title: "Senior Software Engineer",
       company: "Freelance",
-      logo: "",
+      logo: "/static/logos/rocket.jpeg",
       period: "2019 - 2022",
       location: "",
       achievements: ["Worked with Liberty Mutual, Boston Bruins, 829 Studios, FlossTime, Spot Easy, and Tadzilla"],
@@ -79,7 +96,7 @@ export default function ResumeTable() {
     {
       title: "Software Engineer",
       company: "Loud Canvas Media",
-      logo: "",
+      logo: "/static/logos/loudcanvas.png",
       period: "2017 - 2019",
       location: "",
       achievements: ["Frontend, ecommerce, and mobile apps"],
@@ -127,8 +144,10 @@ export default function ResumeTable() {
                         </div>
                       )}
                       <div className="min-w-0 flex-grow">
-                        <div className="font-medium leading-snug">{job.title}</div>
-                        <div className="mt-1 text-[15px] font-normal leading-snug text-muted-foreground">{job.company}</div>
+                        <div className="font-medium leading-snug">{job.roles ? job.company : job.title}</div>
+                        <div className="mt-1 text-[15px] font-normal leading-snug text-muted-foreground">
+                          {job.roles ? job.title : job.company}
+                        </div>
                       </div>
                       <div className="mr-2 flex flex-shrink-0 items-center gap-2">
                         <span className="hidden whitespace-nowrap font-mono text-[13px] font-normal text-muted-foreground sm:block">
@@ -139,14 +158,23 @@ export default function ResumeTable() {
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="space-y-3 pb-2">
-                      <ul className="space-y-2 text-base leading-normal">
-                        {job.achievements.map((achievement, i) => (
-                          <li key={i} className="flex gap-2">
-                            <span className="mt-0.5 text-muted-foreground">•</span>
-                            <span>{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      {job.roles ? (
+                        <ol className="space-y-6">
+                          {job.roles.map((role, i) => (
+                            <li key={i} className="relative pl-6">
+                              <span className="absolute left-0 top-[7px] h-2 w-2 rounded-full bg-muted-foreground" />
+                              {i < job.roles.length - 1 && (
+                                <span className="absolute -bottom-6 left-[3.5px] top-5 w-px bg-border" />
+                              )}
+                              <div className="font-medium leading-snug">{role.title}</div>
+                              <div className="mb-3 mt-1 font-mono text-[13px] text-muted-foreground">{role.period}</div>
+                              <Achievements items={role.achievements} />
+                            </li>
+                          ))}
+                        </ol>
+                      ) : (
+                        <Achievements items={job.achievements} />
+                      )}
                     </div>
                   </AccordionContent>
                 </AccordionItem>
