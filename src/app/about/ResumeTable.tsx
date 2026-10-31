@@ -21,7 +21,7 @@ function Achievements({ items }: { items: string[] }) {
 export default function ResumeTable() {
   const experience = [
     {
-      title: "Engineering Manager",
+      title: "Senior Engineering Manager",
       company: "FieldPulse",
       logo: "/static/logos/fieldpulse.webp",
       period: "Mar 2026 - Present",
