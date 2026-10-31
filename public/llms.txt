@@ -25,5 +25,6 @@ Owen Bick is a software engineer who builds web and mobile platforms, booking sy
 
 ## Journal
 
+- [Every Level Is Technical Now](https://owenbick.com/journal/every-level-is-technical-now): I was told I was done being technical the day I became a manager. Here's how I think AI changed what each engineering level needs to be good at.
 - [Most SaaS Companies Will Not Survive](https://owenbick.com/journal/most-saas-companies-will-not-survive): Some of my thoughts on why most SaaS companies will not survive the AI era and which ones I think will.
 - [The 10 Commandments of the Hustle](https://owenbick.com/journal/10-commandments): What they don't teach you in school, but should. Rules that actually hold up, pulled from real failures and hard-won wins.

@@ -1,0 +1,92 @@
+When I got promoted into management, one of the first things I was told was that I was done doing technical work. My job was people, process, and coordination. If a technical call needed to be made, I was supposed to pull in a staff engineer and get out of the way.
+
+That wasn't unique to me. It was pretty much how the industry thought about leveling for a long time. Software Engineer I, II, and to an extent III were about coding: knowing how to write it, having good judgment in it, and being in the weeds every day. Senior and staff engineers owned the technical decisions for their part of the system, usually in collaboration with each other. And managers were there to coordinate, keep things moving, and stay out of the code.
+
+I don't think that model holds up anymore. AI changed what each level actually needs to be good at, and it's changed how I personally think about leveling. I'm not going to pretend I know exactly how this scales to a 10,000-person engineering org, but here's how I see it now.
+
+## SWE I, II, and III: building judgment
+
+AI will build things pretty much any way you want. Ask it to, and it'll write microservices, a modular monolith, or whatever framework you name. If you don't ask, it'll happily recommend one. Writing the code isn't the hard part anymore. Knowing which way to build it, and *why*, is.
+
+So I think the early levels are now about growing architectural judgment: understanding how systems are built and the trade-offs of building them one way versus another.
+
+A greenfield project is a good example. Do you go with domain-driven design? Microservices? What language and framework? What are the trade-offs of each? And then there are the thousands and thousands of micro decisions that come up once you're actually building it and figuring out what needs to happen. AI can give you options for every single one of those. What it can't give you (yet) is the experience to know which option is right for your business, your team, and your timeline.
+
+A lot of the job at these levels is learning how more experienced people scope out projects, and learning how the business actually works. Especially at I and II, I'd say it's really about:
+
+1. How do you work with product?
+2. How do you work with your manager?
+3. How do you work with senior and staff engineers?
+4. How do you work with business stakeholders?
+5. How do the decisions you make impact all of those people?
+
+That's especially true at companies where product stays out of the technical side and engineering is trusted to make technical decisions. If you're given that trust, you need to understand what you're trading off when you use it.
+
+## Senior: owning or co-owning a domain
+
+At FieldPulse, I've really been intentional about organizing teams into pods: small groups of anywhere from 2 or 3 people up to 7 or 8, each focused on an area of the product, a feature set, or a domain. You isolate them as much as possible because you want them to build deep domain knowledge and be able to answer for it.
+
+It's the same reason you want one vendor for something when you go outside the company. It's about whose throat to choke. If something goes wrong, you know exactly who to go to. And when there are a lot of things that can go wrong, especially on a complicated project or with real scaling concerns, that clarity matters.
+
+A senior engineer has the judgment. They've worked on enough projects, been through enough product life cycles, and shipped enough things. They can work with product directly, own a feature, and get it out the door.
+
+But what actually makes someone senior is that they also have the business context. Say you own billing. You own the billing domain: Stripe (or whoever your payment processor is), how invoices get generated, how usage gets metered. A senior engineer doesn't just understand the technical implementation. They understand how billing works as a system for the business, and they can make trade-offs on the business's behalf. They can go to someone and say, "Look, if we go usage-based billing here, it's going to take this much to implement, and this is how it's going to affect the business."
+
+That's the difference between owning a feature and being an owner.
+
+## Staff: technical direction with business weight
+
+Nobody really knows what a staff engineer is. Ask ten companies and you'll get ten different answers. [Will Larson even wrote a book about it.](https://staffeng.com) But I think the uncontroversial version is that a staff engineer sets technical direction for multiple teams or a business unit. That's been true for a very long time.
+
+What I think has changed is how much of the business they need to understand. Staff engineers should have executive relationships. They deeply understand the business side of the business, not just the technical side, and they can make very strong trade-offs because of it.
+
+At big tech companies, especially during the ZIRP era, that wasn't always the case. If you were at Uber or Google, the business case was usually already made. Your job was to make it work. The scale of the problems was immense, a lot of the tech was new, and people were figuring it out as they went. Solving the problem *was* the job.
+
+Nowadays we're standing on the shoulders of giants. A lot of that technology already exists, it's mature, and most of it is open source. The hard problems have shifted. Now it's a lot about what you're optimizing for:
+
+- Cost?
+- Efficiency?
+- Velocity?
+- Headcount reduction?
+- Rapid growth and scalability?
+
+And how does AI fit into all of that? What does it cost? What are the trade-offs between different models?
+
+Unless you're a frontier AI lab sitting on more than $100 billion in cash, you can't just throw money at a problem until it goes away. You have to understand that yes, we can build it this way, and it'll work, but it's going to be more expensive and harder to maintain. Can we do it in phases? Can we go one way at first, but set it up so we can migrate later if we need to? Somebody has to make those calls, and that somebody is pretty much at the staff level.
+
+The other half of the job is getting everyone else on board. A staff engineer has to take that direction, distribute it to the rest of the teams, and get everyone on the same page about the vision. It's a job of influence much more than it's a job of authority.
+
+## Engineering manager: the flip side of staff
+
+This is where management comes in, and it's where my thinking has changed the most.
+
+In the past, engineering management was mostly coordination. You needed to understand the basics so you could make a call if you had to, but you were generally told to pull in a staff engineer and not make technical judgments yourself.
+
+If a staff engineer today is maybe 75% technical depth and 25% business depth, I think the engineering manager is almost the flip of that: 75% business depth, 25% technical depth. Before, that technical number was close to zero.
+
+You're working with your team, making calls on behalf of the business, weighing those trade-offs, and building the business case. But you're also doing the work nobody else has time for.
+
+I wouldn't necessarily expect a manager to be shipping features. Maybe they jump in when they need to, but I'd still expect a senior engineer, a staff engineer, or a mid-level engineer working toward senior to lead the development of a feature and at least do the initial work. The manager supplements that:
+
+- Writing tests so the team feels more confident in the code they ship
+- Improving CI/CD so deployment pipelines are fast
+- Adding linting and automations that make it easier to get PRs up
+- Making sure the security tooling is solid
+
+All of the little things that make the team better. You're not only looking for people and process ways to make the team more productive. You're looking for technical ways too. You're elevating the team through technical means, almost the way a tech lead would.
+
+The staff engineer does some of this too, but at a broader level across multiple teams, with more architectural impact. A staff engineer makes decisions that affect the entire business or a huge part of it. A manager focuses on their teams (which might be several teams, or even part of a function), insulates them a bit more, and has a better read on the business impact of what they're doing.
+
+That's what I think an engineering manager is now, and that's what I think managers need to optimize for.
+
+## Directors, VPs, and the C-suite
+
+The C-suite is its own thing, and honestly I'm not sure where it's going. But I do think it's important for CTOs to stay at least somewhat involved in the technical work so they can see it and make good decisions, instead of being insulated by 19,000 layers of bureaucracy.
+
+Directors and VPs are doing a lot of what the engineering manager is doing, just at a bigger scale. You're identifying those same kinds of opportunities across more teams, setting initiatives, keeping them moving, and helping out when you have the time. You're still technical.
+
+## It's technical all the way up
+
+That's really the throughline for me. The role is technical at every level, even a VP running an entire business unit. What changes as you go up isn't *whether* you're technical. It's the scale and scope of how you empower your teams technically.
+
+I was told I was done being technical the day I became a manager. I don't think anyone should be told that anymore.
