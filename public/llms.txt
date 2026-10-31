@@ -15,6 +15,7 @@ Owen Bick is a software engineer who builds web and mobile platforms, booking sy
 - [Reviews](https://owenbick.com/reviews)
 - [Resume](https://owenbick.com/resume)
 - [Contact](https://owenbick.com/contact)
+- [RSS feed](https://owenbick.com/rss.xml)
 
 ## Blog
 

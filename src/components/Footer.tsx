@@ -8,6 +8,7 @@ const links = [
   { href: "https://linkedin.com/in/bick", label: "LinkedIn" },
   { href: "/reviews", label: "Reviews" },
   { href: "/contact", label: "Contact" },
+  { href: "/rss.xml", label: "RSS" },
 ]
 
 export default function Footer() {

@@ -33,6 +33,11 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://owenbick.com"),
+  alternates: {
+    types: {
+      "application/rss+xml": [{ url: "/rss.xml", title: "Owen Bick" }],
+    },
+  },
   icons: {
     icon: "/favicon.ico",
   },
