@@ -20,8 +20,7 @@ export const posts: Post[] = [
   {
     slug: "most-saas-companies-will-not-survive",
     title: "Most SaaS Companies Will Not Survive",
-    excerpt:
-      "Some of my thoughts on why most SaaS companies will not survive the AI era and which ones I think will.",
+    excerpt: "Some of my thoughts on why most SaaS companies will not survive the AI era and which ones I think will.",
     date: "October 19, 2026",
     badgeType: "default",
   },
