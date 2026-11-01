@@ -173,7 +173,10 @@ export default function ResumeTable() {
                           ))}
                         </ol>
                       ) : (
-                        <Achievements items={job.achievements} />
+                        <>
+                          <div className="font-mono text-[13px] text-muted-foreground sm:hidden">{job.period}</div>
+                          <Achievements items={job.achievements} />
+                        </>
                       )}
                     </div>
                   </AccordionContent>
