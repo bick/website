@@ -1,11 +1,10 @@
+import type React from "react"
 import type { Metadata } from "next"
 import { IBM_Plex_Mono, Inter, Newsreader } from "next/font/google"
-import type React from "react"
 
 import "./globals.css"
 
 import { GoogleAnalytics } from "@next/third-parties/google"
-import { Analytics } from "@vercel/analytics/react"
 
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
@@ -45,9 +44,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${inter.variable} ${newsreader.variable} ${plexMono.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${inter.variable} ${newsreader.variable} ${plexMono.variable}`}
+      suppressHydrationWarning
+    >
       <head>
-        <link rel="preload" href="/fonts/SuisseIntl-Regular-WebM.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link
+          rel="preload"
+          href="/fonts/SuisseIntl-Regular-WebM.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
         <link rel="preload" href="/fonts/SuisseIntl-Medium.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body>
@@ -56,7 +66,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="flex min-h-screen flex-col">{children}</div>
           <Footer />
         </ThemeProvider>
-        <Analytics />
         <GoogleAnalytics gaId="G-3X4LD4BT5X" />
       </body>
     </html>

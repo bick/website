@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next"
-
 import { posts } from "@/data/posts"
+
+export const dynamic = "force-static"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://owenbick.com"

@@ -1,0 +1,4 @@
+/projects https://weekendlabs.net 302
+/projects/:slug https://weekendlabs.net 302
+/journal /blog 301
+/journal/:slug /blog/:slug 301
