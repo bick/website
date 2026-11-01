@@ -48,7 +48,7 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
     <section className="relative overflow-hidden pb-20 pt-40">
       <div className={`absolute inset-0 bg-linear-to-br ${gradientClass} hero-fade-in`} />
 
-      <div className="hero-fade-in pointer-events-none absolute inset-0 opacity-25 mix-blend-overlay">
+      <div className="hero-fade-in pointer-events-none absolute inset-0 mix-blend-overlay">
         <svg className="h-full w-full">
           <filter id="heroGrain">
             <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />

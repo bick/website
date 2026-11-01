@@ -137,6 +137,10 @@
     }
 }
 
+/*
+ * Entrance animations fill backwards only: once finished they drop off the element, so it stops
+ * holding a compositor layer (and a stacking context) for the rest of the page's life.
+ */
 @keyframes heroFadeIn {
     from {
         opacity: 0;
@@ -149,7 +153,7 @@
 }
 
 .hero-fade-in {
-    animation: heroFadeIn 0.3s ease-out both;
+    animation: heroFadeIn 0.3s ease-out backwards;
 }
 
 @keyframes splitTextIn {
@@ -173,7 +177,7 @@
 
 .split-item {
     display: inline-block;
-    animation: splitTextIn 0.7s cubic-bezier(0.19, 1, 0.22, 1) both;
+    animation: splitTextIn 0.7s cubic-bezier(0.19, 1, 0.22, 1) backwards;
 }
 
 @keyframes subtextIn {
@@ -188,12 +192,86 @@
 }
 
 .subtext-in {
-    animation: subtextIn 0.6s ease-out both;
+    animation: subtextIn 0.6s ease-out backwards;
+}
+
+@keyframes backdropFadeIn {
+    from {
+        opacity: 0;
+    }
+}
+
+.backdrop-fade-in {
+    animation: backdropFadeIn 0.6s ease-out backwards;
+}
+
+/* Twinkle and float only touch opacity and transform, so they run on the compositor. */
+@keyframes starTwinkle {
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Stars twinkle in groups: running animations are re-styled on every main-thread frame, even composited ones. */
+.star-group {
+    position: absolute;
+    inset: 0;
+    opacity: 0.6;
+    animation: starTwinkle 5s ease-in-out infinite backwards;
+}
+
+@keyframes bubbleFloatHome {
+    0%, 100% { transform: translate(50vw, 30vh) rotate(0deg); }
+    10% { transform: translate(75vw, 10vh) rotate(8deg); }
+    20% { transform: translate(20vw, 70vh) rotate(-5deg); }
+    30% { transform: translate(65vw, 20vh) rotate(10deg); }
+    40% { transform: translate(10vw, 80vh) rotate(-8deg); }
+    50% { transform: translate(80vw, 60vh) rotate(12deg); }
+    60% { transform: translate(30vw, 15vh) rotate(-4deg); }
+    70% { transform: translate(70vw, 75vh) rotate(6deg); }
+    80% { transform: translate(15vw, 40vh) rotate(-10deg); }
+    90% { transform: translate(60vw, 25vh) rotate(5deg); }
+}
+
+@keyframes bubbleFloatAbout {
+    0%, 100% { transform: translate(30vw, 20vh) rotate(0deg); }
+    16.667% { transform: translate(60vw, 50vh) rotate(8deg); }
+    33.333% { transform: translate(15vw, 30vh) rotate(-5deg); }
+    50% { transform: translate(50vw, 10vh) rotate(10deg); }
+    66.667% { transform: translate(25vw, 60vh) rotate(-8deg); }
+    83.333% { transform: translate(65vw, 25vh) rotate(5deg); }
+}
+
+.bubble-float {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    margin-left: min(-200px, -15vw);
+    margin-top: min(-200px, -15vw);
+}
+
+.bubble-float-home {
+    transform: translate(50vw, 30vh);
+    animation: bubbleFloatHome 120s ease-in-out infinite;
+}
+
+.bubble-float-about {
+    transform: translate(30vw, 20vh);
+    animation: bubbleFloatAbout 90s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
     .split-item,
-    .subtext-in {
+    .subtext-in,
+    .hero-fade-in,
+    .backdrop-fade-in,
+    .star-group,
+    .bubble-float-home,
+    .bubble-float-about {
         animation: none;
     }
 }

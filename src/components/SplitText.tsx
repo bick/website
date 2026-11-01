@@ -16,6 +16,10 @@ const SPLITTABLE = new Set(["em", "strong", "span"])
 
 const MAX_DURATION = 0.7
 
+// Every animated piece is its own compositor layer. Past this length the per-character stagger is
+// shorter than a frame anyway, so animate whole words on the same timeline.
+const MAX_ANIMATED_CHARS = 30
+
 function collectWords(node: ReactNode, words: Piece[][], wrap: Piece["wrap"]) {
   Children.forEach(node, (child) => {
     if (typeof child === "string" || typeof child === "number") {
@@ -44,15 +48,21 @@ export default function SplitText({ children, delay = 0 }: SplitTextProps) {
   const words: Piece[][] = [[]]
   collectWords(children, words, (node) => node)
 
-  const total = words.flat().reduce((sum, piece) => sum + (piece.isText ? Array.from(piece.content as string).length : 1), 0)
+  const length = (piece: Piece) => (piece.isText ? Array.from(piece.content as string).length : 1)
+  const total = words.flat().reduce((sum, piece) => sum + length(piece), 0)
+  const splitChars = total <= MAX_ANIMATED_CHARS
   const stagger = Math.min(0.02, MAX_DURATION / total)
 
   let index = 0
-  const item = (content: ReactNode, key: number) => (
-    <span key={key} className="split-item" style={{ animationDelay: `${(delay + index++ * stagger).toFixed(3)}s` }}>
-      {content}
-    </span>
-  )
+  const item = (content: ReactNode, key: number, span = 1) => {
+    const animationDelay = `${(delay + index * stagger).toFixed(3)}s`
+    index += span
+    return (
+      <span key={key} className="split-item" style={{ animationDelay }}>
+        {content}
+      </span>
+    )
+  }
 
   return (
     <>
@@ -65,9 +75,9 @@ export default function SplitText({ children, delay = 0 }: SplitTextProps) {
               <span className="split-word">
                 {word.map((piece, pieceIndex) => (
                   <span key={pieceIndex}>
-                    {piece.isText
+                    {piece.isText && splitChars
                       ? piece.wrap(Array.from(piece.content as string).map((char, charIndex) => item(char, charIndex)))
-                      : item(piece.wrap(piece.content), 0)}
+                      : item(piece.wrap(piece.content), 0, length(piece))}
                   </span>
                 ))}
               </span>

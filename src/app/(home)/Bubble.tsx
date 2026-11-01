@@ -1,102 +1,64 @@
-"use client"
-
-import { useEffect, useMemo, useState, type ReactNode } from "react"
+import type { ReactNode } from "react"
 import Image from "next/image"
-import { motion, type Variants } from "framer-motion"
 
 interface BackgroundWrapperProps {
   children: ReactNode
 }
 
+const STAR_COUNT = 60
+// Phones render only the first few, in CSS so the count is right from the first paint.
+const MOBILE_STAR_COUNT = 20
+const STAR_GROUPS = 8
+
+const rng = (i: number) => {
+  const x = Math.sin(42 + i * 127.1) * 43758.5453
+  return x - Math.floor(x)
+}
+
+const stars = Array.from({ length: STAR_COUNT }, (_, i) => ({
+  left: `${Math.round(rng(i * 3) * 10000) / 100}%`,
+  top: `${Math.round(rng(i * 3 + 1) * 10000) / 100}%`,
+  size: rng(i * 3 + 2) < 0.1 ? 6 : rng(i * 3 + 2) < 0.35 ? 4 : 3,
+  brightness: Math.round((0.4 + rng(i * 13) * 0.6) * 100) / 100,
+  hiddenOnMobile: i >= MOBILE_STAR_COUNT,
+}))
+
+const starGroups = Array.from({ length: STAR_GROUPS }, (_, group) => ({
+  delay: Math.round(rng(group * 7) * 600) / 100,
+  duration: Math.round((3 + rng(group * 11) * 4) * 100) / 100,
+  stars: stars.filter((_, i) => i % STAR_GROUPS === group),
+}))
+
 function Stars() {
-  const [count, setCount] = useState(20)
-
-  useEffect(() => {
-    if (window.innerWidth >= 768) setCount(60)
-  }, [])
-
-  const stars = useMemo(() => {
-    const seed = 42
-    const rng = (i: number) => {
-      const x = Math.sin(seed + i * 127.1) * 43758.5453
-      return x - Math.floor(x)
-    }
-
-    return Array.from({ length: count }, (_, i) => ({
-      left: `${Math.round(rng(i * 3) * 10000) / 100}%`,
-      top: `${Math.round(rng(i * 3 + 1) * 10000) / 100}%`,
-      size: rng(i * 3 + 2) < 0.1 ? 6 : rng(i * 3 + 2) < 0.35 ? 4 : 3,
-      delay: Math.round(rng(i * 7) * 600) / 100,
-      duration: Math.round((3 + rng(i * 11) * 4) * 100) / 100,
-      brightness: Math.round((0.4 + rng(i * 13) * 0.6) * 100) / 100,
-    }))
-  }, [count])
-
   return (
     <div className="pointer-events-none absolute inset-0 z-[1]">
-      {stars.map((star, i) => (
-        <motion.div
-          key={i}
-          className="absolute rounded-full bg-neutral-400 dark:bg-white"
-          style={{
-            left: star.left,
-            top: star.top,
-            width: star.size,
-            height: star.size,
-          }}
-          animate={{
-            opacity: [star.brightness * 0.3, star.brightness, star.brightness * 0.3],
-          }}
-          transition={{
-            duration: star.duration,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "easeInOut",
-            delay: star.delay,
-          }}
-        />
+      {starGroups.map((group, groupIndex) => (
+        <div
+          key={groupIndex}
+          className="star-group"
+          style={{ animationDuration: `${group.duration}s`, animationDelay: `${group.delay}s` }}
+        >
+          {group.stars.map((star, i) => (
+            <div
+              key={i}
+              className={`absolute rounded-full bg-neutral-400 dark:bg-white ${star.hiddenOnMobile ? "hidden md:block" : ""}`}
+              style={{ left: star.left, top: star.top, width: star.size, height: star.size, opacity: star.brightness }}
+            />
+          ))}
+        </div>
       ))}
     </div>
   )
 }
 
 export default function BackgroundWrapper({ children }: BackgroundWrapperProps) {
-  const bubbleFloatVariants: Variants = {
-    initial: {
-      x: "50vw",
-      y: "30vh",
-      rotate: 0,
-    },
-    float: {
-      x: ["50vw", "75vw", "20vw", "65vw", "10vw", "80vw", "30vw", "70vw", "15vw", "60vw", "50vw"],
-      y: ["30vh", "10vh", "70vh", "20vh", "80vh", "60vh", "15vh", "75vh", "40vh", "25vh", "30vh"],
-      rotate: [0, 8, -5, 10, -8, 12, -4, 6, -10, 5, 0],
-      transition: {
-        duration: 120,
-        repeat: Number.POSITIVE_INFINITY,
-        repeatType: "loop",
-        ease: "easeInOut",
-      },
-    },
-  }
-
   return (
     <div className="bubble relative w-full overflow-hidden">
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-orange-100/70 dark:from-orange-950/40 via-background to-amber-100/50 dark:to-amber-950/30"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      />
+      <div className="backdrop-fade-in absolute inset-0 bg-gradient-to-br from-orange-100/70 dark:from-orange-950/40 via-background to-amber-100/50 dark:to-amber-950/30" />
 
       <Stars />
 
-      <motion.div
-        className="pointer-events-none absolute inset-0 z-[1] mix-blend-overlay"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-      >
+      <div className="backdrop-fade-in pointer-events-none absolute inset-0 z-[1] opacity-20 mix-blend-overlay">
         <svg className="h-full w-full">
           <filter id="homeGrain">
             <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch" />
@@ -104,29 +66,12 @@ export default function BackgroundWrapper({ children }: BackgroundWrapperProps) 
           </filter>
           <rect width="100%" height="100%" filter="url(#homeGrain)" />
         </svg>
-      </motion.div>
+      </div>
 
       <div className="pointer-events-none absolute inset-0 top-0 z-[2]">
-        <motion.div
-          className="absolute"
-          variants={bubbleFloatVariants}
-          initial="initial"
-          animate="float"
-          style={{
-            width: "min(1000px, 700px)",
-            height: "min(1000px, 700px)",
-            marginLeft: "min(-200px, -15vw)",
-            marginTop: "min(-200px, -15vw)",
-          }}
-        >
-          <Image
-            src="/static/background.svg"
-            alt=""
-            fill
-            className="object-contain opacity-100"
-            loading="lazy"
-          />
-        </motion.div>
+        <div className="bubble-float bubble-float-home">
+          <Image src="/static/background.svg" alt="" fill className="object-contain opacity-100" loading="lazy" />
+        </div>
       </div>
 
       <div className="relative z-10">{children}</div>

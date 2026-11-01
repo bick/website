@@ -119,7 +119,7 @@ const Header: React.FC = () => {
   ]
 
   const linkClasses: string =
-    "flex text-neutral-600 dark:text-[#9797a0] font-medium text-[15px] mx-2 md:mx-3 py-5 transition-all duration-150 ease dark:mix-blend-exclusion hover:text-foreground hover:no-underline hover:opacity-100 hover:[text-shadow:rgba(255,255,255,0.85)_0_0_32px]"
+    "flex text-neutral-600 dark:text-[#9797a0] font-medium text-[15px] mx-2 md:mx-3 py-5 transition-colors duration-150 ease dark:mix-blend-exclusion hover:text-foreground hover:no-underline hover:opacity-100 hover:[text-shadow:rgba(255,255,255,0.85)_0_0_32px]"
 
   const createSparkles = (): void => {
     if (!buttonRef.current) return

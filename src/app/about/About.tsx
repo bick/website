@@ -2,48 +2,18 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { motion, type Variants } from "framer-motion"
 
 import SplitText from "@/components/SplitText"
 
 import ResumeTable from "./ResumeTable"
 
 export default function AboutPage() {
-  const bubbleFloatVariants: Variants = {
-    initial: {
-      x: "30vw",
-      y: "20vh",
-      rotate: 0,
-    },
-    float: {
-      x: ["30vw", "60vw", "15vw", "50vw", "25vw", "65vw", "30vw"],
-      y: ["20vh", "50vh", "30vh", "10vh", "60vh", "25vh", "20vh"],
-      rotate: [0, 8, -5, 10, -8, 5, 0],
-      transition: {
-        duration: 90,
-        repeat: Number.POSITIVE_INFINITY,
-        repeatType: "loop",
-        ease: "easeInOut",
-      },
-    },
-  }
-
   return (
     <>
       <section className="relative overflow-hidden pb-24 pt-40">
-        <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-purple-100 dark:from-purple-950/80 via-background to-indigo-100/70 dark:to-indigo-950/50"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        />
+        <div className="backdrop-fade-in absolute inset-0 bg-gradient-to-br from-purple-100 dark:from-purple-950/80 via-background to-indigo-100/70 dark:to-indigo-950/50" />
 
-        <motion.div
-          className="absolute inset-0 mix-blend-overlay"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
+        <div className="backdrop-fade-in absolute inset-0 opacity-30 mix-blend-overlay">
           <svg className="h-full w-full">
             <filter id="grain">
               <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
@@ -51,21 +21,10 @@ export default function AboutPage() {
             </filter>
             <rect width="100%" height="100%" filter="url(#grain)" />
           </svg>
-        </motion.div>
+        </div>
 
         <div className="pointer-events-none absolute inset-0 z-0">
-          <motion.div
-            className="absolute"
-            variants={bubbleFloatVariants}
-            initial="initial"
-            animate="float"
-            style={{
-              width: "min(1000px, 700px)",
-              height: "min(1000px, 700px)",
-              marginLeft: "min(-200px, -15vw)",
-              marginTop: "min(-200px, -15vw)",
-            }}
-          >
+          <div className="bubble-float bubble-float-about">
             <Image
               src="/static/background.svg"
               alt="Background decoration"
@@ -73,21 +32,16 @@ export default function AboutPage() {
               className="object-contain opacity-60"
               priority
             />
-          </motion.div>
+          </div>
         </div>
 
         <div className="container relative z-10">
           <div className="flex flex-col items-center gap-10 md:flex-row md:items-start md:gap-16">
-            <motion.div
-              className="flex-shrink-0"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, ease: "easeOut", delay: 0.05 }}
-            >
+            <div className="hero-fade-in flex-shrink-0" style={{ animationDelay: "0.05s" }}>
               <div className="relative h-48 w-48 overflow-hidden border md:h-56 md:w-56">
                 <Image src="/static/owen2026.jpeg" alt="Owen Bick" fill className="object-cover" priority />
               </div>
-            </motion.div>
+            </div>
 
             <div className="text-center md:text-left">
               <h1 className="page-title">
