@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { IBM_Plex_Mono, Inter, Newsreader } from "next/font/google"
+import { Alice, IBM_Plex_Mono } from "next/font/google"
 
 import "./globals.css"
 
@@ -10,18 +10,10 @@ import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import { ThemeProvider } from "@/components/theme-provider"
 
-const inter = Inter({
+const alice = Alice({
   subsets: ["latin"],
-  weight: ["400", "500"],
-  style: ["normal", "italic"],
-  variable: "--font-inter",
-})
-
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  style: ["normal", "italic"],
-  variable: "--font-newsreader",
+  weight: "400",
+  variable: "--font-alice",
 })
 
 const plexMono = IBM_Plex_Mono({
@@ -47,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${inter.variable} ${newsreader.variable} ${plexMono.variable}`}
+      className={`${alice.variable} ${plexMono.variable}`}
       suppressHydrationWarning
     >
       <head>
