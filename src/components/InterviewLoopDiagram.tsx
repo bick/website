@@ -34,7 +34,7 @@ const groups: Group[] = [
   },
   {
     x: 510,
-    label: "Bar scales with level",
+    label: "Bar scales with level†",
     rounds: [{ title: "Architecture", question: "Can you weigh trade-offs?" }],
   },
 ]
@@ -90,7 +90,7 @@ export default function InterviewLoopDiagram() {
         experience.
       </figcaption>
       <figcaption className="mt-2 text-sm text-muted-foreground">
-        * I think you should do the architecture interview with all Senior+ role and potentially even mid-level engineer
+        † I think you should do the architecture interview with all Senior+ role and potentially even mid-level engineer
         interviews if you have a high bar for mid levels.
       </figcaption>
     </figure>
