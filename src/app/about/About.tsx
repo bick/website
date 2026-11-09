@@ -4,14 +4,13 @@ import Image from "next/image"
 import Link from "next/link"
 
 import SplitText from "@/components/SplitText"
-
 import ResumeTable from "./ResumeTable"
 
 export default function AboutPage() {
   return (
     <>
       <section className="relative overflow-hidden pb-24 pt-40">
-        <div className="backdrop-fade-in absolute inset-0 bg-gradient-to-br from-purple-100 dark:from-purple-950/80 via-background to-indigo-100/70 dark:to-indigo-950/50" />
+        <div className="backdrop-fade-in absolute inset-0 bg-gradient-to-br from-purple-100 via-background to-indigo-100/70 dark:from-purple-950/80 dark:to-indigo-950/50" />
 
         <div className="backdrop-fade-in absolute inset-0 opacity-30 mix-blend-overlay">
           <svg className="h-full w-full">
@@ -48,20 +47,22 @@ export default function AboutPage() {
                 <SplitText>Owen Bick</SplitText>
               </h1>
               <p className="subtext-in label mt-3" style={{ animationDelay: "0.2s" }}>
-                Software Engineering Leader &middot; Austin &amp; Dallas
+                Software Engineering Leader &middot; Austin
               </p>
               <p className="subtext-in mt-6 max-w-xl" style={{ animationDelay: "0.3s" }}>
-                I&apos;m a Software Engineering Leader with 15+ years of experience building and
-                scaling high-performing engineering teams. I started as a developer working with
-                everything from WordPress to modern React and TypeScript stacks, that foundation
-                shapes how I lead today.
+                I&apos;m a Software Engineering Leader with 15+ years of experience building and scaling high-performing
+                engineering teams. I started as a developer working with everything from WordPress to modern React and
+                TypeScript stacks, that foundation shapes how I lead today.
               </p>
               <p className="subtext-in mt-4 max-w-xl" style={{ animationDelay: "0.5s" }}>
-                Currently, I partner with Series C+ startups to build and scale their engineering
-                organizations where I work on hiring senior talent, establishing technical strategy,
-                and ensuring teams deliver on ambitious roadmaps.
+                Currently, I partner with Series C+ startups to build and scale their engineering organizations where I
+                work on hiring senior talent, establishing technical strategy, and ensuring teams deliver on ambitious
+                roadmaps.
               </p>
-              <div className="hero-fade-in flex justify-center gap-5 md:justify-start" style={{ animationDelay: "0.9s" }}>
+              <div
+                className="hero-fade-in flex justify-center gap-5 md:justify-start"
+                style={{ animationDelay: "0.9s" }}
+              >
                 <Link href="/contact" className="portfolio-item more-link">
                   Get in touch
                 </Link>

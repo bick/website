@@ -25,7 +25,6 @@ export default function ResumeTable() {
       company: "FieldPulse",
       logo: "/static/logos/fieldpulse.webp",
       period: "Mar 2026 - Present",
-      location: "Dallas, Texas",
       achievements: [
         "Leading engineering teams building field service management software for trade contractors across HVAC, plumbing, electrical, and other service industries",
         "Driving technical strategy and roadmap for customer-facing tooling that powers scheduling, dispatching, invoicing, and payments for thousands of service businesses",
@@ -37,7 +36,6 @@ export default function ResumeTable() {
       company: "Smile Doctors",
       logo: "/static/logos/smiledoctors.jpeg",
       period: "Sep 2024 - Mar 2026",
-      location: "Dallas, Texas",
       achievements: [],
       roles: [
         {
@@ -65,7 +63,6 @@ export default function ResumeTable() {
       company: "Weekend Labs",
       logo: "/static/logos/weekendlabs.jpeg",
       period: "Feb 2022 - Present",
-      location: "Austin, Texas",
       achievements: [
         "Built and scaled product development consultancy generating 6-figure ARR",
         "Led engineering teams to deliver revenue-generating products for 15+ clients",
@@ -77,7 +74,6 @@ export default function ResumeTable() {
       company: "Discount Drug Network",
       logo: "/static/logos/ddn.jpeg",
       period: "May 2022 - Sep 2024",
-      location: "Boston, Massachusetts",
       achievements: [
         "Architected and scaled a B2B pharmaceutical pricing API (Node.js/TypeScript, C# backend, PostgreSQL) processing millions of daily requests, enabling enterprise clients to surface real-time drug pricing across 70,000+ US pharmacies",
         "Architected API gateway architecture, rate limiting, and resilience patterns that ensured platform stability at scale; reduced computing costs by 25% through algorithm optimization",
@@ -90,7 +86,6 @@ export default function ResumeTable() {
       company: "Freelance",
       logo: "/static/logos/rocket.jpeg",
       period: "2019 - 2022",
-      location: "",
       achievements: ["Worked with Liberty Mutual, Boston Bruins, 829 Studios, FlossTime, Spot Easy, and Tadzilla"],
     },
     {
@@ -98,7 +93,6 @@ export default function ResumeTable() {
       company: "Loud Canvas Media",
       logo: "/static/logos/loudcanvas.png",
       period: "2017 - 2019",
-      location: "",
       achievements: ["Frontend, ecommerce, and mobile apps"],
     },
     {
@@ -106,7 +100,6 @@ export default function ResumeTable() {
       company: "Stacktron",
       logo: "/static/logos/stacktron.jpeg",
       period: "2014 - 2017",
-      location: "",
       achievements: ["Founding engineer", "Built billing and cloud infrastructure management systems"],
     },
   ]

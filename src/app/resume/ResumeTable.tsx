@@ -9,7 +9,6 @@ export default function ResumeTable() {
       title: "Senior Engineering Manager",
       company: "FieldPulse",
       period: "Apr 2026 - Present",
-      location: "Dallas, Texas",
       duration: "1 mo",
       isPresentJob: true,
       achievements: [
@@ -22,7 +21,6 @@ export default function ResumeTable() {
       title: "Engineering Manager & Product Lead",
       company: "Smile Doctors",
       period: "Sep 2024 - Mar 2026",
-      location: "Dallas, Texas",
       duration: "1 yr 7 mos",
       isPresentJob: false,
       achievements: [
@@ -35,7 +33,6 @@ export default function ResumeTable() {
       title: "Founder",
       company: "Weekend Labs",
       period: "Feb 2022 - Present",
-      location: "Austin, Texas",
       duration: "3 yrs 1 mo",
       isPresentJob: true,
       achievements: [
@@ -48,7 +45,6 @@ export default function ResumeTable() {
       title: "Senior Product Engineer",
       company: "Discount Drug Network",
       period: "May 2022 - Sep 2024",
-      location: "Boston, Massachusetts",
       duration: "2 yrs 5 mos",
       isPresentJob: false,
       achievements: [
@@ -61,7 +57,6 @@ export default function ResumeTable() {
       title: "Product Development Lead",
       company: "Freelance Consulting",
       period: "2017 - 2022",
-      location: "",
       duration: "5 yrs",
       isPresentJob: false,
       achievements: [
@@ -74,7 +69,6 @@ export default function ResumeTable() {
       title: "Co-Founder",
       company: "Stacktron",
       period: "2014 - 2016",
-      location: "",
       duration: "2 yrs",
       isPresentJob: false,
       achievements: [
@@ -106,12 +100,12 @@ export default function ResumeTable() {
                     <div className="flex w-full items-center gap-3 text-left">
                       <div className="min-w-0 flex-grow">
                         <div className="font-medium leading-snug">{job.title}</div>
-                        <div className="mt-1 text-[15px] font-normal leading-snug text-muted-foreground">{job.company}</div>
+                        <div className="mt-1 text-[15px] font-normal leading-snug text-muted-foreground">
+                          {job.company}
+                        </div>
                       </div>
                       <div className="mr-2 flex flex-shrink-0 items-center gap-2">
-                        {job.isPresentJob && (
-                          <span className="label">Current</span>
-                        )}
+                        {job.isPresentJob && <span className="label">Current</span>}
                         <span className="hidden whitespace-nowrap font-mono text-[13px] font-normal text-muted-foreground sm:block">
                           {job.duration}
                         </span>
@@ -122,7 +116,6 @@ export default function ResumeTable() {
                     <div className="space-y-3 pb-2">
                       <div className="flex flex-wrap gap-x-4 gap-y-1 font-mono text-[13px] text-muted-foreground">
                         <span>{job.period}</span>
-                        {job.location && <span>{job.location}</span>}
                       </div>
                       <ul className="space-y-2 text-base leading-normal">
                         {job.achievements.map((achievement, i) => (

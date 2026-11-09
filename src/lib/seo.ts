@@ -10,11 +10,11 @@ type PageMetadata = {
 
 export const siteMetadata: PageMetadata = {
   home: {
-    title: "Owen Bick – A software engineer based in Austin and Dallas",
-    description: "Owen Bick is a software engineer based in Austin and Dallas.",
+    title: "Owen Bick – A software engineer based in Austin",
+    description: "Owen Bick is a software engineer based in Austin.",
     openGraph: {
-      title: "Owen Bick – A software engineer based in Austin and Dallas",
-      description: "Owen Bick is a software engineer based in Austin and Dallas.",
+      title: "Owen Bick – A software engineer based in Austin",
+      description: "Owen Bick is a software engineer based in Austin.",
     },
   },
   about: {
@@ -51,10 +51,12 @@ export const siteMetadata: PageMetadata = {
   },
   speaking: {
     title: "Speaking – Owen Bick",
-    description: "Owen Bick speaks about building engineering teams, shipping with craft, and where software companies go next.",
+    description:
+      "Owen Bick speaks about building engineering teams, shipping with craft, and where software companies go next.",
     openGraph: {
       title: "Speaking – Owen Bick",
-      description: "Owen Bick speaks about building engineering teams, shipping with craft, and where software companies go next.",
+      description:
+        "Owen Bick speaks about building engineering teams, shipping with craft, and where software companies go next.",
     },
   },
   contact: {

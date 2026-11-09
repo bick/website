@@ -14,11 +14,11 @@ type HeroProps = {
 }
 
 const GRADIENTS: Record<string, string> = {
-  purple: "from-purple-100 dark:from-purple-950/80 via-background to-indigo-100/70 dark:to-indigo-950/50",
-  blue: "from-blue-100 dark:from-blue-950/70 via-background to-cyan-100/70 dark:to-cyan-950/40",
-  green: "from-emerald-100 dark:from-emerald-950/70 via-background to-teal-100/70 dark:to-teal-950/40",
-  red: "from-rose-100 dark:from-rose-950/70 via-background to-red-100/70 dark:to-red-950/40",
-  orange: "from-orange-100 dark:from-orange-950/70 via-background to-amber-100/70 dark:to-amber-950/40",
+  purple: "from-purple-200 dark:from-purple-950/80 via-background to-indigo-200/80 dark:to-indigo-950/50",
+  blue: "from-blue-200 dark:from-blue-950/70 via-background to-cyan-200/80 dark:to-cyan-950/40",
+  green: "from-emerald-200 dark:from-emerald-950/70 via-background to-teal-200/80 dark:to-teal-950/40",
+  red: "from-rose-200 dark:from-rose-950/70 via-background to-red-200/80 dark:to-red-950/40",
+  orange: "from-orange-200 dark:from-orange-950/70 via-background to-amber-200/80 dark:to-amber-950/40",
 }
 
 export default function Hero({ type, title, subtitle, gradient, splitText = true }: HeroProps) {
@@ -45,7 +45,7 @@ export default function Hero({ type, title, subtitle, gradient, splitText = true
 
   const gradientClass = gradient
     ? GRADIENTS[gradient] || gradient
-    : "from-neutral-100 dark:from-gray-950/60 via-background to-neutral-200/50 dark:to-gray-900/40"
+    : "from-neutral-200 dark:from-gray-950/60 via-background to-neutral-300/60 dark:to-gray-900/40"
 
   return (
     <section className="relative overflow-hidden pb-20 pt-40">

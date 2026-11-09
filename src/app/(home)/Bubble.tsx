@@ -54,7 +54,7 @@ function Stars() {
 export default function BackgroundWrapper({ children }: BackgroundWrapperProps) {
   return (
     <div className="bubble relative w-full overflow-hidden">
-      <div className="backdrop-fade-in absolute inset-0 bg-gradient-to-br from-orange-100/70 dark:from-orange-950/40 via-background to-amber-100/50 dark:to-amber-950/30" />
+      <div className="backdrop-fade-in absolute inset-0 bg-gradient-to-br from-orange-200/80 via-background to-amber-200/60 dark:from-orange-950/40 dark:to-amber-950/30" />
 
       <Stars />
 

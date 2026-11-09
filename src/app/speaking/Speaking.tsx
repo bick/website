@@ -90,7 +90,7 @@ export default function Speaking() {
   return (
     <>
       <section className="relative overflow-hidden pb-16 pt-40">
-        <div className="hero-fade-in bg-linear-to-br absolute inset-0 from-orange-100 via-background to-amber-100/70 dark:from-orange-950/70 dark:to-amber-950/40" />
+        <div className="hero-fade-in bg-linear-to-br absolute inset-0 from-orange-200 via-background to-amber-200/80 dark:from-orange-950/70 dark:to-amber-950/40" />
         <div className="hero-fade-in pointer-events-none absolute inset-0 mix-blend-overlay">
           <svg className="h-full w-full">
             <filter id="speakingGrain">
