@@ -4,8 +4,6 @@ import { useState, type FormEvent, type ReactNode } from "react"
 import Image from "next/image"
 import Link from "next/link"
 
-import SplitText from "@/components/SplitText"
-
 const EMAIL = "owenbick@gmail.com"
 
 const BIO =
@@ -92,7 +90,7 @@ export default function Speaking() {
   return (
     <>
       <section className="relative overflow-hidden pb-16 pt-40">
-        <div className="hero-fade-in absolute inset-0 bg-linear-to-br from-orange-100 via-background to-amber-100/70 dark:from-orange-950/70 dark:to-amber-950/40" />
+        <div className="hero-fade-in bg-linear-to-br absolute inset-0 from-orange-100 via-background to-amber-100/70 dark:from-orange-950/70 dark:to-amber-950/40" />
         <div className="hero-fade-in pointer-events-none absolute inset-0 mix-blend-overlay">
           <svg className="h-full w-full">
             <filter id="speakingGrain">
@@ -108,14 +106,14 @@ export default function Speaking() {
             <div className="min-w-0 md:max-w-[560px]">
               <p className="subtext-in label mb-5">Speaking</p>
               <h1 className="page-title" style={{ fontSize: "clamp(36px, 5vw, 44px)", lineHeight: 1.1 }}>
-                <SplitText delay={0.1}>
-                  Talks on building engineering teams, shipping with craft, and where software companies go next.
-                </SplitText>
+                Talks on building engineering teams, shipping with craft, and where software companies go next.
               </h1>
-              <p className="subtext-in mt-6 text-lg leading-normal text-muted-foreground" style={{ animationDelay: "0.5s" }}>
-                I speak at conferences, company offsites, and podcasts about engineering leadership
-                from the inside: what it takes to scale a team at a startup without losing the quality
-                bar.
+              <p
+                className="subtext-in mt-6 text-lg leading-normal text-muted-foreground"
+                style={{ animationDelay: "0.5s" }}
+              >
+                I speak at conferences, company offsites, and podcasts about engineering leadership from the inside:
+                what it takes to scale a team at a startup without losing the quality bar.
               </p>
               <div className="hero-fade-in mt-8 flex flex-wrap gap-3" style={{ animationDelay: "0.9s" }}>
                 <a href="#book" className={buttonPrimary}>
@@ -135,7 +133,7 @@ export default function Speaking() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-background to-transparent" />
+        <div className="bg-linear-to-t absolute bottom-0 left-0 right-0 h-16 from-background to-transparent" />
       </section>
 
       <div className="subtext-in container pb-8" style={{ animationDelay: "0.9s" }}>

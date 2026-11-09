@@ -52,13 +52,10 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <>
-      <Link
-        href="/blog"
-        className="portfolio-item label absolute left-6 top-9 z-[10000] hidden no-underline lg:block"
-      >
+      <Link href="/blog" className="portfolio-item label absolute left-6 top-9 z-[10000] hidden no-underline lg:block">
         &larr; Back to Blog
       </Link>
-      <Hero title={post.title} subtitle={post.date} gradient="blue" />
+      <Hero title={post.title} subtitle={post.date} gradient="blue" splitText={false} />
       <article className="subtext-in pb-20" style={{ animationDelay: "0.3s" }}>
         <div className="container">
           <div className="prose">

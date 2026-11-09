@@ -10,6 +10,7 @@ type HeroProps = {
   title?: string
   subtitle?: string
   gradient?: string
+  splitText?: boolean
 }
 
 const GRADIENTS: Record<string, string> = {
@@ -20,33 +21,35 @@ const GRADIENTS: Record<string, string> = {
   orange: "from-orange-100 dark:from-orange-950/70 via-background to-amber-100/70 dark:to-amber-950/40",
 }
 
-export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
+export default function Hero({ type, title, subtitle, gradient, splitText = true }: HeroProps) {
   if (type === "home") {
     return (
       <section className="pb-24 pt-48">
         <div className="container">
           <p className="subtext-in label mb-5">
-            Engineering leader based in <GiTexas className="mx-0.5 inline align-[-4px] text-base text-foreground" /> Austin
+            Engineering leader based in <GiTexas className="mx-0.5 inline align-[-4px] text-base text-foreground" />{" "}
+            Austin
           </p>
           <h1 className="page-title max-w-155">
             <SplitText delay={0.1}>
               I build engineering teams, ship products, and help startups scale without giving up on <em>craft</em>.
             </SplitText>
           </h1>
-          <p className="subtext-in mt-7 max-w-140 text-muted-foreground" style={{ animationDelay: "0.5s" }}>
-            I lead engineering at <a href="https://fieldpulse.com">FieldPulse</a>. I write about
-            engineering leadership.
+          <p className="subtext-in max-w-140 mt-7 text-muted-foreground" style={{ animationDelay: "0.5s" }}>
+            I lead engineering at <a href="https://fieldpulse.com">FieldPulse</a>. I write about engineering leadership.
           </p>
         </div>
       </section>
     )
   }
 
-  const gradientClass = gradient ? GRADIENTS[gradient] || gradient : "from-neutral-100 dark:from-gray-950/60 via-background to-neutral-200/50 dark:to-gray-900/40"
+  const gradientClass = gradient
+    ? GRADIENTS[gradient] || gradient
+    : "from-neutral-100 dark:from-gray-950/60 via-background to-neutral-200/50 dark:to-gray-900/40"
 
   return (
     <section className="relative overflow-hidden pb-20 pt-40">
-      <div className={`absolute inset-0 bg-linear-to-br ${gradientClass} hero-fade-in`} />
+      <div className={`bg-linear-to-br absolute inset-0 ${gradientClass} hero-fade-in`} />
 
       <div className="hero-fade-in pointer-events-none absolute inset-0 mix-blend-overlay">
         <svg className="h-full w-full">
@@ -59,17 +62,15 @@ export default function Hero({ type, title, subtitle, gradient }: HeroProps) {
       </div>
 
       <div className="container relative z-10">
-        <h1 className="page-title">
-          <SplitText>{title}</SplitText>
-        </h1>
+        <h1 className="page-title">{splitText ? <SplitText>{title}</SplitText> : title}</h1>
         {subtitle && (
-          <p className="subtext-in mt-4 max-w-140 text-muted-foreground" style={{ animationDelay: "0.3s" }}>
+          <p className="subtext-in max-w-140 mt-4 text-muted-foreground" style={{ animationDelay: "0.3s" }}>
             {subtitle}
           </p>
         )}
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-background to-transparent" />
+      <div className="bg-linear-to-t absolute bottom-0 left-0 right-0 h-16 from-background to-transparent" />
     </section>
   )
 }
