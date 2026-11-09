@@ -85,6 +85,9 @@ export default function InterviewLoopDiagram() {
           </g>
         ))}
       </svg>
+      <figcaption className="mt-2 text-sm text-muted-foreground">
+        I skip the AI-off rounds for staff+ roles and for senior engineers with a strong referral or proven experience.
+      </figcaption>
     </figure>
   )
 }
