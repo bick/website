@@ -196,6 +196,22 @@
     animation: subtextIn 0.6s ease-out backwards;
 }
 
+/* Titles that don't use SplitText: a quiet fade with a slight rise. */
+@keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.title-fade-in {
+    animation: titleFadeIn 0.9s cubic-bezier(0.19, 1, 0.22, 1) backwards;
+}
+
 @keyframes backdropFadeIn {
     from {
         opacity: 0;
@@ -268,6 +284,7 @@
 @media (prefers-reduced-motion: reduce) {
     .split-item,
     .subtext-in,
+    .title-fade-in,
     .hero-fade-in,
     .backdrop-fade-in,
     .star-group,

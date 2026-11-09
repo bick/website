@@ -62,7 +62,15 @@ export default function Hero({ type, title, subtitle, gradient, splitText = true
       </div>
 
       <div className="container relative z-10">
-        <h1 className="page-title">{splitText ? <SplitText>{title}</SplitText> : title}</h1>
+        {splitText ? (
+          <h1 className="page-title">
+            <SplitText>{title}</SplitText>
+          </h1>
+        ) : (
+          <h1 className="page-title title-fade-in" style={{ animationDelay: "0.1s" }}>
+            {title}
+          </h1>
+        )}
         {subtitle && (
           <p className="subtext-in max-w-140 mt-4 text-muted-foreground" style={{ animationDelay: "0.3s" }}>
             {subtitle}
