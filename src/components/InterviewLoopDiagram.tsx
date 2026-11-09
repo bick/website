@@ -90,8 +90,8 @@ export default function InterviewLoopDiagram() {
         experience.
       </figcaption>
       <figcaption className="mt-2 text-sm text-muted-foreground">
-        † I think you should do the architecture interview with all Senior+ role and potentially even mid-level engineer
-        interviews if you have a high bar for mid levels.
+        † I think you should do the architecture interview with all Senior+ roles and potentially even mid-level
+        engineer interviews if you have a high bar for mid levels.
       </figcaption>
     </figure>
   )
