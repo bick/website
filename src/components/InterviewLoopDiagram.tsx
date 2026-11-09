@@ -18,7 +18,7 @@ type Group = { x: number; label: string; rounds: Round[] }
 const groups: Group[] = [
   {
     x: 24,
-    label: "AI off",
+    label: "AI off*",
     rounds: [
       { title: "FizzBuzz", question: "Can you code at all?" },
       { title: "Algorithm problem", question: "Do you understand it?" },
@@ -86,7 +86,8 @@ export default function InterviewLoopDiagram() {
         ))}
       </svg>
       <figcaption className="mt-2 text-sm text-muted-foreground">
-        I skip the AI-off rounds for staff+ roles and for senior engineers with a strong referral or proven experience.
+        * I skip the AI-off rounds for staff+ roles and for senior engineers with a strong referral or proven
+        experience.
       </figcaption>
     </figure>
   )
