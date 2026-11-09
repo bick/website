@@ -9,12 +9,20 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: "how-i-think-about-technical-interviews",
+    title: "How I Think About Technical Interviews",
+    excerpt:
+      "Writing code got cheap. Understanding it didn't. Here's how I run technical interviews now that AI is part of the job.",
+    date: "November 9, 2026",
+    badge: "Latest",
+    badgeType: "default",
+  },
+  {
     slug: "hire-for-roi-not-for-the-seat",
     title: "Hire for ROI, Not for the Seat",
     excerpt:
       "When I hire a senior engineer, I'm asking one question: will this person be a net positive for the business? Here's what I actually look for.",
     date: "November 5, 2026",
-    badge: "Latest",
     badgeType: "default",
   },
   {

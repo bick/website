@@ -1,0 +1,72 @@
+import InterviewLoopDiagram from "@/components/InterviewLoopDiagram"
+
+I've done technical interviews at a lot of companies. LeetCode easies, whiteboards, in person, remote. I've walked through my own code over a video call. I've done take-home projects, full interview loops, on-sites, all of it. If there's a technical interview format out there, I've probably sat through it.
+
+And what I've come to believe, especially now with AI, is that the right interview depends a lot on who you're hiring and what you actually need from them. I'm mostly talking about late mid-level (SWE III or so) through senior here.
+
+Here's my short version: writing code got cheap. Understanding it didn't. So that's what I interview for.
+
+<InterviewLoopDiagram />
+
+The AI-off rounds check that you understand code. The AI-on rounds check how you work with it.
+
+## AI changed the game
+
+People cheat. They paste your question into a model, look things up live, or find some other way around it. It's honestly really easy. If you have a second computer off to the side, you can get around most screen monitoring and coding tools, and that makes it hard to truly assess anyone.
+
+But I still think LeetCode, or at least algorithm problems, have a place in the industry. We just need to rethink how we use them.
+
+## Tell candidates the rules
+
+If AI makes cheating easy, I don't think the answer is more surveillance. It's being clear about what each round is actually testing.
+
+I split it in two. Some rounds are AI-off, because I want to see that you understand code without help. Some rounds are AI-on, because I want to see how you really work day to day. I tell candidates which is which up front.
+
+That takes a lot of the cheating problem off the table. If AI is allowed, there's nothing to sneak. If it isn't, and you can't explain your own solution when I start asking follow-up questions, that shows up fast.
+
+## Algorithms: understanding over syntax
+
+When I ask an algorithms question, or hand someone a function with a bad algorithm in it, I don't even care most of the time if you write perfect code. Perfect syntax, runs on the first try, none of that matters much to me. What I'm trying to understand is whether you *understand the code*. Can you see where it falls short? Can you identify the problem and explain it?
+
+That matters more now, not less. When you're using AI to write code, how do you know it's writing optimal code? How do you know it isn't going to fall over under load? You need to understand what it's generating. Even at a loose, pseudocode level, I want to see that you know how to solve the problem.
+
+I usually think about coding problems in two tiers, and sometimes I'll give both:
+
+1. **Something dead simple**, like FizzBuzz. As easy as it comes. This just tells me you can code at all.
+2. **A real algorithms problem.** This is where I learn how you think.
+
+If you're big tech and you have the budget to hire the absolute best engineers in the world, sure, go ahead with dynamic programming and the really hard stuff. For most companies, that's not what you need.
+
+And I think cheating, while real, is a little overstated. When the point of the problem is explaining your reasoning out loud, it's a lot harder to fake. Algorithm problems are still a decent way to evaluate skills. I just don't think it's fair to be super anal about them.
+
+## How do they use AI?
+
+One thing I think is really valuable is walking through a technical problem *with* the candidate and having them show me how they actually work. How do they write code? How do they use AI? Are they using skills, hooks, custom instructions? Are they a power user, and can they tune their tools to work the way they need?
+
+Most tech degrees don't teach any of this, but it's become one of the most important skills an engineer has. The models are legitimately good now. They're not perfect, and it's important to say that, but if you're not bought in at this point, you're falling behind. You should be using it as much as possible.
+
+What separates people is the checks and balances they put around it. If you're generating a ton of AI code and it's really hard to review, you shouldn't be doing that in the first place. Work in reasonably sized PRs. Review your own PR before you send it to anyone else, so you can tell if the code is bad. Nobody should be cranking out giant PRs and dumping them on a reviewer. Run a separate AI review pass and ask what you missed. Pretend you're not the one who wrote it.
+
+So I want to see how someone actually uses AI and how well they understand it, beyond just typing prompts into Claude Code or Cursor.
+
+## Give them a PR to review
+
+If I could only run one technical round right now, it'd be a code review. Hand the candidate a pull request, ideally one an AI wrote, with a few real problems buried in it: an N+1 query, a missing edge case, a function that works fine today but won't scale.
+
+This is the job now. More and more of the code a senior engineer touches is code they didn't write line by line. Can they spot what's wrong? Can they explain why it matters? Would they approve it, and if not, what would they ask for first?
+
+It tests almost everything I care about in one sitting: understanding the code, judging the trade-offs, and explaining it to another person without being a jerk about it.
+
+## Architecture at every level
+
+Architecture has mostly been a staff-level interview, and some seniors get it too, partly because of where staff engineers sit in terms of authority. I think it should be part of the interview at every level now, even entry level if you're a high-bar company.
+
+Especially at a startup, everyone needs to be thinking about architecture and making recommendations. Say someone comes in and says, "I think we need an event queue here. We have a lot of jobs coming in, they might fail, and we need retries." That's exactly the kind of thinking I want. Then the senior and staff engineers can weigh in: maybe that's a good idea, maybe it isn't, and here's why.
+
+The bar scales with level. For more junior people, I just want to see them thinking about it. As you go up, I get pickier: do they know which services to use, how are they weighing the trade-offs, can they defend the decision? You can always push some of that to someone more senior, but with AI writing more of the code, the ability to think about architecture matters more than ever.
+
+## What I'm really testing
+
+Every round comes back to the same thing. I'm not testing whether you can produce code. AI can do that. I'm testing whether you understand what got produced, whether you can make good decisions about it, and whether you can explain those decisions to the people you work with.
+
+That's the technical half of a bigger question, the one I wrote about in [*Hire for ROI, Not for the Seat*](/blog/hire-for-roi-not-for-the-seat): is this person going to be a net positive for the business? The technical interview just tells me whether they can hold up their end of it.
