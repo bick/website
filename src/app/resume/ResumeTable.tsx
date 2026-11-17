@@ -7,14 +7,12 @@ export default function ResumeTable() {
   const experience = [
     {
       title: "Senior Engineering Manager",
-      company: "FieldPulse",
-      period: "Apr 2026 - Present",
+      company: "Imprint",
+      period: "Nov 2026 - Present",
       duration: "1 mo",
       isPresentJob: true,
       achievements: [
-        "Leading engineering teams building field service management software for trade contractors",
-        "Driving product strategy across customer-facing tooling for HVAC, plumbing, and electrical businesses",
-        "Owning technical roadmaps for revenue-critical features serving thousands of service businesses",
+        "Member Experience team",
       ],
     },
     {

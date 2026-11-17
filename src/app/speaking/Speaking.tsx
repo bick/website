@@ -7,7 +7,7 @@ import Link from "next/link"
 const EMAIL = "owenbick@gmail.com"
 
 const BIO =
-  "Owen Bick is an engineering leader who builds teams, ships products, and scales startups. He started writing code as a teenager and has spent 15+ years building products and leading engineering teams. He is currently an Engineering Manager at FieldPulse and writes about engineering leadership at owenbick.com."
+  "Owen Bick is an engineering leader who builds teams, ships products, and scales startups. He started writing code as a teenager and has spent 15+ years building products and leading engineering teams. He is currently a Senior Engineering Manager at Imprint and writes about engineering leadership at owenbick.com."
 
 const talks: { category: string; title: string; description: ReactNode }[] = [
   {

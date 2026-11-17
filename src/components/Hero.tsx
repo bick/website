@@ -36,7 +36,7 @@ export default function Hero({ type, title, subtitle, gradient, splitText = true
             </SplitText>
           </h1>
           <p className="subtext-in max-w-140 mt-7 text-muted-foreground" style={{ animationDelay: "0.5s" }}>
-            I lead engineering at <a href="https://fieldpulse.com">FieldPulse</a>. I write about engineering leadership.
+            I&apos;m a Senior Engineering Manager at <a href="https://imprint.co">Imprint</a>. I write about engineering leadership.
           </p>
         </div>
       </section>
