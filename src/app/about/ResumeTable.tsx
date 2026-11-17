@@ -22,13 +22,10 @@ export default function ResumeTable() {
   const experience = [
     {
       title: "Senior Engineering Manager",
-      company: "FieldPulse",
-      logo: "/static/logos/fieldpulse.webp",
-      period: "Mar 2026 - Present",
+      company: "Imprint",
+      period: "2026 - Present",
       achievements: [
-        "Leading engineering teams building field service management software for trade contractors across HVAC, plumbing, electrical, and other service industries",
-        "Driving technical strategy and roadmap for customer-facing tooling that powers scheduling, dispatching, invoicing, and payments for thousands of service businesses",
-        "Partnering with product and design to deliver revenue-critical features and improve experience for owners and field technicians",
+        "Leading engineering teams building co-branded credit card and rewards programs for leading brands",
       ],
     },
     {
