@@ -8,8 +8,8 @@ export default function ResumeTable() {
     {
       title: "Senior Engineering Manager",
       company: "Imprint",
-      period: "2026 - Present",
-      duration: "",
+      period: "Nov 2026 - Present",
+      duration: "1 mo",
       isPresentJob: true,
       achievements: [
         "Leading engineering teams building co-branded credit card and rewards programs for leading brands",
