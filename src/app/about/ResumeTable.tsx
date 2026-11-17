@@ -25,7 +25,7 @@ export default function ResumeTable() {
       company: "Imprint",
       period: "Nov 2026 - Present",
       achievements: [
-        "Leading engineering teams building co-branded credit card and rewards programs for leading brands",
+        "Member Experience team",
       ],
     },
     {

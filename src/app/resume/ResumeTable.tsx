@@ -12,7 +12,7 @@ export default function ResumeTable() {
       duration: "1 mo",
       isPresentJob: true,
       achievements: [
-        "Leading engineering teams building co-branded credit card and rewards programs for leading brands",
+        "Member Experience team",
       ],
     },
     {
